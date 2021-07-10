@@ -1,0 +1,142 @@
+<h4 class="animate__animated animate__fadeInDown page_name_head">Simulation Results</h4>
+<div class="sim_first_results_main">
+    <div class="sim_first_result_card">
+        <h5>Simulation Outputs</h5>
+        <div class="sim_1_output_parameters">
+            <div class="sim_1_output_parameters_card">
+                <div>
+                    <h6>Tariff Table</h6>
+                    <hr>
+                    <br>
+                </div>
+                <label>Tariff upto 100 units/month</label>
+                <input type="number"  ng-model="tariff_till_100">
+                <label>Tariff upto 300 units/month</label>
+                <input type="number" ng-model="tariff_till_300">
+                <label>Tariff upto 500 units/month</label>
+                <input type="number" ng-model="tariff_till_500">
+                <label>Tariff from 501 units/month</label>
+                <input type="number" ng-model="tariff_till_501">
+                <label>Tariff sell 5 Rs/unit</label>
+                <input type="number" ng-model="tariff_till_export">
+            </div>
+            <div class="sim_1_output_parameters_card">
+                <div>
+                    <h6>Simulation / Energy Details</h6>
+                    <hr>
+                    <br>
+                </div>
+                <div class="sim_out_datachunks">
+                    <label>Simulation Days</label><br>
+                    <span>{{simulation_outputs.simulated_days}} days</span>
+                </div>
+                
+                <!-- <label>Average Demand per day in an year</label>
+                <label>Climatic Variation Impact in System Performance</label> -->
+                <div class="sim_out_datachunks">
+                    <label>Energy Saved / Utilized</label><br>
+                    <span>{{energy_saved | number : 2}} kWh in {{simulation_outputs.simulated_days}} days</span>
+                </div>
+                <div class="sim_out_datachunks">
+                    <label>Unmet Energy / Grid Energy Required</label><br>
+                    <span>{{energy_required_from_grid | number : 2}} kWh in {{simulation_outputs.simulated_days}} days</span>
+                </div>
+                <div class="sim_out_datachunks">
+                    <label>Surplus Energy Produced</label><br>
+                    <span>{{energy_exportable | number : 2}} kWh in {{simulation_outputs.simulated_days}} days</span>
+                </div>
+                
+
+
+            </div>
+            <div class="sim_1_output_parameters_card">
+                <div>
+                    <h6>Life of the Components</h6>
+                    <hr>
+                    <br>
+                </div>
+
+                <div class="sim_out_datachunks">
+                    <label>Battery Life</label><br>
+                    <span>{{batt_lifetime_prediction | number : 2}} years</span>
+                </div>
+                <div class="sim_out_datachunks">
+                    <label>Solar Panel Life</label><br>
+                    <span>20 years - DIRECT</span>
+                </div>
+                <div class="sim_out_datachunks">
+                    <label>Converter Life</label><br>
+                    <span>15 years - DIRECT</span>
+                </div>
+               
+            </div>
+            <div class="sim_1_output_parameters_card">
+                <div>
+                    <h6>Economics</h6>
+                    <hr>
+                    <br>
+                </div>
+                <div class="sim_out_datachunks">
+                    <label>Amount Saved without exports (Approx.)</label>
+                    <span>{{amount_saved_no_exports | currency:"₹": 0}} in {{simulation_outputs.simulated_days}} days </span>
+                </div>
+                <div class="sim_out_datachunks">
+                    <label>Amount Saved with Grid Exports (Approx.)</label>
+                    <span>{{amount_saved_with_exports | currency:"₹": 0}} in {{simulation_outputs.simulated_days}} days</span>
+                </div>
+                <div class="sim_out_datachunks">
+                    <label>Principal Investment Required (Approx.)</label>
+                    <span>{{total_investment_needed | currency:"₹": 0 }}</span>
+                </div>
+                <div class="sim_out_datachunks">
+                    <label>Recurring Investment Required</label>
+                    <span>{{total_cost_batt | currency:"₹": 0}} every {{batt_lifetime_prediction | number : 2}} years</span>
+                </div>
+                <div class="sim_out_datachunks">     
+                    <label>Payback Period (Approx.)</label>
+                    <span>{{payback_wo_export | number:1}} years</span>
+                </div>
+                <div class="sim_out_datachunks">
+                    <label>Payback Period with Net Metering (Approx.)</label>
+                    <span>{{payback_with_export | number:1}} years</span>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+    <div class="sim_first_result_card">
+        <h5>SOH variation with time</h5>
+       <div id="sim_results_graph_1"></div>
+       <h5>Predicted Lifetime of the Battery ~ {{batt_lifetime_prediction | number : 2}} years</h5>
+    </div>
+    <div class="sim_first_result_card">
+        <h5>Energy Demands and Generated</h5>
+        <div id="sim_results_graph_2"></div>
+        <div>
+            <h6>Average Exportable Energy (if Grid tied System ) ~ {{energy_exportable_avg | number : 2}} kWh per day</h6>
+            <h6>Average Energy Required from Grid ~ {{energy_required_from_grid_avg | number : 2}} kWh per day</h6>
+            <!-- <h6>Total Exportable Energy (if Grid tied System ) ~ {{energy_exportable | number : 2}} kWh in {{simulation_outputs.simulated_days}} days</h6>
+            <h6>Total Energy Required from Grid ~ {{energy_required_from_grid | number : 2}} kWh in {{simulation_outputs.simulated_days}} days</h6> -->
+        </div>
+    </div>
+    <div class="sim_first_result_card">
+        <h5>Principal Investment</h5>
+        <div id="sim_results_graph_3"></div>
+    </div>
+    <div class="sim_first_result_card">
+        <h5>Energy Distribution</h5>
+        <div id="sim_results_graph_4"></div>
+    </div>
+    <div class="sim_first_result_card">
+        <h5>Energy Saved </h5>
+        <div id="sim_results_graph_5"></div>
+    </div>
+    <div class="sim_first_result_card">
+        <h5>Energy Flow for {{simulation_outputs.simulated_days}} days ( Experimental )</h5>
+        <div id="sim_results_graph_6"></div>
+    </div>
+</div>

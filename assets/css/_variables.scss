@@ -1,0 +1,52 @@
+$primary-color-light:"white";
+$primary-color-dark:"white";
+// Light Theme
+$forecolor-light:rgb(130, 194, 255);
+$fontcolor-light:rgb(40, 62, 158);
+// Dark Theme
+$forecolor-dark:rgb(27, 27, 27);
+$forecolor-dark-highlight:rgb(56, 56, 56);
+$fontcolor-dark:rgb(202, 198, 198);
+
+// Side Bar COlor
+$sidebar-background-dark:rgba(255,255,255,0.7);
+$sidebar-forecolor-dark:rgba(37, 131, 76, 1);
+$sidebar-forecolor-dark-hover:rgb(27, 102, 58);
+$sidebar-fontcolor-dark:rgba(243, 243, 243, 1);
+// Other variables
+$summary-tab-handle-width: 70px;
+$menu-left-border-radius: 0 10px 10px 0px;
+$menubar-left-fontsize: 1.35rem;
+
+//commoon button colors
+$ins_btn_foreground: rgb(209, 255, 211);
+$ins_btn_font: rgb(209, 255, 211);
+
+*, html{
+    margin: 0;
+    padding: 0;    
+    box-sizing: border-box;
+    font-size: 12px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html{
+    width: 100vw;
+    height: 100vh;
+}
+i.material-icons {
+    vertical-align: middle;
+ }
+
+h1,h2,h3,h4,h5,h6{
+    color: $fontcolor-dark;
+}
+
+.landing_center{
+    color: $fontcolor-dark;
+}
+.header_underline{
+    padding: 0;
+    margin: 0;
+    // width: 100vw;         
+}

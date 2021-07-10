@@ -1,0 +1,152 @@
+<div class="load_profile">
+    <div id="load_profile_curtain"></div>
+    <h4 class="animate__animated animate__fadeInDown page_name_head">The Load Profile</h4>
+    <h5>Lets find out what load profile you have?</h5>
+    <div class="load_profile_popup" id="the_popup">
+        <div class="load_profile_popup_container">
+           <h5>Move the sliders to design your load model</h5>
+            
+            <div class="load_slider_farm">
+                <div id="slider_0" class="load_slider"></div>
+                <div id="slider_1" class="load_slider"></div>
+                <div id="slider_2" class="load_slider"></div>
+                <div id="slider_3" class="load_slider"></div>
+                <div id="slider_4" class="load_slider"></div>
+                <div id="slider_5" class="load_slider"></div>
+                <div id="slider_6" class="load_slider"></div>
+                <div id="slider_7" class="load_slider"></div>
+                <div id="slider_8" class="load_slider"></div>
+                <div id="slider_9" class="load_slider"></div>
+                <div id="slider_10" class="load_slider"></div>
+                <div id="slider_11" class="load_slider"></div>
+                <div id="slider_12" class="load_slider"></div>
+                <div id="slider_13" class="load_slider"></div>
+                <div id="slider_14" class="load_slider"></div>
+                <div id="slider_15" class="load_slider"></div>
+                <div id="slider_16" class="load_slider"></div>
+                <div id="slider_17" class="load_slider"></div>
+                <div id="slider_18" class="load_slider"></div>
+                <div id="slider_19" class="load_slider"></div>
+                <div id="slider_20" class="load_slider"></div>
+                <div id="slider_21" class="load_slider"></div>
+                <div id="slider_22" class="load_slider"></div>
+                <div id="slider_23" class="load_slider"></div>
+                
+            </div>
+            <div id="load_profile_usermodelled"></div>
+            <div class="load_pop_max_demand">
+                <div>
+                    <label>Maximum Demand in Watts</label>
+                    <input type="number" id="max_demand_input" ng-model="max_demand_data">    
+                </div>
+                <button class="btn_class_type1 " ng-click=set_max_demand()>RESET AND SET MAXIMUM DEMAND</button>
+                <button id="btn_load_profile_modelled" class="btn_class_type1 " ng-click="load_profile_user_modelled()"> SET PROFILE </button>
+
+            
+            </div>
+                
+            
+        </div>
+    </div>
+    <div class="load_selection">
+        <!-- Database Profile -->
+        <div class="load_cards ">
+            <div class="load_cards_auto_curtain"></div>
+            <h5>{{database_profile}}</h5>
+            <div class="card_content_container">
+                <form id="loads_database_form">
+                    <div>Select the preferred load profile</div>
+                    <select id="loads_database" name="loads_list" form="loads_database_form" ng-model="selectedLoad" ng-change="load_changer()">
+                        <!-- <option>Choose your load</option> -->
+                        <option ng-repeat="loads in preset_loads" ng-value="{{loads}}" >{{loads.aoi_name}}</option>
+                    </select>
+                </form>
+                <p>
+                    Datalogged load profiles from various places
+                </p>
+             </div>
+
+            <div class="card_btn_container">
+                <button id="btn_load_profile_database" class="btn_class_type1" ng-click="load_database()"> SELECT</button>
+            </div>
+
+            
+        </div>
+        
+        <!-- User Profile Modelling-->
+        <div class="load_cards">
+            <div class="load_cards_auto_curtain"></div>
+            <h5>{{user_model_profile}}</h5>
+            <div class="card_content_container">
+                <p>
+                    Select this method if you want to model your own profile
+                </p>
+            </div>
+            <!-- PLOTLY -->
+            
+            <div class="card_btn_container">
+                <button class="btn_class_type1" ng-click="load_profile_user_modelled()"> SELECT </button>
+            </div>
+        </div>  
+
+        <!-- upload  Profile -->
+        <div class="load_cards">
+            <div class="load_cards_auto_curtain"></div>
+            <h5>{{upload_profile}}</h5>
+            <div class="card_content_container">
+                <div>
+                    <input class="btn_class_type1" type="file" id="load_file" name="load_file"/>
+                    <button class="btn_class_type1" id="clickerid" ng-click="load_profile_upload()">Set the File</button>
+                </div>
+                <div>
+                    Make sure the uploaded file resort to the required format, otherwise it will not work.
+                </div>
+             </div>
+             <div class="card_btn_container">
+                <button class="btn_class_type1" ng-click="load_profile_sel('uploaded')"> SELECT </button>
+            </div>
+            
+        </div>
+
+        <!-- appliance Auto Profile -->
+        <div class="load_cards">
+            <div class="load_cards_auto_curtain"></div>
+            <h5>{{appliance_profile}}</h5>
+            <div class="card_content_container">
+                <p>
+                    Select this method if you want to manually design or use architectural templates for designing.
+                </p>
+            </div>            
+            <div class="card_btn_container">
+                <button class="btn_class_type1" ng-click="load_profile_user_modelled()"> SELECT </button>
+            </div>
+        </div>
+        <!-- From Electricity Bill -->
+        <div class="load_cards">
+            <div class="load_cards_auto_curtain"></div>
+            <h5>{{electricity_bill}}</h5>
+            <div class="card_content_container">
+                <p>
+                    Select this method if you want use information from electricity bill for designing load profile.
+                </p>
+            </div>            
+            <div class="card_btn_container">
+                <button class="btn_class_type1" ng-click="load_profile_user_modelled()"> SELECT </button>
+            </div>
+        </div>
+
+        <!-- load profile -->
+        <div class="load_cards" id="final_load_graph">
+            <h5>The Load</h5>
+            <div class="card_content_container">
+                <div id="load_profile_final" >
+                </div>
+             </div>
+             <div class="card_btn_container">
+                <button class="btn_class_type1" ng-click="reset_load_selection()">RESET</button>
+                <button id="btn_load_profile_final" class="btn_class_type1" ng-click="load_profile_upload()"> SET THE LOAD </button>
+            </div>            
+        </div>
+        
+    </div>
+</div>

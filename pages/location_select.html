@@ -1,0 +1,36 @@
+<!-- modal window -->
+<div id="model_blanket"></div>
+<div class="modal_geo" id="modal_geo">
+    <button id="curtain_buttton">GO BACK</button>
+    <div class="model_flex">
+        <div id="geo_insolation" style="width:100%;height:400px;"></div>
+        <div id="geo_temperature" style="width:100%;height:400px;"></div>
+        
+    </div>
+</div>
+<div class="location_select">    
+    <h4 class="animate__animated animate__fadeInDown page_name_head">The Location</h4>
+    <h5>Lets find out where you want to install the microgrid?</h5>
+    <div class="location_selection">
+        <div id="map" ></div>
+        <!-- <pre id="info"></pre> -->
+    </div>
+    <div id="current_loc"></div>
+    <div id="location_result_submit">
+        <div id="sel_loc_graph">
+            <form name="geo_data">                
+                <label>Latitude</label>
+                <div id="geo_lat" ng-model="geo_id.latitude">Latitude</div>
+                <label>Longitude</label>
+                <div id="geo_long" ng-model="geo_id.longitude">Longitude</div>
+                <label>Nearest Available Location</label>
+                <div id="geo_location">Nearest Location</div>
+            </form>            
+        </div>
+        <div id="loc_btn_cont">
+            <button id="btn_location_graph" class="btn_class_type1" ng-click="geo_loader()">Graph</button>
+            <button id="btn_location_final" class="btn_class_type1" ng-click="location_final()">Set Location and Proceed</button>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,57 @@
+    // The Begininng
+.begin_main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    place-items: center;
+    place-content: center;
+    overflow: hidden;
+    // outline: solid 2px red;
+    // &:hover{
+    //     background-color: wheat;
+    // }
+    // align-items: center;
+    // justify-content: center;
+
+    .begin_btn{
+        width: 270px;
+        height: 70px;
+        position: absolute;
+        padding: 8px;
+        border: solid 2px $fontcolor-dark;
+        color: $fontcolor-dark;
+        border-radius: 4px;
+        transition: all 0.2s ease-in-out;
+        background-color: transparent;
+        font-size: 3rem;
+        text-align: center;
+        // outline: 2px solid rgba(245, 222, 179, 0);
+        // outline-offset: 15px;
+        &:hover{        
+            // outline: 5px solid rgba(47, 231, 118, 0.459);
+            // outline-offset: 200px;
+            border: solid 2px $fontcolor-dark;
+            background-color: rgb(156, 163, 255);//$fontcolor-dark;
+            color: $forecolor-dark;
+            cursor: pointer;
+        }
+    }
+}
+
+.indicate{
+    opacity: 0.5;
+    animation: begin_btn_indicator 0.8s linear 0s infinite forwards;
+}
+
+@keyframes begin_btn_indicator {
+    from{
+        transform: scale(1);
+        opacity: 0.5;
+        border: solid 2px $fontcolor-dark;
+    }
+    to{
+        transform: scale(1.5);
+        opacity: 0;
+        border: solid 2px rgb(255, 255, 255);
+    }
+}

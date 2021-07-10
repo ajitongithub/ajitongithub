@@ -1,0 +1,112 @@
+﻿SL,Model,Manufacturer,inv_type,inv_kVA_rating,inv_input_voltage,cc_output_current,inv_efficiency,cc_type,cc_input_panel_watts,cc_PV_input_voltage,cc_efficiency,batt_support,weight,Dimensions,Price
+1,UTL Gamma Plus Mppt solar inverter 1 KVA /12 Volt,UTL Solar,Off-Grid,1,12,30,80,MPPT,1000,45,95,N/A,25,305.5 x 327.8 x 116,"9,900"
+2,UTL Gamma Plus Mppt solar inverter 1 KVA /24 Volt,UTL Solar,Off-Grid,1,24,30,80,MPPT,1000,45,95,N/A,25,305.5 x 327.8 x 116,"10,100"
+3,UTL Gamma Plus Mppt solar inverter 2 KVA /24 Volt,UTL Solar,Off-Grid,2,24,80,85,MPPT,2000,90,95,N/A,30,305.5 x 327.8 x 116,"26,000"
+4,UTL Gamma Plus Mppt solar inverter 2 KVA /48 Volt,UTL Solar,Off-Grid,2,48,40,85,MPPT,2000,80,95,N/A,39,305.5 x 327.8 x 116,N/A
+5,UTL Gamma Plus Mppt solar inverter 3 KVA /48 Volt,UTL Solar,Off-Grid,3,48,60,88,MPPT,3000,100,95,N/A,55,305.5 x 327.8 x 116,N/A
+6,UTL Gamma Plus Mppt solar inverter 5 KVA /48 Volt,UTL Solar,Off-Grid,5,48,100,88,MPPT,5000,230,95,N/A,55,305.5 x 327.8 x 116,N/A
+7,UTL Gamma Plus Mppt solar inverter 5 KVA /96 Volt,UTL Solar,Off-Grid,5,96,50,88,MPPT,5000,450,95,N/A,55,305.5 x 327.8 x 116,N/A
+8,Smarten Superb 1100 mppt inverter ,Smarten,Off-Grid,1,12,30,90,MPPT,500,50,93,N/A,30,N/A,"9,700"
+9,Smarten Superb 2200 mppt inverter,Smarten,Off-Grid,2,24,30,90,MPPT,1000,85,93,N/A,40,N/A,"14,000"
+10,Smarten Superb 5200 mppt inverter ,Smarten,Off-Grid,5,48,50,90,MPPT,3000,120,93,N/A,60,N/A,"50,500"
+11,Microtek solar inverter msun 2335 VA - off grid,Microtek,Off-Grid,2.335,24,30,80,PWM,1200,45,92,N/A,N/A,N/A,"9,600"
+12,Microtek solar inverter msun 1435 - off grid,Microtek,Off-Grid,1.435,12,30,80,PWM,600,30,92,150,N/A,N/A,"6,700"
+13,Microtek solar inverter msun 2035 - off grid,Microtek,Off-Grid,2.035,24,30,80,PWM,1200,45,92,200,N/A,N/A,"8,100"
+14,Microtek Solar Inverter msun 1235 Off Grid,Microtek,Off-Grid,1.235,12,30,80,PWM,600,30,92,200,N/A,N/A,"6,000"
+15,Microtek solar off grid inverter msun 1 kva -with mppt charger,Microtek,Off-Grid,1,24,40,86,MPPT,1000,85,98,200,17.5,350x398x170,"14,500"
+16,Microtek off grid solar inverter msun 2kva with mppt charger,Microtek,Off-Grid,2,36,40,89,MPPT,1960,130,98,200,31.5,490x255x425,"29,000"
+17,Microtek off grid solar inverter msun 2kva with mppt charger,Microtek,Off-Grid,2,48,40,89,MPPT,1960,170,98,200,33.5,490x255x425,"33,000"
+18,Microtek off grid solar inverter msun 3kva with mppt charger,Microtek,Off-Grid,3,48,60,89,MPPT,3000,170,98,200,36.5,490x255x425,"41,000"
+19,Microtek on grid Solar Inverter msun 1 kw,Microtek,On-Grid,1,N/A,15,97,MPPT,1000,N/A,98,N/A,35,405x314x135,"27,000"
+20,Microtek on grid solar inverter msun 2 kw,Microtek,On-Grid,2,N/A,15,97,MPPT,2000,N/A,98,N/A,35,405x314x135,"38,000"
+21,Microtek on grid solar inverter msun 3 kw,Microtek,On-Grid,3,N/A,15,97,MPPT,3000,N/A,98,N/A,35,405x314x135,"48,500"
+22,Microtek on grid solar inverter msun 5 kw,Microtek,On-Grid,4,N/A,15,97,MPPT,5000,N/A,98,N/A,35,405x314x135,"72,000"
+23,Microtek M-SUN SBH 3KVA/48V,Microtek,Hybrid,3,48,80,93,MPPT,4000,145,98,400,11,120x295x468,"90,000"
+24,Luminous Solar NXG Hybrid Inverter 1100/12V,Luminous,Hybrid - UPS,0.85,12,30,90,PWM,1000,21,94,N/A,10,370x320x250,"6,000"
+25,Luminous Solar NXG Hybrid Inverter 1800/24V,Luminous,Hybrid - UPS,1.5,24,40,95,PWM,1000,45,94,N/A,15,370x310x130,"8,300"
+26,Luminous Solar NXG Hybrid Inverter 1400 - 12V,Luminous,Hybrid - UPS,1.1,12,40,95,PWM,1000,21,94,N/A,15,370x310x130,"7,300"
+27,Luminous solar nxg hybrid inverter 750 VA - 12V,Luminous,Hybrid - UPS,0.75,12,20,95,PWM,400,21,94,N/A,8,370x320x130,"4,800"
+28,Luminous solar nxt 1.5 kva off grid hybrid inverter,Luminous,Hybrid - Off Grid,1.5,48,15,97,MPPT,1000,135,98,400,7,300x504x515,N/A
+29,Luminous solar nxt 2.5 kva off grid hybrid inverter,Luminous,Hybrid - Off Grid,2.5,48,30,97,MPPT,2000,165,98,400,7,300x504x516,"38,000"
+30,Luminous solar nxt 3.75 kva off grid hybrid inverter,Luminous,Hybrid - Off Grid,3.75,48,46,97,MPPT,3000,165,98,400,7,300x504x517,"40,000"
+31,Luminous solar nxt 5.75 kva off grid hybrid inverter,Luminous,Hybrid - Off Grid,5.75,48,60,97,MPPT,5000,165,98,400,9.8,339x565x172,"54,000"
+32,Luminous solar 7.5 KVA off grid hybrid inverter,Luminous,Hybrid - Off Grid,7.5,96,60,97,MPPT,6000,240,98,200,76.3,350 x 635 x 589,"75,000"
+33,Luminous solar 9.5 KVA off grid hybrid inverter,Luminous,Hybrid - Off Grid,9.5,120,50,97,MPPT,7500,230,97,200,125,400x575x783,"1,15,000"
+34,Luminous solar nxt 12.5 KVA off grid hybrid inverter,Luminous,Hybrid - Off Grid,N/A,N/A,65,96.8,MPPT,10000,300,97,200,150,400x575x783,"1,35,000"
+35,NXI 130,Luminous,Hybrid - On Grid,2.335,N/A,N/A,96.8,MPPT,3000,N/A,97,200,9.8,339x565x172,"39,000"
+36,NXI 120,Luminous,Hybrid - On Grid,N/A,N/A,N/A,96.8,MPPT,2000,N/A,97,200,9.8,339x565x172,"32,000"
+37,NXI 140,Luminous,Hybrid - On Grid,N/A,N/A,N/A,96.8,MPPT,4000,N/A,97,200,9.8,339x565x172,"52,500"
+38,NXI 360,Luminous,Hybrid - On Grid,N/A,N/A,N/A,96.8,MPPT,6000,N/A,97,200,9.8,339x565x172,"70,000"
+39,NXI 310,Luminous,Hybrid - On Grid,N/A,N/A,N/A,96.8,MPPT,10000,N/A,97,200,9.8,339x565x172,"91,000"
+40,NXI 320,Luminous,Hybrid - On Grid,N/A,N/A,N/A,96.8,MPPT,20000,N/A,97,200,9.8,339x565x172,"1,29,000"
+41,NXI 315,Luminous,Hybrid - On Grid,N/A,N/A,N/A,96.8,MPPT,15000,N/A,97,200,9.8,339x565x172,"1,10,500"
+42,NXI 325,Luminous,Hybrid - On Grid,N/A,N/A,N/A,96.8,MPPT,25000,N/A,97,200,9.8,339x565x172,"1,40,000"
+43,SE17K,Solar Edge,Hybrid - On Grid,N/A,750,23,98,MPPT,22950,1000,98,200,33.2,540 x 315 x 540,"1,98,000"
+44,SE27.6K,Solar Edge,Hybrid - On Grid,N/A,750,40,98.3,MPPT,37250,1000,98.3,200,45,775x315x260,"2,79,000"
+45,BRAINY ECO 1600 VA,Sukam,Off-Grid - UPS,1.1,12,30,90,PWM,1500,25,92,100,11.6,302x311x128,"9,600"
+46,BT800SW,Base,UPS,0.8,12,N/A,91,N/A,N/A,N/A,N/A,N/A,10,360x276x132,"3,895"
+47,BT1400SW,Base,UPS,1.4,24,N/A,91,N/A,N/A,N/A,N/A,N/A,16.5,360x321x146,"5,460"
+48,Consul Neowatt ,Consul Neowatt ,Hybrid Inverter,4,48,N/A,95,N/A,N/A,N/A,N/A,N/A,N/A,N/A,70500
+49,Consul Neowatt ,Consul Neowatt ,Hybrid Inverter,6,96,N/A,95,N/A,N/A,N/A,N/A,N/A,N/A,N/A,73500
+50,Consul Neowatt ,Consul Neowatt ,Hybrid Inverter,7,96,N/A,95,N/A,N/A,N/A,N/A,N/A,N/A,N/A,76500
+51,Consul Neowatt ,Consul Neowatt ,Hybrid Inverter,9,96,N/A,95,N/A,N/A,N/A,N/A,N/A,N/A,N/A,82500
+52,Consul Neowatt ,Consul Neowatt ,Hybrid Inverter,11,120,N/A,95,N/A,N/A,N/A,N/A,N/A,N/A,N/A,117500
+53,Consul Neowatt ,Consul Neowatt ,Hybrid Inverter,14,120,N/A,95,N/A,N/A,N/A,N/A,N/A,N/A,N/A,176500
+54,Consul Neowatt ,Consul Neowatt ,Hybrid Inverter,17,120,N/A,95,N/A,N/A,N/A,N/A,N/A,N/A,N/A,214000
+55,Consul Neowatt ,Consul Neowatt ,Hybrid Inverter,14,120,N/A,95,N/A,N/A,N/A,N/A,N/A,N/A,N/A,236000
+56,Consul Neowatt ,Consul Neowatt ,Hybrid Inverter,21,240,N/A,95,N/A,N/A,N/A,N/A,N/A,N/A,N/A,246000
+57,Consul Neowatt ,Consul Neowatt ,Hybrid Inverter,29,240,N/A,95,N/A,N/A,N/A,N/A,N/A,N/A,N/A,285000
+58,Consul Neowatt ,Consul Neowatt ,Hybrid Inverter,36,240,N/A,95,N/A,N/A,N/A,N/A,N/A,N/A,N/A,357000
+59,Consul Neowatt ,Consul Neowatt ,Hybrid Inverter,43,240,N/A,95,N/A,N/A,N/A,N/A,N/A,N/A,N/A,422000
+60,Consul Neowatt ,Consul Neowatt ,Hybrid Inverter,57,240,N/A,95,N/A,N/A,N/A,N/A,N/A,N/A,N/A,673500
+61,Consul Neowatt ,Consul Neowatt ,Hybrid Inverter,71,240,N/A,95,N/A,N/A,N/A,N/A,N/A,N/A,N/A,792000
+62,Consul Neowatt ,Consul Neowatt ,Hybrid Inverter,143,240,N/A,95,N/A,N/A,N/A,N/A,N/A,N/A,N/A,1066000
+63,Sukam,Sukam,Solar Inverter,1.1,12,N/A,93,N/A,N/A,N/A,N/A,N/A,N/A,N/A,6500
+64,Sukam,Sukam,Solar Inverter,1.6,24,N/A,93,N/A,N/A,N/A,N/A,N/A,N/A,N/A,7500
+65,Sukam,Sukam,Solar Inverter,1.4,24,N/A,93,N/A,N/A,N/A,N/A,N/A,N/A,N/A,17500
+66,Sukam,Sukam,Solar Inverter,2.9,48,N/A,93,N/A,N/A,N/A,N/A,N/A,N/A,N/A,30000
+67,Sukam,Sukam,Solar Inverter,4.3,48,N/A,93,N/A,N/A,N/A,N/A,N/A,N/A,N/A,45000
+68,Sukam ,Sukam ,Solar Inverter,8.9,96,N/A,93,N/A,N/A,N/A,N/A,N/A,N/A,N/A,65000
+69,Sukam,Sukam,Solar Inverter,10,120,N/A,93,N/A,N/A,N/A,N/A,N/A,N/A,N/A,85000
+70,Havells,Havells,Solar Inverter,3.1,120,N/A,95,N/A,N/A,N/A,N/A,N/A,N/A,N/A,26000
+71,Havells,Havells,Solar Inverter,4.3,120,N/A,95,N/A,N/A,N/A,N/A,N/A,N/A,N/A,34000
+72,Havells,Havells,Solar Inverter,7.9,240,N/A,95,N/A,N/A,N/A,N/A,N/A,N/A,N/A,79000
+73,Havells,Havells,Solar Inverter,15.7,240,N/A,95,N/A,N/A,N/A,N/A,N/A,N/A,N/A,92000
+74,Havells,Havells,Solar Inverter,21.4,240,N/A,95,N/A,N/A,N/A,N/A,N/A,N/A,N/A,112000
+75,Havells,Havells,Solar Inverter,28.6,240,N/A,95,N/A,N/A,N/A,N/A,N/A,N/A,N/A,115500
+76,Havells,Havells,Solar Inverter,42.9,240,N/A,95,N/A,N/A,N/A,N/A,N/A,N/A,N/A,152500
+77,Havells,Havells,Solar Inverter,71.4,240,N/A,95,N/A,N/A,N/A,N/A,N/A,N/A,N/A,210500
+78,Sukam,Sukam,Grid-Tied Inverter,1.4,12,N/A,94,N/A,N/A,N/A,N/A,N/A,N/A,N/A,22000
+79,Sukam,Sukam,Grid-Tied Inverter,2.9,24,N/A,94,N/A,N/A,N/A,N/A,N/A,N/A,N/A,25000
+80,Sukam,Sukam,Grid-Tied Inverter,4.3,24,N/A,94,N/A,N/A,N/A,N/A,N/A,N/A,N/A,33000
+81,Sukam,Sukam,Grid-Tied Inverter,5.7,48,N/A,94,N/A,N/A,N/A,N/A,N/A,N/A,N/A,43000
+82,Sukam,Sukam,Grid-Tied Inverter,7.1,48,N/A,94,N/A,N/A,N/A,N/A,N/A,N/A,N/A,46000
+83,Sukam,Sukam,Grid-Tied Inverter,14.3,120,N/A,94,N/A,N/A,N/A,N/A,N/A,N/A,N/A,94000
+84,Sukam,Sukam,Grid-Tied Inverter,28.6,240,N/A,94,N/A,N/A,N/A,N/A,N/A,N/A,N/A,129000
+85,Sukam,Sukam,Grid-Tied Inverter,42.9,240,N/A,94,N/A,N/A,N/A,N/A,N/A,N/A,N/A,140000
+86,Sukam,Sukam,Grid-Tied Inverter,71.4,240,N/A,94,N/A,N/A,N/A,N/A,N/A,N/A,N/A,250000
+87,Sunny Tripower 5000 TL,SMA,Solar Inverter,7.1,48,N/A,96,N/A,N/A,N/A,N/A,N/A,N/A,N/A,127500
+88,Sunny Tripower 6000 TL,SMA,Solar Inverter,8.6,48,N/A,96,N/A,N/A,N/A,N/A,N/A,N/A,N/A,146000
+89,Sunny Tripower 7000 TL,SMA,Solar Inverter,10,96,N/A,96,N/A,N/A,N/A,N/A,N/A,N/A,N/A,159000
+90,Sunny Tripower 8000 TL,SMA,Solar Inverter,11.4,96,N/A,96,N/A,N/A,N/A,N/A,N/A,N/A,N/A,166000
+91,Sunny Tripower 9000 TL,SMA,Solar Inverter,12.9,120,N/A,96,N/A,N/A,N/A,N/A,N/A,N/A,N/A,177000
+92,Sunny Tripower 10000 TL,SMA,Solar Inverter,14.3,120,N/A,96,N/A,N/A,N/A,N/A,N/A,N/A,N/A,183000
+93,Sunny Tripower 12000 TL,SMA,Solar Inverter,17.1,240,N/A,96,N/A,N/A,N/A,N/A,N/A,N/A,N/A,189000
+94,Sunny Tripower 20000 TL,SMA,Solar Inverter,28.6,240,N/A,96,N/A,N/A,N/A,N/A,N/A,N/A,N/A,195000
+95,Sunny Tripower 25000 TL,SMA,Solar Inverter,35.7,240,N/A,96,N/A,N/A,N/A,N/A,N/A,N/A,N/A,202000
+96,RPI-H3,Delta,Solar Inverter,4.3,48,N/A,95,N/A,N/A,N/A,N/A,N/A,N/A,N/A,42000
+97,RPI-H5,Delta,Solar Inverter,7.1,96,N/A,95,N/A,N/A,N/A,N/A,N/A,N/A,N/A,53000
+98,RPI-M6A,Delta,Solar Inverter,8.6,120,N/A,95,N/A,N/A,N/A,N/A,N/A,N/A,N/A,83000
+99,RPI-M10A,Delta,Solar Inverter,14.3,240,N/A,95,N/A,N/A,N/A,N/A,N/A,N/A,N/A,94000
+100,RPI-M15A,Delta,Solar Inverter,21.4,240,N/A,95,N/A,N/A,N/A,N/A,N/A,N/A,N/A,130000
+101,RPI-M20A,Delta,Solar Inverter,28.6,240,N/A,95,N/A,N/A,N/A,N/A,N/A,N/A,N/A,135000
+102,RPI-M30A,Delta,Solar Inverter,42.9,240,N/A,95,N/A,N/A,N/A,N/A,N/A,N/A,N/A,140000
+103,RPI-M50A,Delta,Solar Inverter,71.4,240,N/A,95,N/A,N/A,N/A,N/A,N/A,N/A,N/A,210000
+104,ABB,ABB,On-Grid Inverter,4.3,48,N/A,95,N/A,N/A,N/A,N/A,N/A,N/A,N/A,52400
+105,ABB,ABB,On-Grid Inverter,7.1,48,N/A,95,N/A,N/A,N/A,N/A,N/A,N/A,N/A,72400
+106,ABB,ABB,On-Grid Inverter,8.6,96,N/A,95,N/A,N/A,N/A,N/A,N/A,N/A,N/A,81400
+107,ABB,ABB,On-Grid Inverter,14.3,120,N/A,95,N/A,N/A,N/A,N/A,N/A,N/A,N/A,105000
+108,ABB,ABB,On-Grid Inverter,21.4,120,N/A,95,N/A,N/A,N/A,N/A,N/A,N/A,N/A,136500
+109,ABB,ABB,On-Grid Inverter,28.6,240,N/A,95,N/A,N/A,N/A,N/A,N/A,N/A,N/A,156500
+110,ABB,ABB,On-Grid Inverter,42.9,240,N/A,95,N/A,N/A,N/A,N/A,N/A,N/A,N/A,174000
+111,ABB,ABB,On-Grid Inverter,71.4,240,N/A,95,N/A,N/A,N/A,N/A,N/A,N/A,N/A,254500

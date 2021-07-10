@@ -1,0 +1,156 @@
+<div id="simulation_modal_curtain"></div>
+<h4 class="animate__animated animate__fadeInDown page_name_head">Simulation Data</h4>
+
+<div class="simulation_data_container">
+    
+    <div class="modal_simulation_progress" id="simulation_result_modal">
+        <h3>PROGRESS REPORT</h3>
+        <h5 id="sim_modal_progress"></h5>
+        <button class="btn_class_type1" id="sim_modal_result_button" ng-click="sim_first_result_btn()">SEE RESULTS</button>
+        <!-- <button class="btn_class_type1" id="sim_modal_result_button" ng-click="sim_first_result_btn()">SEE RESULTS</button> -->
+    
+    </div>
+
+    <div class="simulation_data_card">
+        <form name="grid_characteristics" class="grid_character">
+            <div>
+                <h5>Grid Reliability</h5>
+                <input type="number" placeholder="Reliability" ng-model="simulation_data.grid_reliability">
+                <div class="switch">
+                    <label>Independent Grid?</label>
+                    <label>
+                        No
+                        <input type="checkbox" ng-model="simulation_data.grid_dependency" ng-change="grid_dependency_func()">
+                        <span class="lever"></span>
+                        Yes
+                    </label>
+                  </div>
+                  <h5>Microgrid Focus? ( Experimental )</h5>
+                  <p>
+                    <label>
+                      <input name="group1" type="radio"  ng-model="simulation_data.microgrid_focus" value="economic" ng-checked="true"/>
+                      <span> Economic</span>
+                    </label>
+                  </p>
+                  <p>
+                    <label>
+                      <input name="group1" type="radio" ng-model="simulation_data.microgrid_focus" value="balanced"/>
+                      <span>Balanced</span>
+                    </label>
+                  </p>
+                  <p>
+                    <label>
+                      <input name="group1" type="radio" ng-model="simulation_data.microgrid_focus" value="reliable"/>
+                      <span>Reliability</span>
+                    </label>
+                  </p>
+            </div>
+            <div>
+                <h5>Simulation Period (in Days)</h5>
+                <input type="number" placeholder="Simulation Period" ng-model="simulation_data.simulation_days"> 
+                <h5>Preferred Autonomy Period in number of days</h5>
+                <input type="number" placeholder="Autonomy Period" ng-model="simulation_data.autonomy_period"> 
+                <h5>Preferred Depth of Discharge (DOD) for Batteries in %</h5>
+                <input type="number" placeholder="DOD" ng-model="simulation_data.depth_of_discharge">
+            </div>    
+            <!-- Switch -->
+            <div class="switch">
+                <h5>Aging Effects</h5>
+                <div>                    
+                    <label>Battery Aging</label>
+                    <label>
+                        Disable
+                        <input type="checkbox" ng-model="simulation_data.batt_aging_flag">
+                        <span class="lever"></span>
+                        Enable
+                    </label>
+                    <hr>
+                    <label>Solar Panel Aging</label>
+                    <label>
+                        Disable
+                        <input type="checkbox" ng-model="simulation_data.solar_panel_aging_flag">
+                        <span class="lever"></span>
+                        Enable
+                    </label>
+                    <hr>
+                    <label>Inverter / CC Aging</label>
+                    <label>
+                        Disable
+                        <input type="checkbox" ng-model="simulation_data.inv_cc_aging_flag">
+                        <span class="lever"></span>
+                        Enable
+                    </label>
+                </div>
+               
+            </div>
+            <!-- Temperature Dependencies -->
+            <div class="switch">
+                <h5>Temperature Effects</h5>
+                <div>
+                    
+                    <label>Battery Temperature Effects</label>
+                    <label>
+                        Disable
+                        <input type="checkbox" ng-model="simulation_data.batt_temperature_flag">
+                        <span class="lever"></span>
+                        Enable
+                    </label>
+                    <hr>
+                    <label>Solar Panel Temperature Effects</label>
+                    <label>
+                        Disable
+                        <input type="checkbox" ng-model="simulation_data.solar_panel_temperature_flag">
+                        <span class="lever"></span>
+                        Enable
+                    </label>                    
+                </div>
+               
+            </div>
+            <!-- Discharge Current Dependencies -->
+            <div class="switch">
+                <h5>Discharge Current Effects</h5>
+                <div>                    
+                    <label>Battery Effects</label>
+                    <label>
+                        Disable
+                        <input type="checkbox" ng-model="simulation_data.batt_discharge_current_flag">
+                        <span class="lever"></span>
+                        Enable
+                    </label>
+                    <hr>
+                    <label>Inverter Effects</label>
+                    <label>
+                        Disable
+                        <input type="checkbox" ng-model="simulation_data.inverter_discharge_current_flag">
+                        <span class="lever"></span>
+                        Enable
+                    </label>                    
+                </div>               
+            </div>
+
+            <!-- Temperature Thresholds -->
+            <div class="switch">
+                <h5>Temperature Thresholds</h5>
+                <div>                    
+
+                    <label>Temperature in Degrees  </label>
+                    <input type="number" placeholder="Lower Threshold" ng-model="simulation_data.lower_threshold_temperature">
+                    <input type="number" placeholder="Upper Threshold" ng-model="simulation_data.upper_threshold_temperature">             
+                </div>      
+                
+                
+
+            </div>
+
+            <div id="simulation_button_div">
+                <button id="simu_prepare_btn" ng-click="simulation_final()">Prepare for Simulation</button>                
+                <button id="simu_runner_btn" ng-click="simulation_run()">Run Simulation</button>
+            </div>
+        </form>
+    </div>
+    <div class="simulation_data_card">
+        <h4>Load Profile</h4>
+        <div id="simulation_first_graph"></div>
+        <button id="load_duration_profile" ng-click="load_duration_profile()">Load Duration Profile</button>
+    </div>
+</div>

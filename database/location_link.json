@@ -1,0 +1,99 @@
+{
+    "location": [{
+            "name": "Mumbai",
+            "latitude": "19.11",
+            "longitutde": "72.91",
+            "altitude_meters": "145",
+            "source": "renewables-ninja",
+            "file_id": "weather_mumbai.csv",
+            "temperature": 2,
+            "insolation": 1
+        },
+        {
+            "name": "Sikkim",
+            "latitude": "27.55",
+            "longitutde": "88.5",
+            "altitude_meters": "1792",
+            "source": "renewables-ninja",
+            "file_id": "weather_sikkim.csv",
+            "temperature": 2,
+            "insolation": 1
+        },
+        {
+            "name": "Mount Abu",
+            "latitude": "24.5925",
+            "longitutde": "72.7083",
+            "altitude_meters": "1220",
+            "source": "renewables-ninja",
+            "file_id": "weather_mount-abu.csv",
+            "temperature": 2,
+            "insolation": 1
+        },
+        {
+            "name": "Lakshadweep",
+            "latitude": "10.57",
+            "longitutde": "72.64",
+            "altitude_meters": "14",
+            "source": "renewables-ninja",
+            "file_id": "weather_lakshadweep.csv",
+            "temperature": 2,
+            "insolation": 1
+        },
+        {
+            "name": "Dahradun",
+            "latitude": "30.3165",
+            "longitutde": "78.0322",
+            "altitude_meters": "653",
+            "source": "Climate-One",
+            "file_id": "weather_dahradun.csv",
+            "temperature": 2,
+            "insolation": 1,
+            "rainfall":3,
+            "windspeed":4,
+            "wind_direction":5,
+            "humidity":6
+        },
+        {
+            "name": "Roorkee",
+            "latitude": "29.8543",
+            "longitutde": "77.8880",
+            "altitude_meters": "277",
+            "source": "Climate-One",
+            "file_id": "weather_roorkee.csv",
+            "temperature": 2,
+            "insolation": 1,
+            "rainfall":3,
+            "windspeed":4,
+            "wind_direction":5,
+            "humidity":6
+        },
+        {
+            "name": "Panagarh",
+            "latitude": "23.4364",
+            "longitutde": "87.4792",
+            "altitude_meters": "71",
+            "source": "Climate-One",
+            "file_id": "weather_panagarh.csv",
+            "temperature": 2,
+            "insolation": 1,
+            "rainfall":3,
+            "windspeed":4,
+            "wind_direction":5,
+            "humidity":6
+        },
+        {
+            "name": "Bareilly",
+            "latitude": "28.3670",
+            "longitutde": "79.4304",
+            "altitude_meters": "178",
+            "source": "Climate-One",
+            "file_id": "weather_bareilly.csv",
+            "temperature": 2,
+            "insolation": 1,
+            "rainfall":3,
+            "windspeed":4,
+            "wind_direction":5,
+            "humidity":6
+        }
+    ]
+}

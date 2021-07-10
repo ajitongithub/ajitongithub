@@ -1,0 +1,50 @@
+<div class="auto_profile_main_container">
+    <!-- Home Page -->
+    <div class="auto_profile_selector">
+        <div class="auto_prof_splash_card">
+            <h3>Design Manually</h3>
+            <img src="../assets/images/design_manually.png">
+            <button ng-click="manual_selection('-100%')" class="btn_auto_profile btn_orangish">SELECT</button>
+        </div>
+        <div class="auto_prof_splash_card">
+            <h3>Load from Template</h3>
+            <img src="../assets/images/template_design.png">
+            <button ng-click="manual_selection('-200%')" class="btn_auto_profile btn_royal_blue">SELECT</button> 
+        </div>
+        
+    </div>
+
+    <!-- Second Part - Design Manually -->
+    <div class="div_manual_load_page">
+        <h2 class="btn_orangish">Manual Design of Loads</h2>
+        <div class="auto_manual_card loads_listing_manual">            
+            <div class="">
+                <h3>Select Loads</h3>
+                <input type="checkbox" value="12">
+            </div>
+        </div>
+        <button ng-click="auto_profile_home()" class="btn_auto_profile btn_orangish">HOME</button>
+    </div>
+
+    <!-- Third Part - From Templates -->
+    <div class="auto_profile_selector">
+        <h2 class="btn_royal_blue">Load from Templates</h2>
+        <div class="auto_manual_card">
+            <h3>Select Loads</h3>
+            
+            <input type="radio" name="auto_profile_type" id="auto_design_manual">
+            <label for="auto_design_manual">
+        </div>
+        <div class="auto_manual_card">
+            <h3 >Load from Template</h3>
+            <img src="../assets/images/template_design.png">
+            <div class="selector_radio">
+                <input type="radio" id="auto_load_manual" name="auto_profile_type" value="Select">
+                <label for="auto_load_manual">Select</label><br>
+                <input type="radio" id="auto_load_template" name="auto_profile_type" value="Select">
+                <label for="auto_load_template">Select</label><br>
+            </div>    
+        </div>
+        <button ng-click="auto_profile_home()" class="btn_auto_profile btn_royal_blue">HOME</button>
+    </div>
+</div>

@@ -1,0 +1,23 @@
+{
+	"tariff_data": [{
+		"ID": "1",
+		"tariff_name": "tariff_buy_till_100",
+		"tariff_amount": 3.30
+	}, {
+		"ID": "2",
+		"tariff_name": "tariff_buy_till_300",
+		"tariff_amount": 7.30
+	}, {
+		"ID": "3",
+		"tariff_name": "tariff_buy_till_500",
+		"tariff_amount": 9.90
+	}, {
+		"ID": "4",
+		"tariff_name": "tariff_buy_from_501",
+		"tariff_amount": 11.5
+	}, {
+		"ID": "5",
+		"tariff_name": "tariff_sell",
+		"tariff_amount": 5
+	}]
+}

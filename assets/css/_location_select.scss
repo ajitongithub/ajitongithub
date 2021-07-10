@@ -1,0 +1,133 @@
+.location_select{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 80px auto 6fr auto 1fr;
+    justify-content: space-between;
+    row-gap: 10px;
+    width: 98%;
+    // background-color: red;
+    border-radius: 5px;
+    margin: 20px auto;
+    .location_selection{
+        width: 100%;            
+        // Map
+        #map{
+            position: relative;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            border-top:solid 2px $forecolor-dark-highlight;
+            border-bottom:solid 2px $forecolor-dark-highlight;       
+        }
+    }
+    #current_loc{
+        position: relative;
+        width: 100%;
+        border-top:solid 6px $forecolor-dark-highlight;
+        border-bottom:solid 6px $forecolor-dark-highlight;
+        text-align: center;
+        vertical-align: middle;
+    }
+    #location_result_submit{
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+        row-gap: 10px;
+        column-gap: 10px;
+        #sel_loc_graph{
+            background-color: rgba(85, 85, 85, 0.164);
+            border: solid 2px white;
+            border-radius: 10px;
+            padding: 10px;
+            transition: all 150ms ease;
+            &:hover{
+                background-color: rgba(17, 17, 17, 0.164);
+            }
+            form{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        div{
+            font-size: 1.5rem;
+            // border: solid 1px wheat;
+            padding: 0 4px;
+            label{
+                font-size: 1.2rem;
+            }
+        }
+        #loc_btn_cont{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+    }
+.ins_btn_2{
+    display: block;
+    // height: 60px;
+    position: relative;
+    padding: 5px;
+    // margin: 2px;
+    border: solid 2px $ins_btn_foreground;
+    color: $ins_btn_foreground;
+    border-radius: 4px;
+    transition: all 0.1s ease-in-out;
+    background-color: transparent;
+    font-size: 2.3rem;
+    text-align: center;
+    &:hover{        
+        border: solid 2px $fontcolor-dark;
+        background-color: rgba(49, 173, 18, 0.63);//$fontcolor-dark;
+        color: white;
+        cursor: pointer;
+    }
+}
+}
+.modal_geo{
+
+    position: absolute;
+    z-index: 999;
+    display: block;
+    width: 100%;
+    height: 90%;
+    // border: solid 2px red;  
+    background-color: rgba(65, 65, 65, 0.685);
+    transform: translateY(-100%);
+    transition: all 150ms ease;
+    overflow: auto;
+    .model_flex{
+        display: grid;
+        grid-template-columns: 0.8fr;
+        justify-content:space-around ;
+        grid-template-rows: 450px 450px;
+        row-gap: 10px;
+        border-radius: 5px;
+    }
+}
+#model_blanket{
+    position: absolute;
+    display: none;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    z-index: 800;
+    opacity: 0.8;
+    overflow: hidden;
+}
+#curtain_buttton{
+    position: sticky;
+    top: 10px;
+    width: 100%;
+    height: 50px;
+    z-index: 1200;
+    background-color: rgba(125, 3, 247, 0.596);
+    border: unset;
+    
+    color: white;
+    font-size: 2rem;
+    &:hover{
+        background-color: rgba(125, 3, 247, 0.884);
+        cursor: pointer;
+    }
+}

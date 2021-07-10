@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script type="application/javascript" src="../assets/js/jquery-3.4.1.min.js"></script>
+<script type="application/javascript" src="../assets/js/materialize.min.js"></script>
+<script type="application/javascript" src="../assets/js/angular.min.js"></script>
+<script type="application/javascript" src="../assets/js/angular-animate.min.js"></script>
+<script type="application/javascript" src="../assets/js/plotly.min.js"></script>
+<script type="application/javascript" src="../assets/js/howler.core.min.js"></script>
+<script type="application/javascript" src="../assets/js/howler.min.js"></script>
+<script type="application/javascript" src="../assets/js/howler.spatial.min.js"></script>
+<script type="application/javascript" src="../assets/js/leaflet.js"></script>
+<!-- <script type="application/javascript" src="assets/js/jsmpeg.min.js"></script> -->
+
+<link rel="stylesheet" href="../assets/css/font-materials.css">
+<link type="text/css" rel="stylesheet" href="../assets/css/materialize.min.css" media="screen,projection">
+<link type="text/css" rel="stylesheet" href="../assets/css/leaflet.css">
+<style>
+    #mapid { 
+        /* position: relative; */
+        height: 100vh; }
+</style>
+<body>
+    <!-- This is a test -->
+    <div id="mapid"></div>
+</body>
+<script>
+    let mymap = L.map('mapid').setView([28.7041, 77.1025], 4);
+    mymap.on('click', onMapClick);
+    L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+            maxZoom: 18,
+            id: 'mapbox/streets-v11',
+            tileSize: 512,
+            zoomOffset: -1,
+            accessToken: 'pk.eyJ1IjoiYWppdG9ubWFwYm94IiwiYSI6ImNrOG8zNWhtaDAxcjgzZXBsMW51enZlNGoifQ.78IjjlIVdu-Rc-IKozcy5Q'
+        }).addTo(mymap);
+
+    function onMapClick(e) {
+           console.log("You clicked the map at " + e.latlng);
+        }   
+</script>
+
+</html>

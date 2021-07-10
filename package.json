@@ -1,0 +1,26 @@
+{
+  "name": "insti-clov_v3",
+  "version": "3.0.0",
+  "description": "Microgrid Simulator",
+  "main": "main.js",
+  "devDependencies": {
+    "electron": "^13.1.6",
+    "electron-packager": "^15.2.0"
+  },
+  "scripts": {
+    "start": "electron .",
+    "package-win": "electron-packager . instinct2  --icon=icon/instinct2.ico --overwrite --platform=win32 --arch=x64  --prune=true --out=buildsep --version-string.CompanyName=APA TechWorks --version-string.FileDescription=MicroGrid --version-string.ProductName=\"Instinct\""
+  },
+  "author": "Ajit Paul Abraham",
+  "license": "MIT",
+  "dependencies": {
+    "@0xcmdr/numjs": "^0.16.1",
+    "@babel/runtime": "^7.14.6",
+    "babel-runtime": "^6.26.0",
+    "npm-check-updates": "^11.8.1",
+    "pandas-js": "^0.2.4",
+    "python-shell": "^3.0.0",
+    "random-seed": "^0.3.0",
+    "scijs": "^0.7.3"
+  }
+}

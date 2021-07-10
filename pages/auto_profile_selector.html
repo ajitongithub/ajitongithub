@@ -1,0 +1,150 @@
+<section class="auto-load-loading__main_container">
+    <div class="auto-load-loading__scroll_container">
+        <div class="auto-load__main-splash">
+            <div class="auto_profile_selector">
+                <div class="auto_prof_splash_card">
+                    <h3>Design Manually</h3>
+                    <img src="../assets/images/design_manually.png">
+                    <button ng-click="manual_selection('-100%')" class="btn_auto_profile btn_orangish">SELECT</button>
+                </div>
+                <div class="auto_prof_splash_card">
+                    <h3>Load from Template</h3>
+                    <img src="../assets/images/template_design.png">
+                    <button ng-click="manual_selection('-200%')" class="btn_auto_profile btn_royal_blue">SELECT</button>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="auto-load__manual">           
+            <div class="manual_load_design">
+                <h3>Design Manually</h3>
+                <div class="manual_load_design__div">
+                    <div class="cards__container">
+                        <div class="ins_card w_100 loads_container">
+                            <h4>Select Appliances / Loads</h4>
+                            <div class="loads_selection__div">
+                                <fieldset>
+                                    <legend>Load Selection</legend>
+                                    <select size="2">
+                                        <optgroup label="Theropods">
+                                            <option>Tyrannosaurus</option>
+                                            <option>Velociraptor</option>
+                                            <option>Deinonychus</option>
+                                        </optgroup>
+                                        <optgroup label="Sauropods">
+                                            <option>Diplodocus</option>
+                                            <option>Saltasaurus</option>
+                                            <option>Apatosaurus</option>
+                                        </optgroup>
+                                    </select>
+                                </fieldset>
+                                <fieldset>
+                                    <legend>Load Details</legend>
+                                    <label>ASD</label>
+                                </fieldset>
+                            </div>
+                        </div>
+                        <div class="ins_card w_100 white_bg">
+                            <h4>Select the Usage Profile</h4>
+                            <div>
+                                <fieldset class="checkboxgroup">                                    
+                                    <legend>some label</legend>
+                                    <select name="Cars" size="10">  
+                                        <option value="Merceders"> Merceders </option>  
+                                        <option value="BMW"> BMW </option>  
+                                        <option value="Jaguar"> Jaguar </option>  
+                                        <option value="Lamborghini"> Lamborghini </option>  
+                                        <option value="Ferrari"> Ferrari </option>  
+                                        <option value="Ford"> Ford </option>  
+                                    </select>  
+                                    <label><input type="checkbox"> checkbox 1</label>
+                                    <label><input type="checkbox"> checkbox 2</label>
+                                    <label><input type="checkbox"> checkbox 3</label>
+                                    <label><input type="checkbox"> checkbox 4</label>
+                                </fieldset>
+                            </div>
+                        </div>
+                        <div class="ins_card w_50">
+                            <h4>Load Aggregation</h4>
+                            <select name="Cars" size="10">  
+                                <option value="Merceders"> Merceders </option>  
+                                <option value="BMW"> BMW </option>  
+                                <option value="Jaguar"> Jaguar </option>  
+                                <option value="Lamborghini"> Lamborghini </option>  
+                                <option value="Ferrari"> Ferrari </option>  
+                                <option value="Ford"> Ford </option>  
+                            </select>  
+                        </div>
+                    </div>
+                    
+                    
+                    
+                    <!-- <div style="width: 100%; background-color: red; height: 5900px;">TEST</div> -->
+                </div>
+                <div class="manual_load_design__btn_container">
+                    <button ng-click="manual_selection('0')" class="manual_load_design__btn btn_features btn_reset">RESET</button>
+                    <button ng-click="alert('processing')" class="manual_load_design__btn btn_features btn_process">PROCESS</button>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="auto-load__template">
+            <div class="auto_profile_selector">
+                <div class="auto_prof_splash_card">
+                    <h3>Back</h3>
+                    <button ng-click="manual_selection('0')" class="btn_auto_profile btn_royal_blue">SELECT</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+<!-- <div class="auto_profile_main_container">
+    <div class="auto_profile_selector">
+        <div class="auto_prof_splash_card">
+            <h3>Design Manually</h3>
+            <img src="../assets/images/design_manually.png">
+            <button ng-click="manual_selection('-100%')" class="btn_auto_profile btn_orangish">SELECT</button>
+        </div>
+        <div class="auto_prof_splash_card">
+            <h3>Load from Template</h3>
+            <img src="../assets/images/template_design.png">
+            <button ng-click="manual_selection('-200%')" class="btn_auto_profile btn_royal_blue">SELECT</button> 
+        </div>
+        
+    </div>
+    <div class="div_manual_load_page">
+        <h2 class="btn_orangish">Manual Design of Loads</h2>
+        <div class="auto_manual_card loads_listing_manual">            
+            <div class="">
+                <h3>Select Loads</h3>
+                <input type="checkbox" value="12">
+            </div>
+        </div>
+        <button ng-click="auto_profile_home()" class="btn_auto_profile btn_orangish">HOME</button>
+    </div>
+
+    <div class="auto_profile_selector">
+        <h2 class="btn_royal_blue">Load from Templates</h2>
+        <div class="auto_manual_card">
+            <h3>Select Loads</h3>
+            
+            <input type="radio" name="auto_profile_type" id="auto_design_manual">
+            <label for="auto_design_manual">
+        </div>
+        <div class="auto_manual_card">
+            <h3 >Load from Template</h3>
+            <img src="../assets/images/template_design.png">
+            <div class="selector_radio">
+                <input type="radio" id="auto_load_manual" name="auto_profile_type" value="Select">
+                <label for="auto_load_manual">Select</label><br>
+                <input type="radio" id="auto_load_template" name="auto_profile_type" value="Select">
+                <label for="auto_load_template">Select</label><br>
+            </div>    
+        </div>
+        <button ng-click="auto_profile_home()" class="btn_auto_profile btn_royal_blue">HOME</button>
+    </div>
+</div> -->

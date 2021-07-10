@@ -1,0 +1,98 @@
+.main_summary{
+    display: grid;
+    grid-template-columns: 35px auto;
+    grid-template-rows: 1fr;
+    // justify-content: space-between;
+    position: relative;
+    
+    box-sizing: border-box;
+    flex-direction: column;
+    background-color: $sidebar-background-dark;
+    color: $sidebar-fontcolor-dark;
+    border-left: solid 2px limegreen;
+    // padding-right: 50px;
+    color: white;
+    transform: translateX(2%);
+    transition: all 150ms ease-in-out;
+    height: 100%;
+    width: 300px;
+    overflow: hidden;
+    z-index: 1000;
+
+    // &:hover{
+    //     transform: translateX(-83%);
+    // }
+        
+    .summary_opener{
+        position: relative;
+        align-items:center;
+        display: flex;
+        align-items: center;
+        transition: all 350ms ease;
+        //$summary-tab-handle-width;
+        height: 100%;
+        transition: all 350ms ease-in-out;
+        span{
+            display: block;
+            width: 25px;
+            i{
+                padding: 0;
+                margin: 0;
+                color: black;
+                position: relative;
+                transform: translateX(-25%);
+                
+            }
+        }
+        &:hover{
+            background-color: rgb(161, 226, 118);
+            cursor: pointer;
+            // i{
+            //    animation: chevron_attend 500ms ease-in-out infinite alternate;
+            // }
+        }
+    }
+// @keyframes chevron_attend {
+//     from{
+//         transform:  initial;
+//         transform:  translateX(-25%);
+        
+//     }
+//     to{
+//         // background-color: blue;
+//         transform:  translateX(0%);
+//     }
+// }
+    .summary_list{
+        background-color: rgba(0, 0, 0, 0.253);
+        
+        color: red;
+        // padding: 20px;
+        // width: 78px;
+        details{
+            all: unset;
+            width: 80%;
+            color: grey;
+            background-color: bisque;
+            border-radius: 5px;
+            margin: 10px;
+            padding: 10px;
+            list-style: none;
+            cursor: pointer;
+            border-left: solid 5px black;
+        }
+        summary{
+            all: unset;
+            width: 100%;
+            color: grey;
+            background-color: bisque;
+            border-radius: 5px;
+            // margin: 10px;
+            // padding: 10px;
+            list-style: none;
+            font-size: 1.5rem;
+            border-left: solid 5px black;
+            caret-color: aqua;
+        }
+    }
+}

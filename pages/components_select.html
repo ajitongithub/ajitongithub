@@ -1,0 +1,70 @@
+
+<h4 class="animate__animated animate__fadeInDown page_name_head">Components</h4>
+<div class="component_container">    
+    <div class="component_card">
+        <form name="solar_database_form">
+            <div>Select the preferred Solar Panel</div>
+            <select id="solar_database" name="solar_list" form="solar_database_form" ng-model="selectedSolar" ng-change="solar_change(selectedSolar)" style="display: block;">
+                <option ng-repeat="solar in solar_data" ng-value="{{solar}}" >
+                    {{solar.sn}} - {{solar.panel_manufacturer}} - {{solar.rating}}W - {{solar.tech_type}}
+                </option>
+            </select>
+            <!-- Details -->
+            <div class="component_details_data">Serial - {{selectedSolar.sn}}</div>
+            <div class="component_details_data">Manufacturer - {{selectedSolar.panel_manufacturer}}</div>
+            <div class="component_details_data">Rating - {{selectedSolar.rating}} W</div>
+            <div class="component_details_data" required>Technology - {{selectedSolar.tech_type}}</div>
+            <div class="component_details_data">Panel Model - {{selectedSolar.model}}</div>
+            <div class="component_details_data">Open Circuit Voltage - {{selectedSolar.Voc }} V</div>
+            <div class="component_details_data">Peak Voltage - {{selectedSolar.Vmp }} V</div>
+            <div class="component_details_data">Closed Circuit Current - {{selectedSolar.Isc }} A</div>
+            <div class="component_details_data">Peak  Current - {{selectedSolar.Imp }} A</div>
+            <div class="component_details_data">Panel Efficiency - {{selectedSolar.efficiency }} %</div>
+            <div class="component_details_data">Life - {{selectedSolar.life }} years</div>
+            <div class="component_details_data">Weight - {{selectedSolar.weight}} kg</div>
+            <div class="component_details_data">Price - {{selectedSolar.price | currency:"₹":0}}</div>
+        </form>
+    </div>
+
+    <div class="component_card">
+        <form name="battery_database_form">
+            <div>Select the preferred Battery</div>
+            <select id="battery_database" name="battery_list" form="battery_database_form" ng-model="selectedBattery" ng-change="battery_change(selectedBattery)" style="display: block;">
+                <option ng-repeat="battery in battery_data" ng-value="{{battery}}" >
+                    {{battery.sn}} - {{battery.manufacturer}} - {{battery.ah_rating}}Ah            
+                </option>
+            </select>
+            <!-- Details -->
+            <div class="component_details_data">Serial - {{selectedBattery.sn}}</div>
+            <div class="component_details_data">Manufacturer - {{selectedBattery.manufacturer}}</div>
+            <div class="component_details_data">C Rating - {{selectedBattery.C_rate}}</div>
+            <div class="component_details_data">AH Rating - {{selectedBattery.ah_rating}}</div>
+            <div class="component_details_data">Battery Model - {{selectedBattery.battery_model}}</div>
+            <div class="component_details_data">Voltage - {{selectedBattery.voltage }} V</div>
+            <div class="component_details_data">Weight - {{selectedBattery.weight}} kg</div>
+            <div class="component_details_data">Price - {{selectedBattery.price | currency:"₹":0}}</div>
+        </form>
+    </div>
+    <!-- Inverter -->
+    <div class="component_card">
+        <form name="inverter_database_form">
+            <div>Select the preferred Inverter</div>
+            <select id="inverter_database" name="inverter_list" form="inverter_database_form" ng-model="selectedInverter" ng-change="inverter_change(selectedInverter)" style="display: block;">
+                <option ng-repeat="inverter in inverter_data" ng-value="{{inverter}}" >
+                    {{inverter.sn}} - {{inverter.manufacturer}} - {{inverter.inv_kVA_rating}}kVA          
+                </option>
+            </select>
+            <!-- Details -->
+            <div class="component_details_data">Serial - {{selectedInverter.sn}}</div>
+            <div class="component_details_data">Manufacturer - {{selectedInverter.manufacturer}}</div>
+            <div class="component_details_data">Rating - {{selectedInverter.inv_kVA_rating}} kVA</div>
+            <div class="component_details_data">Input Voltage - {{selectedInverter.inv_input_voltage}} V</div>
+            <div class="component_details_data">Inverter Efficiency - {{selectedInverter.inv_efficiency}} %</div>
+            <!-- <div class="component_details_data">Voltage - {{selectedInverter.voltage }} V</div> -->
+            <div class="component_details_data">Weight - {{selectedInverter.weight}} kg</div>
+            <div class="component_details_data">Price - {{selectedInverter.price | priceCorrection | currency:"₹":0 }}</div>
+        </form>
+    </div>
+    <label class="lbl_component_info">{{lbl_component_info}}</label>
+    <div class="component_access" ><button id="btn_component_final" class="btn_class_type1" ng-click="component_final()">SELECT COMPONENT</button></div>
+</div>
