@@ -958,7 +958,6 @@ for (i = 0; i < simulation_hours; i++) {
   // console.log(linear_regression(nj.array([4, 5, 6, 7, 10]),nj.array([3, 8, 20, 30, 12])));
   // console.log(linear_regression(nj.array([0,1,2,3,4,5]),nj.array([98.9,12,6,9,5,2])));
 
-  // var regressive_data = linear_regression(nj_X_data,SOH_nj);
   var regressive_data = linear_regression(nj_X_data, SOH_nj);
 
   simulation_outputs.batt_SOH_line_equation = regressive_data;
