@@ -1,7 +1,28 @@
 {
     "sankey_energy": [{
         "label": ["Solar Insolation", "Solar Panel", "CC", "Battery", "Inverter", "Load", "Solar Panel Losses", "CC Losses", "Battery Losses", "Inverter Losses", "Overall Losses"],
-        "link": ["1", "(1000*.19)", "(1000*.19*0.97)", "(1000*0.19*0.97*0.98)", "(1000*0.19*0.97*0.98*0.95)", "(1000*.81)", "(1000*.19*0.03)", "(1000*0.19*0.97*0.02)", "(1000*0.19*0.97*0.98*0.05)"],
+        "link-value": ["1", "(1000*.19)", "(1000*.19*0.97)", "(1000*0.19*0.97*0.98)", "(1000*0.19*0.97*0.98*0.95)", "(1000*.81)", "(1000*.19*0.03)", "(1000*0.19*0.97*0.02)", "(1000*0.19*0.97*0.98*0.05)"],
         "link-label": ["Insolation to Solar Panel", "Panel to Charge Controller", "Charge Controller to Battery", "Battery to Inverter", "Inverter to Load", "", ""]
+    },{
+        "data":[
+            {
+                "source":0,
+                "target":1,
+                "link-value":"1000",
+                "link-label":"Insolation to Solar Panel"
+            },
+            {
+                "source":1,
+                "target":2,
+                "link-value":"(1000*.19)",
+                "link-label":"Panel to Charge Controller"
+            },
+            {
+                "source":2,
+                "target":3,
+                "link-value":"(1000*.19*0.97)",
+                "link-label":"Charge Controller to Battery"
+            }
+        ]
     }]
 }
