@@ -22,6 +22,12 @@
                 "target":3,
                 "link-value":"(1000*.19*0.97)",
                 "link-label":"Charge Controller to Battery"
+            },
+            {
+                "source":3,
+                "target":4,
+                "link-value":"(1000*.19*0.97)",
+                "link-label":"Battery to Inverter"
             }
         ]
     }]
