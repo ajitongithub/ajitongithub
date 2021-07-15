@@ -28,9 +28,7 @@
                                     <legend>Load Selection</legend>
                                     <select size="2">
                                         <optgroup label="Theropods">
-                                            <option>Tyrannosaurus</option>
-                                            <option>Velociraptor</option>
-                                            <option>Deinonychus</option>
+                                            <option ng-repeat="x in loads_data">{{x.Name}}</option>
                                         </optgroup>
                                         <optgroup label="Sauropods">
                                             <option>Diplodocus</option>
@@ -41,7 +39,7 @@
                                 </fieldset>
                                 <fieldset>
                                     <legend>Load Details</legend>
-                                    <label>ASD</label>
+                                    <label>{{load_wattage}}</label>
                                 </fieldset>
                             </div>
                         </div>
