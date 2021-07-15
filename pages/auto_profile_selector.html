@@ -27,14 +27,17 @@
                                 <fieldset>
                                     <legend>Load Selection</legend>
                                     <select size="2">
-                                        <optgroup label="Theropods">
+                                        <!-- <optgroup label="Theropods">
                                             <option ng-repeat="x in loads_data">{{x.Name}}</option>
+                                        </optgroup> -->
+                                        <optgroup ng-repeat="load_type in load_types" label="{{load_type}}">
+                                            <option ng-repeat="x in loads_data | filter:load_type" ng-click="detectIndex(x.SN)">{{x.Name}}</option>
                                         </optgroup>
-                                        <optgroup label="Sauropods">
+                                        <!-- <optgroup label="Sauropods">
                                             <option>Diplodocus</option>
                                             <option>Saltasaurus</option>
                                             <option>Apatosaurus</option>
-                                        </optgroup>
+                                        </optgroup> -->
                                     </select>
                                 </fieldset>
                                 <fieldset>

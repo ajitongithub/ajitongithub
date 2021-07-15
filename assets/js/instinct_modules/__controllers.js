@@ -1207,93 +1207,42 @@ Plotly.newPlot(sim_results_graph_6, data_sim_results_6, layout_sim_results_6,con
 //auto_load_loader_controller
 
 napp.controller('auto_load_loader_controller',function($scope,$http,$rootScope,$q){
-	// console.log(window.XMLHttpRequest);
+
 	$scope.loads_data = {};
 	$scope.load_wattage = {};
+	let temp_array_1 = [];
 
-	
 	// Data loading
-	$http.get('../database/loads_appliances.json').then(function(response){
-		// $scope.preset_loads = response.data.load_profile;
-		// console.log(response)
+	$http.get('../database/loads_appliances.json').then(function (response) {
+
 		//data sorting
 		let loads_data = response.data;
-		let temp_array_1 = [];
-		const load_types = loads_data.filter(clean_data);
-		console.log(load_types);
-		$scope.loads_data = response.data;//JSON.parse(response.data);
-		
-		
-		// 
-		// loads_data.forEach(data_points => {
-		// 	// console.log(data_points.Type)
-		// 	temp_array_1.push(data_points.Type);
-		// 	// console.log(temp_array_1.includes(temp_array_1));
-		// });
-		// console.log(temp_array_1);
-		// let distinct_load_types = []
-		// temp_array_1.forEach((ele)=>{
-		// 	// console.log(ele)
-		// 	console.log(temp_array_1.includes(ele));
-		// })
+		let load_types = loads_data.filter(sorter_2);
+		$scope.load_types = load_types.map((element) => element.Type).sort()
+		// console.log(load_types);
+		$scope.loads_data = response.data;
 
-
-	},function(err) {
+	}, function (err) {
 		console.log(err);
 	});
-// 
-	const clean_data = (value, index, self)=>{
-		
-		if (index <= 5){
-			// temp_array_1.push(value.Type);
-			// console.log(self[index].Type)
-			console.log(value.Type)
-		}
 
-		// console.log(temp_array_1)
+	const sorter_2 = (value, index, self) => {
+		if (temp_array_1.includes(String(value.Type))) {
+			return false
+		}
+		else {
+			temp_array_1.push(value.Type);
+			return true
+		}
+	}
+	// Ooption change detect
+	$scope.detectIndex = (data1) => {
+		console.log(data1)
 	}
 
 
-	// // fucntion to distinct loads tyep
-	// function onlyUnique(value, index, self) {
-	// 	// console.log(value)
-	// 	// console.log(index)
-	// 	console.log(self.map(s => s.Name))
-	// 	// return self.indexOf(value) === index;
-	// 	return false;
-	//   }
-	
-	// let distinct_loads =[];
-	// const sorter_2 = (values1)=>{
-		
-	// 	temp_array_1.push(values1.Type);
-	// 	console.log(temp_array_1.length);
-	// 	if (temp_array_1.includes("Standard Household")){
-	// 		return true;
-	// 	}
-	// 	else
-	// 	{
-	// 		return false
-	// 	}
-	// }
-
-	// console.log($httpProvider.defaults.headers)
-	// var defer = $q.defer();
-	// $http({
-	// 	method: 'GET',		
-	// 	url: '../database/loads_appliances.json',
-	// 		headers: {'Content-Type': undefined},
-	// 		uploadEventHandlers: {progress: function(e) {
-	// 			defer.notify(e.loaded * 100 / e.total);
-    //     }}
-    // }).then(defer.resolve.bind(defer), defer.reject.bind(defer));
-	// 		return defer.promise;
-	
 
 
-
-
-	//   console.log(HttpEventType.DownloadProgress);
 
 	// Active Button Changer 
 	var side_menu_active_system = document.getElementsByClassName('left_side_menu');
