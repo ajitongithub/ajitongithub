@@ -1712,11 +1712,11 @@ footer {
 }
 
 .manual_load_design .manual_load_design__div .cards__container .ins_card > * {
-  color: red;
+  color: beige;
 }
 
 .manual_load_design .manual_load_design__div .cards__container .ins_card fieldset label {
-  color: green;
+  color: white;
   font-size: 1.2rem;
 }
 

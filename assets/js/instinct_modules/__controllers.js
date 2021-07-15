@@ -1236,8 +1236,14 @@ napp.controller('auto_load_loader_controller',function($scope,$http,$rootScope,$
 		}
 	}
 	// Ooption change detect
-	$scope.detectIndex = (data1) => {
-		console.log(data1)
+	$scope.detectIndex = (request_data) => {
+		// console.log(data1)
+		$scope.RatedPower = request_data.RatedPower;
+		$scope.RecommendedProfile = request_data.RecommendedProfile;
+		$scope.Scenario = request_data.Scenario;
+		$scope.PowerFactor = request_data.PowerFactor;
+		$scope.Name = request_data.Name;
+		$scope.Manufacturer = request_data.Manufacturer;
 	}
 
 
