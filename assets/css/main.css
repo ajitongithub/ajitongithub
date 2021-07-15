@@ -1750,8 +1750,8 @@ footer {
 
 .manual_load_design .manual_load_design__div .cards__container .ins_card .loads_selection__div > fieldset:nth-child(1) {
   -ms-grid-column: 1;
-  -ms-grid-column-span: 6;
-  grid-column: 1/7;
+  -ms-grid-column-span: 4;
+  grid-column: 1/5;
 }
 
 .manual_load_design .manual_load_design__div .cards__container .ins_card .loads_selection__div > fieldset:nth-child(1) select {
@@ -1759,7 +1759,7 @@ footer {
 }
 
 .manual_load_design .manual_load_design__div .cards__container .ins_card .loads_selection__div > fieldset:nth-child(2) {
-  grid-column: 7/-1;
+  grid-column: 5/-1;
 }
 
 .manual_load_design .manual_load_design__div .cards__container .ins_card .loads_selection__div > fieldset:nth-child(2) select {

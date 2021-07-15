@@ -14,7 +14,7 @@ let napp = angular.module("insti-app", ['angular-loading-bar', 'ngRoute']);
 napp.config(['$routeProvider', '$locationProvider','$httpProvider', function ($routeProvider, $locationProvider,$httpProvider) {
 	// $locationProvider.html5Mode(true); //activate HTML5 Mode
 	// Route Provider
-	console.log($httpProvider);
+	// console.log($httpProvider);
 	$routeProvider.when('/', {
 		cache: false,
 		templateUrl: '../pages/begining.html',

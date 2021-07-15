@@ -33,16 +33,11 @@
                                         <optgroup ng-repeat="load_type in load_types" label="{{load_type}}">
                                             <option ng-repeat="x in loads_data | filter:load_type" ng-click="detectIndex(x)">{{x.Name}}</option>
                                         </optgroup>
-                                        <!-- <optgroup label="Sauropods">
-                                            <option>Diplodocus</option>
-                                            <option>Saltasaurus</option>
-                                            <option>Apatosaurus</option>
-                                        </optgroup> -->
                                     </select>
                                 </fieldset>
                                 <fieldset>
                                     <legend>Load Details</legend>
-                                    <label>Power - {{RatedPower}}</label><br>
+                                    <label>Power - {{RatedPower}} Watts</label><br>
                                     <label>Recommended Profile - {{RecommendedProfile}}</label><br>
                                     <label>Scenario - {{Scenario}}</label><br>
                                     <label>Power Factor - {{PowerFactor}}</label><br>

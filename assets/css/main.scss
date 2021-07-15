@@ -1290,7 +1290,7 @@ footer {
                     // height: 1fr;
                     &>fieldset:nth-child(1) {
                         // background-color: red;
-                        grid-column: 1/7;
+                        grid-column: 1/5;
 
                         // height: 100%;
                         select {
@@ -1300,7 +1300,7 @@ footer {
 
                     &>fieldset:nth-child(2) {
                         // background-color: green;
-                        grid-column: 7/-1;
+                        grid-column: 5/-1;
 
                         select {
                             height: auto;
