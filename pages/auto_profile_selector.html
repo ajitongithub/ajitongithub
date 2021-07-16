@@ -37,11 +37,13 @@
                                 </fieldset>
                                 <fieldset>
                                     <legend>Load Details</legend>
-                                    <label>Power - {{RatedPower}} Watts</label><br>
+                                    <label>Power (Watts)</label> <input type="number" ng-model="RatedPower" placeholder="Rated Power in Watts"><br>
                                     <label>Recommended Profile - {{RecommendedProfile}}</label><br>
                                     <label>Scenario - {{Scenario}}</label><br>
                                     <label>Power Factor - {{PowerFactor}}</label><br>
                                 </fieldset>
+                                <button class="btn" ng-click="load_loading()">SELECT THE LOAD</button>
+                                <button class="btn">AUTO USAGE LOAD</button>
                             </div>
                         </div>
                         <div class="ins_card w_100 white_bg">

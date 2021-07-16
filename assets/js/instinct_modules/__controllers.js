@@ -1209,6 +1209,7 @@ Plotly.newPlot(sim_results_graph_6, data_sim_results_6, layout_sim_results_6,con
 napp.controller('auto_load_loader_controller',function($scope,$http,$rootScope,$q){
 
 	$scope.loads_data = {};
+	let selected_load_object = {};
 	$scope.load_wattage = {};
 	let temp_array_1 = [];
 
@@ -1237,15 +1238,29 @@ napp.controller('auto_load_loader_controller',function($scope,$http,$rootScope,$
 	}
 	// Ooption change detect
 	$scope.detectIndex = (request_data) => {
-		// console.log(data1)
+		selected_load_object = {};
+
 		$scope.RatedPower = request_data.RatedPower;
 		$scope.RecommendedProfile = request_data.RecommendedProfile;
 		$scope.Scenario = request_data.Scenario;
 		$scope.PowerFactor = request_data.PowerFactor;
 		$scope.Name = request_data.Name;
 		$scope.Manufacturer = request_data.Manufacturer;
-	}
 
+
+
+		// console.log(selected_load_object);
+	}
+	$scope.load_loading = ()=>{
+		// Loading data into loads
+		selected_load_object['rated_power'] = parseInt($scope.RatedPower);
+		selected_load_object['recommended_profile'] = $scope.RecommendedProfile
+		selected_load_object['scenario'] = $scope.Scenario;
+		selected_load_object['power_factor'] = $scope.PowerFactor;
+		selected_load_object['load_name'] = $scope.Name;
+		selected_load_object['manufacturer'] = $scope.Manufacturer;
+		console.log(selected_load_object);
+	}
 
 
 
