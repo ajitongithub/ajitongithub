@@ -3,7 +3,7 @@
     "name": "commercial_kitchen",
     "scenario": "Commercial",
     "type": "N/A",
-    "weekday_usage_profile": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,],
+    "weekday_usage_profile": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
     "weekend_usage_profile": 0,
     "dependencies": "none",
     "frequency": "All"
