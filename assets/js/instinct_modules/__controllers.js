@@ -21,6 +21,7 @@ napp.controller('location_controller',function($scope,$http,$location,$rootScope
 		// console.log(response.data);
 		location_links_data = response.data;
 	})
+	//TODO: Needs checking for location neighbouring
 	// Active Button Changer 
 	var side_menu_active_system = document.getElementsByClassName('left_side_menu');
 	for(i=0;i<side_menu_active_system.length;i++){

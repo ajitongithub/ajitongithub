@@ -251,7 +251,7 @@ ipcMain.on('simulation_run', (event, data) => {
 
   let solar_fill_factor = (solar_Vm * solar_Im) / (solar_Voc * solar_Isc);
 
-  let real_area = solar_Wp / (solar_efficiency * 1000)
+  let real_area = solar_Wp / (solar_efficiency * 1000);
   //real_area = 1.221543587 // from datasheet
   //calculated_area = solar_Wp / 1000 // m2
   //print("\nReal Area =" + str(real_area) + "Calculated area = " + str(calculated_area)+"\n")
@@ -315,9 +315,9 @@ ipcMain.on('simulation_run', (event, data) => {
   let batt_AH_OUTPUT = Array(simulation_hours).fill(0);
   let batt_POWER_OUTPUT = Array(simulation_hours).fill(0);
   //Temperature Dependency parameters
-  let batt_total_batteries = batt_in_parallel * batt_in_series
-  let batt_total_AH = batt_total_batteries * batt_AH_individual
-  let batt_design_WH = batt_voltage * batt_total_AH
+  let batt_total_batteries = batt_in_parallel * batt_in_series;
+  let batt_total_AH = batt_total_batteries * batt_AH_individual;
+  let batt_design_WH = batt_voltage * batt_total_AH;
   let batt_discharge_current_flag = true;
   //--------------------------------------------------
 
@@ -404,7 +404,7 @@ ipcMain.on('simulation_run', (event, data) => {
     //variability - flag check
     if (true) {
       generated_load_profile[load_data_inst] += (generated_load_profile[load_data_inst] * load_variability); //adding variability
-    };
+    }
     //load_inflation - flag check ( yearly increment - )
     if (true && (Math.round(load_data_inst / 8760) > 0)) {
       //load Inflation addition    
@@ -437,7 +437,7 @@ ipcMain.on('simulation_run', (event, data) => {
       let inv_variable_2 = 90 - (104.43 * Math.exp(-0.524 * Math.pow(inv_variable_1, 0.686)));
       inverter_efficiency[i] = inv_variable_2;
 
-      let inv_variable_3 = generated_load_profile[i] / (inv_variable_2 / 100)
+      let inv_variable_3 = generated_load_profile[i] / (inv_variable_2 / 100);
       inverter_DC_IN_POWER[i] = inv_variable_3;
       //Inverter Demand
       inverter_DC_IN_CURRENT[i] = (inv_variable_3 / system_voltage);
@@ -528,7 +528,7 @@ ipcMain.on('simulation_run', (event, data) => {
     }
 
     //2nd phase Charge Controller Models
-    CC_output_raw_power[i] = solar_derated_output[i] * CC_eff
+    CC_output_raw_power[i] = solar_derated_output[i] * CC_eff;
 
     //Charge Controller Failure Detect
     if ((CC_output_raw_power[i] >= CC_max_charging_power) > 0) {
@@ -584,11 +584,11 @@ ipcMain.on('simulation_run', (event, data) => {
 batt_inst_energy = (batt_design_WH * batt_init_SOH); //Effective of initial Aging
 
 //Energy of Battery at 12 AM. Compensation of pre-simulated energy
-batt_inst_energy = batt_inst_energy - pre_sim_energy // Energy of the battery at that instant
+batt_inst_energy = batt_inst_energy - pre_sim_energy; // Energy of the battery at that instant
 
 //reverfy charge/discharge possibilities
-if(batt_design_WH > batt_inst_energy){batt_chargable = true} else {batt_chargable = false};
-if(batt_inst_energy != 0){batt_dischargable = true} else {batt_dischargable = false};
+if(batt_design_WH > batt_inst_energy){batt_chargable = true;} else {batt_chargable = false;}
+if(batt_inst_energy != 0){batt_dischargable = true;} else {batt_dischargable = false;}
 
 //Pre-fill DOD Averaging Window
 for (i = 0; i < batt_DOD_averagingWindow; i++) {
@@ -768,7 +768,7 @@ for (i = 0; i < simulation_hours; i++) {
         batt_TEMP_day_average.push((batt_TEMP_hourly.reduce((x, y) => x + y)) / batt_TEMP_hourly.length);
         batt_TEMP_hourly = [];
         batt_DOD_SOH_buffer = batt_DOD_compensation_program(batt_DOD_window_average * 100);
-        batt_BATT_arhenius.push(batt_arhennius_compensation_program(batt_DOD_SOH_buffer, batt_TEMP_day_average[batt_TEMP_day_average.length - 1], 25))
+        batt_BATT_arhenius.push(batt_arhennius_compensation_program(batt_DOD_SOH_buffer, batt_TEMP_day_average[batt_TEMP_day_average.length - 1], 25));
         
         //aging effects of battery
         if(instinct_config.simulation_data.batt_aging_flag){
@@ -962,7 +962,7 @@ for (i = 0; i < simulation_hours; i++) {
 
   simulation_outputs.batt_SOH_line_equation = regressive_data;
 
-  var fitted_curve = []
+  var fitted_curve = [];
   for (i = 0; i < simulation_days; i++) {
     fitted_curve.push((regressive_data.slope * i) + regressive_data.intercept);
   }

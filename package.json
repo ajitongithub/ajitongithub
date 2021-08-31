@@ -4,8 +4,8 @@
   "description": "Microgrid Simulator",
   "main": "main.js",
   "devDependencies": {
-    "electron": "^13.1.6",
-    "electron-packager": "^15.2.0"
+    "electron": "^14.0.0",
+    "electron-packager": "^15.3.0"
   },
   "scripts": {
     "start": "electron .",
@@ -15,9 +15,9 @@
   "license": "MIT",
   "dependencies": {
     "@0xcmdr/numjs": "^0.16.1",
-    "@babel/runtime": "^7.14.6",
+    "@babel/runtime": "^7.15.3",
     "babel-runtime": "^6.26.0",
-    "npm-check-updates": "^11.8.2",
+    "npm-check-updates": "^11.8.3",
     "pandas-js": "^0.2.4",
     "python-shell": "^3.0.0",
     "random-seed": "^0.3.0",
