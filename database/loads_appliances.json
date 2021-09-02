@@ -161,7 +161,7 @@
     "type": "Kitchen",
     "power_factor": 0.9,
     "voltage": 230,
-    "recommended_profile": "commercial_kitchen_refrigeration",
+    "recommended_profile": "commercial_kitchen",
     "scenario": "URBAN"
   },
   {
@@ -513,7 +513,7 @@
     "type": "Kitchen",
     "power_factor": 0.9,
     "voltage": 230,
-    "recommended_profile": "commercial_kitchen_refrigeration",
+    "recommended_profile": "commercial_kitchen",
     "scenario": "INDUSTRIAL"
   },
   {

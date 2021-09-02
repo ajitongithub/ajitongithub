@@ -4,9 +4,12 @@
 @import "begining";
 @import "main_sidebar_left";
 @import "summary_sidebar_right";
+@import "auto_loading";
 
 * {
     font-size: 12px;
+    // border: solid 1px red;
+    box-sizing: border-box;
 }
 
 body {
@@ -1306,7 +1309,8 @@ footer {
                             height: auto;
                         }
                     }
-                    input{
+
+                    input {
                         color: white;
                     }
                 }
@@ -1393,8 +1397,6 @@ input[type="checkbox"]:checked {
     opacity: 1;
     background-color: red;
 }
-
 .checkboxgroup {
     width: 100%;
-
 }

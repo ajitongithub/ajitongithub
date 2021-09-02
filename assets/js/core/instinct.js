@@ -63,7 +63,7 @@ napp.controller("insti-controller", function ($scope, $location, $http, $rootSco
 
 	let quit_button = document.getElementById("quit_app");
 	quit_button.addEventListener('click', (e) => {
-		remote.app.quit()
+		remote.app.quit();
 	});
 
 	$scope.software_name = "INSTI CLOV";
@@ -92,10 +92,10 @@ napp.controller("insti-controller", function ($scope, $location, $http, $rootSco
 		// gsap.to("#sum_chevron", {duration:0.25, rotate: 180});
 		anim_sidebar.resume();
 		anim_sidebar.to("#sum_chevron", { duration: 0.25, x: -3 });
-	})
+	});
 	side_summary.addEventListener('mouseout', function (e) {
 		// gsap.to("#sum_chevron", {duration:0.25, rotate: 180});
 		anim_sidebar.pause();
 		anim_sidebar.to("#sum_chevron", { duration: 0.25, x: -5 });
-	})
+	});
 });

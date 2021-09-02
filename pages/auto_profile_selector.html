@@ -14,8 +14,6 @@
                 </div>
             </div>
         </div>
-
-
         <div class="auto-load__manual">
             <div class="manual_load_design">
                 <h3>Design Manually</h3>
@@ -31,13 +29,15 @@
                                             <option ng-repeat="x in loads_data">{{x.Name}}</option>
                                         </optgroup> -->
                                         <optgroup ng-repeat="load_type in load_types" label="{{load_type}}">
-                                            <option ng-repeat="x in loads_data | filter:load_type" ng-click="detectIndex(x)">{{x.Name}}</option>
+                                            <option ng-repeat="x in loads_data | filter:load_type"
+                                                ng-click="detectIndex(x)">{{x.Name}}</option>
                                         </optgroup>
                                     </select>
                                 </fieldset>
                                 <fieldset>
                                     <legend>Load Details</legend>
-                                    <label>Power (Watts)</label> <input type="number" ng-model="RatedPower" placeholder="Rated Power in Watts"><br>
+                                    <label>Power (Watts)</label> <input type="number" ng-model="RatedPower"
+                                        placeholder="Rated Power in Watts"><br>
                                     <label>Recommended Profile - {{RecommendedProfile}}</label><br>
                                     <label>Scenario - {{Scenario}}</label><br>
                                     <label>Power Factor - {{PowerFactor}}</label><br>
@@ -95,59 +95,201 @@
 
 
         <div class="auto-load__template">
-            <div class="auto_profile_selector">
+            <!-- <div class="auto_profile_selector">
                 <div class="auto_prof_splash_card">
                     <h3>Back</h3>
                     <button ng-click="manual_selection('0')" class="btn_auto_profile btn_royal_blue">SELECT</button>
                 </div>
+            </div> -->
+            <div class="sections_wrapper">
+                <!-- For Top Control -->
+                <div></div>
+                <section class="template_main_container">
+                    <div class="aside_container">
+                        <div class="modal_marker_slide">
+                            <div id="transfer_id" hidden></div>
+                            <fieldset class="marker_timeInput__div">
+                                <legend>Start Time</legend>
+                                <input type="time" id="startTime__input">
+                                <fieldset>
+                                    <legend>Start Transition (Experimental)</legend>
+                                    <input type="radio" id="start_trans_step" name="start_time_rise" value="Step">
+                                                                      
+                                    <label for="start_trans_step">Step</label>
+                                    <input type="radio" id="start_trans_linear" name="start_time_rise" value="Linear">
+                                    <label for="start_trans_linear">Linear</label>
+                                    <input type="radio" id="start_trans_exponential" name="start_time_rise" value="Exponential">
+                                    <label for="start_trans_exponential">Exponential</label>
+                                </fieldset>
+                            </fieldset>
+                            <fieldset class="marker_timeInput__div">
+                                <legend>End Time</legend>
+                                <input type="time" id="endTime__input">
+                                <fieldset>
+                                    <legend>End Transition (Experimental)</legend>
+                                    <input class="with-gap" type="radio" id="end_trans_step" name="end_time_rise" value="Step"><label
+                                        for="end_trans_step">Step</label>
+                                    <input type="radio" id="end_trans_linear" name="end_time_rise"
+                                        value="Linear"><label for="end_trans_linear">Linear</label>
+                                    <input type="radio" id="end_trans_exponential" name="end_time_rise"
+                                        value="Exponential"><label for="end_trans_exponential">Exponential</label>
+                                </fieldset>
+                            </fieldset>
+                            <fieldset class="marker_timeInput__div">
+                                <legend>Parameters</legend>
+                                <div class="slide_parameters__div">
+                                    <span>Quantity</span>
+                                    <input type="number" placeholder="Quantity" id="marker_load_qty">
+                                    <span>Power in Watts</span>
+                                    <input type="number" placeholder="Power" id="marker_load_power">
+                                    <span>Related Model</span>
+                                    <input type="text" placeholder="Model" id="marker_load_model">
+                                    <div class="reschedule_container">
+                                        <label for="Re-Schedulable">Re-Schedulable</label>
+                                        <input type="checkbox" name="Re-Schedulable" value="schedulable" id="marker_load_schedulable">
+                                    </div>
+                                </div>
+                            </fieldset>
+
+                            <div class="marker_modal_btnContainer">
+                                <button id="marker_modal__okBtn">OK</button>
+                                <button id="marker_modal__cancelBtn">CANCEL</button>
+                            </div>
+                        </div>
+                        <!-- Room Templates -->
+                        <fieldset class="load_types__fields">
+                            <legend>Load Profile Templates</legend>
+                            <div class="loads_container">
+                                <select id="template_selector">
+                                    <option>1HK - 300 sq.ft</option>
+                                    <option>1BHK - 900 sq.ft</option>
+                                    <option>2BHK - 1300 sq.ft</option>
+                                </select>
+                                <div class="template_btnContainer">
+                                    <button id="template_OK">OK</button>
+                                    <button id="template_Cancel">CANCEL</button>
+                                </div>
+                                <!-- <div class="load_items" data-powerData="250" data-qtyData="1" data-modellingData="refrigerator_model"
+                                        data-schedulableData="false" draggable="true" data-appName="Refrigerator">
+                                        Refrigerator
+                                    </div> -->
+                            </div>
+                        </fieldset>
+                        <!-- load items -->
+                        <fieldset class="load_types__fields">
+                            <legend>Generic Loads</legend>
+                            <div class="loads_container">
+                                <!-- <div class="load_items" data-powerData="250" data-qtyData="1"
+                                    data-modellingData="refrigerator_model" data-schedulableData="false"
+                                    draggable="true" data-appName="Refrigerator">
+                                    Refrigerator
+                                </div>
+                                <div class="load_items" data-powerData="1500" data-qtyData="1"
+                                    data-modellingData="ac_model" data-schedulableData="false" draggable="true"
+                                    data-appName="Air Conditioner">
+                                    Air Conditioner
+                                </div>
+                                <div class="load_items" data-powerData="20" data-qtyData="1"
+                                    data-modellingData="indoor_light_model" data-schedulableData="true" draggable="true"
+                                    data-appName="Tube Light">
+                                    Tube Light
+                                </div> -->
+                                <!-- Repeat loads -->
+                                <div class="load_items" ng-repeat="load in loads_data" draggable="true" 
+                                data-powerData="150"
+                                data-qtyData="1"
+                                data-modellingData="{{load.recommended_profile}}"
+                                data-schedulableData="true"
+                                data-powerfactor="{{load.power_factor}}"
+                                data-appName="{{load.name}}"
+                                data-scenario="{{load.scenario}}"
+                                data-manufacturer="{{load.manufacturer}}"
+                                data-type="{{load.type}}"
+                                data-voltage="{{load.voltage}}">
+                                {{load.name}}
+                                </div>
+                            </div>
+                        </fieldset>
+                        <fieldset class="load_types__fields">
+                            <legend>Branded Loads</legend>
+                            <div class="loads_container">
+                                <div class="load_items" data-powerData="250" data-qtyData="1"
+                                    data-modellingData="refrigerator_model" data-schedulableData="false"
+                                    draggable="true" data-appName="Refrigerator">
+                                    Refrigerator
+                                </div>
+                            </div>
+                        </fieldset>
+
+
+                    </div>
+                    <div id="slider_container" class="load_designspace__div">
+                        <div class="load_excess__div">Instinct Grid</div>
+                        <div class="load_range__div">
+                            <!-- <input type="range" min="0" max="23" step="1" list="steplist" id="load_range__slider"> -->
+                            <datalist id="steplist">
+                                <option>0</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                                <option>8</option>
+                                <option>9</option>
+                                <option>10</option>
+                                <option>11</option>
+                                <option>12</option>
+                                <option>13</option>
+                                <option>14</option>
+                                <option>15</option>
+                                <option>16</option>
+                                <option>17</option>
+                                <option>18</option>
+                                <option>19</option>
+                                <option>20</option>
+                                <option>21</option>
+                                <option>22</option>
+                                <option>23</option>
+                            </datalist>
+                        </div>
+                        <div class="load_infobar__div">
+                            <div class="load_info"></div>
+                            <div class="load_info"></div>
+                        </div>
+                        <div class="loads_grid__div">
+                            <!-- Gridlines -->
+                            <!-- <div id="load_gridlines"></div> -->
+                            <div class="load_track__div"></div>
+                            <div class="load_track__div"></div>
+                        </div>
+                        <div id="add_track_id" class="add_track__div">
+                            Add New Track
+                        </div>
+                    </div>
+                </section>
+                <section class="grid_control__div">
+                    <button id="save_grid">SAVE SCHEDULES</button>
+                    <button id="load_grid">LOAD SCHEDULES</button>
+                    <button id="clear_grid">CLEAR</button>
+                    <button id="align_grid">RE-ALIGN</button>
+                </section>
+                <section class="processing_info__div">
+                    <button id="process_data">PROCESS DATA</button>
+                    <div id="status__div"></div>
+                </section>
+                <section class="plotter">
+                    <div class="plotter_1">
+
+                    </div>
+                    <div class="plotter_2">
+
+                    </div>
+                </section>
+                <!-- For Bottom Control -->
+                <div></div>
             </div>
         </div>
     </div>
-
 </section>
-<!-- <div class="auto_profile_main_container">
-    <div class="auto_profile_selector">
-        <div class="auto_prof_splash_card">
-            <h3>Design Manually</h3>
-            <img src="../assets/images/design_manually.png">
-            <button ng-click="manual_selection('-100%')" class="btn_auto_profile btn_orangish">SELECT</button>
-        </div>
-        <div class="auto_prof_splash_card">
-            <h3>Load from Template</h3>
-            <img src="../assets/images/template_design.png">
-            <button ng-click="manual_selection('-200%')" class="btn_auto_profile btn_royal_blue">SELECT</button> 
-        </div>
-        
-    </div>
-    <div class="div_manual_load_page">
-        <h2 class="btn_orangish">Manual Design of Loads</h2>
-        <div class="auto_manual_card loads_listing_manual">            
-            <div class="">
-                <h3>Select Loads</h3>
-                <input type="checkbox" value="12">
-            </div>
-        </div>
-        <button ng-click="auto_profile_home()" class="btn_auto_profile btn_orangish">HOME</button>
-    </div>
-
-    <div class="auto_profile_selector">
-        <h2 class="btn_royal_blue">Load from Templates</h2>
-        <div class="auto_manual_card">
-            <h3>Select Loads</h3>
-            
-            <input type="radio" name="auto_profile_type" id="auto_design_manual">
-            <label for="auto_design_manual">
-        </div>
-        <div class="auto_manual_card">
-            <h3 >Load from Template</h3>
-            <img src="../assets/images/template_design.png">
-            <div class="selector_radio">
-                <input type="radio" id="auto_load_manual" name="auto_profile_type" value="Select">
-                <label for="auto_load_manual">Select</label><br>
-                <input type="radio" id="auto_load_template" name="auto_profile_type" value="Select">
-                <label for="auto_load_template">Select</label><br>
-            </div>    
-        </div>
-        <button ng-click="auto_profile_home()" class="btn_auto_profile btn_royal_blue">HOME</button>
-    </div>
-</div> -->

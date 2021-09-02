@@ -33,7 +33,7 @@ function createWindow() {
     // skipTaskbar:true,
     frame: true,
     transparent: false,
-    opacity: 0.9,
+    opacity: 1,
     width: 1200,
     height: 800,
     icon: './icon/instinct2.ico',

@@ -1,9 +1,9 @@
 
 // Begin Page Controller
-napp.controller('begin_controller',function($scope,$http){
+napp.controller('begin_controller', function ($scope, $http) {
 	// Active Button Changer 
 	var side_menu_active_system = document.getElementsByClassName('left_side_menu');
-	for(i=0;i<side_menu_active_system.length;i++){
+	for (i = 0; i < side_menu_active_system.length; i++) {
 		side_menu_active_system[i].classList.remove("active");
 	}
 	side_menu_active_system[0].classList.add("active");
@@ -11,20 +11,20 @@ napp.controller('begin_controller',function($scope,$http){
 });
 
 // Location Controller
-napp.controller('location_controller',function($scope,$http,$location,$rootScope){
+napp.controller('location_controller', function ($scope, $http, $location, $rootScope) {
 	//test code
 	let tstamp = Date.now();
-	let location_links_data = {};
+	let location_links_data = { };
 	// // selected location
 	// let location_object = {};
-	$http.get("../database/location_link.json?data="+tstamp).then(function(response){
+	$http.get("../database/location_link.json?data=" + tstamp).then(function (response) {
 		// console.log(response.data);
 		location_links_data = response.data;
-	})
+	});
 	//TODO: Needs checking for location neighbouring
 	// Active Button Changer 
 	var side_menu_active_system = document.getElementsByClassName('left_side_menu');
-	for(i=0;i<side_menu_active_system.length;i++){
+	for (i = 0; i < side_menu_active_system.length; i++) {
 		side_menu_active_system[i].classList.remove("active");
 	}
 	side_menu_active_system[1].classList.add("active");
@@ -37,7 +37,7 @@ napp.controller('location_controller',function($scope,$http,$location,$rootScope
 	btn_location_final.disabled = true;
 
 	// Data Weather Fetch
-	tstamp = Date.now();		
+	tstamp = Date.now();
 	var insol_array = []; //insolation
 	var insol_aggregate_monthly = []; //insolation averaged over a month
 	var temp_avg_monthly = []; //insolation averaged over a month
@@ -48,14 +48,14 @@ napp.controller('location_controller',function($scope,$http,$location,$rootScope
 
 	console.log("location_controller ");
 	// Location Object File
-	instinct_profile["insolation"] = {};
-	instinct_profile["temperature"] = {};
-	instinct_profile["location_data"] = {};
+	instinct_profile.insolation = { };
+	instinct_profile.temperature = { };
+	instinct_profile.location_data = { };
 
 	let loc_mod_button = document.getElementById("curtain_buttton");
-	
 
-	loc_mod_button.addEventListener('click',function(){
+
+	loc_mod_button.addEventListener('click', function () {
 		document.getElementById("model_blanket").style.display = "none";
 		document.getElementById("modal_geo").style.transform = "translateY(-100%)";
 	});
@@ -70,47 +70,47 @@ napp.controller('location_controller',function($scope,$http,$location,$rootScope
 	});
 
 	map.on('mousemove', function (e) {
-			document.getElementById('current_loc').innerHTML = 
+		document.getElementById('current_loc').innerHTML =
 			'Lattitude: ' + JSON.stringify(e.lngLat.lat.toPrecision(4)) +
 			' & Longitude: ' + JSON.stringify(e.lngLat.lng.toPrecision(4));
 	});
-	
+
 	map.on('click', function (e) {
 		btn_location_graph.disabled = false;
 		btn_location_final.disabled = false;
 		// 
 		insol_array = []; //insoliation
 		insol_aggregate_monthly = [];
-		temp_avg_monthly = []; 
+		temp_avg_monthly = [];
 		temp_array = [];	// temperautre 
 		var geo_weather = document.getElementById('geo_insolation');
 		var geo_temperature = document.getElementById('geo_temperature');
 		var data = [{
 			type: 'bar',
 			y: [2, 1, 3, 2],
-			x:['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
+			x: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
 			orientation: 'horizontal'
-			}];
-		var layout_geo_insol = 
-			{
-				title: 'Monthy Aggregate of Insolation Data',
-				xaxis: {
-					range: ['2019-01-01', '2020-01-01'],
-					type: 'date'
-				}
-			};
-		var layout_geo_temp = 
-			{
-				title: 'Average Temperature Data',
-				xaxis: {
-					range: ['2019-01-01', '2020-01-01'],
-					type: 'date'
-				}
-			};
-		let config_geo_weather = {responsive: true,displayModeBar: false};
-		
-		Plotly.newPlot(geo_weather, data, layout_geo_insol,config_geo_weather);
-		Plotly.newPlot(geo_temperature, data, layout_geo_temp,config_geo_weather);
+		}];
+		var layout_geo_insol =
+		{
+			title: 'Monthy Aggregate of Insolation Data',
+			xaxis: {
+				range: ['2019-01-01', '2020-01-01'],
+				type: 'date'
+			}
+		};
+		var layout_geo_temp =
+		{
+			title: 'Average Temperature Data',
+			xaxis: {
+				range: ['2019-01-01', '2020-01-01'],
+				type: 'date'
+			}
+		};
+		let config_geo_weather = { responsive: true, displayModeBar: false };
+
+		Plotly.newPlot(geo_weather, data, layout_geo_insol, config_geo_weather);
+		Plotly.newPlot(geo_temperature, data, layout_geo_temp, config_geo_weather);
 
 		// 
 		marker.remove();
@@ -119,34 +119,34 @@ napp.controller('location_controller',function($scope,$http,$location,$rootScope
 		document.getElementById('geo_lat').innerHTML = e.lngLat.lat;
 		document.getElementById('geo_long').innerHTML = e.lngLat.lng;
 		// document.getElementById('geo_sat').innerHTML = "MERRA-2 and Others";
-		$scope.geo_id = {'latitude':e.lngLat.lat,'longitude':e.lngLat.lng,'satellite':"MERRA-2 and Others"};
+		$scope.geo_id = { 'latitude': e.lngLat.lat, 'longitude': e.lngLat.lng, 'satellite': "MERRA-2 and Others" };
 		// find_best_location(e.lngLat.lat,e.lngLat.lng,location_links_data);
-		location_object = find_best_location(e.lngLat.lat,e.lngLat.lng,location_links_data);
+		location_object = find_best_location(e.lngLat.lat, e.lngLat.lng, location_links_data);
 		// Load the map data
 		// console.log(location_object);
 		let url_data = `../database/weather_data/${location_object.the_url}?data=${tstamp}`;
 		// console.log(url_data);
 		// var nearest_location = document.getElementById('geo_location');
 		document.getElementById('geo_location').innerHTML = location_object.selected_place;
-		$http.get(url_data).then(function(response){
+		$http.get(url_data).then(function (response) {
 			var weather_data_array = response.data.split('\n');
 			var insol_adder = 0;
 			var temp_adder = 0;
-			for (element=1;element<weather_data_array.length-1;element++){
+			for (element = 1; element < weather_data_array.length - 1; element++) {
 				insolation_array = weather_data_array[element].split(",");
 				insolation_data = insolation_array[1];
 				temperature_data = (parseFloat(insolation_array[2].trim()));
 				// console.log(insolation_array[2]);
 				insol_adder += parseFloat(insolation_data);
 				temp_adder += parseFloat(temperature_data);
-				if((element % 720) == 0){
+				if ((element % 720) == 0) {
 					// console.log(element);
 					insol_aggregate_monthly.push(insol_adder);
 					temp_avg_monthly.push(temp_adder / 720); //Per Day Average
 					insol_adder = 0;
 					temp_adder = 0;
 				}
-				
+
 				insol_array.push(insolation_data);
 				temp_array.push(temperature_data);
 
@@ -155,9 +155,9 @@ napp.controller('location_controller',function($scope,$http,$location,$rootScope
 			Plotly.restyle(geo_weather, 'y', [insol_aggregate_monthly]);
 			Plotly.restyle(geo_temperature, 'y', [temp_avg_monthly]);
 			// Plotly.restyle(geo_temperature, 'y', [temp_array]);
-			instinct_profile["insolation"] = insol_array;
-			instinct_profile["temperature"] = temp_array;
-		});	
+			instinct_profile.insolation = insol_array;
+			instinct_profile.temperature = temp_array;
+		});
 		// $http.get("../database/weather.csv?data="+tstamp).then(function(response){
 		// 	var weather_data_array = response.data.split('\n');
 		// 	for (element=1;element<weather_data_array.length-1;element++){
@@ -174,7 +174,7 @@ napp.controller('location_controller',function($scope,$http,$location,$rootScope
 
 	});
 
-	
+
 
 	//plotly geo graph
 	// var geo_weather = document.getElementById('geo_insolation');
@@ -201,19 +201,19 @@ napp.controller('location_controller',function($scope,$http,$location,$rootScope
 	// 		}
 	// 	};
 	// let config_geo_weather = {responsive: true,displayModeBar: false};
-	
+
 	// Plotly.newPlot(geo_weather, data, layout_geo_insol,config_geo_weather);
 	// Plotly.newPlot(geo_temperature, data, layout_geo_temp,config_geo_weather);
 
-	$scope.geo_loader = function(){
+	$scope.geo_loader = function () {
 		var modal_geo = document.getElementById("modal_geo");
 		var modal_curtain = document.getElementById("model_blanket");
 		modal_curtain.style.display = "block";
 		var st_val = modal_geo.style.transform;
-		if (st_val == "translateY(0px)"){
-			modal_geo.style.transform = "translateY(-100%)";			
+		if (st_val == "translateY(0px)") {
+			modal_geo.style.transform = "translateY(-100%)";
 		}
-		else{
+		else {
 			modal_geo.style.transform = "translateY(0px)";
 			// $http.get("../database/weather.csv?data="+tstamp).then(function(response){
 			// 	var weather_data_array = response.data.split('\n');
@@ -229,14 +229,14 @@ napp.controller('location_controller',function($scope,$http,$location,$rootScope
 			// 	Plotly.restyle(geo_temperature, 'y', [temp_array]);
 			// });			
 		}
-	};	
+	};
 
 
 
 	// Location Loader
-	$scope.location_final = function(){
-		instinct_profile["location_data"] = $scope.geo_id;
-		
+	$scope.location_final = function () {
+		instinct_profile.location_data = $scope.geo_id;
+
 		//String
 		let summary_location_lattitude = "Lattitude - " + Math.round($scope.geo_id.latitude * 10) / 10;
 		let summary_location_longitude = " Longitude - " + Math.round($scope.geo_id.longitude * 10) / 10;
@@ -247,7 +247,7 @@ napp.controller('location_controller',function($scope,$http,$location,$rootScope
 		document.getElementById("sum_loc").style.color = "green";
 		console.log(instinct_profile);
 		// sent data to the node unit
-		ipcRenderer.send('location_done',instinct_profile);
+		ipcRenderer.send('location_done', instinct_profile);
 		$location.path("/load_profile");
 		// ipcRenderer.on('location_load_complete',(e,data)=>{
 		// 	console.log(data);
@@ -258,24 +258,24 @@ napp.controller('location_controller',function($scope,$http,$location,$rootScope
 		// 		alert("Experiencing some technical problems");
 		// 	}
 		// });
-		
 
-		
+
+
 	};
-	
+
 });
 // Load Profile Controller
-napp.controller('load_profile_controller',function($scope,$http,$location){
+napp.controller('load_profile_controller', function ($scope, $http, $location) {
 	// Active Button Changer 
 	var side_menu_active_system = document.getElementsByClassName('left_side_menu');
-	for(i=0;i<side_menu_active_system.length;i++){
+	for (i = 0; i < side_menu_active_system.length; i++) {
 		side_menu_active_system[i].classList.remove("active");
 	}
 	side_menu_active_system[2].classList.add("active");
 
 	if (document.readyState === 'complete') {
 		//status_bar
-		status_activate("Load Profile Page has loaded",2000)
+		status_activate("Load Profile Page has loaded", 2000);
 	}
 	//disable button
 	let btn_load_profile_final = document.getElementById('btn_load_profile_final');
@@ -283,10 +283,10 @@ napp.controller('load_profile_controller',function($scope,$http,$location){
 	let btn_load_profile_modelled = document.getElementById('btn_load_profile_modelled');
 	btn_load_profile_final.disabled = true;
 	btn_load_profile_database.disabled = true;
-	
-	instinct_profile["load_profile"] = {};
+
+	instinct_profile.load_profile = { };
 	// RESET
-	$scope.reset_load_selection = function(){
+	$scope.reset_load_selection = function () {
 		btn_load_profile_final.disabled = true;
 		btn_load_profile_database.disabled = true;
 		$scope.selectedLoad = "";
@@ -295,9 +295,9 @@ napp.controller('load_profile_controller',function($scope,$http,$location){
 		for (i = 0; i < x.length; i++) {
 			x[i].style.transform = "translateY(-100%)";
 		}
-	} 
+	};
 	// Populate the database driven load profile
-	$http.get('../database/preset_load_profiles.json').then(function(response){
+	$http.get('../database/preset_load_profiles.json').then(function (response) {
 		$scope.preset_loads = response.data.load_profile;
 		// console.log(response.data.load_profile)
 	});
@@ -306,7 +306,7 @@ napp.controller('load_profile_controller',function($scope,$http,$location){
 
 
 	// Load Profile Modelling (User)------------------------------------------
-	var load_profile_array = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+	var load_profile_array = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
 	$scope.database_profile = "Profile from Database";
 	$scope.user_model_profile = "Model the Load Profile";
@@ -315,19 +315,25 @@ napp.controller('load_profile_controller',function($scope,$http,$location){
 	$scope.electricity_bill = "Use Electricity Bill";
 	$scope.max_demand_data = 1500;
 
-	$scope.load_profile_user_modelled = function(){
+	// template loading
+	$scope.load_from_template = ()=>{
+		console.log("a");
+		$location.path("/auto_load_loader");
+	};
+
+	$scope.load_profile_user_modelled = function () {
 		// auto pop up		
 		var load_curtain = document.getElementById("load_profile_curtain");
 		var load_farm_popup = document.getElementById("the_popup");
 		var st_val = load_farm_popup.style.transform;
-		if (st_val == "translateY(0px)"){
-			load_farm_popup.style.transform = "translateY(-500%)";			
+		if (st_val == "translateY(0px)") {
+			load_farm_popup.style.transform = "translateY(-500%)";
 			load_curtain.style.transform = "translateY(-100%)";
 			// load_profile_array
 			Plotly.restyle(load_profile_final, 'y', [load_profile_array]);
-			instinct_profile["load_profile"] = load_profile_array;
+			instinct_profile.load_profile = load_profile_array;
 		}
-		else{
+		else {
 			load_farm_popup.style.transform = "translateY(0px)";
 			load_curtain.style.transform = "translateY(0px)";
 		}
@@ -350,8 +356,8 @@ napp.controller('load_profile_controller',function($scope,$http,$location){
 		mode: 'lines+markers',
 		y: [2, 1, 3, 2],
 		orientation: 'horizontal',
-		name:'Load Profile',
-		}];
+		name: 'Load Profile',
+	}];
 	var layout = {
 		title: 'Energy Demand for the Selected Load',
 		xaxis: {
@@ -375,14 +381,16 @@ napp.controller('load_profile_controller',function($scope,$http,$location){
 			x: 1,
 			xanchor: 'right',
 			y: 1
-		  },
-		margin: {t: 50, b: 80, l: 80, r: 50},
+		},
+		margin: { t: 50, b: 80, l: 80, r: 50 },
 	};
-	let config = {responsive: true,
-		displayModeBar: false};
+	let config = {
+		responsive: true,
+		displayModeBar: false
+	};
 
-	Plotly.newPlot(load_profile_usermodel_graph, data, layout,config);
-	
+	Plotly.newPlot(load_profile_usermodel_graph, data, layout, config);
+
 
 	// Slider
 	var slider_0 = document.getElementById('slider_0');
@@ -409,46 +417,46 @@ napp.controller('load_profile_controller',function($scope,$http,$location){
 	var slider_21 = document.getElementById('slider_21');
 	var slider_22 = document.getElementById('slider_22');
 	var slider_23 = document.getElementById('slider_23');
-	
-	$scope.set_max_demand = function(){
-	let sliderOptions_update = {
-		start: [0],
-        range: {			
-            'min': 0,
-            'max': $scope.max_demand_data
-        }
-    };
-	slider_0.noUiSlider.updateOptions(sliderOptions_update);
-	slider_1.noUiSlider.updateOptions(sliderOptions_update);
-	slider_2.noUiSlider.updateOptions(sliderOptions_update);
-	slider_3.noUiSlider.updateOptions(sliderOptions_update);
-	slider_4.noUiSlider.updateOptions(sliderOptions_update);
-	slider_5.noUiSlider.updateOptions(sliderOptions_update);
-	slider_6.noUiSlider.updateOptions(sliderOptions_update);
-	slider_7.noUiSlider.updateOptions(sliderOptions_update);
-	slider_8.noUiSlider.updateOptions(sliderOptions_update);
-	slider_9.noUiSlider.updateOptions(sliderOptions_update);
-	slider_10.noUiSlider.updateOptions(sliderOptions_update);
-	slider_11.noUiSlider.updateOptions(sliderOptions_update);
-	slider_12.noUiSlider.updateOptions(sliderOptions_update);
-	slider_13.noUiSlider.updateOptions(sliderOptions_update);
-	slider_14.noUiSlider.updateOptions(sliderOptions_update);
-	slider_15.noUiSlider.updateOptions(sliderOptions_update);
-	slider_16.noUiSlider.updateOptions(sliderOptions_update);
-	slider_17.noUiSlider.updateOptions(sliderOptions_update);
-	slider_18.noUiSlider.updateOptions(sliderOptions_update);
-	slider_19.noUiSlider.updateOptions(sliderOptions_update);
-	slider_20.noUiSlider.updateOptions(sliderOptions_update);
-	slider_21.noUiSlider.updateOptions(sliderOptions_update);
-	slider_22.noUiSlider.updateOptions(sliderOptions_update);
-	slider_23.noUiSlider.updateOptions(sliderOptions_update);
+
+	$scope.set_max_demand = function () {
+		let sliderOptions_update = {
+			start: [0],
+			range: {
+				'min': 0,
+				'max': $scope.max_demand_data
+			}
+		};
+		slider_0.noUiSlider.updateOptions(sliderOptions_update);
+		slider_1.noUiSlider.updateOptions(sliderOptions_update);
+		slider_2.noUiSlider.updateOptions(sliderOptions_update);
+		slider_3.noUiSlider.updateOptions(sliderOptions_update);
+		slider_4.noUiSlider.updateOptions(sliderOptions_update);
+		slider_5.noUiSlider.updateOptions(sliderOptions_update);
+		slider_6.noUiSlider.updateOptions(sliderOptions_update);
+		slider_7.noUiSlider.updateOptions(sliderOptions_update);
+		slider_8.noUiSlider.updateOptions(sliderOptions_update);
+		slider_9.noUiSlider.updateOptions(sliderOptions_update);
+		slider_10.noUiSlider.updateOptions(sliderOptions_update);
+		slider_11.noUiSlider.updateOptions(sliderOptions_update);
+		slider_12.noUiSlider.updateOptions(sliderOptions_update);
+		slider_13.noUiSlider.updateOptions(sliderOptions_update);
+		slider_14.noUiSlider.updateOptions(sliderOptions_update);
+		slider_15.noUiSlider.updateOptions(sliderOptions_update);
+		slider_16.noUiSlider.updateOptions(sliderOptions_update);
+		slider_17.noUiSlider.updateOptions(sliderOptions_update);
+		slider_18.noUiSlider.updateOptions(sliderOptions_update);
+		slider_19.noUiSlider.updateOptions(sliderOptions_update);
+		slider_20.noUiSlider.updateOptions(sliderOptions_update);
+		slider_21.noUiSlider.updateOptions(sliderOptions_update);
+		slider_22.noUiSlider.updateOptions(sliderOptions_update);
+		slider_23.noUiSlider.updateOptions(sliderOptions_update);
 	};
 
 	var slider_options = {
 		start: [50],
 		animate: false,
 		animationDuration: 200,
-		
+
 		connect: true,
 		step: 1,
 		direction: 'rtl',
@@ -496,35 +504,35 @@ napp.controller('load_profile_controller',function($scope,$http,$location){
 	noUiSlider.create(slider_22, slider_options);
 	noUiSlider.create(slider_23, slider_options);
 
-	slider_mod_function(slider_0,0);
-	slider_mod_function(slider_1,1);
-	slider_mod_function(slider_2,2);
-	slider_mod_function(slider_3,3);
-	slider_mod_function(slider_4,4);
-	slider_mod_function(slider_5,5);
-	slider_mod_function(slider_6,6);
-	slider_mod_function(slider_7,7);
-	slider_mod_function(slider_8,8);
-	slider_mod_function(slider_9,9);
-	slider_mod_function(slider_10,10);
-	slider_mod_function(slider_11,11);
-	slider_mod_function(slider_12,12);
-	slider_mod_function(slider_13,13);
-	slider_mod_function(slider_14,14);
-	slider_mod_function(slider_15,15);
-	slider_mod_function(slider_16,16);
-	slider_mod_function(slider_17,17);
-	slider_mod_function(slider_18,18);
-	slider_mod_function(slider_19,19);
-	slider_mod_function(slider_20,20);
-	slider_mod_function(slider_21,21);
-	slider_mod_function(slider_22,22);
-	slider_mod_function(slider_23,23);
+	slider_mod_function(slider_0, 0);
+	slider_mod_function(slider_1, 1);
+	slider_mod_function(slider_2, 2);
+	slider_mod_function(slider_3, 3);
+	slider_mod_function(slider_4, 4);
+	slider_mod_function(slider_5, 5);
+	slider_mod_function(slider_6, 6);
+	slider_mod_function(slider_7, 7);
+	slider_mod_function(slider_8, 8);
+	slider_mod_function(slider_9, 9);
+	slider_mod_function(slider_10, 10);
+	slider_mod_function(slider_11, 11);
+	slider_mod_function(slider_12, 12);
+	slider_mod_function(slider_13, 13);
+	slider_mod_function(slider_14, 14);
+	slider_mod_function(slider_15, 15);
+	slider_mod_function(slider_16, 16);
+	slider_mod_function(slider_17, 17);
+	slider_mod_function(slider_18, 18);
+	slider_mod_function(slider_19, 19);
+	slider_mod_function(slider_20, 20);
+	slider_mod_function(slider_21, 21);
+	slider_mod_function(slider_22, 22);
+	slider_mod_function(slider_23, 23);
 
 	// function
-	function slider_mod_function(data,value){
+	function slider_mod_function(data, value) {
 		// let test = document.getElementsByClassName('test1');
-		data.noUiSlider.on('update',function(values,handle){
+		data.noUiSlider.on('update', function (values, handle) {
 			// test[0].innerHTML = values[handle];
 			// $scope.afd = values[handle];
 			load_profile_array[value] = values[handle];
@@ -534,13 +542,13 @@ napp.controller('load_profile_controller',function($scope,$http,$location){
 
 	//Final Load Profile Plot
 	var load_profile_final = document.getElementById('load_profile_final');
-	var data = [{
+	data = [{
 		type: 'scatter',
-		name:'Load Profile',
+		name: 'Load Profile',
 		mode: 'lines+markers',
 		y: [2, 1, 3, 2],
 		orientation: 'horizontal'
-		}];
+	}];
 	var layout_load_final = {
 		title: 'Energy Demand for the Selected Load',
 		xaxis: {
@@ -564,18 +572,20 @@ napp.controller('load_profile_controller',function($scope,$http,$location){
 			x: 1,
 			xanchor: 'right',
 			y: 1
-		  },
-		margin: {t: 50, b: 80, l: 80, r: 50},
+		},
+		margin: { t: 50, b: 80, l: 80, r: 50 },
 	};
-	let config_load_final = {responsive: true,
-		displayModeBar: false};
-	
-	Plotly.newPlot(load_profile_final, data, layout_load_final,config_load_final);
+	let config_load_final = {
+		responsive: true,
+		displayModeBar: false
+	};
 
-	$scope.selecter_load = function(input){
+	Plotly.newPlot(load_profile_final, data, layout_load_final, config_load_final);
+
+	$scope.selecter_load = function (input) {
 		console.log(input);
-	}
-	$scope.load_database = function(){
+	};
+	$scope.load_database = function () {
 		console.log($scope.selectedLoad);
 		btn_load_profile_final.disabled = false;
 		// Other Files
@@ -583,41 +593,41 @@ napp.controller('load_profile_controller',function($scope,$http,$location){
 		x[1].style.transform = "translateY(0)";
 		x[2].style.transform = "translateY(0)";
 		x[3].style.transform = "translateY(0)";
-		instinct_profile["load_profile"] = $scope.selectedLoad.load_profile;
-		Plotly.restyle(load_profile_final, 'y', [$scope.selectedLoad.load_profile]);	
-	}
-	$scope.load_changer = function(){
-		if( $scope.selectedLoad.load_profile){
+		instinct_profile.load_profile = $scope.selectedLoad.load_profile;
+		Plotly.restyle(load_profile_final, 'y', [$scope.selectedLoad.load_profile]);
+	};
+	$scope.load_changer = function () {
+		if ($scope.selectedLoad.load_profile) {
 			btn_load_profile_database.disabled = false;
 		}
-		else{
+		else {
 			btn_load_profile_database.disabled = true;
 		}
-		instinct_profile["load_profile"] = $scope.selectedLoad.load_profile;
+		instinct_profile.load_profile = $scope.selectedLoad.load_profile;
 		Plotly.restyle(load_profile_final, 'y', [$scope.selectedLoad.load_profile]);
-		
-	}
+
+	};
 	//load profile 
-	$scope.load_profile_upload = function(){
+	$scope.load_profile_upload = function () {
 		console.log("Load Profile Loading");
-		console.log(instinct_profile);	
+		console.log(instinct_profile);
 		// instinct_profile["load_profile"] = load_profile_array;
-		ipcRenderer.send('load_profile_done',instinct_profile);
+		ipcRenderer.send('load_profile_done', instinct_profile);
 		$location.path("/component_selection");
-	}
+	};
 
 });
 // Component Controller
-napp.controller('components_controller',function($scope,$http,$location){
+napp.controller('components_controller', function ($scope, $http, $location) {
 	// Active Button Changer 
 	var side_menu_active_system = document.getElementsByClassName('left_side_menu');
-	for(i=0;i<side_menu_active_system.length;i++){
+	for (i = 0; i < side_menu_active_system.length; i++) {
 		side_menu_active_system[i].classList.remove("active");
 	}
 	side_menu_active_system[3].classList.add("active");
 
 
-	let comp_counter = {};
+	let comp_counter = { };
 	comp_counter.inverter = 0;
 	comp_counter.battery = 0;
 	comp_counter.solar = 0;
@@ -626,84 +636,84 @@ napp.controller('components_controller',function($scope,$http,$location){
 	$scope.lbl_component_info = "Please select the components to proceed further";
 
 
-	instinct_profile['components'] = {};
+	instinct_profile.components = { };
 	$scope.component_accept = 1;
 
 	// loads components database
 	// Battery
-	$http.get('../database/batteries_csv.csv').then(function(response){
-		$scope.battery_data = csv_to_array(response.data);		
+	$http.get('../database/batteries_csv.csv').then(function (response) {
+		$scope.battery_data = csv_to_array(response.data);
 	});
 	// solar_panel
-	$http.get('../database/solar_panel_csv.csv').then(function(response){
-		$scope.solar_data = csv_to_array(response.data);		
+	$http.get('../database/solar_panel_csv.csv').then(function (response) {
+		$scope.solar_data = csv_to_array(response.data);
 	});
 	// Inverter
-	$http.get('../database/inverter_csv.csv').then(function(response){
-		$scope.inverter_data = csv_to_array(response.data);		
+	$http.get('../database/inverter_csv.csv').then(function (response) {
+		$scope.inverter_data = csv_to_array(response.data);
 	});
 
-	$scope.priceCorrection = function(input){
-		if (input == "N/A"){
+	$scope.priceCorrection = function (input) {
+		if (input == "N/A") {
 			console.log(input);
 			return "GOH";
 		}
-		
-	}
+
+	};
 
 	//$scope.component_accept = ($scope.solar_database_form.$dirty);// && $scope.battery_database_form.$dirty && $scope.inverter_database_form.$dirty)
-	$scope.inverter_change = function(val){
-		if(val){
+	$scope.inverter_change = function (val) {
+		if (val) {
 			$scope.lbl_component_info = "Inverter is selected";
 			comp_counter.inverter = 1;
 		}
-		else{
+		else {
 			comp_counter.inverter = 0;
 		}
 		console.log(comp_counter);
-		if(comp_counter.inverter && comp_counter.battery && comp_counter.solar){
+		if (comp_counter.inverter && comp_counter.battery && comp_counter.solar) {
 			btn_component_final.disabled = false;
 			$scope.lbl_component_info = "All components loaded, ready to proceed. Please click the button to proceed";
 		}
-	}
-	$scope.battery_change = function(val){
-		if(val){
+	};
+	$scope.battery_change = function (val) {
+		if (val) {
 			$scope.lbl_component_info = "Battery is selected";
 			comp_counter.battery = 1;
 		}
-		else{
+		else {
 			comp_counter.battery = 0;
 		}
 		console.log(comp_counter);
-	}
-	$scope.solar_change = function(val){
-		if(val){
+	};
+	$scope.solar_change = function (val) {
+		if (val) {
 			$scope.lbl_component_info = "Solar Panel is selected";
 			comp_counter.solar = 1;
 		}
-		else{
+		else {
 			comp_counter.solar = 0;
 		}
 		console.log(comp_counter);
-	}
+	};
 
 	// Final Program - Components
-	$scope.component_final = function(){
+	$scope.component_final = function () {
 		console.log(instinct_profile);
 		// check for selection
-		instinct_profile.components['battery'] = $scope.selectedBattery;
-		instinct_profile.components['solar_panel'] = $scope.selectedSolar;
-		instinct_profile.components['inverter'] = $scope.selectedInverter;
-		ipcRenderer.send('components_done',instinct_profile);
+		instinct_profile.components.battery = $scope.selectedBattery;
+		instinct_profile.components.solar_panel = $scope.selectedSolar;
+		instinct_profile.components.inverter = $scope.selectedInverter;
+		ipcRenderer.send('components_done', instinct_profile);
 		$location.path('/simulation_data');
-	}
+	};
 });
 
 //Simulation Data
-napp.controller('simulation_data_controller',function($scope,$http,$q,$location,$rootScope){
+napp.controller('simulation_data_controller', function ($scope, $http, $q, $location, $rootScope) {
 	// Active Button Changer 
 	var side_menu_active_system = document.getElementsByClassName('left_side_menu');
-	for(i=0;i<side_menu_active_system.length;i++){
+	for (i = 0; i < side_menu_active_system.length; i++) {
 		side_menu_active_system[i].classList.remove("active");
 	}
 	side_menu_active_system[4].classList.add("active");
@@ -716,32 +726,32 @@ napp.controller('simulation_data_controller',function($scope,$http,$q,$location,
 	// modal
 	let sim_modal_result_button = document.getElementById("sim_modal_result_button");
 	sim_modal_result_button.disabled = true;
-	$scope.simulation_data = {};
+	$scope.simulation_data = { };
 	// Set preset data
 	$scope.simulation_data.grid_reliability = 0;
 	$scope.simulation_data.grid_dependency = true;
-	$scope.simulation_data.autonomy_period = 1; 
-	$scope.simulation_data.simulation_days = 365; 
+	$scope.simulation_data.autonomy_period = 1;
+	$scope.simulation_data.simulation_days = 365;
 	$scope.simulation_data.microgrid_focus = "economic";
 	$scope.simulation_data.depth_of_discharge = 50;
 	$scope.simulation_data.batt_aging_flag = true;
-	$scope.simulation_data.solar_panel_aging_flag = true; 
+	$scope.simulation_data.solar_panel_aging_flag = true;
 	$scope.simulation_data.inv_cc_aging_flag = true;
 	$scope.simulation_data.batt_temperature_flag = true;
-	$scope.simulation_data.solar_panel_temperature_flag = true; 
+	$scope.simulation_data.solar_panel_temperature_flag = true;
 	$scope.simulation_data.batt_discharge_current_flag = true;
 	$scope.simulation_data.inverter_discharge_current_flag = true;
 	$scope.simulation_data.lower_threshold_temperature = 15;
 	$scope.simulation_data.upper_threshold_temperature = 35;
 
-	$scope.grid_dependency_func = function(){
-		if($scope.simulation_data.grid_dependency){	
+	$scope.grid_dependency_func = function () {
+		if ($scope.simulation_data.grid_dependency) {
 			$scope.simulation_data.grid_reliability = 0;
 		}
-		else{
+		else {
 			$scope.simulation_data.grid_reliability = 70;
 		}
-	}
+	};
 	// PLOTLY - DATA SIM
 	// plotly
 	var simulation_first_graph = document.getElementById('simulation_first_graph');
@@ -754,97 +764,99 @@ napp.controller('simulation_data_controller',function($scope,$http,$q,$location,
 	var layout = {
 		title: 'Load Profile',
 		grid: {
-			rows: 1, 
-			columns: 2, 
+			rows: 1,
+			columns: 2,
 			pattern: 'independent'
 		}
-	  };
+	};
 
-	let config = {responsive: true,
-		displayModeBar: false};
-		// TRACE
+	let config = {
+		responsive: true,
+		displayModeBar: false
+	};
+	// TRACE
 	const original_profile = instinct_profile.load_profile;
 	var actual_profile_trace = {
 		y: original_profile,
 		type: 'scatter'
-		};
-		
+	};
+
 	var ldc_profile_trace = {
 		y: [0, 0, 0],
 		xaxis: 'x2',
 		yaxis: 'y2',
 		type: 'scatter'
-		};
+	};
 	var data = [actual_profile_trace, ldc_profile_trace];
-	Plotly.newPlot(simulation_first_graph, data, layout,config);
+	Plotly.newPlot(simulation_first_graph, data, layout, config);
 	// Load Duration
 	var ldc_profile = [];
-	
-	$scope.load_duration_profile = function(){
+
+	$scope.load_duration_profile = function () {
 		console.log("LOAD DURATION CURVE");
-		ldc_profile = original_profile.sort(function(a, b){return b - a});
+		ldc_profile = original_profile.sort(function (a, b) { return (b - a); });
 		console.log(instinct_profile.load_profile);
 		console.log(ldc_profile);
-		Plotly.restyle(simulation_first_graph, 'y', [instinct_profile.load_profile,ldc_profile]);
-	}
- // FInal data
-	$scope.simulation_final = function(){
+		Plotly.restyle(simulation_first_graph, 'y', [instinct_profile.load_profile, ldc_profile]);
+	};
+	// FInal data
+	$scope.simulation_final = function () {
 		console.log("This is a test message");
 		document.getElementById("simu_prepare_btn").innerText = "Preparing..";
 		instinct_profile.simulation_data = $scope.simulation_data;
 		console.log(instinct_profile);
-		ipcRenderer.send('simulation_parameters',instinct_profile);
-		setTimeout(function(){
+		ipcRenderer.send('simulation_parameters', instinct_profile);
+		setTimeout(function () {
 			document.getElementById("simu_runner_btn").disabled = false;
 			document.getElementById("simu_prepare_btn").innerText = "Prepared";
 			document.getElementById("simu_prepare_btn").style.backgroundColor = "rgba(0, 255, 55, 0.664)";
 			document.getElementById("simu_prepare_btn").style.color = "white";
-		},5000);
-	}
- // Run
-	$scope.simulation_run = function(){
+		}, 5000);
+	};
+	// Run
+	$scope.simulation_run = function () {
 		let simulation_modal_curtain = document.getElementById('simulation_modal_curtain');
 		simulation_modal_curtain.style.transform = "translateY(0px)";
 
 		var sim_modal = document.getElementById("simulation_result_modal");
 		var sim_modal_val = sim_modal.style.transform;
-		if (sim_modal_val == "translateY(0px)"){
+		if (sim_modal_val == "translateY(0px)") {
 			sim_modal.style.transform = "translateY(-500%)";
 		}
-		else{
+		else {
 			sim_modal.style.transform = "translateY(0px)";
 			setTimeout(() => {
-					console.log("SIMULATION START");
-					document.getElementById('sim_modal_progress').innerHTML = "Simulation in progress";
-					document.getElementById('sim_modal_progress').style.color = "yellow	 ";
-					ipcRenderer.send('simulation_run');
+				console.log("SIMULATION START");
+				document.getElementById('sim_modal_progress').innerHTML = "Simulation in progress";
+				document.getElementById('sim_modal_progress').style.color = "yellow	 ";
+				ipcRenderer.send('simulation_run');
 			}, 3000);
-		}	
-	}
+		}
+	};
 
 
 	// Results Page
-	$scope.sim_first_result_btn = function(){
+	$scope.sim_first_result_btn = function () {
 		document.getElementById("simulation_result_modal").style.transform = "translateY(-500%)";
-		
-		$http.get('../outputs/output_batt_SOH.json').then(function(response){
-			$rootScope.result_BATT_SOH = (response.data);		
+
+		$http.get('../outputs/output_batt_SOH.json').then(function (response) {
+			$rootScope.result_BATT_SOH = (response.data);
 			// console.log($rootScope.result_BATT_SOH);
 		});
-		$http.get('../outputs/output_batt_DOD.json').then(function(response){
-			$rootScope.result_output_batt_DOD = (response.data);		
+		$http.get('../outputs/output_batt_DOD.json').then(function (response) {
+			$rootScope.result_output_batt_DOD = (response.data);
 			// console.log($rootScope.result_BATT_SOH);
 		});
-		$http.get('../outputs/output_energy_unmet.json').then(function(response){
-			$rootScope.result_output_energy_unmet = (response.data);		
+		$http.get('../outputs/output_energy_unmet.json').then(function (response) {
+			$rootScope.result_output_energy_unmet = (response.data);
 			// console.log($rootScope.result_BATT_SOH);
 		});
-		$http.get('../outputs/output_energy_surplus.json').then(function(response){
-			$rootScope.result_output_energy_surplus = (response.data);		
+		$http.get('../outputs/output_energy_surplus.json').then(function (response) {
+			$rootScope.result_output_energy_surplus = (response.data);
 			// console.log($rootScope.result_BATT_SOH);
 		});
-		$http.get('../database/tariff_data.json').then(function(response){
-			$rootScope.tariff_data = response.data.tariff_data;		
+		$http.get('../database/tariff_data.json').then(function (response) {
+			$rootScope.tariff_data = response.data.tariff_data;
 			// console.log($scope.tariff_data[0].tariff_amount);
 			//load data into the model
 			$rootScope.tariff_till_100 = $rootScope.tariff_data[0].tariff_amount;
@@ -855,32 +867,32 @@ napp.controller('simulation_data_controller',function($scope,$http,$q,$location,
 			$rootScope.tariff_till_export = $rootScope.tariff_data[4].tariff_amount;
 			// tariff_amount_export = $rootScope.tariff_till_export;
 		});
-		$http.get('../outputs/simulation_outputs.json').then(function(response){
-			$rootScope.simulation_outputs = (response.data);		
+		$http.get('../outputs/simulation_outputs.json').then(function (response) {
+			$rootScope.simulation_outputs = (response.data);
 			$location.path("/simulation_first_result");
-		});		
-	}
+		});
+	};
 });
 
 
 //Sim-first-results
-napp.controller('simulation_first_result_controller',function($scope,$http,$rootScope){
-	
+napp.controller('simulation_first_result_controller', function ($scope, $http, $rootScope) {
+
 	// Active Button Changer 
 	var side_menu_active_system = document.getElementsByClassName('left_side_menu');
-	for(i=0;i<side_menu_active_system.length;i++){
+	for (i = 0; i < side_menu_active_system.length; i++) {
 		side_menu_active_system[i].classList.remove("active");
 	}
 	side_menu_active_system[0].classList.add("active");
 
 
- 	$rootScope.batt_lifetime_prediction = parseFloat($rootScope.simulation_outputs.predicted_life_of_battery)/365; //in years
-	$rootScope.energy_exportable_avg = parseFloat($rootScope.simulation_outputs.energy_surplus_total)/($rootScope.simulation_outputs.simulated_days*1000);
-	$rootScope.energy_required_from_grid_avg = parseFloat($rootScope.simulation_outputs.energy_unmet_total/($rootScope.simulation_outputs.simulated_days*1000));
-	$rootScope.energy_exportable = parseFloat($rootScope.simulation_outputs.energy_surplus_total/1000);
-	$rootScope.energy_required_from_grid = parseFloat($rootScope.simulation_outputs.energy_unmet_total/1000);
+	$rootScope.batt_lifetime_prediction = parseFloat($rootScope.simulation_outputs.predicted_life_of_battery) / 365; //in years
+	$rootScope.energy_exportable_avg = parseFloat($rootScope.simulation_outputs.energy_surplus_total) / ($rootScope.simulation_outputs.simulated_days * 1000);
+	$rootScope.energy_required_from_grid_avg = parseFloat($rootScope.simulation_outputs.energy_unmet_total / ($rootScope.simulation_outputs.simulated_days * 1000));
+	$rootScope.energy_exportable = parseFloat($rootScope.simulation_outputs.energy_surplus_total / 1000);
+	$rootScope.energy_required_from_grid = parseFloat($rootScope.simulation_outputs.energy_unmet_total / 1000);
 	$rootScope.energy_saved = parseFloat($rootScope.simulation_outputs.energy_saved_overall / 1000);
-	
+
 	// Economics
 	$scope.solar_panel_cost_each = 12800;
 	$scope.solar_panel_count = 9;
@@ -906,11 +918,11 @@ napp.controller('simulation_first_result_controller',function($scope,$http,$root
 	console.log("$rootScope.energy_exportable" + $rootScope.energy_exportable);
 	console.log("$rootScope.tariff_amount_export" + $rootScope.tariff_till_export);
 
-	
+
 	//Payback
-	let energy_saved_in_an_year = ($scope.energy_saved/ $rootScope.simulation_outputs.simulated_days)*365; //energy per year
-	let amount_saved_without_exports_in_an_year = ( $scope.amount_saved_no_exports/ $rootScope.simulation_outputs.simulated_days)*365; //energy per year
-	let amount_saved_with_exports_in_an_year = ( $scope.amount_saved_with_exports/ $rootScope.simulation_outputs.simulated_days)*365; //energy per year
+	let energy_saved_in_an_year = ($scope.energy_saved / $rootScope.simulation_outputs.simulated_days) * 365; //energy per year
+	let amount_saved_without_exports_in_an_year = ($scope.amount_saved_no_exports / $rootScope.simulation_outputs.simulated_days) * 365; //energy per year
+	let amount_saved_with_exports_in_an_year = ($scope.amount_saved_with_exports / $rootScope.simulation_outputs.simulated_days) * 365; //energy per year
 
 	let payback_period_without_export = $scope.total_investment_needed / amount_saved_without_exports_in_an_year;
 	let payback_period_with_export = $scope.total_investment_needed / amount_saved_with_exports_in_an_year;
@@ -923,16 +935,16 @@ napp.controller('simulation_first_result_controller',function($scope,$http,$root
 	//max in month for solar power output
 	let max_month_solar = 0;
 
-	for(i=0;i<$rootScope.simulation_outputs.solar_power_output_permonth.length;i++){
-		
-		if (max_month_solar < $rootScope.simulation_outputs.solar_power_output_permonth[i]){
+	for (i = 0; i < $rootScope.simulation_outputs.solar_power_output_permonth.length; i++) {
+
+		if (max_month_solar < $rootScope.simulation_outputs.solar_power_output_permonth[i]) {
 			max_month_solar = $rootScope.simulation_outputs.solar_power_output_permonth[i];
 		}
 	}
 
 
 
-	let simulation_output_data = {};
+	let simulation_output_data = { };
 	//sim_results_graph_1 - BATT- SOH
 	let sim_results_graph_1 = document.getElementById('sim_results_graph_1');
 	let sim_results_graph_2 = document.getElementById('sim_results_graph_2');
@@ -944,41 +956,41 @@ napp.controller('simulation_first_result_controller',function($scope,$http,$root
 	let data_sim_results_1 = [{
 		type: 'scatter',
 		mode: 'lines+markers',
-		marker:{
+		marker: {
 			size: 2
 		},
 		y: $rootScope.result_BATT_SOH,
 		name: 'BATTERY SOH SIMULATED CURVE',
 		orientation: 'horizontal',
-		
-		},
-		{
+
+	},
+	{
 		type: 'scatter',
 		mode: 'lines+markers',
-		marker:{
+		marker: {
 			size: 1
 		},
 		y: $rootScope.simulation_outputs.batt_SOH_fitted_curve,
 		name: 'LINEAR CURVE FITTED (SOH)',
 		orientation: 'horizontal'
-		}];
+	}];
 
 	let layout_sim_results_1 = {
 		title: 'State of Health vs Time',
 		xaxis: {
 			title: 'Day of Year',
 			titlefont: {
-			  family: 'Arial, sans-serif',
-			  size: 18,
-			  color: 'black'
+				family: 'Arial, sans-serif',
+				size: 18,
+				color: 'black'
 			}
 		},
 		yaxis: {
 			title: 'State of Health in %',
 			titlefont: {
-			  family: 'Arial, sans-serif',
-			  size: 18,
-			  color: 'black'
+				family: 'Arial, sans-serif',
+				size: 18,
+				color: 'black'
 			}
 		},
 		showlegend: true,
@@ -986,8 +998,8 @@ napp.controller('simulation_first_result_controller',function($scope,$http,$root
 			x: 1,
 			xanchor: 'right',
 			y: 1
-		  },
-		margin: {t: 50, b: 80, l: 80, r: 50},
+		},
+		margin: { t: 50, b: 80, l: 80, r: 50 },
 	};
 	let config_sim_results_1 = {
 		responsive: true,
@@ -995,17 +1007,17 @@ napp.controller('simulation_first_result_controller',function($scope,$http,$root
 	};
 	// graph 2 config - BATT DOD
 	var surplus_energy = {
-		x: $rootScope.simulation_outputs['months_array'],
+		x: $rootScope.simulation_outputs.months_array,
 		y: $rootScope.simulation_outputs.surplus_energy_permonth,
 		type: 'bar',
 		name: 'Surplus Energy',
 		marker: {
-		  color: 'rgb(96, 212, 0)',
-		  opacity: 0.7,
+			color: 'rgb(96, 212, 0)',
+			opacity: 0.7,
 		}
-	};	  
+	};
 	var unmet_energy = {
-		x: $rootScope.simulation_outputs['months_array'],
+		x: $rootScope.simulation_outputs.months_array,
 		y: $rootScope.simulation_outputs.unmet_energy_permonth,
 		type: 'bar',
 		name: 'Unmet Energy',
@@ -1015,7 +1027,7 @@ napp.controller('simulation_first_result_controller',function($scope,$http,$root
 		}
 	};
 	var solar_power_output = {
-		x: $rootScope.simulation_outputs['months_array'],
+		x: $rootScope.simulation_outputs.months_array,
 		y: $rootScope.simulation_outputs.solar_power_output_permonth,
 		type: 'bar',
 		name: 'Solar Power Generated',
@@ -1024,33 +1036,33 @@ napp.controller('simulation_first_result_controller',function($scope,$http,$root
 			opacity: 0.5
 		}
 	};
-	var data_sim_results_2 = [surplus_energy, unmet_energy,solar_power_output];
+	var data_sim_results_2 = [surplus_energy, unmet_energy, solar_power_output];
 
 	var layout_sim_results_2 = {
-	  title: 'Various Energies',
-	  xaxis: {
-		title: 'Month of Year',
-		tickangle: -45,
-		titlefont: {
-			family: 'Arial, sans-serif',
-			size: 18,
-			color: 'black'
+		title: 'Various Energies',
+		xaxis: {
+			title: 'Month of Year',
+			tickangle: -45,
+			titlefont: {
+				family: 'Arial, sans-serif',
+				size: 18,
+				color: 'black'
+			}
+		},
+		yaxis: {
+			title: 'Energy in Wh',
+			titlefont: {
+				family: 'Arial, sans-serif',
+				size: 18,
+				color: 'black'
+			}
+		},
+		barmode: 'group',
+		legend: {
+			x: 1,
+			xanchor: 'right',
+			y: 1
 		}
-	},
-	yaxis: {
-		title: 'Energy in Wh',
-		titlefont: {
-			family: 'Arial, sans-serif',
-			size: 18,
-			color: 'black'
-		}
-	},
-	  barmode: 'group',
-	  legend: {
-		x: 1,
-		xanchor: 'right',
-		y: 1
-	  }
 	};
 
 	// graph 3 Economics Pie-Chart
@@ -1061,250 +1073,153 @@ napp.controller('simulation_first_result_controller',function($scope,$http,$root
 		textinfo: "label+percent",
 		textposition: "outside",
 		automargin: true
-	  }];
+	}];
 
 	let layout_sim_results_3 = {
-		title: 'Initial Investment Distribution',	
+		title: 'Initial Investment Distribution',
 		showlegend: true,
-		margin: {t: 50, b: 80, l: 80, r: 50},
+		margin: { t: 50, b: 80, l: 80, r: 50 },
 	};
 
 	let config_sim_results_3 = {
 		responsive: true,
 		displayModeBar: false
 	};
-	
+
 	// graph 4 config - Radar Plot
 	let data_sim_results_4 = [{
 		type: 'scatterpolar',
 		name: 'Solar Power Generated',
 		r: $rootScope.simulation_outputs.solar_power_output_permonth,
-		theta: $rootScope.simulation_outputs['months_array'],
+		theta: $rootScope.simulation_outputs.months_array,
 		fill: 'toself'
-	  },{
+	}, {
 		type: 'scatterpolar',
 		name: 'Energy Unmet',
 		r: $rootScope.simulation_outputs.unmet_energy_permonth,
-		theta: $rootScope.simulation_outputs['months_array'],
+		theta: $rootScope.simulation_outputs.months_array,
 		fill: 'toself'
-	  },{
+	}, {
 		type: 'scatterpolar',
 		name: 'Energy Surplus',
 		r: $rootScope.simulation_outputs.surplus_energy_permonth,
-		theta: $rootScope.simulation_outputs['months_array'],
+		theta: $rootScope.simulation_outputs.months_array,
 		fill: 'toself'
-	  }];
+	}];
 	let layout_sim_results_4 = {
 		polar: {
-		  radialaxis: {
-			visible: true,
-			range: [0, max_month_solar]
-		  }
+			radialaxis: {
+				visible: true,
+				range: [0, max_month_solar]
+			}
 		},
 		showlegend: true
-	  };
+	};
 	let config_sim_results_4 = {
 		responsive: true,
 		displayModeBar: false
 	};
 
-// graph 5 
-let data_sim_results_5 = [{
-	type: 'bar',
-	name: 'Energy Utilized',
-	x: $rootScope.simulation_outputs['months_array'],
-	y: $rootScope.simulation_outputs.energy_saved_monthly,
-	// orientation: 'horizontal'
+	// graph 5 
+	let data_sim_results_5 = [{
+		type: 'bar',
+		name: 'Energy Utilized',
+		x: $rootScope.simulation_outputs.months_array,
+		y: $rootScope.simulation_outputs.energy_saved_monthly,
+		// orientation: 'horizontal'
 	}];
-let layout_sim_results_5 = {
-	title: 'Energy Utilized for the Demand',
-	xaxis: {
-		title: 'Month of Year',
-		titlefont: {
-			family: 'Arial, sans-serif',
-			size: 18,
-			color: 'black'
+	let layout_sim_results_5 = {
+		title: 'Energy Utilized for the Demand',
+		xaxis: {
+			title: 'Month of Year',
+			titlefont: {
+				family: 'Arial, sans-serif',
+				size: 18,
+				color: 'black'
+			}
+		},
+		yaxis: {
+			title: 'Energy Utilized in Wh',
+			titlefont: {
+				family: 'Arial, sans-serif',
+				size: 18,
+				color: 'black'
+			}
+		},
+		showlegend: true,
+		margin: { t: 50, b: 80, l: 80, r: 50 },
+	};
+	let config_sim_results_5 = {
+		responsive: true,
+		displayModeBar: false
+	};
+
+	// sankey system
+
+	var data = {
+		type: "sankey",
+		arrangement: "snap",
+		domain: {
+			x: [0, 1],
+			y: [0, 1]
+		},
+		orientation: "h",
+		valueformat: ".0f",
+		valuesuffix: "Wh",
+		node: {
+			pad: 15,
+			thickness: 5,
+			line: {
+				color: "black",
+				width: 0.5
+			},
+			//    label: ["Solar Insolation","Solar Panel Losses","CC","CC_losses","Battery","Surplus Energy","Inverter","Inverter Losses","Load","Grid"],
+			//    color: ["rgba(31, 119, 180, 0.8)","rgba(255, 127, 14, 0.8)","rgba(44, 160, 44, 0.8)","rgba(44, 160, 44, 0.8)","rgba(44, 160, 44, 0.8)","rgba(44, 160, 44, 0.8)","rgba(44, 160, 44, 0.8)","rgba(44, 160, 44, 0.8)","rgba(44, 160, 44, 0.8)","rgba(44, 160, 44, 0.8)"]
+			label: ["Solar Insolation", "Solar Panel", "CC", "Battery", "Inverter", "Load", "Solar Panel Losses", "CC Losses", "Battery Losses", "Inverter Losses", "Overall Losses"],
+			//    color: ["rgba(31, 119, 180, 0.8)","rgba(255, 127, 14, 0.8)",]
+		},
+
+		link: {
+			source: [0, 1, 2, 3, 4, 1, 2, 3, 4, 6, 7, 8, 9],
+			target: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10],
+			value: [1000, (1000 * 0.19), (1000 * 0.19 * 0.97), (1000 * 0.19 * 0.97 * 0.98), (1000 * 0.19 * 0.97 * 0.98 * 0.95), (1000 * 0.81), (1000 * 0.19 * 0.03), (1000 * 0.19 * 0.97 * 0.02), (1000 * 0.19 * 0.97 * 0.98 * 0.05)],
+			label: ["Insolation to Solar Panel", "Panel to Charge Controller", "Charge Controller to Battery", "Battery to Inverter", "Inverter to Load", "", ""]
 		}
-	},
-	yaxis: {
-		title: 'Energy Utilized in Wh',
-		titlefont: {
-			family: 'Arial, sans-serif',
-			size: 18,
-			color: 'black'
+	};
+
+	var data_sim_results_6 = [data];
+
+	var layout_sim_results_6 = {
+		title: "Energy Flow",
+		//   width: 1118,
+		//   height: 772,
+		font: {
+			size: 10
 		}
-	},
-	showlegend: true,
-	margin: {t: 50, b: 80, l: 80, r: 50},
-};
-let config_sim_results_5 = {
-	responsive: true,
-	displayModeBar: false
-};
+	};
 
-// sankey system
+	let config_sim_results_6 = {
+		responsive: true,
+		displayModeBar: false
+	};
 
-var data = {
-  type: "sankey",
-  arrangement: "snap",
-  domain: {
-    x: [0,1],
-    y: [0,1]
-  },
-  orientation: "h",
-  valueformat: ".0f",
-  valuesuffix: "Wh",
-  node: {
-    pad: 15,
-    thickness: 5,
-    line: {
-      color: "black",
-      width: 0.5
-    },
-//    label: ["Solar Insolation","Solar Panel Losses","CC","CC_losses","Battery","Surplus Energy","Inverter","Inverter Losses","Load","Grid"],
-//    color: ["rgba(31, 119, 180, 0.8)","rgba(255, 127, 14, 0.8)","rgba(44, 160, 44, 0.8)","rgba(44, 160, 44, 0.8)","rgba(44, 160, 44, 0.8)","rgba(44, 160, 44, 0.8)","rgba(44, 160, 44, 0.8)","rgba(44, 160, 44, 0.8)","rgba(44, 160, 44, 0.8)","rgba(44, 160, 44, 0.8)"]
-   label: ["Solar Insolation","Solar Panel","CC","Battery","Inverter","Load","Solar Panel Losses","CC Losses","Battery Losses","Inverter Losses","Overall Losses"],
-//    color: ["rgba(31, 119, 180, 0.8)","rgba(255, 127, 14, 0.8)",]
-      },
-
-  link: {
-    source: [0,1,2,3,4,1,2,3,4,6,7,8,9],
-    target: [1,2,3,4,5,6,7,8,9,10,10,10,10],
-    value: [1000,(1000*.19),(1000*.19*0.97),(1000*0.19*0.97*0.98),(1000*0.19*0.97*0.98*0.95),(1000*.81),(1000*.19*0.03),(1000*0.19*0.97*0.02),(1000*0.19*0.97*0.98*0.05)],
-    label:  ["Insolation to Solar Panel", "Panel to Charge Controller","Charge Controller to Battery", "Battery to Inverter", "Inverter to Load","",""]
-  }
-}
-
-var data_sim_results_6 = [data]
-
-var layout_sim_results_6 = {
-  title: "Energy Flow",
-//   width: 1118,
-//   height: 772,
-  font: {
-    size: 10
-  }
-}
-
-let config_sim_results_6 = {
-	responsive: true,
-	displayModeBar: false
-};
-
-Plotly.newPlot(sim_results_graph_6, data_sim_results_6, layout_sim_results_6,config_sim_results_6);
+	Plotly.newPlot(sim_results_graph_6, data_sim_results_6, layout_sim_results_6, config_sim_results_6);
 
 
 
-	Plotly.newPlot(sim_results_graph_1, data_sim_results_1, layout_sim_results_1,config_sim_results_1);
-	Plotly.newPlot(sim_results_graph_2, data_sim_results_2, layout_sim_results_2,config_sim_results_1);
-	Plotly.newPlot(sim_results_graph_3, data_sim_results_3, layout_sim_results_3,config_sim_results_3);
-	Plotly.newPlot(sim_results_graph_4, data_sim_results_4, layout_sim_results_4,config_sim_results_4);
-	Plotly.newPlot(sim_results_graph_5, data_sim_results_5, layout_sim_results_5,config_sim_results_5);
+	Plotly.newPlot(sim_results_graph_1, data_sim_results_1, layout_sim_results_1, config_sim_results_1);
+	Plotly.newPlot(sim_results_graph_2, data_sim_results_2, layout_sim_results_2, config_sim_results_1);
+	Plotly.newPlot(sim_results_graph_3, data_sim_results_3, layout_sim_results_3, config_sim_results_3);
+	Plotly.newPlot(sim_results_graph_4, data_sim_results_4, layout_sim_results_4, config_sim_results_4);
+	Plotly.newPlot(sim_results_graph_5, data_sim_results_5, layout_sim_results_5, config_sim_results_5);
 	// Plotly.newPlot(sim_results_graph_6, data_sim_results_6, layout_sim_results_6,config_sim_results_6);
 
 });
-
-
-//auto_load_loader_controller
-
-napp.controller('auto_load_loader_controller',function($scope,$http,$rootScope,$q){
-
-	$scope.loads_data = {};
-	let selected_load_object = {};
-	$scope.load_wattage = {};
-	let temp_array_1 = [];
-
-	// Data loading
-	$http.get('../database/loads_appliances.json').then(function (response) {
-
-		//data sorting
-		let loads_data = response.data;
-		let load_types = loads_data.filter(sorter_2);
-		$scope.load_types = load_types.map((element) => element.Type).sort()
-		// console.log(load_types);
-		$scope.loads_data = response.data;
-
-	}, function (err) {
-		console.log(err);
-	});
-
-	const sorter_2 = (value, index, self) => {
-		if (temp_array_1.includes(String(value.Type))) {
-			return false
-		}
-		else {
-			temp_array_1.push(value.Type);
-			return true
-		}
-	}
-	// Ooption change detect
-	$scope.detectIndex = (request_data) => {
-		selected_load_object = {};
-
-		$scope.RatedPower = request_data.RatedPower;
-		$scope.RecommendedProfile = request_data.RecommendedProfile;
-		$scope.Scenario = request_data.Scenario;
-		$scope.PowerFactor = request_data.PowerFactor;
-		$scope.Name = request_data.Name;
-		$scope.Manufacturer = request_data.Manufacturer;
-
-
-
-		// console.log(selected_load_object);
-	}
-	$scope.load_loading = ()=>{
-		// Loading data into loads
-		selected_load_object['rated_power'] = parseInt($scope.RatedPower);
-		selected_load_object['recommended_profile'] = $scope.RecommendedProfile
-		selected_load_object['scenario'] = $scope.Scenario;
-		selected_load_object['power_factor'] = $scope.PowerFactor;
-		selected_load_object['load_name'] = $scope.Name;
-		selected_load_object['manufacturer'] = $scope.Manufacturer;
-		console.log(selected_load_object);
-	}
-
-
-
-
-	// Active Button Changer 
-	var side_menu_active_system = document.getElementsByClassName('left_side_menu');
-	for(i=0;i<side_menu_active_system.length;i++){
-		side_menu_active_system[i].classList.remove("active");
-	}
-	side_menu_active_system[6].classList.add("active");
-	//load appliances
-
-	//status_bar
-	status_activate("Auto Loader Page has loaded",2000)
-	// var status_bar = document.getElementById('info_bar');
-	// status_bar.style.transform = "translateY(-30%)";
-	// setTimeout(() => {
-	// 	status_bar.style.transform = "translateY(100%)";
-	// }, 2000);
-
-
-	
-	//load usage stats
-	//screen shifter
-	$scope.manual_selection  = function(input){
-		console.log(input);
-		// input = "-40%";
-		let screen_profile = document.querySelectorAll('.auto-load-loading__scroll_container');
-		screen_profile[0].style.transform = `translateY(${input})`;//"translateY(-input)";
-
-		// Loaders
-	}
-	$scope.auto_profile_home  = function(){
-	let screen_profile = document.querySelectorAll('.auto_profile_main_container');
-	screen_profile[0].style.transform = "translateY(0)";
-	}
-});
-
 // Environmenatal Assessment
-napp.controller('env_assess_controller',function($scope,$http,$rootScope){
+napp.controller('env_assess_controller', function ($scope, $http, $rootScope) {
 	// Active Button Changer 
 	var side_menu_active_system = document.getElementsByClassName('left_side_menu');
-	for(i=0;i<side_menu_active_system.length;i++){
+	for (i = 0; i < side_menu_active_system.length; i++) {
 		side_menu_active_system[i].classList.remove("active");
 	}
 	side_menu_active_system[5].classList.add("active");
@@ -1312,7 +1227,7 @@ napp.controller('env_assess_controller',function($scope,$http,$rootScope){
 
 	if (document.readyState === 'complete') {
 		//status_bar
-		status_activate("Environmental Page has loaded",2000)
+		status_activate("Environmental Page has loaded", 2000);
 	}
 	//load usage stats
 
