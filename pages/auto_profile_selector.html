@@ -179,24 +179,10 @@
                         <fieldset class="load_types__fields">
                             <legend>Generic Loads</legend>
                             <div class="loads_container">
-                                <!-- <div class="load_items" data-powerData="250" data-qtyData="1"
-                                    data-modellingData="refrigerator_model" data-schedulableData="false"
-                                    draggable="true" data-appName="Refrigerator">
-                                    Refrigerator
-                                </div>
-                                <div class="load_items" data-powerData="1500" data-qtyData="1"
-                                    data-modellingData="ac_model" data-schedulableData="false" draggable="true"
-                                    data-appName="Air Conditioner">
-                                    Air Conditioner
-                                </div>
-                                <div class="load_items" data-powerData="20" data-qtyData="1"
-                                    data-modellingData="indoor_light_model" data-schedulableData="true" draggable="true"
-                                    data-appName="Tube Light">
-                                    Tube Light
-                                </div> -->
+                                <input type="text" placeholder="Search" id="load_search">
                                 <!-- Repeat loads -->
                                 <div class="load_items" ng-repeat="load in loads_data" draggable="true" 
-                                data-powerData="150"
+                                data-powerData="{{load.rated_power}}"
                                 data-qtyData="1"
                                 data-modellingData="{{load.recommended_profile}}"
                                 data-schedulableData="true"
