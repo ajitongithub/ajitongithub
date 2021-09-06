@@ -407,7 +407,7 @@ napp.controller('auto_load_loader_controller', function ($scope, $http, $rootSco
         let marker_load_schedulable = document.querySelector('#marker_load_schedulable');
 
         //test
-        console.log(element.dataset)
+        // console.log(element.dataset);
         marker_load_power.value = element.dataset.powerdata;
         marker_load_qty.value = element.dataset.qtydata;
         marker_load_model.value = element.dataset.modellingdata;
