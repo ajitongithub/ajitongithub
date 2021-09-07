@@ -315,10 +315,11 @@ napp.controller('load_profile_controller', function ($scope, $http, $location) {
 	$scope.electricity_bill = "Use Electricity Bill";
 	$scope.max_demand_data = 1500;
 
+	//TODO
 	// template loading
 	$scope.load_from_template = ()=>{
-		console.log("a");
 		$location.path("/auto_load_loader");
+
 	};
 
 	$scope.load_profile_user_modelled = function () {
@@ -1232,3 +1233,27 @@ napp.controller('env_assess_controller', function ($scope, $http, $rootScope) {
 	//load usage stats
 
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

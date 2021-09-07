@@ -1,5 +1,7 @@
+// // 
 //auto_load_loader_controller
-napp.controller('auto_load_loader_controller', function ($scope, $http, $rootScope, $q) {
+napp.controller('auto_load_loader_controller', function ($scope, $http, $rootScope, $q, $window) {
+    console.log("ASD");
     // Data loading
     $http.get('../database/loads_appliances.json').then(function (response) {
         //data sorting
@@ -43,12 +45,12 @@ napp.controller('auto_load_loader_controller', function ($scope, $http, $rootSco
 
     let add_track__div = document.querySelector("#add_track_id"); //Add Tracks DIV
     let relign_markers = document.querySelector("#align_grid"); //Align Markers
-    // let dragged__div;
     let dragging__dataset;
 
 
     // Drag - Drop Processing - Functions
     let load__dragstart = e => {
+        console.log('asdaaaaaa');
         dragged__div = e.target;
         dragging__dataset = e.target.dataset;
         console.log("DRAG START");
@@ -102,13 +104,13 @@ napp.controller('auto_load_loader_controller', function ($scope, $http, $rootSco
             drop_data.dataset.type = dragging__dataset.type;
             drop_data.dataset.voltage = dragging__dataset.voltage;
 
-            // drop_data.innerText = dragging__dataset.powerdata;
-            drop_data.innerHTML = `<div class="marker_left">07:00</div><div class="marker_right">10:00</div>`;
             drop_data.setAttribute("class", "load_marker__div");
-            
+
             drop_data.setAttribute("draggable", "false");
             drop_data.style.left = `${e.offsetX}px`;
             drop_data.style.width = `${200}px`;
+            drop_data.innerHTML = `<div class="marker_left">07:00</div><div class="marker_right">10:00</div>`;
+            // drop_data.innerHTML = `<div class="marker_left">${}</div><div class="marker_right">${}</div>`;
             e.target.appendChild(drop_data);
 
             // Get the element
@@ -572,12 +574,10 @@ napp.controller('auto_load_loader_controller', function ($scope, $http, $rootSco
         }, 2000);
     };
 
-    //On Load Items
-    window.onload = e => {
+    angular.element(document).ready(() => {
         //-------------------FUNCTIONS
         re_aligner();
         core_function__drag();
-
         // Attach Drag Drop - Load Items
         load__items.forEach(load_element => {
             // console.log(load_element.dataset);
@@ -594,10 +594,6 @@ napp.controller('auto_load_loader_controller', function ($scope, $http, $rootSco
             track_element.addEventListener("drop", load__drop, false);
         });
         // reassign_trackListeners();
-
-
-
-
         //listerners queryselectors
         add_track__div = document.querySelector("#add_track_id");// Add Track Button Addition
         load__grid = document.querySelector('.loads_grid__div');// The Grid 
@@ -610,18 +606,132 @@ napp.controller('auto_load_loader_controller', function ($scope, $http, $rootSco
         let grid_clear__button = document.querySelector("#clear_grid");
 
         grid_save__button.addEventListener('click', e => {
-            let grid_model_data = document.querySelector('#slider_container');
-            let grid_arrangement = grid_model_data.innerHTML.toString();
-            localStorage.setItem('grid_item', grid_arrangement);
-            console.log("DATA SAVED");
-        });
+            //     let grid_model_data = document.querySelector('#slider_container');
+            let grid_info_data = document.querySelector('.load_infobar__div');
+            let grid_marker_data = document.querySelector('.loads_grid__div');
+            // let grid_arrangement = grid_model_data.innerHTML.toString();
+            // localStorage.setItem('grid_item', grid_arrangement);
 
+            // No of info Tracks and Data---------------------
+            let designer_info_object = {}; //the ultimate design object
+            let no_of_tracks = 0;
+            let info_containers = {};
+            let info_temp_array = [];
+            grid_info_data.childNodes.forEach(info_element => {
+                if (info_element.className == "load_info") {
+                    info_containers = {};
+                    info_element.childNodes.forEach(node => {
+                        info_containers.track_id = no_of_tracks;
+                        info_containers.load_name = node.childNodes[0].innerText;
+                        info_containers.load_id = node.dataset.syncdata;
+                        info_temp_array.push(info_containers);
+                    });
+                    no_of_tracks += 1;
+                }
+            });
+            designer_info_object.info_data = info_temp_array;
+            //---MARKERS data_loading
+            no_of_tracks = 0;
+            let load_containers = {};
+            let load_temp_array = [];
+            grid_marker_data.childNodes.forEach(load_element => {
+                if (load_element.className == "load_track__div") {
+                    load_element.childNodes.forEach(node => {
+                        load_containers = {};
+                        load_containers.track_id = no_of_tracks;
+                        // load_containers.load_name = node.childNodes[0].innerText;
+                        load_containers.load_id = node.dataset.syncdata;
+                        load_containers.dataset = node.dataset;
+                        load_containers.starttime = node.childNodes[0].innerText;
+                        console.log(format_to_seconds(node.childNodes[0].innerText));
+                        load_containers.endtime = node.childNodes[1].innerText;
+                        load_temp_array.push(load_containers);
+                    });
+                    no_of_tracks += 1;
+                }
+            });
+            // console.log(load_temp_array);
+            // console.log(no_of_tracks);
+            var name_of_design = "Blah Blah";
+            designer_info_object.arrange_name = name_of_design;
+            designer_info_object.loading_data = load_temp_array;
+            designer_info_object.tracks_count = no_of_tracks;
+            console.log(designer_info_object);
+            // Store in Local Storage
+            localStorage.setItem('design_object_test', JSON.stringify(designer_info_object));
+           
+            ipcRenderer.send('save_load_design', "gd");
+            console.log("DATA SAVED");
+
+         
+
+        });
         grid_load__button.addEventListener('click', e => {
-            let grid_model_data = document.querySelector('#slider_container');
-            grid_model_data.innerHTML = localStorage.getItem('grid_item');
+            // let grid_model_data = document.querySelector('#slider_container');
+            // grid_model_data.innerHTML = localStorage.getItem('grid_item');
+            // reassign_trackListeners();
+
+            let grid_info_data = document.querySelector('.load_infobar__div');
+            let grid_marker_data = document.querySelector('.loads_grid__div');
+
+            grid_info_data.innerHTML = "";
+            grid_marker_data.innerHTML = "";
+
+            //load the tracks and bars
+            let design_data = JSON.parse(localStorage.getItem('design_object_test'));
+            console.log(design_data);
+            console.log(design_data.info_data[0].load_id);
+
+            let no_of_tracks = parseInt(design_data.tracks_count);
+            console.log(no_of_tracks);
+            //First - Generate Tracks and Info Bars..
+            for (let t_count = 0; t_count < no_of_tracks; t_count++) {
+                //info Bar
+                let new_info_element = document.createElement('div');
+                new_info_element.classList.add('load_info');
+                grid_info_data.appendChild(new_info_element);
+                //load_tracks
+                let new_load_track = document.createElement('div');
+                new_load_track.classList.add('load_track__div');
+                grid_marker_data.appendChild(new_load_track);
+            }
+            //populate the data
+            let no_of_loads = design_data.info_data.length;
+            for (let l_count = 0; l_count < no_of_loads; l_count++) {
+                //load the data- info
+                let info_data__div = document.createElement('div');
+                info_data__div.dataset.syncdata = design_data.info_data[l_count].load_id;
+                info_data__div.innerHTML = `<div>${design_data.info_data[l_count].load_name}</div>`;
+                grid_info_data.childNodes[parseInt(design_data.info_data[l_count].track_id)].appendChild(info_data__div);
+
+                //load the marker data
+                let full_width = grid_marker_data.childNodes[parseInt(design_data.loading_data[l_count].track_id)].clientWidth;
+                let pixel_ratio_sec = 86400 / full_width;
+
+                // left and width data
+                let marker_start = (format_to_seconds(design_data.loading_data[l_count].starttime) / pixel_ratio_sec).toFixed(0);
+                let marker_end = (format_to_seconds(design_data.loading_data[l_count].endtime) / pixel_ratio_sec).toFixed(0);
+                let marker_data__div = document.createElement('div');
+                marker_data__div.dataset.appname = design_data.loading_data[l_count].dataset.appname;
+                marker_data__div.dataset.manufacturer = design_data.loading_data[l_count].dataset.manufacturer;
+                marker_data__div.dataset.modellingdata = design_data.loading_data[l_count].dataset.modellingdata;
+                marker_data__div.dataset.powerdata = design_data.loading_data[l_count].dataset.powerdata;
+                marker_data__div.dataset.powerfactor = design_data.loading_data[l_count].dataset.powerfactor;
+                marker_data__div.dataset.qtydata = design_data.loading_data[l_count].dataset.qtydata;
+                marker_data__div.dataset.scenario = design_data.loading_data[l_count].dataset.scenario;
+                marker_data__div.dataset.schedulabledata = design_data.loading_data[l_count].dataset.schedulabledata;
+                marker_data__div.dataset.syncdata = design_data.loading_data[l_count].dataset.syncdata;
+                marker_data__div.dataset.type = design_data.loading_data[l_count].dataset.type;
+                marker_data__div.dataset.voltage = design_data.loading_data[l_count].dataset.voltage;
+                marker_data__div.setAttribute("draggable", "false");
+                marker_data__div.innerHTML = `<div class="marker_left">${design_data.loading_data[l_count].starttime}</div><div class="marker_right">${design_data.loading_data[l_count].endtime}</div>`;
+                marker_data__div.setAttribute("class", "load_marker__div");
+                marker_data__div.style.left = `${marker_start}px`;
+                marker_data__div.style.width = `${marker_end - marker_start}px`;
+                grid_marker_data.childNodes[parseInt(design_data.loading_data[l_count].track_id)].appendChild(marker_data__div);
+            }
             reassign_trackListeners();
         });
-
         grid_clear__button.addEventListener('click', e => {
             let grid_model_data = document.querySelector('.loads_grid__div');
             let grid_info_data = document.querySelector('.load_infobar__div');
@@ -629,9 +739,7 @@ napp.controller('auto_load_loader_controller', function ($scope, $http, $rootSco
             grid_info_data.innerHTML = `<div class="load_info"></div><div class="load_info"></div>`;
             reassign_trackListeners();
         });
-
-
         console.log('page is fully Load at the end');
-    };
+    });
     // -----------END
 });// End Of COntroller

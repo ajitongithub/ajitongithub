@@ -1172,3 +1172,10 @@ for (i = 0; i < simulation_hours; i++) {
 //     // console.log(instinct_config);
 //   });
 // });
+
+
+// New Functions
+ipcMain.handle('save_load_design', (event, data) => {
+  console.log("ASD");
+  console.log(data);
+});

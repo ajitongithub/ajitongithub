@@ -181,7 +181,9 @@
                             <div class="loads_container">
                                 <input type="text" placeholder="Search" id="load_search">
                                 <!-- Repeat loads -->
-                                <div class="load_items" ng-repeat="load in loads_data" draggable="true" 
+                                <div class="load_items" ng-repeat="load in loads_data"
+                                ng-init="$last && finished()" 
+                                draggable="true" 
                                 data-powerData="{{load.rated_power}}"
                                 data-qtyData="1"
                                 data-modellingData="{{load.recommended_profile}}"
@@ -256,7 +258,7 @@
                     </div>
                 </section>
                 <section class="grid_control__div">
-                    <button id="save_grid">SAVE SCHEDULES</button>
+                    <button id="save_grid" ng-click="test11()">SAVE SCHEDULES</button>
                     <button id="load_grid">LOAD SCHEDULES</button>
                     <button id="clear_grid">CLEAR</button>
                     <button id="align_grid">RE-ALIGN</button>
