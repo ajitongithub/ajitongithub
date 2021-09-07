@@ -661,9 +661,7 @@ napp.controller('auto_load_loader_controller', function ($scope, $http, $rootSco
             localStorage.setItem('design_object_test', JSON.stringify(designer_info_object));
            
             ipcRenderer.send('save_load_design', "gd");
-            console.log("DATA SAVED");
-
-         
+            console.log("DATA SAVED");        
 
         });
         grid_load__button.addEventListener('click', e => {
