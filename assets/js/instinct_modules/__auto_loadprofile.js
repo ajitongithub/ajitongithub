@@ -365,8 +365,6 @@ let core_function__drag = () => {
     });
 };
 
-
-
 const load_design_loader = (load_design_object) => {
     let grid_info_data = document.querySelector('.load_infobar__div');
     let grid_marker_data = document.querySelector('.loads_grid__div');
@@ -630,7 +628,7 @@ napp.controller('auto_load_loader_controller', function ($scope, $http, $rootSco
     //Template Loading
     $http.get('../database/load_design.json').then(function (response) {
         //data sorting
-        let template_data = response.data;
+        // let template_data = response.data;
         $scope.template_data = response.data;
         // console.log(template_data);
     }, function (err) {
@@ -640,129 +638,129 @@ napp.controller('auto_load_loader_controller', function ($scope, $http, $rootSco
     // Indian Market Appliance Loading
     $http.get('../database/appliance_listing/AC_fixed.json').then(function (response) {
         //data sorting
-        let load__ac_fixed = response.data;
+        // let load__ac_fixed = response.data;
         $scope.load__ac_fixed = response.data;
-        console.log(load__ac_fixed);
+        // console.log(load__ac_fixed);
     }, function (err) {
         console.log(err);
     });
     $http.get('../database/appliance_listing/ceiling_fan.json').then(function (response) {
         //data sorting
-        let load__ceiling_fan = response.data;
+        // let load__ceiling_fan = response.data;
         $scope.load__ceiling_fan = response.data;
-        console.log(load__ceiling_fan);
+        // console.log(load__ceiling_fan);
     }, function (err) {
         console.log(err);
     });
     $http.get('../database/appliance_listing/inverter_ac.json').then(function (response) {
         //data sorting
-        let load__inverter_ac = response.data;
+        // let load__inverter_ac = response.data;
         $scope.load__inverter_ac = response.data;
-        console.log(load__inverter_ac);
+        // console.log(load__inverter_ac);
     }, function (err) {
         console.log(err);
     });
     $http.get('../database/appliance_listing/computer_monitors.json').then(function (response) {
         //data sorting
-        let load__computer_monitors = response.data;
+        // let load__computer_monitors = response.data;
         $scope.load__computer_monitors = response.data;
-        console.log(load__computer_monitors);
+        // console.log(load__computer_monitors);
     }, function (err) {
         console.log(err);
     });
     $http.get('../database/appliance_listing/deep_freezer.json').then(function (response) {
         //data sorting
-        let load__deep_freezer = response.data;
+        // let load__deep_freezer = response.data;
         $scope.load__deep_freezer = response.data;
-        console.log(load__deep_freezer);
+        // console.log(load__deep_freezer);
     }, function (err) {
         console.log(err);
     });
     $http.get('../database/appliance_listing/frost_free_refrigerator.json').then(function (response) {
         //data sorting
-        let load__frost_free_refrigerator = response.data;
+        // let load__frost_free_refrigerator = response.data;
         $scope.load__frost_free_refrigerator = response.data;
-        console.log(load__frost_free_refrigerator);
+        // console.log(load__frost_free_refrigerator);
     }, function (err) {
         console.log(err);
     }); 
     $http.get('../database/appliance_listing/LED_lamps.json').then(function (response) {
         //data sorting
-        let load__LED_lamps = response.data;
+        // let load__LED_lamps = response.data;
         $scope.load__LED_lamps = response.data;
-        console.log(load__LED_lamps);
+        // console.log(load__LED_lamps);
     }, function (err) {
         console.log(err);
     });
     $http.get('../database/appliance_listing/TFL.json').then(function (response) {
         //data sorting
-        let load__TFL = response.data;
+        // let load__TFL = response.data;
         $scope.load__TFL = response.data;
-        console.log(load__TFL);
+        // console.log(load__TFL);
     }, function (err) {
         console.log(err);
     }); 
     $http.get('../database/appliance_listing/submersible_pump.json').then(function (response) {
         //data sorting
-        let load__submersible_pump = response.data;
+        // let load__submersible_pump = response.data;
         $scope.load__submersible_pump = response.data;
-        console.log(load__submersible_pump);
+        // console.log(load__submersible_pump);
     }, function (err) {
         console.log(err);
     });
     $http.get('../database/appliance_listing/microwave.json').then(function (response) {
         //data sorting
-        let load__microwave = response.data;
+        // let load__microwave = response.data;
         $scope.load__microwave = response.data;
-        console.log(load__microwave);
+        // console.log(load__microwave);
     }, function (err) {
         console.log(err);
     });
     $http.get('../database/appliance_listing/water_heater.json').then(function (response) {
         //data sorting
-        let load__water_heater = response.data;
+        // let load__water_heater = response.data;
         $scope.load__water_heater = response.data;
-        console.log(load__water_heater);
+        // console.log(load__water_heater);
     }, function (err) {
         console.log(err);
     });
     $http.get('../database/appliance_listing/chillers.json').then(function (response) {
         //data sorting
-        let load__chillers = response.data;
+        // let load__chillers = response.data;
         $scope.load__chillers = response.data;
-        console.log(load__chillers);
+        // console.log(load__chillers);
     }, function (err) {
         console.log(err);
     });
     $http.get('../database/appliance_listing/washing_machine.json').then(function (response) {
         //data sorting
-        let load__washing_machine = response.data;
+        // let load__washing_machine = response.data;
         $scope.load__washing_machine = response.data;
-        console.log(load__washing_machine);
+        // console.log(load__washing_machine);
     }, function (err) {
         console.log(err);
     }); 
     $http.get('../database/appliance_listing/openwell_submersible_pump.json').then(function (response) {
         //data sorting
-        let load__openwell_sub_pump = response.data;
+        // let load__openwell_sub_pump = response.data;
         $scope.load__openwell_sub_pump = response.data;
-        console.log(load__openwell_sub_pump);
+        // console.log(load__openwell_sub_pump);
     }, function (err) {
         console.log(err);
     });
     $http.get('../database/appliance_listing/monoset_pump.json').then(function (response) {
         //data sorting
-        let load__monoset_pump = response.data;
+        // let load__monoset_pump = response.data;
         $scope.load__monoset_pump = response.data;
-        console.log(load__monoset_pump);
+        // console.log(load__monoset_pump);
     }, function (err) {
         console.log(err);
     }); 
     $http.get('../database/appliance_listing/direct_cool_refrigerators.json').then(function (response) {
         //data sorting
-        let load__direct_cool_refrigerator = response.data;
+        // let load__direct_cool_refrigerator = response.data;
         $scope.load__direct_cool_refrigerator = response.data;
-        console.log(load__direct_cool_refrigerator);
+        // console.log(load__direct_cool_refrigerator);
     }, function (err) {
         console.log(err);
     });
@@ -969,7 +967,7 @@ napp.controller('auto_load_loader_controller', function ($scope, $http, $rootSco
             grid_info_data.innerHTML = `<div class="load_info"></div><div class="load_info"></div>`;
             reassign_trackListeners();
         });
-        console.log('page is fully Load at the end');
+        // console.log('page is fully Load at the end');
     });
     // -----------END
 });// End Of COntroller

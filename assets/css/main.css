@@ -771,6 +771,13 @@ h1, h2, h3, h4, h5, h6 {
   width: 95%;
 }
 
+.auto-load__template .sections_wrapper .template_main_container .aside_container .load_types__fields details {
+  display: block;
+  padding: 5px;
+  border-bottom: solid 2px #b3b3b3;
+  font-weight: 500;
+}
+
 .auto-load__template .sections_wrapper .template_main_container .aside_container .load_types__fields legend {
   font-size: 16px;
   font-weight: 500;

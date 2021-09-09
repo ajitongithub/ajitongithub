@@ -311,6 +311,14 @@
                     overflow-y: auto;
                     width: 95%;
 
+                    details {
+                        display: block;
+                        padding: 5px;
+                        border-bottom: solid 2px rgb(179, 179, 179);
+                        font-weight: 500;
+                        
+                    }
+
                     legend {
                         font-size: 16px;
                         font-weight: 500;
@@ -330,6 +338,7 @@
                             font-weight: 600;
                             font-size: 14px;
                         }
+
                     }
 
                     .loads_container {
