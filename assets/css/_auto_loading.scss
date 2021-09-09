@@ -252,6 +252,7 @@
 
                             }
                         }
+
                         label {
                             display: block;
                             width: 80%;
@@ -315,15 +316,32 @@
                         font-weight: 500;
                     }
 
+                    .brands_container {
+                        .brand_items {
+                            display: block;
+                            background-color: aliceblue;
+                            color: #424242;
+                            border: solid 1px grey;
+                            margin: 3px;
+                            border-radius: 4px;
+                            padding: 3px 8px;
+                            cursor: move;
+                            overflow: hidden;
+                            font-weight: 600;
+                            font-size: 14px;
+                        }
+                    }
+
                     .loads_container {
                         position: relative;
 
-                       #load_search{
-                        position: sticky;
-                        top: 2px;
-                        background-color: rgba(0, 0, 0, 0.89);
-                        color: beige;
-                       } 
+                        #load_search {
+                            position: sticky;
+                            top: 2px;
+                            background-color: rgba(0, 0, 0, 0.89);
+                            color: beige;
+                        }
+
                         #template_selector {
                             display: block;
                             width: 100%;
@@ -366,6 +384,8 @@
                             font-weight: 600;
                             font-size: 14px;
                         }
+
+
                     }
                 }
 

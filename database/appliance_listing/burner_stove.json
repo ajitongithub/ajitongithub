@@ -1,0 +1,825 @@
+[{
+		"manufacturer": "BUTTERFLY",
+		"bee_star": "1",
+		"model": "BL203/70",
+		"no_of_burners": "2",
+		"thermal_efficiency": "70",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "BUTTERFLY",
+		"bee_star": "1",
+		"model": "BL206/70",
+		"no_of_burners": "2",
+		"thermal_efficiency": "70",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "GREENCHEF",
+		"bee_star": "1",
+		"model": "surya",
+		"no_of_burners": "2",
+		"thermal_efficiency": "69",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "GREENCHEF",
+		"bee_star": "1",
+		"model": "NANO",
+		"no_of_burners": "3",
+		"thermal_efficiency": "69",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "BUTTERFLY",
+		"bee_star": "2",
+		"model": "BL 207/72",
+		"no_of_burners": "2",
+		"thermal_efficiency": "72",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "GREENCHEF",
+		"bee_star": "1",
+		"model": "SURYA DLX",
+		"no_of_burners": "2",
+		"thermal_efficiency": "69",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "GREENCHEF",
+		"bee_star": "1",
+		"model": "MILLENEUM",
+		"no_of_burners": "2",
+		"thermal_efficiency": "69",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "SUNFLAME",
+		"bee_star": "1",
+		"model": "SF 2B SS",
+		"no_of_burners": "2",
+		"thermal_efficiency": "69.10",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "RICHFLAME",
+		"bee_star": "1",
+		"model": "SUMO DLX",
+		"no_of_burners": "2",
+		"thermal_efficiency": "69",
+		"validity": "30-06-2019"
+	},
+	{
+		"manufacturer": "RICHFLAME",
+		"bee_star": "1",
+		"model": "CLASSIC DLX",
+		"no_of_burners": "3",
+		"thermal_efficiency": "69",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "RICHFLAME",
+		"bee_star": "1",
+		"model": "SAFARI DLX",
+		"no_of_burners": "3",
+		"thermal_efficiency": "69",
+		"validity": "30-06-2019"
+	},
+	{
+		"manufacturer": "MILTON",
+		"bee_star": "1",
+		"model": "'SURYA'",
+		"no_of_burners": "2",
+		"thermal_efficiency": "69",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "BUTTERFLY",
+		"bee_star": "1",
+		"model": "BL201/70",
+		"no_of_burners": "2",
+		"thermal_efficiency": "70",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "BUTTERFLY",
+		"bee_star": "1",
+		"model": "BL202/70",
+		"no_of_burners": "2",
+		"thermal_efficiency": "70",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "AGNI",
+		"bee_star": "1",
+		"model": "ELEGANT",
+		"no_of_burners": "2",
+		"thermal_efficiency": "69",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "AGNI",
+		"bee_star": "1",
+		"model": "PRESTIGE-2G",
+		"no_of_burners": "2",
+		"thermal_efficiency": "69",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "AGNI",
+		"bee_star": "1",
+		"model": "PRESTIGE-3G",
+		"no_of_burners": "3",
+		"thermal_efficiency": "69",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "SURYA WHITE LINE",
+		"bee_star": "1",
+		"model": "SUPERB",
+		"no_of_burners": "2",
+		"thermal_efficiency": "69%",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "SURYA WHITE LINE",
+		"bee_star": "1",
+		"model": "SURYA XTRA SAVE",
+		"no_of_burners": "2",
+		"thermal_efficiency": "69%",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "AGNI",
+		"bee_star": "1",
+		"model": "PRESTIGE",
+		"no_of_burners": "2",
+		"thermal_efficiency": "68.5",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "Surya Liberty",
+		"bee_star": "1",
+		"model": "EXCEL",
+		"no_of_burners": "2",
+		"thermal_efficiency": "69",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "LADYFINGER",
+		"bee_star": "1",
+		"model": "LF SUPERB",
+		"no_of_burners": "2",
+		"thermal_efficiency": "69%",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "LADYFINGER",
+		"bee_star": "1",
+		"model": "LF SURYA XTRA SAVE",
+		"no_of_burners": "2",
+		"thermal_efficiency": "69%",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "GREENCHEF",
+		"bee_star": "1",
+		"model": "Supreme",
+		"no_of_burners": "2",
+		"thermal_efficiency": "69",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "SURYAFLAME & ADVANTA",
+		"bee_star": "1",
+		"model": "QUEEN",
+		"no_of_burners": "2",
+		"thermal_efficiency": "68.50%",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "SURYAFLAME & ADVANTA",
+		"bee_star": "1",
+		"model": "ROYAL",
+		"no_of_burners": "2",
+		"thermal_efficiency": "68.50%",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "BUTTERFLY",
+		"bee_star": "1",
+		"model": "BLGTK 201",
+		"no_of_burners": "2",
+		"thermal_efficiency": "68",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "AGNI",
+		"bee_star": "1",
+		"model": "PREMIUM",
+		"no_of_burners": "2",
+		"thermal_efficiency": "68.5",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "AGNI",
+		"bee_star": "1",
+		"model": "PRESTIGE GT-3",
+		"no_of_burners": "3",
+		"thermal_efficiency": "69",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "RICHFLAME",
+		"bee_star": "1",
+		"model": "SURYA DLX",
+		"no_of_burners": "2",
+		"thermal_efficiency": "69",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "Apollo Surya Agni",
+		"bee_star": "1",
+		"model": "CLASSIC",
+		"no_of_burners": "2",
+		"thermal_efficiency": "69",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "Apollo Surya Agni",
+		"bee_star": "1",
+		"model": "ECO",
+		"no_of_burners": "2",
+		"thermal_efficiency": "69",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "KARVY FLAME",
+		"bee_star": "1",
+		"model": "SUPER",
+		"no_of_burners": "2",
+		"thermal_efficiency": "68",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "SURYA CHEF",
+		"bee_star": "1",
+		"model": "DELUXE",
+		"no_of_burners": "2",
+		"thermal_efficiency": "69",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "SURYA CHEF",
+		"bee_star": "1",
+		"model": "CRYSTAL-2B",
+		"no_of_burners": "2",
+		"thermal_efficiency": "69",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "SURYA CHEF",
+		"bee_star": "1",
+		"model": "CRYSTAL-3B",
+		"no_of_burners": "3",
+		"thermal_efficiency": "69",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "AVIVA",
+		"bee_star": "1",
+		"model": "ELEGANT",
+		"no_of_burners": "2",
+		"thermal_efficiency": "69.5",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "AVIVA",
+		"bee_star": "1",
+		"model": "EXCEL",
+		"no_of_burners": "2",
+		"thermal_efficiency": "69.5",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "AVIVA",
+		"bee_star": "1",
+		"model": "DELUXE SS",
+		"no_of_burners": "2",
+		"thermal_efficiency": "69.5",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "AVIVA",
+		"bee_star": "1",
+		"model": "ELITE SS",
+		"no_of_burners": "2",
+		"thermal_efficiency": "69.5",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "MILTON",
+		"bee_star": "1",
+		"model": "LAZER",
+		"no_of_burners": "2",
+		"thermal_efficiency": "69",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "MICRONOVA",
+		"bee_star": "1",
+		"model": "SUPREME",
+		"no_of_burners": "2",
+		"thermal_efficiency": "69",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "Orwo Flame",
+		"bee_star": "1",
+		"model": "ECO SHINE",
+		"no_of_burners": "2",
+		"thermal_efficiency": "68",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "Orwo Flame",
+		"bee_star": "1",
+		"model": "ECO GREEN",
+		"no_of_burners": "2",
+		"thermal_efficiency": "68",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "LIFE STYLE",
+		"bee_star": "1",
+		"model": "SUPREME.",
+		"no_of_burners": "2",
+		"thermal_efficiency": "69",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "LIFE STYLE",
+		"bee_star": "1",
+		"model": "ECO.",
+		"no_of_burners": "2",
+		"thermal_efficiency": "69",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "Realflame",
+		"bee_star": "1",
+		"model": "Nano - BPCL",
+		"no_of_burners": "2",
+		"thermal_efficiency": "68",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "Realflame",
+		"bee_star": "1",
+		"model": "Nano IOCL",
+		"no_of_burners": "2",
+		"thermal_efficiency": "68",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "SUNSPARK",
+		"bee_star": "1",
+		"model": "Sleek 2",
+		"no_of_burners": "2",
+		"thermal_efficiency": "68.5",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "ROYALFLAME",
+		"bee_star": "1",
+		"model": "BEAT",
+		"no_of_burners": "2",
+		"thermal_efficiency": "68.5",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "ROYALFLAME",
+		"bee_star": "1",
+		"model": "Classic",
+		"no_of_burners": "2",
+		"thermal_efficiency": "68.5",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "ROYALFLAME",
+		"bee_star": "1",
+		"model": "Accord Plus",
+		"no_of_burners": "2",
+		"thermal_efficiency": "68.5",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "AGNI",
+		"bee_star": "1",
+		"model": "ECO-99",
+		"no_of_burners": "2",
+		"thermal_efficiency": "68.5",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "JYOTI FLAME",
+		"bee_star": "1",
+		"model": "SILVER",
+		"no_of_burners": "2",
+		"thermal_efficiency": "68",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "JYOTI FLAME",
+		"bee_star": "1",
+		"model": "PLATINUM.",
+		"no_of_burners": "2",
+		"thermal_efficiency": "68",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "AVIVA",
+		"bee_star": "1",
+		"model": "ECO GOLD.",
+		"no_of_burners": "2",
+		"thermal_efficiency": "69.5",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "AVIVA",
+		"bee_star": "1",
+		"model": "ECO SURYA.",
+		"no_of_burners": "2",
+		"thermal_efficiency": "69.5",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "JYOTI FLAME",
+		"bee_star": "1",
+		"model": "DIAMOND.",
+		"no_of_burners": "2",
+		"thermal_efficiency": "68",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "ROYALFLAME",
+		"bee_star": "1",
+		"model": "CRETA",
+		"no_of_burners": "2",
+		"thermal_efficiency": "68.5",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "ROYALFLAME",
+		"bee_star": "1",
+		"model": "SUPERB.",
+		"no_of_burners": "3",
+		"thermal_efficiency": "68.5",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "ROYALFLAME",
+		"bee_star": "1",
+		"model": "ALTIS",
+		"no_of_burners": "4",
+		"thermal_efficiency": "68.5",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "GREENCHEF",
+		"bee_star": "1",
+		"model": "Jumbo",
+		"no_of_burners": "2",
+		"thermal_efficiency": "69",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "GREENCHEF",
+		"bee_star": "1",
+		"model": "Galaxy",
+		"no_of_burners": "2",
+		"thermal_efficiency": "69",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "GREENCHEF",
+		"bee_star": "1",
+		"model": "Budgetline",
+		"no_of_burners": "2",
+		"thermal_efficiency": "69",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "OMEN",
+		"bee_star": "1",
+		"model": "GLASS TOP-2BR",
+		"no_of_burners": "2",
+		"thermal_efficiency": "68",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "OMEN",
+		"bee_star": "1",
+		"model": "GLASS TOP-3BR",
+		"no_of_burners": "3",
+		"thermal_efficiency": "68",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "OMEN",
+		"bee_star": "1",
+		"model": "GLASS TOP-4BR",
+		"no_of_burners": "4",
+		"thermal_efficiency": "68",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "OMEN",
+		"bee_star": "1",
+		"model": "2B SS",
+		"no_of_burners": "2",
+		"thermal_efficiency": "68",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "PIGEON",
+		"bee_star": "1",
+		"model": "Gilma PG-02",
+		"no_of_burners": "2",
+		"thermal_efficiency": "68.5",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "STUFFA",
+		"bee_star": "1",
+		"model": "Jaguar",
+		"no_of_burners": "2",
+		"thermal_efficiency": "69",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "STUFFA",
+		"bee_star": "1",
+		"model": "Leopard",
+		"no_of_burners": "2",
+		"thermal_efficiency": "69",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "STUFFA",
+		"bee_star": "1",
+		"model": "Tiger",
+		"no_of_burners": "2",
+		"thermal_efficiency": "69",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "STUFFA",
+		"bee_star": "1",
+		"model": "Stela",
+		"no_of_burners": "2",
+		"thermal_efficiency": "69",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "BUTTERFLY",
+		"bee_star": "1",
+		"model": "BL203",
+		"no_of_burners": "2",
+		"thermal_efficiency": "68",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "BUTTERFLY",
+		"bee_star": "1",
+		"model": "BL206",
+		"no_of_burners": "2",
+		"thermal_efficiency": "68",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "BUTTERFLY",
+		"bee_star": "1",
+		"model": "BL202",
+		"no_of_burners": "2",
+		"thermal_efficiency": "68",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "CLARION",
+		"bee_star": "1",
+		"model": "Magic",
+		"no_of_burners": "2",
+		"thermal_efficiency": "69.70%",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "JINDAL",
+		"bee_star": "1",
+		"model": "JINDAL SUPREME",
+		"no_of_burners": "2",
+		"thermal_efficiency": "69.37",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "SUPERCHEF",
+		"bee_star": "1",
+		"model": "superb",
+		"no_of_burners": "2",
+		"thermal_efficiency": "69.44",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "GREENCHEF",
+		"bee_star": "1",
+		"model": "Crysta",
+		"no_of_burners": "2",
+		"thermal_efficiency": "69",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "GREENCHEF",
+		"bee_star": "1",
+		"model": "Crysta",
+		"no_of_burners": "3",
+		"thermal_efficiency": "69",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "GREENCHEF",
+		"bee_star": "1",
+		"model": "Crysta",
+		"no_of_burners": "4",
+		"thermal_efficiency": "69",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "SAFEFLAME",
+		"bee_star": "1",
+		"model": "SURYA-SUPER",
+		"no_of_burners": "2",
+		"thermal_efficiency": "69.58",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "CORAL GOLD",
+		"bee_star": "1",
+		"model": "CHA-202",
+		"no_of_burners": "2",
+		"thermal_efficiency": "68",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "MICRONOVA",
+		"bee_star": "1",
+		"model": "VS-2",
+		"no_of_burners": "2",
+		"thermal_efficiency": "69",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "MICRONOVA",
+		"bee_star": "1",
+		"model": "CRYSTAL-3",
+		"no_of_burners": "3",
+		"thermal_efficiency": "69",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "SUPER SHAKTI",
+		"bee_star": "1",
+		"model": "Supreme",
+		"no_of_burners": "2",
+		"thermal_efficiency": "69",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "SUPER SHINE",
+		"bee_star": "1",
+		"model": "Platinum",
+		"no_of_burners": "2",
+		"thermal_efficiency": "69",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "JUPITER",
+		"bee_star": "1",
+		"model": "Euro",
+		"no_of_burners": "2",
+		"thermal_efficiency": "69",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "PIGEON",
+		"bee_star": "1",
+		"model": "SURYA",
+		"no_of_burners": "2",
+		"thermal_efficiency": "68.5",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "SUPER SAVER",
+		"bee_star": "1",
+		"model": "Royal",
+		"no_of_burners": "2",
+		"thermal_efficiency": "69",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "UNICORN",
+		"bee_star": "1",
+		"model": "UNICORN GT 2BR",
+		"no_of_burners": "2",
+		"thermal_efficiency": "69",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "UNICORN",
+		"bee_star": "1",
+		"model": "UNICORN GT 3BR",
+		"no_of_burners": "3",
+		"thermal_efficiency": "69",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "UNICORN",
+		"bee_star": "1",
+		"model": "UNICORN GT 4BR",
+		"no_of_burners": "4",
+		"thermal_efficiency": "69",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "MILTON",
+		"bee_star": "1",
+		"model": "SURYA CLASSIC",
+		"no_of_burners": "2",
+		"thermal_efficiency": "69.38",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "STUFFA",
+		"bee_star": "1",
+		"model": "2B GT",
+		"no_of_burners": "2",
+		"thermal_efficiency": "68.63",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "STUFFA",
+		"bee_star": "1",
+		"model": "3B GT",
+		"no_of_burners": "3",
+		"thermal_efficiency": "68.7",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "SURYAFLAME & ADVANTA",
+		"bee_star": "1",
+		"model": "LPG2BGT",
+		"no_of_burners": "2",
+		"thermal_efficiency": "68.5",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "SURYAFLAME & ADVANTA",
+		"bee_star": "1",
+		"model": "LPG3BGT",
+		"no_of_burners": "3",
+		"thermal_efficiency": "68.5",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "SAFEFLAME",
+		"bee_star": "1",
+		"model": "3BGlass Top",
+		"no_of_burners": "3",
+		"thermal_efficiency": "68.5",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "Golden Surya",
+		"bee_star": "1",
+		"model": "KRISTAL",
+		"no_of_burners": "2",
+		"thermal_efficiency": "69",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "PIGEON",
+		"bee_star": "1",
+		"model": "PG-02",
+		"no_of_burners": "2",
+		"thermal_efficiency": "68.5",
+		"validity": "30-06-2021"
+	},
+	{
+		"manufacturer": "EVITA",
+		"bee_star": "1",
+		"model": "INDITECH",
+		"no_of_burners": "2",
+		"thermal_efficiency": "68.5",
+		"validity": "30-06-2021"
+	}
+]

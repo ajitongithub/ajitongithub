@@ -776,6 +776,20 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
 }
 
+.auto-load__template .sections_wrapper .template_main_container .aside_container .load_types__fields .brands_container .brand_items {
+  display: block;
+  background-color: aliceblue;
+  color: #424242;
+  border: solid 1px grey;
+  margin: 3px;
+  border-radius: 4px;
+  padding: 3px 8px;
+  cursor: move;
+  overflow: hidden;
+  font-weight: 600;
+  font-size: 14px;
+}
+
 .auto-load__template .sections_wrapper .template_main_container .aside_container .load_types__fields .loads_container {
   position: relative;
 }

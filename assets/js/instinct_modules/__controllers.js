@@ -1233,27 +1233,3 @@ napp.controller('env_assess_controller', function ($scope, $http, $rootScope) {
 	//load usage stats
 
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

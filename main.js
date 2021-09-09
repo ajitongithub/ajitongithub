@@ -1126,7 +1126,16 @@ for (i = 0; i < simulation_hours; i++) {
   event.reply('simulation-response', 'Over');
 });
 
-
+// New Functions
+ipcMain.on('save_load_design', (event, data) => {
+  // console.log(data);
+  // var sim_txt = JSON.stringify(data);
+  fs.writeFile(resolve(__dirname, 'database/load_design.json'), data, function (err) {
+    if (err) throw err;
+    // event.sender.send('main_responder_channel', "Simulation Data Saved");
+    console.log('Load Design Saved');
+  });
+});
 
 // ipcMain.on('promisesTest', (event, data) => {
 //   console.log("Started");
@@ -1172,10 +1181,3 @@ for (i = 0; i < simulation_hours; i++) {
 //     // console.log(instinct_config);
 //   });
 // });
-
-
-// New Functions
-ipcMain.handle('save_load_design', (event, data) => {
-  console.log("ASD");
-  console.log(data);
-});

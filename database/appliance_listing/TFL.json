@@ -1,0 +1,193 @@
+[{
+		"manufacturer": "HPL",
+		"bee_star": "1",
+		"model": "TL 36W Star",
+		"color_temperature_kelvin": "6500",
+		"input_power_watts": "36",
+		"validity": "30-06-2023"
+	},
+	{
+		"manufacturer": "Crompton",
+		"bee_star": "1",
+		"model": "36W 6500k Super Saver",
+		"color_temperature_kelvin": "6500",
+		"input_power_watts": "36",
+		"validity": "30-06-2023"
+	},
+	{
+		"manufacturer": "SURYA",
+		"bee_star": "1",
+		"model": "36WH L, 6500K",
+		"color_temperature_kelvin": "6500",
+		"input_power_watts": "36",
+		"validity": "30-06-2023"
+	},
+	{
+		"manufacturer": "PHILIPS",
+		"bee_star": "1",
+		"model": "TL 36w, 6500K Lifemax",
+		"color_temperature_kelvin": "6500",
+		"input_power_watts": "36",
+		"validity": "30-06-2023"
+	},
+	{
+		"manufacturer": "PHILIPS",
+		"bee_star": "3",
+		"model": "36 W/84 TRULITE 4000 K",
+		"color_temperature_kelvin": "4000",
+		"input_power_watts": "36",
+		"validity": "30-06-2023"
+	},
+	{
+		"manufacturer": "PHILIPS",
+		"bee_star": "3",
+		"model": "36 W/82 TRULITE 2700 K",
+		"color_temperature_kelvin": "2700",
+		"input_power_watts": "36",
+		"validity": "30-06-2023"
+	},
+	{
+		"manufacturer": "PHILIPS",
+		"bee_star": "3",
+		"model": "36W/86 TRULITE 6500K",
+		"color_temperature_kelvin": "6500",
+		"input_power_watts": "36",
+		"validity": "30-06-2023"
+	},
+	{
+		"manufacturer": "OSRAM",
+		"bee_star": "2",
+		"model": "T5 54W",
+		"color_temperature_kelvin": "6500",
+		"input_power_watts": "54",
+		"validity": "30-06-2023"
+	},
+	{
+		"manufacturer": "OSRAM",
+		"bee_star": "3",
+		"model": "T5 28W",
+		"color_temperature_kelvin": "6500",
+		"input_power_watts": "28",
+		"validity": "30-06-2023"
+	},
+	{
+		"manufacturer": "Crompton",
+		"bee_star": "3",
+		"model": "36W 6500K Super Glow",
+		"color_temperature_kelvin": "6500",
+		"input_power_watts": "36",
+		"validity": "30-06-2023"
+	},
+	{
+		"manufacturer": "OSRAM",
+		"bee_star": "3",
+		"model": "36W, 2700K, HL",
+		"color_temperature_kelvin": "2700",
+		"input_power_watts": "36",
+		"validity": "30-06-2023"
+	},
+	{
+		"manufacturer": "OSRAM",
+		"bee_star": "3",
+		"model": "36W, 6500K, HL",
+		"color_temperature_kelvin": "6500",
+		"input_power_watts": "36",
+		"validity": "30-06-2023"
+	},
+	{
+		"manufacturer": "OSRAM",
+		"bee_star": "3",
+		"model": "36 W, 4000 K, HL",
+		"color_temperature_kelvin": "4000",
+		"input_power_watts": "36",
+		"validity": "30-06-2023"
+	},
+	{
+		"manufacturer": "OSRAM",
+		"bee_star": "1",
+		"model": "36 W, 6500 K",
+		"color_temperature_kelvin": "6500",
+		"input_power_watts": "36",
+		"validity": "30-06-2023"
+	},
+	{
+		"manufacturer": "PHILIPS",
+		"bee_star": "1",
+		"model": "TLD 36W/54 Life Max Plus, 6500K",
+		"color_temperature_kelvin": "6500",
+		"input_power_watts": "36",
+		"validity": "30-06-2023"
+	},
+	{
+		"manufacturer": "HAVELLS",
+		"bee_star": "1",
+		"model": "Maxoline 36W T8 FTL 6500K",
+		"color_temperature_kelvin": "6500",
+		"input_power_watts": "36",
+		"validity": "30-06-2023"
+	},
+	{
+		"manufacturer": "BAJAJ",
+		"bee_star": "1",
+		"model": "Bajaj T8 FTL 36W CDL",
+		"color_temperature_kelvin": "6500",
+		"input_power_watts": "36",
+		"validity": "30-06-2023"
+	},
+	{
+		"manufacturer": "CEMA",
+		"bee_star": "1",
+		"model": "110102",
+		"color_temperature_kelvin": "6500",
+		"input_power_watts": "36",
+		"validity": "30-06-2023"
+	},
+	{
+		"manufacturer": "SURYA",
+		"bee_star": "3",
+		"model": "T528W 2700K G5 Cap SURYA",
+		"color_temperature_kelvin": "2700",
+		"input_power_watts": "28",
+		"validity": "30-06-2023"
+	},
+	{
+		"manufacturer": "SURYA",
+		"bee_star": "3",
+		"model": "T528W 6500K G5 Cap SURYA",
+		"color_temperature_kelvin": "6500",
+		"input_power_watts": "28",
+		"validity": "30-06-2023"
+	},
+	{
+		"manufacturer": "Crompton",
+		"bee_star": "3",
+		"model": "T528W 6500K Energy Lux",
+		"color_temperature_kelvin": "6500",
+		"input_power_watts": "28",
+		"validity": "30-06-2023"
+	},
+	{
+		"manufacturer": "ECOLINK",
+		"bee_star": "1",
+		"model": "TLD36w,6500 Ecolink Star Light",
+		"color_temperature_kelvin": "6500",
+		"input_power_watts": "36",
+		"validity": "30-06-2023"
+	},
+	{
+		"manufacturer": "SURYA",
+		"bee_star": "1",
+		"model": "36WMLG",
+		"color_temperature_kelvin": "6500",
+		"input_power_watts": "36",
+		"validity": "30-06-2023"
+	},
+	{
+		"manufacturer": "PHILIPS",
+		"bee_star": "3",
+		"model": "TL5 Essential 28w/865 1SL/40",
+		"color_temperature_kelvin": "6500",
+		"input_power_watts": "28",
+		"validity": "30-06-2023"
+	}
+]

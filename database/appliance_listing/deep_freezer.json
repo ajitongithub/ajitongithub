@@ -1,0 +1,25 @@
+[{
+		"manufacturer": "GODREJ",
+		"bee_star": "3",
+		"model": "DH EPenta 325C",
+		"storage_volume_litres": "288",
+		"annual_energy_kwh_per_year": "1045",
+		"validity": "31-12-2021"
+	},
+	{
+		"manufacturer": "GODREJ",
+		"bee_star": "3",
+		"model": "DH EPenta 425C",
+		"storage_volume_litres": "384",
+		"annual_energy_kwh_per_year": "1228",
+		"validity": "31-12-2021"
+	},
+	{
+		"manufacturer": "GODREJ",
+		"bee_star": "4",
+		"model": "DH EPenta 525D",
+		"storage_volume_litres": "481",
+		"annual_energy_kwh_per_year": "1301",
+		"validity": "31-12-2021"
+	}
+]

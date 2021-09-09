@@ -1,0 +1,7011 @@
+[{
+		"manufacturer": "CROMPTON",
+		"bee_star": "1",
+		"model": "Asset50",
+		"min_air_delivery_cubic_mins": "215",
+		"input_power_watts": "50",
+		"service_value": "4.3",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "USHA",
+		"bee_star": "1",
+		"model": "Technix Flair",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "50",
+		"service_value": "4.4",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "CROMPTON",
+		"bee_star": "1",
+		"model": "Entrust 50",
+		"min_air_delivery_cubic_mins": "215",
+		"input_power_watts": "50",
+		"service_value": "4.3",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "MARC",
+		"bee_star": "1",
+		"model": "Airmill Star",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "USHA",
+		"bee_star": "1",
+		"model": "ELSA",
+		"min_air_delivery_cubic_mins": "224",
+		"input_power_watts": "55",
+		"service_value": "4.07",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "BENTEX-SKN",
+		"bee_star": "1",
+		"model": "PRIMA",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "50",
+		"service_value": "4.4",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "LUMINOUS",
+		"bee_star": "1",
+		"model": "MERC STAR",
+		"min_air_delivery_cubic_mins": "215",
+		"input_power_watts": "50",
+		"service_value": "4.3",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "BERLIA",
+		"bee_star": "1",
+		"model": "BERLIA-EE",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.0",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "LUMINOUS",
+		"bee_star": "1",
+		"model": "KRONA STAR",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "50",
+		"service_value": "4.4",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "USHA",
+		"bee_star": "3",
+		"model": "TECHNIX PLUS",
+		"min_air_delivery_cubic_mins": "215",
+		"input_power_watts": "43",
+		"service_value": "5",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "SINGER",
+		"bee_star": "1",
+		"model": "SCF 120 AEBT",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "CINNI",
+		"bee_star": "1",
+		"model": "POWER SAVER",
+		"min_air_delivery_cubic_mins": "210.0",
+		"input_power_watts": "50",
+		"service_value": "4.0",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "ANCHOR",
+		"bee_star": "1",
+		"model": "Penta Turbo Star",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "48",
+		"service_value": "4.37",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "ORIENT ELECTRIC",
+		"bee_star": "1",
+		"model": "ORIENT-G",
+		"min_air_delivery_cubic_mins": "215",
+		"input_power_watts": "50",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "Eveready",
+		"bee_star": "1",
+		"model": "FAB SAVER",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "STANDARD",
+		"bee_star": "1",
+		"model": "Super Speed 50",
+		"min_air_delivery_cubic_mins": "222",
+		"input_power_watts": "50",
+		"service_value": "4.44",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "YASHAPP",
+		"bee_star": "2",
+		"model": "BEE48",
+		"min_air_delivery_cubic_mins": "224",
+		"input_power_watts": "48",
+		"service_value": "4.66",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "MARC",
+		"bee_star": "1",
+		"model": "Airmill Starplus",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "VIDISHA",
+		"bee_star": "1",
+		"model": "ACE V",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "YASHAPP",
+		"bee_star": "2",
+		"model": "ECO50",
+		"min_air_delivery_cubic_mins": "225",
+		"input_power_watts": "48",
+		"service_value": "4.68",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "Eveready",
+		"bee_star": "1",
+		"model": "FAB SAVER DX",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "50",
+		"service_value": "4.4",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "MARC",
+		"bee_star": "1",
+		"model": "Max Star",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "50",
+		"service_value": "4.4",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "MARC",
+		"bee_star": "1",
+		"model": "Air Star",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "50",
+		"service_value": "4.4",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "MARC",
+		"bee_star": "1",
+		"model": "Hi Star",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "50",
+		"service_value": "4.4",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "MARC",
+		"bee_star": "1",
+		"model": "Rev Star",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "50",
+		"service_value": "4.4",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "CROMPTON",
+		"bee_star": "1",
+		"model": "EE50",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "49",
+		"service_value": "4.48",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "USHA",
+		"bee_star": "1",
+		"model": "ENERGIA PLUS",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "50",
+		"service_value": "4.4",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "USHA",
+		"bee_star": "4",
+		"model": "TECHNIX PRIME 38",
+		"min_air_delivery_cubic_mins": "215",
+		"input_power_watts": "38",
+		"service_value": "5.6",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "USHA",
+		"bee_star": "1",
+		"model": "VETRA PLUS",
+		"min_air_delivery_cubic_mins": "224",
+		"input_power_watts": "55",
+		"service_value": "4.07",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "ANCHOR",
+		"bee_star": "1",
+		"model": "Stiler Plus",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "Pooja",
+		"bee_star": "1",
+		"model": "Classic ES-50",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "BAJAJ",
+		"bee_star": "1",
+		"model": "ELECTRA 50",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.01",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "BAJAJ",
+		"bee_star": "1",
+		"model": "KASSELS STAR",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "54",
+		"service_value": "4.15",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "BAJAJ",
+		"bee_star": "1",
+		"model": "EXCEL STAR",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "52",
+		"service_value": "4.01",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "SURYA",
+		"bee_star": "1",
+		"model": "ECO STAR",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "USHA",
+		"bee_star": "1",
+		"model": "NABILA",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "52",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "CROMPTON",
+		"bee_star": "1",
+		"model": "Empower 50",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "LAZER",
+		"bee_star": "1",
+		"model": "Es-48",
+		"min_air_delivery_cubic_mins": "212",
+		"input_power_watts": "48",
+		"service_value": "4.4",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "CROMPTON",
+		"bee_star": "1",
+		"model": "Whirl Briz",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "CROMPTON",
+		"bee_star": "1",
+		"model": "Whirl Briz Deco",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "USHA",
+		"bee_star": "1",
+		"model": "ERGO 5 STAR",
+		"min_air_delivery_cubic_mins": "224",
+		"input_power_watts": "55",
+		"service_value": "4.07",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "USHA",
+		"bee_star": "1",
+		"model": "ENERGIA",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.15",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "CROMPTON",
+		"bee_star": "1",
+		"model": "ASSET DECO 50",
+		"min_air_delivery_cubic_mins": "215",
+		"input_power_watts": "50",
+		"service_value": "4.3",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "CROMPTON",
+		"bee_star": "1",
+		"model": "CPS-50",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "USHA",
+		"bee_star": "2",
+		"model": "Technix",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "43",
+		"service_value": "4.8",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "ANCHOR",
+		"bee_star": "1",
+		"model": "Strella Dlx Plus",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "LUMINOUS",
+		"bee_star": "1",
+		"model": "PULSE 50",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.0",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "HALONIX",
+		"bee_star": "1",
+		"model": "ZEPHYR",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "HAVELLS",
+		"bee_star": "3",
+		"model": "ES-40",
+		"min_air_delivery_cubic_mins": "212",
+		"input_power_watts": "40",
+		"service_value": "5.3",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "ORIENT ELECTRIC",
+		"bee_star": "1",
+		"model": "ENERGY STAR",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "48",
+		"service_value": "4.4",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "ORIENT ELECTRIC",
+		"bee_star": "1",
+		"model": "SUMMER CROWN",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "48",
+		"service_value": "4.4",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "ORIENT ELECTRIC",
+		"bee_star": "1",
+		"model": "SMART SAVER 50",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "50",
+		"service_value": "4.4",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "ORIENT ELECTRIC",
+		"bee_star": "1",
+		"model": "IS 50",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "50",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "USHA",
+		"bee_star": "1",
+		"model": "Striker Plus",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "52",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "USHA",
+		"bee_star": "1",
+		"model": "ATOM",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "RR",
+		"bee_star": "1",
+		"model": "ERMIR",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "ORIENT ELECTRIC",
+		"bee_star": "1",
+		"model": "Orient Joan",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "50",
+		"service_value": "4.4",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "ORPIC",
+		"bee_star": "1",
+		"model": "ORPIC-1200",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "SEION",
+		"bee_star": "1",
+		"model": "High Flow Plus",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "BAJAJ",
+		"bee_star": "1",
+		"model": "Energy Smart 50",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "CROMPTON",
+		"bee_star": "1",
+		"model": "HS Decora Plus",
+		"min_air_delivery_cubic_mins": "218",
+		"input_power_watts": "53",
+		"service_value": "4.11",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "CROMPTON",
+		"bee_star": "1",
+		"model": "Star220",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "50",
+		"service_value": "4.4",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "CROMPTON",
+		"bee_star": "1",
+		"model": "HS PLUS",
+		"min_air_delivery_cubic_mins": "218",
+		"input_power_watts": "53",
+		"service_value": "4.11",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "CROMPTON",
+		"bee_star": "1",
+		"model": "Aura Plus",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "52",
+		"service_value": "4.04",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "CROMPTON",
+		"bee_star": "1",
+		"model": "Avancer Plus",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "52",
+		"service_value": "4.04",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "CROMPTON",
+		"bee_star": "1",
+		"model": "Imperial Plus",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "52",
+		"service_value": "4.04",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "SUPERFAN",
+		"bee_star": "5",
+		"model": "Super Q",
+		"min_air_delivery_cubic_mins": "227",
+		"input_power_watts": "25",
+		"service_value": "9.0",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "JP ENERGY",
+		"bee_star": "1",
+		"model": "SB-390",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "SUPERFAN",
+		"bee_star": "5",
+		"model": "Super RX/X1/X7",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "35",
+		"service_value": "6.29",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "Pooja",
+		"bee_star": "1",
+		"model": "PRIME",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "MAYA",
+		"bee_star": "5",
+		"model": "GABBAR",
+		"min_air_delivery_cubic_mins": "275",
+		"input_power_watts": "32",
+		"service_value": "8.59",
+		"sweep_size": "1400 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "MAYA",
+		"bee_star": "5",
+		"model": "Ecological",
+		"min_air_delivery_cubic_mins": "180",
+		"input_power_watts": "22",
+		"service_value": "8.18",
+		"sweep_size": "900 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "POLAR",
+		"bee_star": "5",
+		"model": "PS-32",
+		"min_air_delivery_cubic_mins": "230",
+		"input_power_watts": "32",
+		"service_value": "7.18",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "LUKER",
+		"bee_star": "5",
+		"model": "ECO 30",
+		"min_air_delivery_cubic_mins": "230",
+		"input_power_watts": "30",
+		"service_value": "7.66",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "MAYA",
+		"bee_star": "5",
+		"model": "Super Eco Tech",
+		"min_air_delivery_cubic_mins": "230",
+		"input_power_watts": "27",
+		"service_value": "8.51",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "Panasonic",
+		"bee_star": "5",
+		"model": "F-12XDA",
+		"min_air_delivery_cubic_mins": "230",
+		"input_power_watts": "30",
+		"service_value": "7.66",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "CINNI",
+		"bee_star": "5",
+		"model": "DYNASTY-27",
+		"min_air_delivery_cubic_mins": "216",
+		"input_power_watts": "27",
+		"service_value": "8",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "INDCOOL",
+		"bee_star": "5",
+		"model": "IDCCF500",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "28",
+		"service_value": "7.5",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "VIDISHA",
+		"bee_star": "5",
+		"model": "ACE-GREEN",
+		"min_air_delivery_cubic_mins": "215",
+		"input_power_watts": "27",
+		"service_value": "7.96",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "ESHA ELECTRIC",
+		"bee_star": "5",
+		"model": "SLAT-30",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "30",
+		"service_value": "7.33",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "ESHA ELECTRIC",
+		"bee_star": "5",
+		"model": "ENSAVER-30",
+		"min_air_delivery_cubic_mins": "216",
+		"input_power_watts": "30",
+		"service_value": "7.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "HY-FA",
+		"bee_star": "5",
+		"model": "ES-24",
+		"min_air_delivery_cubic_mins": "218",
+		"input_power_watts": "24",
+		"service_value": "9",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "HY-FA",
+		"bee_star": "5",
+		"model": "ES-28",
+		"min_air_delivery_cubic_mins": "224",
+		"input_power_watts": "28",
+		"service_value": "8",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "SURYA",
+		"bee_star": "5",
+		"model": "SS 32",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "32",
+		"service_value": "6.8",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "SURYA",
+		"bee_star": "5",
+		"model": "SS 32 PRIME",
+		"min_air_delivery_cubic_mins": "230",
+		"input_power_watts": "32",
+		"service_value": "7.18",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "SURYA",
+		"bee_star": "5",
+		"model": "SS 35 PRIME",
+		"min_air_delivery_cubic_mins": "245",
+		"input_power_watts": "35",
+		"service_value": "7",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "AIRZON",
+		"bee_star": "5",
+		"model": "AIRZON-34",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "34",
+		"service_value": "6.18",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "SURYA",
+		"bee_star": "5",
+		"model": "SS 28",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "28",
+		"service_value": "7.5",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "SURYA",
+		"bee_star": "5",
+		"model": "SS 35",
+		"min_air_delivery_cubic_mins": "270",
+		"input_power_watts": "35",
+		"service_value": "7.71",
+		"sweep_size": "1400 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "HAVELLS",
+		"bee_star": "5",
+		"model": "Efficiencia",
+		"min_air_delivery_cubic_mins": "225",
+		"input_power_watts": "32",
+		"service_value": "7.03",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "HAVELLS",
+		"bee_star": "5",
+		"model": "Efficiencia Neo",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "26",
+		"service_value": "8.46",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "RR",
+		"bee_star": "1",
+		"model": "ERMIR",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "RR",
+		"bee_star": "5",
+		"model": "MH Classic Calid 1200mm",
+		"min_air_delivery_cubic_mins": "224",
+		"input_power_watts": "28",
+		"service_value": "8",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "RR",
+		"bee_star": "5",
+		"model": "MH Classic Georgia 1200mm",
+		"min_air_delivery_cubic_mins": "224",
+		"input_power_watts": "28",
+		"service_value": "8",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "RR",
+		"bee_star": "5",
+		"model": "MH Classic Advance 1200mm",
+		"min_air_delivery_cubic_mins": "215",
+		"input_power_watts": "25",
+		"service_value": "8.6",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "RR",
+		"bee_star": "1",
+		"model": "SUPREMUS",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "RR",
+		"bee_star": "5",
+		"model": "MH CLASSIC",
+		"min_air_delivery_cubic_mins": "217",
+		"input_power_watts": "27",
+		"service_value": "8.03",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "KONARK",
+		"bee_star": "5",
+		"model": "KEW/BLDC",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "27",
+		"service_value": "8.14",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "MADHUBAN",
+		"bee_star": "5",
+		"model": "TYPOON",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "27",
+		"service_value": "8.14",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "GANESH",
+		"bee_star": "5",
+		"model": "HIBRID",
+		"min_air_delivery_cubic_mins": "216",
+		"input_power_watts": "27",
+		"service_value": "8",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "USHA",
+		"bee_star": "5",
+		"model": "ENERGIA 32",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "32",
+		"service_value": "6.8",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "Eveready",
+		"bee_star": "5",
+		"model": "EDC3248",
+		"min_air_delivery_cubic_mins": "230",
+		"input_power_watts": "32",
+		"service_value": "7.18",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "USHA",
+		"bee_star": "5",
+		"model": "TECHNIX PRIME 35",
+		"min_air_delivery_cubic_mins": "215",
+		"input_power_watts": "35",
+		"service_value": "6.1",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "ARCLINE",
+		"bee_star": "5",
+		"model": "ARC LINE ES-2",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "27",
+		"service_value": "7.8",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "SUPERFAN",
+		"bee_star": "5",
+		"model": "Super RE/E1/E7",
+		"min_air_delivery_cubic_mins": "219",
+		"input_power_watts": "35",
+		"service_value": "6.1",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "Amul",
+		"bee_star": "1",
+		"model": "AK-48",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "Gorilla",
+		"bee_star": "5",
+		"model": "Gorilla Efficio",
+		"min_air_delivery_cubic_mins": "236",
+		"input_power_watts": "27",
+		"service_value": "8.7",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "SUPERFAN",
+		"bee_star": "5",
+		"model": "Super RJ/J1/J7",
+		"min_air_delivery_cubic_mins": "133",
+		"input_power_watts": "24",
+		"service_value": "5.54",
+		"sweep_size": "900 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "JUPITER",
+		"bee_star": "5",
+		"model": "QUADCOPTER",
+		"min_air_delivery_cubic_mins": "240",
+		"input_power_watts": "30",
+		"service_value": "8.0",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "JUPITER",
+		"bee_star": "5",
+		"model": "TRICOPTER",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "25",
+		"service_value": "8.4",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "CROMPTON",
+		"bee_star": "5",
+		"model": "Energion HS",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "35",
+		"service_value": "6.29",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "VENTUM",
+		"bee_star": "5",
+		"model": "DS120",
+		"min_air_delivery_cubic_mins": "210.60",
+		"input_power_watts": "31.7",
+		"service_value": "6.54",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "Gorilla",
+		"bee_star": "5",
+		"model": "Gorilla Renesa+",
+		"min_air_delivery_cubic_mins": "275",
+		"input_power_watts": "32",
+		"service_value": "8.6",
+		"sweep_size": "1400 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "ORIENT ELECTRIC",
+		"bee_star": "5",
+		"model": "ECO QUASAR",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "32",
+		"service_value": "6.87",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "ORIENT ELECTRIC",
+		"bee_star": "5",
+		"model": "ECOTECH PLUS",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "32",
+		"service_value": "6.28",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "UNITEX",
+		"bee_star": "1",
+		"model": "DEA-1200",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "CROMPTON",
+		"bee_star": "5",
+		"model": "Energion Jura",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "36",
+		"service_value": "6.11",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "CROMPTON",
+		"bee_star": "5",
+		"model": "Energion aura",
+		"min_air_delivery_cubic_mins": "225",
+		"input_power_watts": "36",
+		"service_value": "6.25",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "KLICK",
+		"bee_star": "1",
+		"model": "K-50",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "KLICK",
+		"bee_star": "5",
+		"model": "KL-01",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "28",
+		"service_value": "7.85",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "KANZ",
+		"bee_star": "1",
+		"model": "KZ-50",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "BENTEX-SKN",
+		"bee_star": "5",
+		"model": "SOLOMAX",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "27",
+		"service_value": "8.14",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "BENTEX-SKN",
+		"bee_star": "5",
+		"model": "SOLO MAX",
+		"min_air_delivery_cubic_mins": "270",
+		"input_power_watts": "35",
+		"service_value": "7.71",
+		"sweep_size": "1400 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "VIDISHA",
+		"bee_star": "5",
+		"model": "1400ACE GREEN",
+		"min_air_delivery_cubic_mins": "270",
+		"input_power_watts": "32",
+		"service_value": "8.43",
+		"sweep_size": "1400 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "Pooja",
+		"bee_star": "5",
+		"model": "ECO PLUS",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "32",
+		"service_value": "6.8",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "SUPERFAN",
+		"bee_star": "5",
+		"model": "Super RV/V1/V7",
+		"min_air_delivery_cubic_mins": "268",
+		"input_power_watts": "34",
+		"service_value": "7.88",
+		"sweep_size": "1400 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "MODI",
+		"bee_star": "1",
+		"model": "True Value",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "A AKVO",
+		"bee_star": "1",
+		"model": "Jewel",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "VENUS",
+		"bee_star": "5",
+		"model": "SIGMA",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "34",
+		"service_value": "6.18",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "CROMPTON",
+		"bee_star": "5",
+		"model": "EN AUR 56",
+		"min_air_delivery_cubic_mins": "270",
+		"input_power_watts": "39",
+		"service_value": "6.92",
+		"sweep_size": "1400 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "INDCOOL",
+		"bee_star": "5",
+		"model": "IDCCF600",
+		"min_air_delivery_cubic_mins": "270",
+		"input_power_watts": "35",
+		"service_value": "7.71",
+		"sweep_size": "1400 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "INDCOOL",
+		"bee_star": "1",
+		"model": "IDCCF115",
+		"min_air_delivery_cubic_mins": "260",
+		"input_power_watts": "60",
+		"service_value": "4.33",
+		"sweep_size": "1400 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "INDCOOL",
+		"bee_star": "1",
+		"model": "IDCCF112",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "AIRZON",
+		"bee_star": "5",
+		"model": "AIRZON SUPREME",
+		"min_air_delivery_cubic_mins": "230",
+		"input_power_watts": "28",
+		"service_value": "8.21",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "PATNY",
+		"bee_star": "1",
+		"model": "CROWN-50",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "CROMPTON",
+		"bee_star": "5",
+		"model": "N Star",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "35",
+		"service_value": "6.28",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "HAVELLS",
+		"bee_star": "2",
+		"model": "ES PLUS",
+		"min_air_delivery_cubic_mins": "226",
+		"input_power_watts": "50",
+		"service_value": "4.52",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "HAVELLS",
+		"bee_star": "2",
+		"model": "ES 50",
+		"min_air_delivery_cubic_mins": "226",
+		"input_power_watts": "50",
+		"service_value": "4.52",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "HAVELLS",
+		"bee_star": "2",
+		"model": "ES Neo",
+		"min_air_delivery_cubic_mins": "226",
+		"input_power_watts": "50",
+		"service_value": "4.52",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "HAVELLS",
+		"bee_star": "2",
+		"model": "Fusion-2 HS",
+		"min_air_delivery_cubic_mins": "235",
+		"input_power_watts": "52",
+		"service_value": "4.52",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "HAVELLS",
+		"bee_star": "1",
+		"model": "Enticer ES 1400 mm",
+		"min_air_delivery_cubic_mins": "250",
+		"input_power_watts": "60",
+		"service_value": "4.16",
+		"sweep_size": "1400 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "STANDARD",
+		"bee_star": "2",
+		"model": "Zinger 50",
+		"min_air_delivery_cubic_mins": "226",
+		"input_power_watts": "50",
+		"service_value": "4.52",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "BAJAJ",
+		"bee_star": "5",
+		"model": "ENERGY SMART 32",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "32",
+		"service_value": "6.87",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "BAJAJ",
+		"bee_star": "5",
+		"model": "ENERGY SMART 35",
+		"min_air_delivery_cubic_mins": "230",
+		"input_power_watts": "35",
+		"service_value": "6.57",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "ORPIC",
+		"bee_star": "5",
+		"model": "ORPIC-1200EE",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "28",
+		"service_value": "7.85",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "ORPIC",
+		"bee_star": "5",
+		"model": "ORPIC-1400EE",
+		"min_air_delivery_cubic_mins": "270",
+		"input_power_watts": "35",
+		"service_value": "7.71",
+		"sweep_size": "1400 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "BAJAJ",
+		"bee_star": "1",
+		"model": "Ark EE",
+		"min_air_delivery_cubic_mins": "225",
+		"input_power_watts": "55",
+		"service_value": "4.09",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "BAJAJ",
+		"bee_star": "1",
+		"model": "DISNEY EE",
+		"min_air_delivery_cubic_mins": "225",
+		"input_power_watts": "55",
+		"service_value": "4.09",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "BAJAJ",
+		"bee_star": "1",
+		"model": "EDGE EE",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "52",
+		"service_value": "4.04",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "BAJAJ",
+		"bee_star": "1",
+		"model": "ELEGANCE EE",
+		"min_air_delivery_cubic_mins": "215",
+		"input_power_watts": "53",
+		"service_value": "4.06",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "BAJAJ",
+		"bee_star": "1",
+		"model": "ELEGANCE ROYALE EE",
+		"min_air_delivery_cubic_mins": "215",
+		"input_power_watts": "53",
+		"service_value": "4.06",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "BAJAJ",
+		"bee_star": "1",
+		"model": "EURO NXG EE",
+		"min_air_delivery_cubic_mins": "225",
+		"input_power_watts": "55",
+		"service_value": "4.09",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "BAJAJ",
+		"bee_star": "1",
+		"model": "REGAL GOLD 4 BLADE EE",
+		"min_air_delivery_cubic_mins": "225",
+		"input_power_watts": "55",
+		"service_value": "4.09",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "BAJAJ",
+		"bee_star": "1",
+		"model": "REGAL GOLD EE",
+		"min_air_delivery_cubic_mins": "225",
+		"input_power_watts": "55",
+		"service_value": "4.09",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "BAJAJ",
+		"bee_star": "1",
+		"model": "REGAL GOLD NXG 4 BLADE EE",
+		"min_air_delivery_cubic_mins": "225",
+		"input_power_watts": "55",
+		"service_value": "4.09",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "BAJAJ",
+		"bee_star": "1",
+		"model": "REGAL GOLD NXG EE",
+		"min_air_delivery_cubic_mins": "225",
+		"input_power_watts": "55",
+		"service_value": "4.09",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "BAJAJ",
+		"bee_star": "1",
+		"model": "SHINTO EE",
+		"min_air_delivery_cubic_mins": "225",
+		"input_power_watts": "55",
+		"service_value": "4.09",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "BAJAJ",
+		"bee_star": "1",
+		"model": "SPEEDSTER BBD EE",
+		"min_air_delivery_cubic_mins": "215",
+		"input_power_watts": "53",
+		"service_value": "4.06",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "BAJAJ",
+		"bee_star": "1",
+		"model": "SPPEDSTER EE",
+		"min_air_delivery_cubic_mins": "215",
+		"input_power_watts": "53",
+		"service_value": "4.06",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "BAJAJ",
+		"bee_star": "1",
+		"model": "ULTIMA DZINER EE",
+		"min_air_delivery_cubic_mins": "215",
+		"input_power_watts": "53",
+		"service_value": "4.06",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "BAJAJ",
+		"bee_star": "1",
+		"model": "ULTIMA EE",
+		"min_air_delivery_cubic_mins": "215",
+		"input_power_watts": "53",
+		"service_value": "4.06",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "BAJAJ",
+		"bee_star": "1",
+		"model": "BEAUTILO EE",
+		"min_air_delivery_cubic_mins": "215",
+		"input_power_watts": "53",
+		"service_value": "4.06",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "BAJAJ",
+		"bee_star": "1",
+		"model": "KASSELS 50 EE",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "52",
+		"service_value": "4.04",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "Eveready",
+		"bee_star": "1",
+		"model": "FAB Dx",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "Eveready",
+		"bee_star": "1",
+		"model": "SOMETE Dx",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "BREEZY LOHIA'S",
+		"bee_star": "5",
+		"model": "EE 28",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "28",
+		"service_value": "7.85",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "BREEZY LOHIA'S",
+		"bee_star": "5",
+		"model": "EE 34",
+		"min_air_delivery_cubic_mins": "245",
+		"input_power_watts": "34",
+		"service_value": "7.20",
+		"sweep_size": "1400 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "POLYCAB",
+		"bee_star": "1",
+		"model": "Zoomer Plus",
+		"min_air_delivery_cubic_mins": "225",
+		"input_power_watts": "52",
+		"service_value": "4.33",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "POLYCAB",
+		"bee_star": "1",
+		"model": "Elanza Plus",
+		"min_air_delivery_cubic_mins": "225",
+		"input_power_watts": "52",
+		"service_value": "4.33",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "LUMINOUS",
+		"bee_star": "5",
+		"model": "NEW YORK TIFFANY",
+		"min_air_delivery_cubic_mins": "230",
+		"input_power_watts": "35",
+		"service_value": "6.57",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "LUMINOUS",
+		"bee_star": "2",
+		"model": "WAVIA",
+		"min_air_delivery_cubic_mins": "225",
+		"input_power_watts": "46",
+		"service_value": "4.89",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "LUMINOUS",
+		"bee_star": "1",
+		"model": "FANTOM",
+		"min_air_delivery_cubic_mins": "215",
+		"input_power_watts": "50",
+		"service_value": "4.3",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "LUMINOUS",
+		"bee_star": "2",
+		"model": "JETTA",
+		"min_air_delivery_cubic_mins": "225",
+		"input_power_watts": "46",
+		"service_value": "4.89",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "LUMINOUS",
+		"bee_star": "1",
+		"model": "SHUTTLE",
+		"min_air_delivery_cubic_mins": "215",
+		"input_power_watts": "50",
+		"service_value": "4.3",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "BAJAJ",
+		"bee_star": "1",
+		"model": "KASSELS 50-14 EE",
+		"min_air_delivery_cubic_mins": "245",
+		"input_power_watts": "59",
+		"service_value": "4.15",
+		"sweep_size": "1400 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "BAJAJ",
+		"bee_star": "1",
+		"model": "HARRIER NXG EE",
+		"min_air_delivery_cubic_mins": "215",
+		"input_power_watts": "53",
+		"service_value": "4.06",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "BAJAJ",
+		"bee_star": "1",
+		"model": "ARK HS EE",
+		"min_air_delivery_cubic_mins": "215",
+		"input_power_watts": "53",
+		"service_value": "4.06",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "BAJAJ",
+		"bee_star": "1",
+		"model": "GRACE LX EE",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "52",
+		"service_value": "4.04",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "BAJAJ",
+		"bee_star": "1",
+		"model": "GRACE LX 14 EE",
+		"min_air_delivery_cubic_mins": "245",
+		"input_power_watts": "59",
+		"service_value": "4.15",
+		"sweep_size": "1400 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "BAJAJ",
+		"bee_star": "1",
+		"model": "PRIDE NEO EE",
+		"min_air_delivery_cubic_mins": "215",
+		"input_power_watts": "53",
+		"service_value": "4.06",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "BAJAJ",
+		"bee_star": "1",
+		"model": "PRIDE NEO 14 EE",
+		"min_air_delivery_cubic_mins": "245",
+		"input_power_watts": "59",
+		"service_value": "4.15",
+		"sweep_size": "1400 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "BAJAJ",
+		"bee_star": "1",
+		"model": "PRIDE EE",
+		"min_air_delivery_cubic_mins": "215",
+		"input_power_watts": "53",
+		"service_value": "4.06",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "BAJAJ",
+		"bee_star": "3",
+		"model": "ELEGANCE ROYALE EE 03",
+		"min_air_delivery_cubic_mins": "225",
+		"input_power_watts": "44",
+		"service_value": "5.11",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "BAJAJ",
+		"bee_star": "3",
+		"model": "EURO NXG EE 03",
+		"min_air_delivery_cubic_mins": "225",
+		"input_power_watts": "44",
+		"service_value": "5.11",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "BAJAJ",
+		"bee_star": "3",
+		"model": "REGAL GOLD NXG 4 BLADE EE 03",
+		"min_air_delivery_cubic_mins": "225",
+		"input_power_watts": "44",
+		"service_value": "5.11",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "BAJAJ",
+		"bee_star": "3",
+		"model": "REGAL GOLD NXG EE 03",
+		"min_air_delivery_cubic_mins": "225",
+		"input_power_watts": "44",
+		"service_value": "5.11",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "V-Guard",
+		"bee_star": "1",
+		"model": "ENVIRO VX",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "BAJAJ",
+		"bee_star": "3",
+		"model": "HARRIER NXG EE 03",
+		"min_air_delivery_cubic_mins": "225",
+		"input_power_watts": "44",
+		"service_value": "5.11",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "BAJAJ",
+		"bee_star": "1",
+		"model": "GRACE GOLD DX EE",
+		"min_air_delivery_cubic_mins": "215",
+		"input_power_watts": "53",
+		"service_value": "4.06",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "BAJAJ",
+		"bee_star": "1",
+		"model": "ESTEEM EE",
+		"min_air_delivery_cubic_mins": "215",
+		"input_power_watts": "53",
+		"service_value": "4.06",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "BAJAJ",
+		"bee_star": "1",
+		"model": "BAHAR 9 EE",
+		"min_air_delivery_cubic_mins": "140",
+		"input_power_watts": "44",
+		"service_value": "3.18",
+		"sweep_size": "900 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "BAJAJ",
+		"bee_star": "1",
+		"model": "BAHAR 14 EE",
+		"min_air_delivery_cubic_mins": "245",
+		"input_power_watts": "59",
+		"service_value": "4.15",
+		"sweep_size": "1400 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "BAJAJ",
+		"bee_star": "1",
+		"model": "BAHAR EE",
+		"min_air_delivery_cubic_mins": "215",
+		"input_power_watts": "53",
+		"service_value": "4.06",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "BAJAJ",
+		"bee_star": "1",
+		"model": "BAHAR DECO EE",
+		"min_air_delivery_cubic_mins": "215",
+		"input_power_watts": "53",
+		"service_value": "4.06",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "LUMINOUS",
+		"bee_star": "1",
+		"model": "AUDIE 900",
+		"min_air_delivery_cubic_mins": "145",
+		"input_power_watts": "42",
+		"service_value": "3.5",
+		"sweep_size": "900 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "LUMINOUS",
+		"bee_star": "1",
+		"model": "AUDIE 1050",
+		"min_air_delivery_cubic_mins": "165",
+		"input_power_watts": "48",
+		"service_value": "3.4",
+		"sweep_size": "1050 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "LUMINOUS",
+		"bee_star": "1",
+		"model": "NEW YORK BROOKLYN 900",
+		"min_air_delivery_cubic_mins": "145",
+		"input_power_watts": "42",
+		"service_value": "3.5",
+		"sweep_size": "900 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "LUMINOUS",
+		"bee_star": "1",
+		"model": "NEW YORK BROOKLYN 1050",
+		"min_air_delivery_cubic_mins": "165",
+		"input_power_watts": "48",
+		"service_value": "3.4",
+		"sweep_size": "1050 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "LUMINOUS",
+		"bee_star": "1",
+		"model": "RAPID 900",
+		"min_air_delivery_cubic_mins": "145",
+		"input_power_watts": "42",
+		"service_value": "3.5",
+		"sweep_size": "900 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "LUMINOUS",
+		"bee_star": "1",
+		"model": "RAPID 1050",
+		"min_air_delivery_cubic_mins": "165",
+		"input_power_watts": "48",
+		"service_value": "3.4",
+		"sweep_size": "1050 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "LUMINOUS",
+		"bee_star": "1",
+		"model": "RAPID 1400",
+		"min_air_delivery_cubic_mins": "245",
+		"input_power_watts": "58",
+		"service_value": "4.2",
+		"sweep_size": "1400 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "V-Guard",
+		"bee_star": "1",
+		"model": "COOLGALE VX",
+		"min_air_delivery_cubic_mins": "215",
+		"input_power_watts": "50",
+		"service_value": "4",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "ORIENT ELECTRIC",
+		"bee_star": "1",
+		"model": "SUMMER COOL",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "50",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "LUMINOUS",
+		"bee_star": "1",
+		"model": "RAPID DECO 900",
+		"min_air_delivery_cubic_mins": "145",
+		"input_power_watts": "42",
+		"service_value": "3.5",
+		"sweep_size": "900 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "ORIENT ELECTRIC",
+		"bee_star": "2",
+		"model": "ORIENT G",
+		"min_air_delivery_cubic_mins": "255",
+		"input_power_watts": "55",
+		"service_value": "4.51",
+		"sweep_size": "1400 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "ORIENT ELECTRIC",
+		"bee_star": "1",
+		"model": "SUMMER KING XL",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "50",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "LUMINOUS",
+		"bee_star": "1",
+		"model": "RAPID DECO 1050",
+		"min_air_delivery_cubic_mins": "165",
+		"input_power_watts": "48",
+		"service_value": "3.4",
+		"sweep_size": "1050 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "ORIENT ELECTRIC",
+		"bee_star": "2",
+		"model": "NEWBREEZE",
+		"min_air_delivery_cubic_mins": "245",
+		"input_power_watts": "52",
+		"service_value": "4.51",
+		"sweep_size": "1400 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "LUMINOUS",
+		"bee_star": "1",
+		"model": "RAPID DECO 1400",
+		"min_air_delivery_cubic_mins": "245",
+		"input_power_watts": "58",
+		"service_value": "4.2",
+		"sweep_size": "1400 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "ORIENT ELECTRIC",
+		"bee_star": "1",
+		"model": "SUMMER PRIDE",
+		"min_air_delivery_cubic_mins": "245",
+		"input_power_watts": "55",
+		"service_value": "4.1",
+		"sweep_size": "1400 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "ORIENT ELECTRIC",
+		"bee_star": "2",
+		"model": "SUMMER COOL",
+		"min_air_delivery_cubic_mins": "245",
+		"input_power_watts": "52",
+		"service_value": "4.51",
+		"sweep_size": "1400 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "ORIENT ELECTRIC",
+		"bee_star": "1",
+		"model": "SUMMER PRIDE",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "50",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "ORIENT ELECTRIC",
+		"bee_star": "2",
+		"model": "SUMMER DELITE ORNAMENTAL",
+		"min_air_delivery_cubic_mins": "255",
+		"input_power_watts": "55",
+		"service_value": "4.51",
+		"sweep_size": "1400 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "ORIENT ELECTRIC",
+		"bee_star": "1",
+		"model": "SUMMER DELITE ORNAMENTAL",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "50",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "ORIENT ELECTRIC",
+		"bee_star": "3",
+		"model": "NEWBREEZE",
+		"min_air_delivery_cubic_mins": "240",
+		"input_power_watts": "47",
+		"service_value": "5.0",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "ORIENT ELECTRIC",
+		"bee_star": "2",
+		"model": "SUMMER DELITE DECORE",
+		"min_air_delivery_cubic_mins": "255",
+		"input_power_watts": "55",
+		"service_value": "4.51",
+		"sweep_size": "1400 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "KENSTAR",
+		"bee_star": "1",
+		"model": "ENERGETIK",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "Eveready",
+		"bee_star": "1",
+		"model": "FAB M Dx",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "Eveready",
+		"bee_star": "1",
+		"model": "VAJRA48 Dx",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "CROMPTON",
+		"bee_star": "1",
+		"model": "SB SAFE AIR 48",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.20",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "CROMPTON",
+		"bee_star": "1",
+		"model": "SB SEA WIND 48",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "CROMPTON",
+		"bee_star": "1",
+		"model": "SB SUPER BRIZ DECO 48",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.20",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "CROMPTON",
+		"bee_star": "1",
+		"model": "SB COOL BREEZE 48",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.20",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "LUMINOUS",
+		"bee_star": "1",
+		"model": "DHOOM",
+		"min_air_delivery_cubic_mins": "215",
+		"input_power_watts": "52",
+		"service_value": "4.1",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "LUMINOUS",
+		"bee_star": "1",
+		"model": "HI AIR CLASSIC 900",
+		"min_air_delivery_cubic_mins": "145",
+		"input_power_watts": "42",
+		"service_value": "3.5",
+		"sweep_size": "900 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "LUMINOUS",
+		"bee_star": "1",
+		"model": "HI AIR CLASSIC 1200",
+		"min_air_delivery_cubic_mins": "225",
+		"input_power_watts": "52",
+		"service_value": "4.3",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "LUMINOUS",
+		"bee_star": "1",
+		"model": "HI AIR CLASSIC 1400",
+		"min_air_delivery_cubic_mins": "245",
+		"input_power_watts": "58",
+		"service_value": "4.2",
+		"sweep_size": "1400 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "LUMINOUS",
+		"bee_star": "1",
+		"model": "RAPID 1200",
+		"min_air_delivery_cubic_mins": "215",
+		"input_power_watts": "52",
+		"service_value": "4.1",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "LUMINOUS",
+		"bee_star": "1",
+		"model": "RAPID DECO 1200",
+		"min_air_delivery_cubic_mins": "215",
+		"input_power_watts": "52",
+		"service_value": "4.1",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "LUMINOUS",
+		"bee_star": "1",
+		"model": "PULSE DECO",
+		"min_air_delivery_cubic_mins": "215",
+		"input_power_watts": "50",
+		"service_value": "4.3",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "LUMINOUS",
+		"bee_star": "1",
+		"model": "RAPID DUOS",
+		"min_air_delivery_cubic_mins": "215",
+		"input_power_watts": "52",
+		"service_value": "4.1",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "LUMINOUS",
+		"bee_star": "1",
+		"model": "RAPID PRIME",
+		"min_air_delivery_cubic_mins": "215",
+		"input_power_watts": "52",
+		"service_value": "4.1",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "BAJAJ",
+		"bee_star": "1",
+		"model": "Regal Gold NXG 14 EE",
+		"min_air_delivery_cubic_mins": "245",
+		"input_power_watts": "59",
+		"service_value": "4.15",
+		"sweep_size": "1400 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "BAJAJ",
+		"bee_star": "1",
+		"model": "Regal Gold NXG 9 EE",
+		"min_air_delivery_cubic_mins": "140",
+		"input_power_watts": "44",
+		"service_value": "3.18",
+		"sweep_size": "900 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "BAJAJ",
+		"bee_star": "1",
+		"model": "Speedster 14 EE",
+		"min_air_delivery_cubic_mins": "245",
+		"input_power_watts": "59",
+		"service_value": "4.15",
+		"sweep_size": "1400 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "BAJAJ",
+		"bee_star": "1",
+		"model": "Speedster 9 EE",
+		"min_air_delivery_cubic_mins": "140",
+		"input_power_watts": "44",
+		"service_value": "3.18",
+		"sweep_size": "900 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "BAJAJ",
+		"bee_star": "1",
+		"model": "Grace DLX NEO EE",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "52",
+		"service_value": "4.04",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "HAVELLS",
+		"bee_star": "1",
+		"model": "Samraat ES 1400 mm",
+		"min_air_delivery_cubic_mins": "250",
+		"input_power_watts": "60",
+		"service_value": "4.16",
+		"sweep_size": "1400 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "HAVELLS",
+		"bee_star": "1",
+		"model": "Fusion ES 1400 mm",
+		"min_air_delivery_cubic_mins": "250",
+		"input_power_watts": "60",
+		"service_value": "4.16",
+		"sweep_size": "1400 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "HAVELLS",
+		"bee_star": "1",
+		"model": "Nicola ES 1400 mm",
+		"min_air_delivery_cubic_mins": "250",
+		"input_power_watts": "60",
+		"service_value": "4.16",
+		"sweep_size": "1400 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "HAVELLS",
+		"bee_star": "1",
+		"model": "Aeroking ES 1400 mm",
+		"min_air_delivery_cubic_mins": "250",
+		"input_power_watts": "60",
+		"service_value": "4.16",
+		"sweep_size": "1400 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "HAVELLS",
+		"bee_star": "1",
+		"model": "Pacer ES 1400 mm",
+		"min_air_delivery_cubic_mins": "250",
+		"input_power_watts": "60",
+		"service_value": "4.16",
+		"sweep_size": "1400 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "HAVELLS",
+		"bee_star": "2",
+		"model": "Fusion ES 1200 mm",
+		"min_air_delivery_cubic_mins": "226",
+		"input_power_watts": "50",
+		"service_value": "4.52",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "HAVELLS",
+		"bee_star": "2",
+		"model": "Nicola ES 1200 mm",
+		"min_air_delivery_cubic_mins": "226",
+		"input_power_watts": "50",
+		"service_value": "4.52",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "HAVELLS",
+		"bee_star": "2",
+		"model": "Pacer ES 1200 mm",
+		"min_air_delivery_cubic_mins": "235",
+		"input_power_watts": "52",
+		"service_value": "4.52",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "HAVELLS",
+		"bee_star": "1",
+		"model": "SS-390 ES 1200 mm",
+		"min_air_delivery_cubic_mins": "230",
+		"input_power_watts": "55",
+		"service_value": "4.18",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "HAVELLS",
+		"bee_star": "2",
+		"model": "Enticer ES 1200 mm",
+		"min_air_delivery_cubic_mins": "235",
+		"input_power_watts": "52",
+		"service_value": "4.52",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "HAVELLS",
+		"bee_star": "2",
+		"model": "Andria ES 1200 mm",
+		"min_air_delivery_cubic_mins": "235",
+		"input_power_watts": "52",
+		"service_value": "4.52",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "HAVELLS",
+		"bee_star": "1",
+		"model": "SS-390 ES 1400 mm",
+		"min_air_delivery_cubic_mins": "250",
+		"input_power_watts": "60",
+		"service_value": "4.16",
+		"sweep_size": "1400 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "HAVELLS",
+		"bee_star": "2",
+		"model": "Enticer Art ES 1200 mm",
+		"min_air_delivery_cubic_mins": "235",
+		"input_power_watts": "52",
+		"service_value": "4.52",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "HAVELLS",
+		"bee_star": "2",
+		"model": "Leganza ES 1200 mm",
+		"min_air_delivery_cubic_mins": "222",
+		"input_power_watts": "49",
+		"service_value": "4.53",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "HAVELLS",
+		"bee_star": "1",
+		"model": "Fusion Prime ES 1200 mm",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "52",
+		"service_value": "4.23",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "HAVELLS",
+		"bee_star": "1",
+		"model": "Equs ES 1200 mm",
+		"min_air_delivery_cubic_mins": "230",
+		"input_power_watts": "55",
+		"service_value": "4.18",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "Amul",
+		"bee_star": "5",
+		"model": "AI-48",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "28",
+		"service_value": "7.85",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "USHA",
+		"bee_star": "1",
+		"model": "SWIFT",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "USHA",
+		"bee_star": "1",
+		"model": "STRIKER",
+		"min_air_delivery_cubic_mins": "230",
+		"input_power_watts": "55",
+		"service_value": "4.18",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "USHA",
+		"bee_star": "1",
+		"model": "NEW ZEN",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "52",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "BAJAJ",
+		"bee_star": "3",
+		"model": "Sabse Tezz EE 03",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "41",
+		"service_value": "5.12",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "BAJAJ",
+		"bee_star": "1",
+		"model": "Sabse Tezz EE",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "52",
+		"service_value": "4.04",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "BAJAJ",
+		"bee_star": "1",
+		"model": "Edge HS EE",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "52",
+		"service_value": "4.04",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "BAJAJ",
+		"bee_star": "1",
+		"model": "EDGE HS DECO EE",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "52",
+		"service_value": "4.04",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "BAJAJ",
+		"bee_star": "1",
+		"model": "SPPEDSTER BBD 9 EE",
+		"min_air_delivery_cubic_mins": "140",
+		"input_power_watts": "44",
+		"service_value": "3.18",
+		"sweep_size": "900 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "BAJAJ",
+		"bee_star": "1",
+		"model": "SHIMMER BBD EE",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "52",
+		"service_value": "4.04",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "BAJAJ",
+		"bee_star": "3",
+		"model": "Kassels 50 EE 03",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "41",
+		"service_value": "5.12",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "BAJAJ",
+		"bee_star": "3",
+		"model": "Excel Star EE 03",
+		"min_air_delivery_cubic_mins": "215",
+		"input_power_watts": "42",
+		"service_value": "5.12",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "BAJAJ",
+		"bee_star": "3",
+		"model": "Electra 50 EE 03",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "41",
+		"service_value": "5.12",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "BAJAJ",
+		"bee_star": "3",
+		"model": "Edge EE 03",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "41",
+		"service_value": "5.12",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "BAJAJ",
+		"bee_star": "3",
+		"model": "Kassels Star EE 03",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "41",
+		"service_value": "5.12",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "CROMPTON",
+		"bee_star": "1",
+		"model": "SB SAFE AIR 36",
+		"min_air_delivery_cubic_mins": "130",
+		"input_power_watts": "42",
+		"service_value": "3.10",
+		"sweep_size": "900 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "CROMPTON",
+		"bee_star": "1",
+		"model": "SB ALPHA BRIZ 48",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.20",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "CROMPTON",
+		"bee_star": "1",
+		"model": "SB HILL BRIZ 48",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.20",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "CROMPTON",
+		"bee_star": "1",
+		"model": "SB SAFE AIR 42",
+		"min_air_delivery_cubic_mins": "165",
+		"input_power_watts": "45",
+		"service_value": "3.6",
+		"sweep_size": "1050 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "CROMPTON",
+		"bee_star": "1",
+		"model": "PM AURA 2 PRIME 48",
+		"min_air_delivery_cubic_mins": "225",
+		"input_power_watts": "55",
+		"service_value": "4.09",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "CROMPTON",
+		"bee_star": "1",
+		"model": "SB SUPER AIR DECO 48",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.20",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "CROMPTON",
+		"bee_star": "1",
+		"model": "HS AURA CLASSIC 48",
+		"min_air_delivery_cubic_mins": "225",
+		"input_power_watts": "55",
+		"service_value": "4.09",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "CROMPTON",
+		"bee_star": "1",
+		"model": "HS JURA PRIME 48",
+		"min_air_delivery_cubic_mins": "225",
+		"input_power_watts": "55",
+		"service_value": "4.09",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "USHA",
+		"bee_star": "2",
+		"model": "STRIKER",
+		"min_air_delivery_cubic_mins": "180",
+		"input_power_watts": "49",
+		"service_value": "3.67",
+		"sweep_size": "1050 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "USHA",
+		"bee_star": "1",
+		"model": "STRIKER",
+		"min_air_delivery_cubic_mins": "135",
+		"input_power_watts": "43",
+		"service_value": "3.1",
+		"sweep_size": "900 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "USHA",
+		"bee_star": "1",
+		"model": "NEW ZEN",
+		"min_air_delivery_cubic_mins": "135",
+		"input_power_watts": "43",
+		"service_value": "3.1",
+		"sweep_size": "900 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "USHA",
+		"bee_star": "2",
+		"model": "NEW ZEN",
+		"min_air_delivery_cubic_mins": "166",
+		"input_power_watts": "45",
+		"service_value": "3.68",
+		"sweep_size": "1050 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "CROMPTON",
+		"bee_star": "1",
+		"model": "HS AURA PRIME 48",
+		"min_air_delivery_cubic_mins": "226",
+		"input_power_watts": "55",
+		"service_value": "4.10",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "CROMPTON",
+		"bee_star": "1",
+		"model": "HS HIGH SPEED 48",
+		"min_air_delivery_cubic_mins": "225",
+		"input_power_watts": "55",
+		"service_value": "4.09",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "USHA",
+		"bee_star": "1",
+		"model": "XAVIA",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "USHA",
+		"bee_star": "1",
+		"model": "WIND-EX",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "50",
+		"service_value": "4.40",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "USHA",
+		"bee_star": "1",
+		"model": "AEROSTYLE",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "USHA",
+		"bee_star": "1",
+		"model": "AEROSTYLE DLX",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "USHA",
+		"bee_star": "1",
+		"model": "DIPLOMAT DLX",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "ORIENT ELECTRIC",
+		"bee_star": "5",
+		"model": "i-float",
+		"min_air_delivery_cubic_mins": "215",
+		"input_power_watts": "32",
+		"service_value": "6.7",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "ORIENT ELECTRIC",
+		"bee_star": "5",
+		"model": "HECTOR 500",
+		"min_air_delivery_cubic_mins": "215",
+		"input_power_watts": "32",
+		"service_value": "6.7",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "V-Guard",
+		"bee_star": "1",
+		"model": "PARIO VX",
+		"min_air_delivery_cubic_mins": "230",
+		"input_power_watts": "55",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "USHA",
+		"bee_star": "1",
+		"model": "AIRKING",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "USHA",
+		"bee_star": "1",
+		"model": "ASTER PLUS",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "50",
+		"service_value": "4.4",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "USHA",
+		"bee_star": "1",
+		"model": "ACE EX",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "51",
+		"service_value": "4.31",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "USHA",
+		"bee_star": "1",
+		"model": "APOLLO LX",
+		"min_air_delivery_cubic_mins": "215",
+		"input_power_watts": "52",
+		"service_value": "4.13",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "USHA",
+		"bee_star": "1",
+		"model": "JET",
+		"min_air_delivery_cubic_mins": "215",
+		"input_power_watts": "52",
+		"service_value": "4.13",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "USHA",
+		"bee_star": "1",
+		"model": "SUPRA",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "USHA",
+		"bee_star": "1",
+		"model": "SPIN",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "51",
+		"service_value": "4.31",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "ORIENT ELECTRIC",
+		"bee_star": "1",
+		"model": "NEW AIR PLUS",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "50",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "ORIENT ELECTRIC",
+		"bee_star": "1",
+		"model": "SUMMER BREEZE",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "50",
+		"service_value": "4.4",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "ORIENT ELECTRIC",
+		"bee_star": "2",
+		"model": "SUMMER BREEZE",
+		"min_air_delivery_cubic_mins": "150",
+		"input_power_watts": "38",
+		"service_value": "3.8",
+		"sweep_size": "900 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "ORIENT ELECTRIC",
+		"bee_star": "1",
+		"model": "AEROQUIET",
+		"min_air_delivery_cubic_mins": "240",
+		"input_power_watts": "55",
+		"service_value": "4.35",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "ORIENT ELECTRIC",
+		"bee_star": "1",
+		"model": "TWISTER HI-SPEED",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "50",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "ORIENT ELECTRIC",
+		"bee_star": "5",
+		"model": "AEROQUIET BLDC",
+		"min_air_delivery_cubic_mins": "240",
+		"input_power_watts": "35",
+		"service_value": "6.85",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "CROMPTON",
+		"bee_star": "1",
+		"model": "SB SEA BLISS 48",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.20",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "USHA",
+		"bee_star": "1",
+		"model": "NEO PLUS",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "51",
+		"service_value": "4.31",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "USHA",
+		"bee_star": "1",
+		"model": "INFINITY",
+		"min_air_delivery_cubic_mins": "215",
+		"input_power_watts": "52",
+		"service_value": "4.13",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "USHA",
+		"bee_star": "1",
+		"model": "SWIFT DECO",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "USHA",
+		"bee_star": "1",
+		"model": "SONATA",
+		"min_air_delivery_cubic_mins": "225",
+		"input_power_watts": "55",
+		"service_value": "4.09",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "USHA",
+		"bee_star": "1",
+		"model": "STRIKER PLATINUM",
+		"min_air_delivery_cubic_mins": "150",
+		"input_power_watts": "45",
+		"service_value": "3.33",
+		"sweep_size": "900 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "USHA",
+		"bee_star": "1",
+		"model": "STRIKER GALAXY",
+		"min_air_delivery_cubic_mins": "150",
+		"input_power_watts": "45",
+		"service_value": "3.33",
+		"sweep_size": "900 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "USHA",
+		"bee_star": "1",
+		"model": "STRIKER PLATINUM",
+		"min_air_delivery_cubic_mins": "180",
+		"input_power_watts": "52",
+		"service_value": "3.46",
+		"sweep_size": "1050 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "CROMPTON",
+		"bee_star": "1",
+		"model": "PM AURA 2 DESIGNER 48",
+		"min_air_delivery_cubic_mins": "225",
+		"input_power_watts": "55",
+		"service_value": "4.09",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "EON",
+		"bee_star": "1",
+		"model": "PRESTO-50",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "EON",
+		"bee_star": "1",
+		"model": "BRAVO HS",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "50",
+		"service_value": "4.4",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "EON",
+		"bee_star": "5",
+		"model": "ECO POWER",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "28",
+		"service_value": "7.85",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "KULIRMA PREMIUM FAN",
+		"bee_star": "1",
+		"model": "PREMIUM/2019",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "50",
+		"service_value": "4.36",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "V-Guard",
+		"bee_star": "1",
+		"model": "GLADO VX",
+		"min_air_delivery_cubic_mins": "240",
+		"input_power_watts": "60",
+		"service_value": "4",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "KULIRMA PREMIUM FAN",
+		"bee_star": "5",
+		"model": "BLDC PREMIUM/2019",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "24",
+		"service_value": "9.17",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "HAVELLS",
+		"bee_star": "1",
+		"model": "EP Trendy ES 1200 mm",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "52",
+		"service_value": "4.23",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "HAVELLS",
+		"bee_star": "1",
+		"model": "Enticer Art ES 1400 mm",
+		"min_air_delivery_cubic_mins": "250",
+		"input_power_watts": "60",
+		"service_value": "4.16",
+		"sweep_size": "1400 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "HAVELLS",
+		"bee_star": "1",
+		"model": "Samraat ES 900 mm",
+		"min_air_delivery_cubic_mins": "140",
+		"input_power_watts": "42",
+		"service_value": "3.33",
+		"sweep_size": "900 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "HAVELLS",
+		"bee_star": "1",
+		"model": "Andria ES 900 mm",
+		"min_air_delivery_cubic_mins": "140",
+		"input_power_watts": "42",
+		"service_value": "3.33",
+		"sweep_size": "900 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "HAVELLS",
+		"bee_star": "1",
+		"model": "Aeroking ES 900 mm",
+		"min_air_delivery_cubic_mins": "140",
+		"input_power_watts": "42",
+		"service_value": "3.33",
+		"sweep_size": "900 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "HAVELLS",
+		"bee_star": "1",
+		"model": "Pacer ES 900 mm",
+		"min_air_delivery_cubic_mins": "140",
+		"input_power_watts": "42",
+		"service_value": "3.33",
+		"sweep_size": "900 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "HAVELLS",
+		"bee_star": "1",
+		"model": "Orion ES 900 mm",
+		"min_air_delivery_cubic_mins": "140",
+		"input_power_watts": "42",
+		"service_value": "3.33",
+		"sweep_size": "900 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "HAVELLS",
+		"bee_star": "1",
+		"model": "Samraat ES 1200 mm",
+		"min_air_delivery_cubic_mins": "230",
+		"input_power_watts": "55",
+		"service_value": "4.18",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "STANDARD",
+		"bee_star": "1",
+		"model": "Zinger ES 1400 mm",
+		"min_air_delivery_cubic_mins": "250",
+		"input_power_watts": "60",
+		"service_value": "4.16",
+		"sweep_size": "1400 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "STANDARD",
+		"bee_star": "1",
+		"model": "Stellar ES 1400 mm",
+		"min_air_delivery_cubic_mins": "250",
+		"input_power_watts": "60",
+		"service_value": "4.16",
+		"sweep_size": "1400 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "STANDARD",
+		"bee_star": "1",
+		"model": "Zoe ES 1200 mm",
+		"min_air_delivery_cubic_mins": "230",
+		"input_power_watts": "55",
+		"service_value": "4.18",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "STANDARD",
+		"bee_star": "1",
+		"model": "Zinger ES 1200 mm",
+		"min_air_delivery_cubic_mins": "222",
+		"input_power_watts": "55",
+		"service_value": "4.04",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "STANDARD",
+		"bee_star": "1",
+		"model": "Dasher Prime ES 1200 mm",
+		"min_air_delivery_cubic_mins": "222",
+		"input_power_watts": "55",
+		"service_value": "4.04",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "STANDARD",
+		"bee_star": "1",
+		"model": "Dasher Jazz ES 1200 mm",
+		"min_air_delivery_cubic_mins": "222",
+		"input_power_watts": "55",
+		"service_value": "4.04",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "USHA",
+		"bee_star": "1",
+		"model": "ACE EX",
+		"min_air_delivery_cubic_mins": "130",
+		"input_power_watts": "40",
+		"service_value": "3.25",
+		"sweep_size": "900 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "USHA",
+		"bee_star": "1",
+		"model": "ACE EX",
+		"min_air_delivery_cubic_mins": "246",
+		"input_power_watts": "59",
+		"service_value": "4.17",
+		"sweep_size": "1400 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "USHA",
+		"bee_star": "1",
+		"model": "SPIN",
+		"min_air_delivery_cubic_mins": "246",
+		"input_power_watts": "59",
+		"service_value": "4.17",
+		"sweep_size": "1400 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "USHA",
+		"bee_star": "1",
+		"model": "SPIN",
+		"min_air_delivery_cubic_mins": "130",
+		"input_power_watts": "40",
+		"service_value": "3.25",
+		"sweep_size": "900 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "USHA",
+		"bee_star": "1",
+		"model": "APOLLO EX",
+		"min_air_delivery_cubic_mins": "246",
+		"input_power_watts": "59",
+		"service_value": "4.17",
+		"sweep_size": "1400 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "USHA",
+		"bee_star": "1",
+		"model": "ALLURE DELUXE",
+		"min_air_delivery_cubic_mins": "135",
+		"input_power_watts": "40",
+		"service_value": "3.37",
+		"sweep_size": "900 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "USHA",
+		"bee_star": "1",
+		"model": "ALLURE DELUXE",
+		"min_air_delivery_cubic_mins": "225",
+		"input_power_watts": "54",
+		"service_value": "4.17",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "USHA",
+		"bee_star": "1",
+		"model": "STRIKER GALAXY",
+		"min_air_delivery_cubic_mins": "180",
+		"input_power_watts": "52",
+		"service_value": "3.46",
+		"sweep_size": "1050 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "CROMPTON",
+		"bee_star": "1",
+		"model": "PM AVANCER PRIME 48",
+		"min_air_delivery_cubic_mins": "226",
+		"input_power_watts": "55",
+		"service_value": "4.10",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "V-Guard",
+		"bee_star": "1",
+		"model": "HAIZE VX",
+		"min_air_delivery_cubic_mins": "215",
+		"input_power_watts": "53",
+		"service_value": "4",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "LUMINOUS",
+		"bee_star": "1",
+		"model": "AUDIE HS",
+		"min_air_delivery_cubic_mins": "225",
+		"input_power_watts": "52",
+		"service_value": "4.3",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "LUMINOUS",
+		"bee_star": "1",
+		"model": "HI AIR METALLIC HS",
+		"min_air_delivery_cubic_mins": "225",
+		"input_power_watts": "52",
+		"service_value": "4.3",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "LUMINOUS",
+		"bee_star": "1",
+		"model": "JAIPUR GANGAUR HS",
+		"min_air_delivery_cubic_mins": "225",
+		"input_power_watts": "52",
+		"service_value": "4.3",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "LUMINOUS",
+		"bee_star": "1",
+		"model": "JAIPUR MINAKARI HS",
+		"min_air_delivery_cubic_mins": "225",
+		"input_power_watts": "52",
+		"service_value": "4.3",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "LUMINOUS",
+		"bee_star": "1",
+		"model": "JAIPUR SANGANERI HS",
+		"min_air_delivery_cubic_mins": "225",
+		"input_power_watts": "52",
+		"service_value": "4.3",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "Star Plus",
+		"bee_star": "5",
+		"model": "Euro Green Wave 32",
+		"min_air_delivery_cubic_mins": "225",
+		"input_power_watts": "32",
+		"service_value": "7.03",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "LUMINOUS",
+		"bee_star": "1",
+		"model": "JOSH",
+		"min_air_delivery_cubic_mins": "215",
+		"input_power_watts": "52",
+		"service_value": "4.1",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "Star Plus",
+		"bee_star": "5",
+		"model": "Euro Green Wave 35",
+		"min_air_delivery_cubic_mins": "245",
+		"input_power_watts": "35",
+		"service_value": "7",
+		"sweep_size": "1400 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "LUMINOUS",
+		"bee_star": "1",
+		"model": "LONDON THAMES HS",
+		"min_air_delivery_cubic_mins": "225",
+		"input_power_watts": "52",
+		"service_value": "4.3",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "LUMINOUS",
+		"bee_star": "1",
+		"model": "NEW YORK RICHMOND HS",
+		"min_air_delivery_cubic_mins": "225",
+		"input_power_watts": "52",
+		"service_value": "4.3",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "LUMINOUS",
+		"bee_star": "1",
+		"model": "RIO BELAIR HS",
+		"min_air_delivery_cubic_mins": "225",
+		"input_power_watts": "52",
+		"service_value": "4.3",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "LUMINOUS",
+		"bee_star": "1",
+		"model": "TRIANA HS",
+		"min_air_delivery_cubic_mins": "225",
+		"input_power_watts": "52",
+		"service_value": "4.3",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "RALLISON",
+		"bee_star": "5",
+		"model": "Rallison BLDC Fans",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "28",
+		"service_value": "7.8",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "V-Guard",
+		"bee_star": "5",
+		"model": "ENVIRO 32",
+		"min_air_delivery_cubic_mins": "230",
+		"input_power_watts": "32",
+		"service_value": "7",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "HALONIX",
+		"bee_star": "5",
+		"model": "PLASMA",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "28",
+		"service_value": "7.86",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "HALONIX",
+		"bee_star": "1",
+		"model": "BLASTER",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "USHA",
+		"bee_star": "1",
+		"model": "PULSAR DELUXE",
+		"min_air_delivery_cubic_mins": "215",
+		"input_power_watts": "52",
+		"service_value": "4.13",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "USHA",
+		"bee_star": "1",
+		"model": "WIND",
+		"min_air_delivery_cubic_mins": "215",
+		"input_power_watts": "52",
+		"service_value": "4.13",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "CROMPTON",
+		"bee_star": "1",
+		"model": "SB NEO BREEZE 48",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.20",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "CROMPTON",
+		"bee_star": "1",
+		"model": "SB HILL BRIZ DECO 48",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.20",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "USHA",
+		"bee_star": "1",
+		"model": "NOVA DLX",
+		"min_air_delivery_cubic_mins": "215",
+		"input_power_watts": "52",
+		"service_value": "4.13",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "SUJATA",
+		"bee_star": "1",
+		"model": "DANZA",
+		"min_air_delivery_cubic_mins": "215",
+		"input_power_watts": "50",
+		"service_value": "4.3",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "USHA",
+		"bee_star": "1",
+		"model": "SWIFT 900 MM",
+		"min_air_delivery_cubic_mins": "135",
+		"input_power_watts": "42",
+		"service_value": "3.21",
+		"sweep_size": "900 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "USHA",
+		"bee_star": "1",
+		"model": "SWIFT 1050 MM",
+		"min_air_delivery_cubic_mins": "160",
+		"input_power_watts": "47",
+		"service_value": "3.40",
+		"sweep_size": "1050 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "USHA",
+		"bee_star": "1",
+		"model": "STRIKER 1400 mm",
+		"min_air_delivery_cubic_mins": "250",
+		"input_power_watts": "60",
+		"service_value": "4.1",
+		"sweep_size": "1400 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "USHA",
+		"bee_star": "1",
+		"model": "NEW ZEN 1400 mm",
+		"min_air_delivery_cubic_mins": "250",
+		"input_power_watts": "60",
+		"service_value": "4.1",
+		"sweep_size": "1400 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "CROMPTON",
+		"bee_star": "1",
+		"model": "SB SAFE AIR 56",
+		"min_air_delivery_cubic_mins": "245",
+		"input_power_watts": "59",
+		"service_value": "4.15",
+		"sweep_size": "1400 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "CROMPTON",
+		"bee_star": "1",
+		"model": "HS PRIME 48",
+		"min_air_delivery_cubic_mins": "225",
+		"input_power_watts": "55",
+		"service_value": "4.09",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "CROMPTON",
+		"bee_star": "1",
+		"model": "HS RIVIERA PRIME 48",
+		"min_air_delivery_cubic_mins": "225",
+		"input_power_watts": "55",
+		"service_value": "4.09",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "USHA",
+		"bee_star": "1",
+		"model": "STRIKER NEO",
+		"min_air_delivery_cubic_mins": "225",
+		"input_power_watts": "55",
+		"service_value": "4.1",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "USHA",
+		"bee_star": "1",
+		"model": "SPIRIT VX",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "USHA",
+		"bee_star": "1",
+		"model": "BARBIE-DREAMTOPIA",
+		"min_air_delivery_cubic_mins": "230",
+		"input_power_watts": "57",
+		"service_value": "4.0",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "USHA",
+		"bee_star": "1",
+		"model": "DORAEMON-FLY AWAY",
+		"min_air_delivery_cubic_mins": "230",
+		"input_power_watts": "57",
+		"service_value": "4.0",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "USHA",
+		"bee_star": "1",
+		"model": "BARBIE-CAREERS",
+		"min_air_delivery_cubic_mins": "230",
+		"input_power_watts": "57",
+		"service_value": "4.0",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "USHA",
+		"bee_star": "1",
+		"model": "CHHOTA BHEEM-SPORTS",
+		"min_air_delivery_cubic_mins": "230",
+		"input_power_watts": "57",
+		"service_value": "4.0",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "BAJAJ",
+		"bee_star": "1",
+		"model": "CREST EE",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "52",
+		"service_value": "4.04",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "BAJAJ",
+		"bee_star": "3",
+		"model": "SHIMMER BBD EE 03",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "41",
+		"service_value": "5.12",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "SUJATA",
+		"bee_star": "1",
+		"model": "Morning Breeze",
+		"min_air_delivery_cubic_mins": "215",
+		"input_power_watts": "50",
+		"service_value": "4.3",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "STANDARD",
+		"bee_star": "1",
+		"model": "Zoe ES 1400 mm",
+		"min_air_delivery_cubic_mins": "246",
+		"input_power_watts": "60",
+		"service_value": "4.1",
+		"sweep_size": "1400 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "STANDARD",
+		"bee_star": "1",
+		"model": "Sailor ES 1400 mm",
+		"min_air_delivery_cubic_mins": "250",
+		"input_power_watts": "60",
+		"service_value": "4.16",
+		"sweep_size": "1400 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "STANDARD",
+		"bee_star": "1",
+		"model": "Qite Pro ES 1400 mm",
+		"min_air_delivery_cubic_mins": "250",
+		"input_power_watts": "60",
+		"service_value": "4.16",
+		"sweep_size": "1400 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "STANDARD",
+		"bee_star": "1",
+		"model": "Frorer ES 1400 mm",
+		"min_air_delivery_cubic_mins": "246",
+		"input_power_watts": "60",
+		"service_value": "4.1",
+		"sweep_size": "1400 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "UNIQUE",
+		"bee_star": "1",
+		"model": "UN-50",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "CROMPTON",
+		"bee_star": "1",
+		"model": "HS RIVIERA 48",
+		"min_air_delivery_cubic_mins": "225",
+		"input_power_watts": "55",
+		"service_value": "4.09",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "CROMPTON",
+		"bee_star": "1",
+		"model": "HS DECORA 48",
+		"min_air_delivery_cubic_mins": "225",
+		"input_power_watts": "55",
+		"service_value": "4.09",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "CROMPTON",
+		"bee_star": "1",
+		"model": "HS DESIGNER 48",
+		"min_air_delivery_cubic_mins": "225",
+		"input_power_watts": "55",
+		"service_value": "4.09",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "CROMPTON",
+		"bee_star": "1",
+		"model": "PM JURA DESIGNER 48",
+		"min_air_delivery_cubic_mins": "225",
+		"input_power_watts": "55",
+		"service_value": "4.09",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "ELEGALE",
+		"bee_star": "5",
+		"model": "EL30",
+		"min_air_delivery_cubic_mins": "230",
+		"input_power_watts": "30",
+		"service_value": "7.6",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "HAVELLS",
+		"bee_star": "5",
+		"model": "Enticer BLDC 1200 mm",
+		"min_air_delivery_cubic_mins": "235",
+		"input_power_watts": "35",
+		"service_value": "6.71",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "HAVELLS",
+		"bee_star": "1",
+		"model": "Festiva ES 1200 mm",
+		"min_air_delivery_cubic_mins": "230",
+		"input_power_watts": "55",
+		"service_value": "4.18",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "CROMPTON",
+		"bee_star": "1",
+		"model": "HS SENOPRIME 48",
+		"min_air_delivery_cubic_mins": "225",
+		"input_power_watts": "55",
+		"service_value": "4.09",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "SUPERFAN",
+		"bee_star": "5",
+		"model": "Super E281/E28R/E28F",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "28",
+		"service_value": "7.86",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "SUPERFAN",
+		"bee_star": "5",
+		"model": "Super Prime",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "35",
+		"service_value": "6.29",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "SUPERFAN",
+		"bee_star": "5",
+		"model": "Super Q361/Q36R/Q36F",
+		"min_air_delivery_cubic_mins": "150",
+		"input_power_watts": "25",
+		"service_value": "6.0",
+		"sweep_size": "900 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "SUPERFAN",
+		"bee_star": "5",
+		"model": "Super Q561/Q56R/Q56F",
+		"min_air_delivery_cubic_mins": "285",
+		"input_power_watts": "30",
+		"service_value": "9.5",
+		"sweep_size": "1400 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "SUPERFAN",
+		"bee_star": "5",
+		"model": "Super Q601/Q60R/Q60F",
+		"min_air_delivery_cubic_mins": "315",
+		"input_power_watts": "35",
+		"service_value": "9.0",
+		"sweep_size": "1500 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "VANDANA",
+		"bee_star": "1",
+		"model": "VE-50",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "ANCHOR",
+		"bee_star": "1",
+		"model": "Penta Decor Star",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "ANCHOR",
+		"bee_star": "1",
+		"model": "Turbo Speed Star",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.20",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "Indo",
+		"bee_star": "1",
+		"model": "ROBOT",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "Indo",
+		"bee_star": "1",
+		"model": "BALISHA",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "Indo",
+		"bee_star": "1",
+		"model": "SPEEDO",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "Indo",
+		"bee_star": "1",
+		"model": "Prime",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "Indo",
+		"bee_star": "1",
+		"model": "SUPREME",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "Indo",
+		"bee_star": "1",
+		"model": "Josh",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "Indo",
+		"bee_star": "1",
+		"model": "BUDGET",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "Indo",
+		"bee_star": "1",
+		"model": "ALIZE DX",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "Indo",
+		"bee_star": "1",
+		"model": "BOLT",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "Indo",
+		"bee_star": "5",
+		"model": "STAR-32",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "32",
+		"service_value": "6.56",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "BAJAJ",
+		"bee_star": "5",
+		"model": "ENERGOS 32",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "32",
+		"service_value": "6.55",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "CROMPTON",
+		"bee_star": "1",
+		"model": "SB ARIYA BRIZ 48",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "51",
+		"service_value": "4.12",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "CROMPTON",
+		"bee_star": "1",
+		"model": "SB ARIYA BRIZ PRIME 48",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "51",
+		"service_value": "4.12",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "V-Guard",
+		"bee_star": "1",
+		"model": "WILO VX",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "RJP",
+		"bee_star": "5",
+		"model": "ECOWISE",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "28",
+		"service_value": "7.50",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "RJP",
+		"bee_star": "1",
+		"model": "PARADISE",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "STANDARD",
+		"bee_star": "1",
+		"model": "Frorer ES 1200 mm",
+		"min_air_delivery_cubic_mins": "222",
+		"input_power_watts": "55",
+		"service_value": "4.04",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "STANDARD",
+		"bee_star": "2",
+		"model": "Stellar ES 1200 mm",
+		"min_air_delivery_cubic_mins": "226",
+		"input_power_watts": "50",
+		"service_value": "4.52",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "STANDARD",
+		"bee_star": "1",
+		"model": "Ameo ES 1200 mm",
+		"min_air_delivery_cubic_mins": "222",
+		"input_power_watts": "55",
+		"service_value": "4.04",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "STANDARD",
+		"bee_star": "1",
+		"model": "Sailor ES 1200 mm",
+		"min_air_delivery_cubic_mins": "222",
+		"input_power_watts": "55",
+		"service_value": "4.04",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "STANDARD",
+		"bee_star": "1",
+		"model": "Zoe ES 900 mm",
+		"min_air_delivery_cubic_mins": "140",
+		"input_power_watts": "42",
+		"service_value": "3.33",
+		"sweep_size": "900 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "STANDARD",
+		"bee_star": "1",
+		"model": "Brisk ES 1200 mm",
+		"min_air_delivery_cubic_mins": "222",
+		"input_power_watts": "55",
+		"service_value": "4.04",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "ANCHOR",
+		"bee_star": "1",
+		"model": "Coolking Star",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.20",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "ANCHOR",
+		"bee_star": "1",
+		"model": "Ventus Star",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.20",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "WHIFA",
+		"bee_star": "5",
+		"model": "TCF-483",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "35",
+		"service_value": "6.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "SUPERFAN",
+		"bee_star": "5",
+		"model": "Super A1/AR/AF",
+		"min_air_delivery_cubic_mins": "230",
+		"input_power_watts": "35",
+		"service_value": "6.57",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "ANCHOR",
+		"bee_star": "1",
+		"model": "Cooler Star",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.20",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "ANCHOR",
+		"bee_star": "1",
+		"model": "Power Star",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.20",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "ANCHOR",
+		"bee_star": "1",
+		"model": "TerraPrime Star",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.20",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "ANCHOR",
+		"bee_star": "1",
+		"model": "Finnair Star",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.20",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "V-Guard",
+		"bee_star": "1",
+		"model": "CVX-50",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "ANCHOR",
+		"bee_star": "1",
+		"model": "Raveno Star",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.20",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "ANCHOR",
+		"bee_star": "1",
+		"model": "XL Premium Star",
+		"min_air_delivery_cubic_mins": "215",
+		"input_power_watts": "52",
+		"service_value": "4.13",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "CROMPTON",
+		"bee_star": "5",
+		"model": "CROMAIR",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "34",
+		"service_value": "6.17",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "ANCHOR",
+		"bee_star": "1",
+		"model": "XL Star",
+		"min_air_delivery_cubic_mins": "215",
+		"input_power_watts": "52",
+		"service_value": "4.13",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "CROMPTON",
+		"bee_star": "5",
+		"model": "Energion eSAVE34",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "34",
+		"service_value": "6.17",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "ARKAYLITE",
+		"bee_star": "1",
+		"model": "TRENDY",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "OXALER",
+		"bee_star": "5",
+		"model": "HI-COOL 32",
+		"min_air_delivery_cubic_mins": "260",
+		"input_power_watts": "32",
+		"service_value": "8.12",
+		"sweep_size": "1400 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "OXALER",
+		"bee_star": "1",
+		"model": "HI-COOL 50",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "50",
+		"service_value": "4.4",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "OXALER",
+		"bee_star": "1",
+		"model": "HI-COOL 60",
+		"min_air_delivery_cubic_mins": "255",
+		"input_power_watts": "60",
+		"service_value": "4.25",
+		"sweep_size": "1400 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "OXALER",
+		"bee_star": "5",
+		"model": "HI-COOL 27",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "27",
+		"service_value": "8.14",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "VIDISHA",
+		"bee_star": "5",
+		"model": "12ACE GREEN PLUS",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "28",
+		"service_value": "7.85",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "HY-FA",
+		"bee_star": "2",
+		"model": "ES-45",
+		"min_air_delivery_cubic_mins": "216",
+		"input_power_watts": "45",
+		"service_value": "4.8",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "RELAXO",
+		"bee_star": "1",
+		"model": "RACE",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "Gorilla",
+		"bee_star": "5",
+		"model": "GV-2 1400",
+		"min_air_delivery_cubic_mins": "236",
+		"input_power_watts": "28",
+		"service_value": "7.8",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "CROMPTON",
+		"bee_star": "1",
+		"model": "HS Markle Prime 48",
+		"min_air_delivery_cubic_mins": "225",
+		"input_power_watts": "55",
+		"service_value": "4.10",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "CROMPTON",
+		"bee_star": "1",
+		"model": "HS Markle Designer 48",
+		"min_air_delivery_cubic_mins": "225",
+		"input_power_watts": "55",
+		"service_value": "4.1",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "CROMPTON",
+		"bee_star": "5",
+		"model": "Energion Stylus",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "35",
+		"service_value": "6.28",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "ANCHOR",
+		"bee_star": "1",
+		"model": "Luxoria Star",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "53",
+		"service_value": "4.15",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "ANCHOR",
+		"bee_star": "1",
+		"model": "Luxoria Dlx Star",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "53",
+		"service_value": "4.15",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "ANCHOR",
+		"bee_star": "1",
+		"model": "Altrix Star",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "ANCHOR",
+		"bee_star": "1",
+		"model": "FLO GS Star",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "ANCHOR",
+		"bee_star": "1",
+		"model": "Inspirio Star",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "USHA",
+		"bee_star": "1",
+		"model": "RACER",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "USHA",
+		"bee_star": "1",
+		"model": "RACER CHROME",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "ORIENT ELECTRIC",
+		"bee_star": "2",
+		"model": "Summer Breeze",
+		"min_air_delivery_cubic_mins": "250",
+		"input_power_watts": "55",
+		"service_value": "4.5",
+		"sweep_size": "1400 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "ORIENT ELECTRIC",
+		"bee_star": "2",
+		"model": "Quasar",
+		"min_air_delivery_cubic_mins": "235",
+		"input_power_watts": "50",
+		"service_value": "4.7",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "ORIENT ELECTRIC",
+		"bee_star": "2",
+		"model": "Quasar Ornamental Shine",
+		"min_air_delivery_cubic_mins": "235",
+		"input_power_watts": "50",
+		"service_value": "4.7",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "ORIENT ELECTRIC",
+		"bee_star": "1",
+		"model": "Quasar Ornamental",
+		"min_air_delivery_cubic_mins": "260",
+		"input_power_watts": "60",
+		"service_value": "4.3",
+		"sweep_size": "1400 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "ORIENT ELECTRIC",
+		"bee_star": "1",
+		"model": "Quasar",
+		"min_air_delivery_cubic_mins": "260",
+		"input_power_watts": "60",
+		"service_value": "4.3",
+		"sweep_size": "1400 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "ORIENT ELECTRIC",
+		"bee_star": "2",
+		"model": "Quasar",
+		"min_air_delivery_cubic_mins": "140",
+		"input_power_watts": "38",
+		"service_value": "3.6",
+		"sweep_size": "900 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "ORIENT ELECTRIC",
+		"bee_star": "2",
+		"model": "Quasar Ornamental",
+		"min_air_delivery_cubic_mins": "320",
+		"input_power_watts": "50",
+		"service_value": "4.7",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "ORIENT ELECTRIC",
+		"bee_star": "2",
+		"model": "Newbreeze",
+		"min_air_delivery_cubic_mins": "140",
+		"input_power_watts": "38",
+		"service_value": "3.6",
+		"sweep_size": "900 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "ORIENT ELECTRIC",
+		"bee_star": "2",
+		"model": "Quasar Ornamental",
+		"min_air_delivery_cubic_mins": "140",
+		"input_power_watts": "38",
+		"service_value": "3.6",
+		"sweep_size": "900 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "CROMPTON",
+		"bee_star": "2",
+		"model": "HS AURA CLASSIC 36 2S",
+		"min_air_delivery_cubic_mins": "145",
+		"input_power_watts": "38",
+		"service_value": "3.81",
+		"sweep_size": "900 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "CROMPTON",
+		"bee_star": "2",
+		"model": "PM AVANCER 36 2S",
+		"min_air_delivery_cubic_mins": "150",
+		"input_power_watts": "40",
+		"service_value": "3.75",
+		"sweep_size": "900 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "CROMPTON",
+		"bee_star": "2",
+		"model": "HS AURA PRIME 36 2S",
+		"min_air_delivery_cubic_mins": "145",
+		"input_power_watts": "38",
+		"service_value": "3.81",
+		"sweep_size": "900 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "HAVELLS",
+		"bee_star": "5",
+		"model": "Efficiencia Neo 1400 mm",
+		"min_air_delivery_cubic_mins": "245",
+		"input_power_watts": "33",
+		"service_value": "7.42",
+		"sweep_size": "1400 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "ANCHOR",
+		"bee_star": "1",
+		"model": "Sonora Dlx Star",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "53",
+		"service_value": "4.15",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "D Fortuner",
+		"bee_star": "5",
+		"model": "RAJDHANI-36",
+		"min_air_delivery_cubic_mins": "150",
+		"input_power_watts": "27",
+		"service_value": "5.5",
+		"sweep_size": "900 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "D Fortuner",
+		"bee_star": "5",
+		"model": "RAJDHANI-48",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "32",
+		"service_value": "6.87",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "POLYCAB",
+		"bee_star": "5",
+		"model": "POWER SAVER 35",
+		"min_air_delivery_cubic_mins": "225",
+		"input_power_watts": "35",
+		"service_value": "6.42",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "POLYCAB",
+		"bee_star": "5",
+		"model": "AFFECIENTE",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "32",
+		"service_value": "6.56",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "BAJAJ",
+		"bee_star": "5",
+		"model": "Energos 35",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "35",
+		"service_value": "6.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "ANCHOR",
+		"bee_star": "1",
+		"model": "FLO Star",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.20",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "MAASHARDA",
+		"bee_star": "5",
+		"model": "MSES1200",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "28",
+		"service_value": "7.85",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "SMART-EK",
+		"bee_star": "5",
+		"model": "Lunar Smartfan V01",
+		"min_air_delivery_cubic_mins": "230",
+		"input_power_watts": "27",
+		"service_value": "8.52",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "SURYA",
+		"bee_star": "1",
+		"model": "Energy Star",
+		"min_air_delivery_cubic_mins": "215",
+		"input_power_watts": "52",
+		"service_value": "4.13",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "SUMMERKING",
+		"bee_star": "1",
+		"model": "STAR",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "CROMPTON",
+		"bee_star": "2",
+		"model": "HS DECORA 2S 48",
+		"min_air_delivery_cubic_mins": "230",
+		"input_power_watts": "51",
+		"service_value": "4.51",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "CROMPTON",
+		"bee_star": "2",
+		"model": "HS MARKLE PRIME 48 2S",
+		"min_air_delivery_cubic_mins": "230",
+		"input_power_watts": "51",
+		"service_value": "4.51",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "CROMPTON",
+		"bee_star": "2",
+		"model": "HS HIGH SPEED 2S 48",
+		"min_air_delivery_cubic_mins": "230",
+		"input_power_watts": "51",
+		"service_value": "4.51",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "CROMPTON",
+		"bee_star": "2",
+		"model": "PM AURA 2 PRIME 2S 42",
+		"min_air_delivery_cubic_mins": "180",
+		"input_power_watts": "47",
+		"service_value": "3.8",
+		"sweep_size": "1050 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "CROMPTON",
+		"bee_star": "2",
+		"model": "PM Avancer2 2S 42",
+		"min_air_delivery_cubic_mins": "189",
+		"input_power_watts": "46",
+		"service_value": "4.1",
+		"sweep_size": "1050 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "V-Guard",
+		"bee_star": "1",
+		"model": "VISTOSO VX",
+		"min_air_delivery_cubic_mins": "240",
+		"input_power_watts": "60",
+		"service_value": "4",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "V-Guard",
+		"bee_star": "1",
+		"model": "GLADO PRIME VX",
+		"min_air_delivery_cubic_mins": "240",
+		"input_power_watts": "60",
+		"service_value": "4",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "USHA",
+		"bee_star": "1",
+		"model": "STRIKER ONE",
+		"min_air_delivery_cubic_mins": "225",
+		"input_power_watts": "56",
+		"service_value": "4.01",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "V-Guard",
+		"bee_star": "1",
+		"model": "LILTO VX",
+		"min_air_delivery_cubic_mins": "215",
+		"input_power_watts": "53",
+		"service_value": "4",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "V-Guard",
+		"bee_star": "1",
+		"model": "EZEST VX",
+		"min_air_delivery_cubic_mins": "215",
+		"input_power_watts": "53",
+		"service_value": "4.1",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "CROMPTON",
+		"bee_star": "1",
+		"model": "HS BRUNA 48 1S",
+		"min_air_delivery_cubic_mins": "226",
+		"input_power_watts": "55",
+		"service_value": "4.1",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "CROMPTON",
+		"bee_star": "2",
+		"model": "HS BRUNA 48 2S",
+		"min_air_delivery_cubic_mins": "230",
+		"input_power_watts": "51",
+		"service_value": "4.51",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "CROMPTON",
+		"bee_star": "2",
+		"model": "HS MARKLE DESIGNER 48 2S",
+		"min_air_delivery_cubic_mins": "230",
+		"input_power_watts": "51",
+		"service_value": "4.51",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "USHA",
+		"bee_star": "1",
+		"model": "SPIRIT",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "USHA",
+		"bee_star": "1",
+		"model": "TRUMP PLUS",
+		"min_air_delivery_cubic_mins": "215",
+		"input_power_watts": "52",
+		"service_value": "4.13",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "USHA",
+		"bee_star": "1",
+		"model": "SUPER STRIKER",
+		"min_air_delivery_cubic_mins": "230",
+		"input_power_watts": "56",
+		"service_value": "4.11",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "USHA",
+		"bee_star": "1",
+		"model": "SWIFT 1400MM",
+		"min_air_delivery_cubic_mins": "250",
+		"input_power_watts": "60",
+		"service_value": "4.16",
+		"sweep_size": "1400 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "USHA",
+		"bee_star": "1",
+		"model": "TRUMP PLUS 900 MM",
+		"min_air_delivery_cubic_mins": "150",
+		"input_power_watts": "45",
+		"service_value": "3.3",
+		"sweep_size": "900 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "USHA",
+		"bee_star": "1",
+		"model": "SWIFT ALPHA",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "USHA",
+		"bee_star": "1",
+		"model": "RACER 900mm",
+		"min_air_delivery_cubic_mins": "150",
+		"input_power_watts": "45",
+		"service_value": "3.33",
+		"sweep_size": "900 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "USHA",
+		"bee_star": "1",
+		"model": "NOVA DLX 900MM",
+		"min_air_delivery_cubic_mins": "150",
+		"input_power_watts": "45",
+		"service_value": "3.3",
+		"sweep_size": "900 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "USHA",
+		"bee_star": "1",
+		"model": "TRUMP PLUS 1400MM",
+		"min_air_delivery_cubic_mins": "250",
+		"input_power_watts": "60",
+		"service_value": "4.16",
+		"sweep_size": "1400 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "USHA",
+		"bee_star": "1",
+		"model": "WIND 900 MM",
+		"min_air_delivery_cubic_mins": "150",
+		"input_power_watts": "45",
+		"service_value": "3.3",
+		"sweep_size": "900 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "USHA",
+		"bee_star": "1",
+		"model": "NOVA DLX 1400 MM",
+		"min_air_delivery_cubic_mins": "250",
+		"input_power_watts": "60",
+		"service_value": "4.16",
+		"sweep_size": "1400 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "USHA",
+		"bee_star": "1",
+		"model": "STRIKER MILLENNIUM",
+		"min_air_delivery_cubic_mins": "225",
+		"input_power_watts": "55",
+		"service_value": "4.09",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "USHA",
+		"bee_star": "1",
+		"model": "STRIKER GALAXY 1400MM",
+		"min_air_delivery_cubic_mins": "250",
+		"input_power_watts": "60",
+		"service_value": "4.16",
+		"sweep_size": "1400 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "USHA",
+		"bee_star": "1",
+		"model": "SWIFT ALPHA CHROME",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "USHA",
+		"bee_star": "1",
+		"model": "STRIKER MILLENNIUM 900 MM",
+		"min_air_delivery_cubic_mins": "150",
+		"input_power_watts": "45",
+		"service_value": "3.33",
+		"sweep_size": "900 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "ANCHOR",
+		"bee_star": "1",
+		"model": "Sprint Deco Star",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.20",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "ANCHOR",
+		"bee_star": "1",
+		"model": "Captor Star",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "53",
+		"service_value": "4.15",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "Khaitan",
+		"bee_star": "1",
+		"model": "EURO",
+		"min_air_delivery_cubic_mins": "211",
+		"input_power_watts": "48",
+		"service_value": "4.40",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "Khaitan",
+		"bee_star": "1",
+		"model": "NANO",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "49",
+		"service_value": "4.30",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "ORIENT ELECTRIC",
+		"bee_star": "5",
+		"model": "Hector 500",
+		"min_air_delivery_cubic_mins": "228",
+		"input_power_watts": "32",
+		"service_value": "7.1",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "INNO ONE – FOR EVERYONE",
+		"bee_star": "5",
+		"model": "INNO ONE",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "27",
+		"service_value": "8.14",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "Waig Solar",
+		"bee_star": "5",
+		"model": "EMERSSION SOFT",
+		"min_air_delivery_cubic_mins": "235",
+		"input_power_watts": "28",
+		"service_value": "8.40",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "ANCHOR",
+		"bee_star": "5",
+		"model": "ECOBREEZ",
+		"min_air_delivery_cubic_mins": "215",
+		"input_power_watts": "28",
+		"service_value": "7.68",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "ANCHOR",
+		"bee_star": "1",
+		"model": "Felicia Star",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.20",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "ANCHOR",
+		"bee_star": "1",
+		"model": "Sprint Star",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.20",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "BERLIA",
+		"bee_star": "5",
+		"model": "ENERGY-5",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "30",
+		"service_value": "7.0",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "LUMINOUS",
+		"bee_star": "3",
+		"model": "JAIPUR TAMRA",
+		"min_air_delivery_cubic_mins": "235",
+		"input_power_watts": "47",
+		"service_value": "5",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "Khaitan",
+		"bee_star": "1",
+		"model": "ZOLTA",
+		"min_air_delivery_cubic_mins": "212",
+		"input_power_watts": "48",
+		"service_value": "4.40",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "LUMINOUS",
+		"bee_star": "3",
+		"model": "RAPID PRO",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "44",
+		"service_value": "5",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "LUMINOUS",
+		"bee_star": "5",
+		"model": "POTENTIA",
+		"min_air_delivery_cubic_mins": "230",
+		"input_power_watts": "35",
+		"service_value": "6.57",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "Atomberg",
+		"bee_star": "5",
+		"model": "Efficio+ D 1200",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "28",
+		"service_value": "7.83",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "Atomberg",
+		"bee_star": "5",
+		"model": "Renesa+ D 1200",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "28",
+		"service_value": "7.83",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "TVS GREEN",
+		"bee_star": "5",
+		"model": "BLDC Ceiling Fan-Power Saver",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "32",
+		"service_value": "6.8",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "TVS GREEN",
+		"bee_star": "5",
+		"model": "DECOR",
+		"min_air_delivery_cubic_mins": "215",
+		"input_power_watts": "35",
+		"service_value": "6.14",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "TVS GREEN",
+		"bee_star": "5",
+		"model": "DELUXE",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "32",
+		"service_value": "6.56",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "SUPERFAN",
+		"bee_star": "5",
+		"model": "Super X1/XR/XF",
+		"min_air_delivery_cubic_mins": "230",
+		"input_power_watts": "35",
+		"service_value": "6.57",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "SUPERFAN",
+		"bee_star": "5",
+		"model": "Super Q481/Q48R/Q48F/Q",
+		"min_air_delivery_cubic_mins": "230",
+		"input_power_watts": "25",
+		"service_value": "9.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "ANCHOR",
+		"bee_star": "5",
+		"model": "ECOBREEZ URBAN 3B",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "31",
+		"service_value": "7.10",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "ANCHOR",
+		"bee_star": "5",
+		"model": "ECOBREEZ URBAN 4B",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "31",
+		"service_value": "6.77",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "LUMINOUS",
+		"bee_star": "3",
+		"model": "JAIPUR GHOOMAR",
+		"min_air_delivery_cubic_mins": "235",
+		"input_power_watts": "47",
+		"service_value": "5",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "LUMINOUS",
+		"bee_star": "3",
+		"model": "HI AIR METALLIC",
+		"min_air_delivery_cubic_mins": "240",
+		"input_power_watts": "48",
+		"service_value": "5",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "LUMINOUS",
+		"bee_star": "3",
+		"model": "LONDON MAYFAIR",
+		"min_air_delivery_cubic_mins": "235",
+		"input_power_watts": "47",
+		"service_value": "5",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "LUMINOUS",
+		"bee_star": "3",
+		"model": "NEW YORK RICHMOND",
+		"min_air_delivery_cubic_mins": "235",
+		"input_power_watts": "47",
+		"service_value": "5",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "KWW",
+		"bee_star": "1",
+		"model": "OPTIMER",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "52",
+		"service_value": "4.0",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "KWW",
+		"bee_star": "2",
+		"model": "CERIBER",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "45",
+		"service_value": "4.66",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "KWW",
+		"bee_star": "5",
+		"model": "ETEMO",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "32",
+		"service_value": "6.5",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "ORIENT ELECTRIC",
+		"bee_star": "5",
+		"model": "Atomiser",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "28",
+		"service_value": "7.8",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "ANCHOR",
+		"bee_star": "1",
+		"model": "Captor Kraft Star",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "53",
+		"service_value": "4.15",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "ANCHOR",
+		"bee_star": "1",
+		"model": "Cruze Star",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "53",
+		"service_value": "4.15",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "LUMINOUS",
+		"bee_star": "3",
+		"model": "JAIPUR SANGANERI",
+		"min_air_delivery_cubic_mins": "235",
+		"input_power_watts": "47",
+		"service_value": "5",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "Atomberg",
+		"bee_star": "5",
+		"model": "Efficio 1200",
+		"min_air_delivery_cubic_mins": "230.8",
+		"input_power_watts": "28",
+		"service_value": "8.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "CROMPTON",
+		"bee_star": "5",
+		"model": "Energion Stylus SMART",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "35",
+		"service_value": "6.28",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "LUMINOUS",
+		"bee_star": "2",
+		"model": "PULSE 45",
+		"min_air_delivery_cubic_mins": "215",
+		"input_power_watts": "45",
+		"service_value": "4.77",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "ANCHOR",
+		"bee_star": "1",
+		"model": "FLO GS Star 900",
+		"min_air_delivery_cubic_mins": "130",
+		"input_power_watts": "40",
+		"service_value": "3.25",
+		"sweep_size": "900 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "OCECO",
+		"bee_star": "5",
+		"model": "FANSIO",
+		"min_air_delivery_cubic_mins": "237",
+		"input_power_watts": "28",
+		"service_value": "8.4",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "POLAR",
+		"bee_star": "1",
+		"model": "PAYTON PS 50",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "SUPERFAN",
+		"bee_star": "5",
+		"model": "Super Q421/Q42R/Q42F",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "25",
+		"service_value": "8",
+		"sweep_size": "1050 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "SUPERFAN",
+		"bee_star": "5",
+		"model": "Super Q48S1/Q48SR/Q48SF",
+		"min_air_delivery_cubic_mins": "260",
+		"input_power_watts": "35",
+		"service_value": "7.43",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "ANCHOR",
+		"bee_star": "1",
+		"model": "Coolking Star 900",
+		"min_air_delivery_cubic_mins": "130",
+		"input_power_watts": "40",
+		"service_value": "3.25",
+		"sweep_size": "900 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "HAVELLS",
+		"bee_star": "5",
+		"model": "Efficiencia Prime",
+		"min_air_delivery_cubic_mins": "225",
+		"input_power_watts": "35",
+		"service_value": "6.42",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "OMEGA'S",
+		"bee_star": "1",
+		"model": "OA 50",
+		"min_air_delivery_cubic_mins": "215",
+		"input_power_watts": "49",
+		"service_value": "4.38",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "ZENTAX",
+		"bee_star": "5",
+		"model": "SONET 24",
+		"min_air_delivery_cubic_mins": "245",
+		"input_power_watts": "35",
+		"service_value": "7",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "ANCHOR",
+		"bee_star": "1",
+		"model": "Strella Deco Star",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.20",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "ANCHOR",
+		"bee_star": "1",
+		"model": "Primera Star",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.20",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "GLUON",
+		"bee_star": "5",
+		"model": "GPL 2020",
+		"min_air_delivery_cubic_mins": "230",
+		"input_power_watts": "28",
+		"service_value": "8.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "Eveready",
+		"bee_star": "1",
+		"model": "SUPER FAB Dx",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "ANCHOR",
+		"bee_star": "1",
+		"model": "Cruze Dlx Star",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "53",
+		"service_value": "4.15",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "ANCHOR",
+		"bee_star": "1",
+		"model": "Sonora Dlx Star 900",
+		"min_air_delivery_cubic_mins": "145",
+		"input_power_watts": "42",
+		"service_value": "3.45",
+		"sweep_size": "900 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "ANCHOR",
+		"bee_star": "1",
+		"model": "Sonora Dlx Star 1050",
+		"min_air_delivery_cubic_mins": "165",
+		"input_power_watts": "48",
+		"service_value": "3.43",
+		"sweep_size": "1050 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "V-Guard",
+		"bee_star": "1",
+		"model": "SUPERFLO VX",
+		"min_air_delivery_cubic_mins": "215",
+		"input_power_watts": "53",
+		"service_value": "4.05",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "HAVELLS",
+		"bee_star": "5",
+		"model": "Efficiencia Pro",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "28",
+		"service_value": "7.85",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "V-Guard",
+		"bee_star": "1",
+		"model": "TUFFMO VX 400",
+		"min_air_delivery_cubic_mins": "232",
+		"input_power_watts": "58",
+		"service_value": "4",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "USHA",
+		"bee_star": "1",
+		"model": "STRIKER MILLENNIUM 1400 MM",
+		"min_air_delivery_cubic_mins": "250",
+		"input_power_watts": "60",
+		"service_value": "4.16",
+		"sweep_size": "1400 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "USHA",
+		"bee_star": "1",
+		"model": "STRIKER PLATINUM 1400MM",
+		"min_air_delivery_cubic_mins": "250",
+		"input_power_watts": "60",
+		"service_value": "4.16",
+		"sweep_size": "1400 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "POLYCAB",
+		"bee_star": "5",
+		"model": "ARNE",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "32",
+		"service_value": "6.56",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "BAJAJ",
+		"bee_star": "5",
+		"model": "EURO PRIME 35",
+		"min_air_delivery_cubic_mins": "225",
+		"input_power_watts": "35",
+		"service_value": "6.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "YASH",
+		"bee_star": "5",
+		"model": "Neostar",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "28",
+		"service_value": "7.5",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "YASH",
+		"bee_star": "5",
+		"model": "MIRAGE",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "32",
+		"service_value": "6.56",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "Atomberg",
+		"bee_star": "5",
+		"model": "Efficio E 1200",
+		"min_air_delivery_cubic_mins": "216",
+		"input_power_watts": "25",
+		"service_value": "8.6",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "Atomberg",
+		"bee_star": "5",
+		"model": "Renesa 1200",
+		"min_air_delivery_cubic_mins": "230",
+		"input_power_watts": "28",
+		"service_value": "8.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "YASH",
+		"bee_star": "1",
+		"model": "MANAK",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.20",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "LUMINOUS",
+		"bee_star": "3",
+		"model": "DELTOID",
+		"min_air_delivery_cubic_mins": "235",
+		"input_power_watts": "47",
+		"service_value": "5",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "Atomberg",
+		"bee_star": "5",
+		"model": "Efficio V4",
+		"min_air_delivery_cubic_mins": "235",
+		"input_power_watts": "28",
+		"service_value": "8.3",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "MARC",
+		"bee_star": "5",
+		"model": "MARC 48-01",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "35",
+		"service_value": "6.28",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "LUMINOUS",
+		"bee_star": "5",
+		"model": "NEW YORK CHELSEA BLDC",
+		"min_air_delivery_cubic_mins": "240",
+		"input_power_watts": "35",
+		"service_value": "6.85",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "ORIENT ELECTRIC",
+		"bee_star": "5",
+		"model": "1400mm HECTOR 500",
+		"min_air_delivery_cubic_mins": "260",
+		"input_power_watts": "35",
+		"service_value": "7.4",
+		"sweep_size": "1400 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "ORPAT",
+		"bee_star": "5",
+		"model": "Money Saver",
+		"min_air_delivery_cubic_mins": "230",
+		"input_power_watts": "28",
+		"service_value": "7.7",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "A G E",
+		"bee_star": "5",
+		"model": "MN120CLASSIC",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "27",
+		"service_value": "7.5",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "Waig Solar",
+		"bee_star": "5",
+		"model": "HOMS",
+		"min_air_delivery_cubic_mins": "270",
+		"input_power_watts": "35",
+		"service_value": "7.8",
+		"sweep_size": "1400 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "STANDARD",
+		"bee_star": "1",
+		"model": "Stellar Premium ES",
+		"min_air_delivery_cubic_mins": "222",
+		"input_power_watts": "55",
+		"service_value": "4.04",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "LUKER",
+		"bee_star": "5",
+		"model": "ECO 28 PRIME",
+		"min_air_delivery_cubic_mins": "230",
+		"input_power_watts": "28",
+		"service_value": "8.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "OXALER",
+		"bee_star": "3",
+		"model": "HI-COOL 42",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "42",
+		"service_value": "5.0",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "OXALER",
+		"bee_star": "3",
+		"model": "HI-COOL 49",
+		"min_air_delivery_cubic_mins": "245",
+		"input_power_watts": "49",
+		"service_value": "5.0",
+		"sweep_size": "1400 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "VENTUM",
+		"bee_star": "5",
+		"model": "ES28",
+		"min_air_delivery_cubic_mins": "230",
+		"input_power_watts": "28",
+		"service_value": "8.21",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "ANCHOR",
+		"bee_star": "3",
+		"model": "Captor 3 Star",
+		"min_air_delivery_cubic_mins": "226",
+		"input_power_watts": "45",
+		"service_value": "5.02",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "ANCHOR",
+		"bee_star": "1",
+		"model": "Italica Dlx Star",
+		"min_air_delivery_cubic_mins": "215",
+		"input_power_watts": "52",
+		"service_value": "4.13",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "PYROTECH",
+		"bee_star": "5",
+		"model": "AF-10-P-L-WXOA",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "28",
+		"service_value": "7.85",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "TVS GREEN",
+		"bee_star": "5",
+		"model": "BLDC Ceiling Fan-Power Saver/RG",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "32",
+		"service_value": "6.8",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "TVS GREEN",
+		"bee_star": "5",
+		"model": "DECOR/RG",
+		"min_air_delivery_cubic_mins": "215",
+		"input_power_watts": "35",
+		"service_value": "6.14",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "TVS GREEN",
+		"bee_star": "5",
+		"model": "DELUXE/RG",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "32",
+		"service_value": "6.56",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "SUPERFAN",
+		"bee_star": "5",
+		"model": "Super V1/VR/VF",
+		"min_air_delivery_cubic_mins": "270",
+		"input_power_watts": "40",
+		"service_value": "6.75",
+		"sweep_size": "1400 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "ORIENT ELECTRIC",
+		"bee_star": "5",
+		"model": "I-TOME",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "26",
+		"service_value": "8.46",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "USHA",
+		"bee_star": "1",
+		"model": "ALLURE DELUXE 1400 MM",
+		"min_air_delivery_cubic_mins": "250",
+		"input_power_watts": "60",
+		"service_value": "4.17",
+		"sweep_size": "1400 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "USHA",
+		"bee_star": "1",
+		"model": "ELSA 1400 MM",
+		"min_air_delivery_cubic_mins": "250",
+		"input_power_watts": "60",
+		"service_value": "4.17",
+		"sweep_size": "1400 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "USHA",
+		"bee_star": "1",
+		"model": "ACACIA",
+		"min_air_delivery_cubic_mins": "225",
+		"input_power_watts": "56",
+		"service_value": "4.02",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "USHA",
+		"bee_star": "1",
+		"model": "Allure Deluxe 4 Blade",
+		"min_air_delivery_cubic_mins": "225",
+		"input_power_watts": "55",
+		"service_value": "4.09",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "LUMINOUS",
+		"bee_star": "3",
+		"model": "NEW YORK CHELSEA",
+		"min_air_delivery_cubic_mins": "240",
+		"input_power_watts": "48",
+		"service_value": "5",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "LUMINOUS",
+		"bee_star": "3",
+		"model": "NEW YORK HUDSON",
+		"min_air_delivery_cubic_mins": "235",
+		"input_power_watts": "47",
+		"service_value": "5",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "LUMINOUS",
+		"bee_star": "3",
+		"model": "PROPELAIRE",
+		"min_air_delivery_cubic_mins": "235",
+		"input_power_watts": "47",
+		"service_value": "5",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "Amul",
+		"bee_star": "5",
+		"model": "AL-56",
+		"min_air_delivery_cubic_mins": "275",
+		"input_power_watts": "35",
+		"service_value": "7.86",
+		"sweep_size": "1400 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "PLAZA",
+		"bee_star": "1",
+		"model": "E Saver 50",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "48",
+		"service_value": "4.4",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "HAVELLS",
+		"bee_star": "5",
+		"model": "Stealth Air BLDC",
+		"min_air_delivery_cubic_mins": "245",
+		"input_power_watts": "40",
+		"service_value": "6.12",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "V-Guard",
+		"bee_star": "1",
+		"model": "DREAMS VX",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "V-Guard",
+		"bee_star": "1",
+		"model": "GATIMAAN NEO",
+		"min_air_delivery_cubic_mins": "232",
+		"input_power_watts": "58",
+		"service_value": "4",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "ANCHOR",
+		"bee_star": "3",
+		"model": "Sonora Dlx 3 Star",
+		"min_air_delivery_cubic_mins": "226",
+		"input_power_watts": "45",
+		"service_value": "5.02",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "ANCHOR",
+		"bee_star": "1",
+		"model": "ACCUSTAR 215",
+		"min_air_delivery_cubic_mins": "215",
+		"input_power_watts": "50",
+		"service_value": "4.3",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "V-Guard",
+		"bee_star": "5",
+		"model": "ECOWIND PRO",
+		"min_air_delivery_cubic_mins": "230",
+		"input_power_watts": "32",
+		"service_value": "7",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "V-Guard",
+		"bee_star": "1",
+		"model": "ZEST VX",
+		"min_air_delivery_cubic_mins": "215",
+		"input_power_watts": "53",
+		"service_value": "4.05",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "CANDES Lifes Run On...",
+		"bee_star": "5",
+		"model": "RAPID-1200MM",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "35",
+		"service_value": "6.28",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "BENTEX-SKN",
+		"bee_star": "1",
+		"model": "PRIMA 56",
+		"min_air_delivery_cubic_mins": "245",
+		"input_power_watts": "60",
+		"service_value": "4.1",
+		"sweep_size": "1400 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "V-Guard",
+		"bee_star": "1",
+		"model": "COOLGALE PRIME VX",
+		"min_air_delivery_cubic_mins": "240",
+		"input_power_watts": "60",
+		"service_value": "4",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "ORIENT ELECTRIC",
+		"bee_star": "5",
+		"model": "i-TOME",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "28",
+		"service_value": "7.85",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "CANDES Lifes Run On...",
+		"bee_star": "5",
+		"model": "RAPID-1400MM",
+		"min_air_delivery_cubic_mins": "255",
+		"input_power_watts": "42",
+		"service_value": "6.07",
+		"sweep_size": "1400 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "CANDES Lifes Run On...",
+		"bee_star": "4",
+		"model": "RAPID-1200/4",
+		"min_air_delivery_cubic_mins": "245",
+		"input_power_watts": "44",
+		"service_value": "5.56",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "HAVELLS",
+		"bee_star": "5",
+		"model": "Efficiencia Neo 900 mm",
+		"min_air_delivery_cubic_mins": "150",
+		"input_power_watts": "28",
+		"service_value": "5.35",
+		"sweep_size": "900 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "YASH",
+		"bee_star": "5",
+		"model": "E-STAR",
+		"min_air_delivery_cubic_mins": "230",
+		"input_power_watts": "32",
+		"service_value": "7.18",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "V-Guard",
+		"bee_star": "1",
+		"model": "MAXFLO VX",
+		"min_air_delivery_cubic_mins": "215",
+		"input_power_watts": "53",
+		"service_value": "4",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "V-Guard",
+		"bee_star": "1",
+		"model": "MISTAL VX",
+		"min_air_delivery_cubic_mins": "216",
+		"input_power_watts": "53",
+		"service_value": "4.1",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "V-Guard",
+		"bee_star": "1",
+		"model": "ROTAIR DX VX",
+		"min_air_delivery_cubic_mins": "215",
+		"input_power_watts": "53",
+		"service_value": "4",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "V-Guard",
+		"bee_star": "1",
+		"model": "ROTAIR VX",
+		"min_air_delivery_cubic_mins": "215",
+		"input_power_watts": "53",
+		"service_value": "4",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "V-Guard",
+		"bee_star": "1",
+		"model": "SONCE VX",
+		"min_air_delivery_cubic_mins": "215",
+		"input_power_watts": "53",
+		"service_value": "4",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "ANCHOR",
+		"bee_star": "3",
+		"model": "Luxoria Dlx 3 Star",
+		"min_air_delivery_cubic_mins": "226",
+		"input_power_watts": "45",
+		"service_value": "5.02",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "Atomberg",
+		"bee_star": "5",
+		"model": "Efficio 1400",
+		"min_air_delivery_cubic_mins": "272",
+		"input_power_watts": "35",
+		"service_value": "7.71",
+		"sweep_size": "1400 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "VENTUM",
+		"bee_star": "5",
+		"model": "ES35 R",
+		"min_air_delivery_cubic_mins": "270",
+		"input_power_watts": "35",
+		"service_value": "7.70",
+		"sweep_size": "1400 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "VENTUM",
+		"bee_star": "5",
+		"model": "ES35",
+		"min_air_delivery_cubic_mins": "270",
+		"input_power_watts": "35",
+		"service_value": "7.70",
+		"sweep_size": "1400 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "VENTUM",
+		"bee_star": "5",
+		"model": "ES28 R",
+		"min_air_delivery_cubic_mins": "230",
+		"input_power_watts": "28",
+		"service_value": "8.21",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "CANDES Lifes Run On...",
+		"bee_star": "5",
+		"model": "RAPID-1200 BLDC",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "35",
+		"service_value": "6.28",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "AIRZON",
+		"bee_star": "5",
+		"model": "AIRZON SUPREME-56",
+		"min_air_delivery_cubic_mins": "270",
+		"input_power_watts": "35",
+		"service_value": "7.71",
+		"sweep_size": "1400 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "INDCOOL",
+		"bee_star": "3",
+		"model": "IDCCF113",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "42",
+		"service_value": "5.0",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "INDCOOL",
+		"bee_star": "3",
+		"model": "IDCCF116",
+		"min_air_delivery_cubic_mins": "245",
+		"input_power_watts": "49",
+		"service_value": "5.0",
+		"sweep_size": "1400 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "LUMINOUS",
+		"bee_star": "3",
+		"model": "RAPTOR",
+		"min_air_delivery_cubic_mins": "235",
+		"input_power_watts": "47",
+		"service_value": "5",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "intelux",
+		"bee_star": "5",
+		"model": "2A1E1A",
+		"min_air_delivery_cubic_mins": "226.59",
+		"input_power_watts": "30",
+		"service_value": "7.81",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "POLYCAB",
+		"bee_star": "1",
+		"model": "Charisma Plus",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "52",
+		"service_value": "4.04",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "USHA",
+		"bee_star": "1",
+		"model": "STRIKER GALAXY 1200MM",
+		"min_air_delivery_cubic_mins": "230",
+		"input_power_watts": "56",
+		"service_value": "4.11",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "USHA",
+		"bee_star": "1",
+		"model": "DIPLOMAT 1200 MM",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "USHA",
+		"bee_star": "1",
+		"model": "Airostrong Angle",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "54",
+		"service_value": "4.07",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "USHA",
+		"bee_star": "1",
+		"model": "Airostrong Curve",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "54",
+		"service_value": "4.07",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "USHA",
+		"bee_star": "1",
+		"model": "SONATA 1400 MM",
+		"min_air_delivery_cubic_mins": "250",
+		"input_power_watts": "60",
+		"service_value": "4.16",
+		"sweep_size": "1400 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "POLAR",
+		"bee_star": "1",
+		"model": "WINPRO",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "53",
+		"service_value": "4.15",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "POLAR",
+		"bee_star": "1",
+		"model": "WIND CHILL",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "53",
+		"service_value": "4.15",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "POLAR",
+		"bee_star": "1",
+		"model": "WINAIRE",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "53",
+		"service_value": "4.15",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "POLAR",
+		"bee_star": "1",
+		"model": "SUPER SPEED",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "53",
+		"service_value": "4.15",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "POLAR",
+		"bee_star": "1",
+		"model": "PAYTON",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "POLAR",
+		"bee_star": "1",
+		"model": "PAVILION",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "POLAR",
+		"bee_star": "1",
+		"model": "MEGAMITE",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "POLAR",
+		"bee_star": "1",
+		"model": "MEGAMITE TT DECO",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "POLAR",
+		"bee_star": "1",
+		"model": "CORVETTE",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "53",
+		"service_value": "4.15",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "POLAR",
+		"bee_star": "1",
+		"model": "BOXTER",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "53",
+		"service_value": "4.15",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "POLAR",
+		"bee_star": "5",
+		"model": "BLDC (PS-32)",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "32",
+		"service_value": "6.8",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "POLAR",
+		"bee_star": "5",
+		"model": "BLDC (PS-35)",
+		"min_air_delivery_cubic_mins": "245",
+		"input_power_watts": "35",
+		"service_value": "7.0",
+		"sweep_size": "1400 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "SURYA",
+		"bee_star": "1",
+		"model": "Airobriz star 1200",
+		"min_air_delivery_cubic_mins": "212.9",
+		"input_power_watts": "47",
+		"service_value": "4.5",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "SURYA",
+		"bee_star": "1",
+		"model": "Airolux Star 1200",
+		"min_air_delivery_cubic_mins": "215.65",
+		"input_power_watts": "48",
+		"service_value": "4.49",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "SURYA",
+		"bee_star": "1",
+		"model": "AIRWIND STAR 1200",
+		"min_air_delivery_cubic_mins": "215.09",
+		"input_power_watts": "51",
+		"service_value": "4.21",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "SURYA",
+		"bee_star": "1",
+		"model": "BALTIC AIR STAR 1200",
+		"min_air_delivery_cubic_mins": "211.24",
+		"input_power_watts": "50",
+		"service_value": "4.22",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "SURYA",
+		"bee_star": "1",
+		"model": "POWER PLUS DECO 1200",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "SURYA",
+		"bee_star": "1",
+		"model": "Shakti Star 1200",
+		"min_air_delivery_cubic_mins": "215",
+		"input_power_watts": "52",
+		"service_value": "4.13",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "SURYA",
+		"bee_star": "1",
+		"model": "UDAAN DECO STAR 900",
+		"min_air_delivery_cubic_mins": "135.13",
+		"input_power_watts": "40",
+		"service_value": "3.37",
+		"sweep_size": "900 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "SURYA",
+		"bee_star": "1",
+		"model": "UDAAN PLUS HS STAR 1200",
+		"min_air_delivery_cubic_mins": "214.35",
+		"input_power_watts": "51",
+		"service_value": "4.21",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "SURYA",
+		"bee_star": "1",
+		"model": "UDAAN PLUS STAR 1200",
+		"min_air_delivery_cubic_mins": "213.1",
+		"input_power_watts": "48",
+		"service_value": "4.44",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "SURYA",
+		"bee_star": "1",
+		"model": "UDAAN PLUS STAR 1400",
+		"min_air_delivery_cubic_mins": "245.9",
+		"input_power_watts": "59",
+		"service_value": "4.15",
+		"sweep_size": "1400 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "POLYCAB",
+		"bee_star": "5",
+		"model": "Affeciente Neo",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "28",
+		"service_value": "7.85",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "SURYA",
+		"bee_star": "1",
+		"model": "UDAAN STAR 1200",
+		"min_air_delivery_cubic_mins": "213.23",
+		"input_power_watts": "50",
+		"service_value": "4.26",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "SURYA",
+		"bee_star": "1",
+		"model": "UDAAN STAR 1400",
+		"min_air_delivery_cubic_mins": "245.03",
+		"input_power_watts": "58",
+		"service_value": "4.22",
+		"sweep_size": "1400 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "SURYA",
+		"bee_star": "1",
+		"model": "UDAAN PLUS STAR 900",
+		"min_air_delivery_cubic_mins": "133.03",
+		"input_power_watts": "40",
+		"service_value": "3.32",
+		"sweep_size": "900 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "TVS GREEN",
+		"bee_star": "5",
+		"model": "Super Saver",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "35",
+		"service_value": "6.0",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "BAJAJ",
+		"bee_star": "1",
+		"model": "Kassel Star +",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "53",
+		"service_value": "4.15",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "Atomberg",
+		"bee_star": "5",
+		"model": "Renesa 1400",
+		"min_air_delivery_cubic_mins": "272.4",
+		"input_power_watts": "31.7",
+		"service_value": "8.59",
+		"sweep_size": "1400 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "Atomberg",
+		"bee_star": "5",
+		"model": "Renesa Alpha",
+		"min_air_delivery_cubic_mins": "242.6",
+		"input_power_watts": "32",
+		"service_value": "7.1",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "JONES",
+		"bee_star": "5",
+		"model": "LW-1200",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "35",
+		"service_value": "6.28",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "SPRINGWEL",
+		"bee_star": "3",
+		"model": "RACER-42",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "42",
+		"service_value": "5.0",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "SPRINGWEL",
+		"bee_star": "3",
+		"model": "RACER-49",
+		"min_air_delivery_cubic_mins": "245",
+		"input_power_watts": "49",
+		"service_value": "5.0",
+		"sweep_size": "1400 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "SPRINGWEL",
+		"bee_star": "1",
+		"model": "RACER-50",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "50",
+		"service_value": "4.4",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "SPRINGWEL",
+		"bee_star": "1",
+		"model": "RACER-60",
+		"min_air_delivery_cubic_mins": "260",
+		"input_power_watts": "60",
+		"service_value": "4.33",
+		"sweep_size": "1400 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "SPRINGWEL",
+		"bee_star": "5",
+		"model": "RACER-28",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "28",
+		"service_value": "7.85",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "SPRINGWEL",
+		"bee_star": "5",
+		"model": "RACER-35",
+		"min_air_delivery_cubic_mins": "270",
+		"input_power_watts": "35",
+		"service_value": "7.71",
+		"sweep_size": "1400 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "Eveready",
+		"bee_star": "1",
+		"model": "FAB36 Dx",
+		"min_air_delivery_cubic_mins": "130",
+		"input_power_watts": "42",
+		"service_value": "3.1",
+		"sweep_size": "900 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "HALONIX",
+		"bee_star": "5",
+		"model": "Plasma",
+		"min_air_delivery_cubic_mins": "255",
+		"input_power_watts": "35",
+		"service_value": "7.28",
+		"sweep_size": "1400 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "ANCHOR",
+		"bee_star": "1",
+		"model": "AMSTAR 215",
+		"min_air_delivery_cubic_mins": "215",
+		"input_power_watts": "50",
+		"service_value": "4.3",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "CROMPTON",
+		"bee_star": "2",
+		"model": "HS HIGH SPEED 56",
+		"min_air_delivery_cubic_mins": "265",
+		"input_power_watts": "58",
+		"service_value": "4.56",
+		"sweep_size": "1400 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "V-Guard",
+		"bee_star": "1",
+		"model": "SUPERFLO 56 VX",
+		"min_air_delivery_cubic_mins": "250",
+		"input_power_watts": "60",
+		"service_value": "4.1",
+		"sweep_size": "1400 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "V-Guard",
+		"bee_star": "1",
+		"model": "Maxflo 56 VX",
+		"min_air_delivery_cubic_mins": "250",
+		"input_power_watts": "60",
+		"service_value": "4.1",
+		"sweep_size": "1400 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "V-Guard",
+		"bee_star": "2",
+		"model": "Glado 56 VX 2 star",
+		"min_air_delivery_cubic_mins": "275",
+		"input_power_watts": "60",
+		"service_value": "4.58",
+		"sweep_size": "1400 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "Airelec",
+		"bee_star": "5",
+		"model": "Gloria",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "28",
+		"service_value": "7.85",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "V-Guard",
+		"bee_star": "1",
+		"model": "Zest 56 VX",
+		"min_air_delivery_cubic_mins": "250",
+		"input_power_watts": "60",
+		"service_value": "4.1",
+		"sweep_size": "1400 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "V-Guard",
+		"bee_star": "1",
+		"model": "Glado 36 VX",
+		"min_air_delivery_cubic_mins": "175",
+		"input_power_watts": "49",
+		"service_value": "3.57",
+		"sweep_size": "900 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "V-Guard",
+		"bee_star": "1",
+		"model": "ZEST 36 VX",
+		"min_air_delivery_cubic_mins": "150",
+		"input_power_watts": "48",
+		"service_value": "3.13",
+		"sweep_size": "900 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "V-Guard",
+		"bee_star": "1",
+		"model": "Superflo 36 VX",
+		"min_air_delivery_cubic_mins": "150",
+		"input_power_watts": "48",
+		"service_value": "3.13",
+		"sweep_size": "900 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "V-Guard",
+		"bee_star": "1",
+		"model": "Maxflo 36 VX",
+		"min_air_delivery_cubic_mins": "150",
+		"input_power_watts": "48",
+		"service_value": "3.13",
+		"sweep_size": "900 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "V-Guard",
+		"bee_star": "1",
+		"model": "Zest 42 VX",
+		"min_air_delivery_cubic_mins": "175",
+		"input_power_watts": "51",
+		"service_value": "3.4",
+		"sweep_size": "1050 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "CROMPTON",
+		"bee_star": "1",
+		"model": "Stilero",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "53",
+		"service_value": "4.15",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "Khaitan",
+		"bee_star": "1",
+		"model": "SUPER STAR BULLET",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "Khaitan",
+		"bee_star": "1",
+		"model": "SUPER STAR",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "Khaitan",
+		"bee_star": "5",
+		"model": "Urja",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "30",
+		"service_value": "7.33",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "Khaitan",
+		"bee_star": "5",
+		"model": "URJA-II",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "30",
+		"service_value": "7.33",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "SILK AIR",
+		"bee_star": "1",
+		"model": "BREEZE",
+		"min_air_delivery_cubic_mins": "210",
+		"input_power_watts": "50",
+		"service_value": "4.2",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "YASH",
+		"bee_star": "5",
+		"model": "ECOSTAR",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "32",
+		"service_value": "6.87",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "ANCHOR",
+		"bee_star": "1",
+		"model": "Coolking Star 1400",
+		"min_air_delivery_cubic_mins": "245",
+		"input_power_watts": "59",
+		"service_value": "4.15",
+		"sweep_size": "1400 mm sweep",
+		"valid_till_date": "30-06-2022"
+	},
+	{
+		"manufacturer": "ANCHOR",
+		"bee_star": "1",
+		"model": "Captor i-Kraft Star",
+		"min_air_delivery_cubic_mins": "220",
+		"input_power_watts": "53",
+		"service_value": "4.15",
+		"sweep_size": "1200 mm sweep",
+		"valid_till_date": "30-06-2022"
+	}
+]

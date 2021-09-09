@@ -1,0 +1,4663 @@
+[{
+		"manufacturer": "LG",
+		"bee_star": "3",
+		"model": "GL-I292STNL",
+		"gross_volume_litres": "260",
+		"storage_volume_litres": "237",
+		"energy_units_per_year": "194",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "3",
+		"model": "GL-I302RTNL",
+		"gross_volume_litres": "284",
+		"storage_volume_litres": "259",
+		"energy_units_per_year": "198",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "3",
+		"model": "GL-I322RPZX",
+		"gross_volume_litres": "308",
+		"storage_volume_litres": "283",
+		"energy_units_per_year": "206",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "2",
+		"model": "GL-C292RPZU",
+		"gross_volume_litres": "260",
+		"storage_volume_litres": "237",
+		"energy_units_per_year": "248",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "3",
+		"model": "GL-T302RPZN",
+		"gross_volume_litres": "284",
+		"storage_volume_litres": "256",
+		"energy_units_per_year": "202",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "3",
+		"model": "GL-T292RPZN",
+		"gross_volume_litres": "260",
+		"storage_volume_litres": "234",
+		"energy_units_per_year": "198",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "2",
+		"model": "GL-C302RPZU",
+		"gross_volume_litres": "284",
+		"storage_volume_litres": "259",
+		"energy_units_per_year": "253",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "2",
+		"model": "GL-C322RPZU",
+		"gross_volume_litres": "308",
+		"storage_volume_litres": "283",
+		"energy_units_per_year": "258",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "3",
+		"model": "GL-T322RPZN",
+		"gross_volume_litres": "308",
+		"storage_volume_litres": "280",
+		"energy_units_per_year": "206",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "2",
+		"model": "GL-T292RPZU",
+		"gross_volume_litres": "260",
+		"storage_volume_litres": "234",
+		"energy_units_per_year": "248",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "2",
+		"model": "GL-T302RDSU",
+		"gross_volume_litres": "284",
+		"storage_volume_litres": "256",
+		"energy_units_per_year": "253",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "2",
+		"model": "GN-H602HLHU",
+		"gross_volume_litres": "516",
+		"storage_volume_litres": "475",
+		"energy_units_per_year": "324",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "2",
+		"model": "GN-H702HLHU",
+		"gross_volume_litres": "547",
+		"storage_volume_litres": "506",
+		"energy_units_per_year": "331",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "2",
+		"model": "GR-H812HLHU",
+		"gross_volume_litres": "630",
+		"storage_volume_litres": "592",
+		"energy_units_per_year": "358",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "2",
+		"model": "GR-H772HXHU",
+		"gross_volume_litres": "603",
+		"storage_volume_litres": "565",
+		"energy_units_per_year": "335",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "2",
+		"model": "GN-C702SGGU",
+		"gross_volume_litres": "547",
+		"storage_volume_litres": "506",
+		"energy_units_per_year": "331",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "2",
+		"model": "GL-T292RSDU",
+		"gross_volume_litres": "260",
+		"storage_volume_litres": "234",
+		"energy_units_per_year": "248",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "3",
+		"model": "GL-T292RSPN",
+		"gross_volume_litres": "260",
+		"storage_volume_litres": "234",
+		"energy_units_per_year": "198",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "3",
+		"model": "GL-T302RSPN",
+		"gross_volume_litres": "284",
+		"storage_volume_litres": "256",
+		"energy_units_per_year": "202",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "2",
+		"model": "GL-T322RPZU",
+		"gross_volume_litres": "308",
+		"storage_volume_litres": "280",
+		"energy_units_per_year": "258",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "3",
+		"model": "GL-T322RHPN",
+		"gross_volume_litres": "308",
+		"storage_volume_litres": "280",
+		"energy_units_per_year": "206",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "2",
+		"model": "GN-C422SGCU",
+		"gross_volume_litres": "427",
+		"storage_volume_litres": "393",
+		"energy_units_per_year": "303",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "1",
+		"model": "GL-N292KPRR",
+		"gross_volume_litres": "260",
+		"storage_volume_litres": "235",
+		"energy_units_per_year": "275",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "1",
+		"model": "GL-N292SDSR",
+		"gross_volume_litres": "260",
+		"storage_volume_litres": "235",
+		"energy_units_per_year": "275",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "2",
+		"model": "GL-C322KPZY",
+		"gross_volume_litres": "308",
+		"storage_volume_litres": "281",
+		"energy_units_per_year": "258",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "2",
+		"model": "GL-C302KPZY",
+		"gross_volume_litres": "284",
+		"storage_volume_litres": "257",
+		"energy_units_per_year": "253",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "2",
+		"model": "GL-C292SPZY",
+		"gross_volume_litres": "260",
+		"storage_volume_litres": "237",
+		"energy_units_per_year": "248",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "2",
+		"model": "GL-C292RPZY",
+		"gross_volume_litres": "260",
+		"storage_volume_litres": "237",
+		"energy_units_per_year": "248",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "2",
+		"model": "GL-T292RPDU",
+		"gross_volume_litres": "260",
+		"storage_volume_litres": "234",
+		"energy_units_per_year": "248",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "2",
+		"model": "GL-N292DPOY",
+		"gross_volume_litres": "260",
+		"storage_volume_litres": "237",
+		"energy_units_per_year": "248",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "2",
+		"model": "GL-N292RDSY",
+		"gross_volume_litres": "260",
+		"storage_volume_litres": "237",
+		"energy_units_per_year": "248",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "2",
+		"model": "GL-T322RBPU",
+		"gross_volume_litres": "308",
+		"storage_volume_litres": "280",
+		"energy_units_per_year": "258",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "2",
+		"model": "GL-T302RPGU",
+		"gross_volume_litres": "284",
+		"storage_volume_litres": "256",
+		"energy_units_per_year": "253",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "1",
+		"model": "GC-B529BLHZ",
+		"gross_volume_litres": "449",
+		"storage_volume_litres": "401",
+		"energy_units_per_year": "380",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "1",
+		"model": "GC-B569BLCZ",
+		"gross_volume_litres": "494",
+		"storage_volume_litres": "445",
+		"energy_units_per_year": "390",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "2",
+		"model": "GN-C422SLCU",
+		"gross_volume_litres": "427",
+		"storage_volume_litres": "393",
+		"energy_units_per_year": "303",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "1",
+		"model": "GC-B389SLCZ",
+		"gross_volume_litres": "310",
+		"storage_volume_litres": "275",
+		"energy_units_per_year": "300",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "2",
+		"model": "GL-T292SRGY",
+		"gross_volume_litres": "260",
+		"storage_volume_litres": "234",
+		"energy_units_per_year": "248",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "3",
+		"model": "GL-T322RES3",
+		"gross_volume_litres": "308",
+		"storage_volume_litres": "280",
+		"energy_units_per_year": "206",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "2",
+		"model": "GL-T302SPZ2",
+		"gross_volume_litres": "284",
+		"storage_volume_litres": "256",
+		"energy_units_per_year": "253",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "2",
+		"model": "GL-T322SPZ2",
+		"gross_volume_litres": "308",
+		"storage_volume_litres": "280",
+		"energy_units_per_year": "258",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "3",
+		"model": "GL-T302RRSN",
+		"gross_volume_litres": "284",
+		"storage_volume_litres": "256",
+		"energy_units_per_year": "202",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "2",
+		"model": "GL-N292BPDY",
+		"gross_volume_litres": "260",
+		"storage_volume_litres": "235",
+		"energy_units_per_year": "248",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "3",
+		"model": "GN-H702HLHQ",
+		"gross_volume_litres": "547",
+		"storage_volume_litres": "506",
+		"energy_units_per_year": "253",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "3",
+		"model": "GR-H812HLHQ",
+		"gross_volume_litres": "630",
+		"storage_volume_litres": "592",
+		"energy_units_per_year": "274",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "3",
+		"model": "GN-H602HLHQ",
+		"gross_volume_litres": "516",
+		"storage_volume_litres": "475",
+		"energy_units_per_year": "247",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "2",
+		"model": "GL-T322RSCY",
+		"gross_volume_litres": "308",
+		"storage_volume_litres": "280",
+		"energy_units_per_year": "258",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "2",
+		"model": "GL-T302RSCY",
+		"gross_volume_litres": "284",
+		"storage_volume_litres": "256",
+		"energy_units_per_year": "253",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "4",
+		"model": "GL-T322RRS4",
+		"gross_volume_litres": "308",
+		"storage_volume_litres": "280",
+		"energy_units_per_year": "164",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "4",
+		"model": "GL-T292RRS4",
+		"gross_volume_litres": "260",
+		"storage_volume_litres": "234",
+		"energy_units_per_year": "159",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "4",
+		"model": "GL-T302RRS4",
+		"gross_volume_litres": "284",
+		"storage_volume_litres": "256",
+		"energy_units_per_year": "161",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "2",
+		"model": "GC-B389SLCU",
+		"gross_volume_litres": "310",
+		"storage_volume_litres": "275",
+		"energy_units_per_year": "274",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "2",
+		"model": "GC-B569BLCF",
+		"gross_volume_litres": "494",
+		"storage_volume_litres": "445",
+		"energy_units_per_year": "317",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "2",
+		"model": "GC-B459NLFF",
+		"gross_volume_litres": "374",
+		"storage_volume_litres": "341",
+		"energy_units_per_year": "291",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "2",
+		"model": "GL-T302SPZY",
+		"gross_volume_litres": "284",
+		"storage_volume_litres": "256",
+		"energy_units_per_year": "253",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "2",
+		"model": "GL-T292RHDY",
+		"gross_volume_litres": "260",
+		"storage_volume_litres": "234",
+		"energy_units_per_year": "248",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "3",
+		"model": "GL-S292RRS3",
+		"gross_volume_litres": "260",
+		"storage_volume_litres": "234",
+		"energy_units_per_year": "198",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "3",
+		"model": "GL-T302SPG3",
+		"gross_volume_litres": "284",
+		"storage_volume_litres": "256",
+		"energy_units_per_year": "202",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "3",
+		"model": "GL-T322SDS3",
+		"gross_volume_litres": "308",
+		"storage_volume_litres": "280",
+		"energy_units_per_year": "206",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "2",
+		"model": "GL-T322SPZY",
+		"gross_volume_litres": "308",
+		"storage_volume_litres": "280",
+		"energy_units_per_year": "258",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "3",
+		"model": "GL-T292SPZX",
+		"gross_volume_litres": "260",
+		"storage_volume_litres": "234",
+		"energy_units_per_year": "198",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "2",
+		"model": "GC-B369NLRF",
+		"gross_volume_litres": "335",
+		"storage_volume_litres": "306",
+		"energy_units_per_year": "283",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "3",
+		"model": "GL-T302SPZX",
+		"gross_volume_litres": "284",
+		"storage_volume_litres": "256",
+		"energy_units_per_year": "202",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "3",
+		"model": "GL-S292SPZX",
+		"gross_volume_litres": "260",
+		"storage_volume_litres": "234",
+		"energy_units_per_year": "198",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "3",
+		"model": "GL-T322SPZX",
+		"gross_volume_litres": "308",
+		"storage_volume_litres": "280",
+		"energy_units_per_year": "206",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "2",
+		"model": "GL-S302SDSY",
+		"gross_volume_litres": "284",
+		"storage_volume_litres": "256",
+		"energy_units_per_year": "253",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "3",
+		"model": "GL-I292RPZX",
+		"gross_volume_litres": "260",
+		"storage_volume_litres": "237",
+		"energy_units_per_year": "198",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "3",
+		"model": "GL-T302RPVX",
+		"gross_volume_litres": "284",
+		"storage_volume_litres": "256",
+		"energy_units_per_year": "202",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "3",
+		"model": "GL-T322RPVX",
+		"gross_volume_litres": "308",
+		"storage_volume_litres": "280",
+		"energy_units_per_year": "206",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "2",
+		"model": "GL-T302RPVY",
+		"gross_volume_litres": "284",
+		"storage_volume_litres": "256",
+		"energy_units_per_year": "253",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "2",
+		"model": "GL-S322SDSY",
+		"gross_volume_litres": "308",
+		"storage_volume_litres": "280",
+		"energy_units_per_year": "258",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "3",
+		"model": "GL-S322RPZX",
+		"gross_volume_litres": "308",
+		"storage_volume_litres": "280",
+		"energy_units_per_year": "206",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "3",
+		"model": "GL-S302RPZX",
+		"gross_volume_litres": "284",
+		"storage_volume_litres": "256",
+		"energy_units_per_year": "202",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "2",
+		"model": "GL-S322SSEY",
+		"gross_volume_litres": "308",
+		"storage_volume_litres": "280",
+		"energy_units_per_year": "258",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "2",
+		"model": "GL-S302SBEY",
+		"gross_volume_litres": "284",
+		"storage_volume_litres": "256",
+		"energy_units_per_year": "253",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "GODREJ",
+		"bee_star": "1",
+		"model": "RF NXW 380A",
+		"gross_volume_litres": "380",
+		"storage_volume_litres": "336",
+		"energy_units_per_year": "344",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "GODREJ",
+		"bee_star": "2",
+		"model": "RT EONASTRA 345B",
+		"gross_volume_litres": "330",
+		"storage_volume_litres": "302",
+		"energy_units_per_year": "258",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "GODREJ",
+		"bee_star": "2",
+		"model": "RT EONVESTA 595B",
+		"gross_volume_litres": "580",
+		"storage_volume_litres": "546",
+		"energy_units_per_year": "325",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "GODREJ",
+		"bee_star": "2",
+		"model": "RT EONVESTA 485B",
+		"gross_volume_litres": "470",
+		"storage_volume_litres": "437",
+		"energy_units_per_year": "301",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "GODREJ",
+		"bee_star": "2",
+		"model": "RF EON 328B",
+		"gross_volume_litres": "331",
+		"storage_volume_litres": "301",
+		"energy_units_per_year": "259",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "GODREJ",
+		"bee_star": "3",
+		"model": "RF EON 260C",
+		"gross_volume_litres": "261",
+		"storage_volume_litres": "240",
+		"energy_units_per_year": "202",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "GODREJ",
+		"bee_star": "3",
+		"model": "RT EONVIBE 306C",
+		"gross_volume_litres": "290",
+		"storage_volume_litres": "267",
+		"energy_units_per_year": "204",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "GODREJ",
+		"bee_star": "2",
+		"model": "RT EONVIBE 306B",
+		"gross_volume_litres": "290",
+		"storage_volume_litres": "267",
+		"energy_units_per_year": "251",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "GODREJ",
+		"bee_star": "2",
+		"model": "RT EON 245B",
+		"gross_volume_litres": "231",
+		"storage_volume_litres": "211",
+		"energy_units_per_year": "242",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "GODREJ",
+		"bee_star": "2",
+		"model": "RT EON 255B",
+		"gross_volume_litres": "240",
+		"storage_volume_litres": "219",
+		"energy_units_per_year": "243",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "GODREJ",
+		"bee_star": "2",
+		"model": "RT EON 275B",
+		"gross_volume_litres": "260",
+		"storage_volume_litres": "238",
+		"energy_units_per_year": "250",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "GODREJ",
+		"bee_star": "2",
+		"model": "RT EONVIBE 366B",
+		"gross_volume_litres": "350",
+		"storage_volume_litres": "318",
+		"energy_units_per_year": "272",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "GODREJ",
+		"bee_star": "2",
+		"model": "RT EONVIBE 326B",
+		"gross_volume_litres": "311",
+		"storage_volume_litres": "281",
+		"energy_units_per_year": "264",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "GODREJ",
+		"bee_star": "2",
+		"model": "RT EONVIBE 256B",
+		"gross_volume_litres": "241",
+		"storage_volume_litres": "220",
+		"energy_units_per_year": "235",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "GODREJ",
+		"bee_star": "2",
+		"model": "RT EONVALOR 276B",
+		"gross_volume_litres": "261",
+		"storage_volume_litres": "240",
+		"energy_units_per_year": "237",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "GODREJ",
+		"bee_star": "3",
+		"model": "RT EONVIBE 256C",
+		"gross_volume_litres": "241",
+		"storage_volume_litres": "220",
+		"energy_units_per_year": "188",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "GODREJ",
+		"bee_star": "2",
+		"model": "RT EONASTRA 285B",
+		"gross_volume_litres": "270",
+		"storage_volume_litres": "246",
+		"energy_units_per_year": "254",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "GODREJ",
+		"bee_star": "2",
+		"model": "RT EONVIBE 346B",
+		"gross_volume_litres": "331",
+		"storage_volume_litres": "301",
+		"energy_units_per_year": "259",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "GODREJ",
+		"bee_star": "3",
+		"model": "RF GF 2604 PTRI",
+		"gross_volume_litres": "261",
+		"storage_volume_litres": "240",
+		"energy_units_per_year": "202",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "GODREJ",
+		"bee_star": "2",
+		"model": "RF GF 2553 PTI 3.4",
+		"gross_volume_litres": "255",
+		"storage_volume_litres": "238",
+		"energy_units_per_year": "246",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "GODREJ",
+		"bee_star": "1",
+		"model": "RF GF 3302 PTH",
+		"gross_volume_litres": "330",
+		"storage_volume_litres": "302",
+		"energy_units_per_year": "333",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "GODREJ",
+		"bee_star": "2",
+		"model": "RT EON VALOR 241 P 3.4",
+		"gross_volume_litres": "241",
+		"storage_volume_litres": "220",
+		"energy_units_per_year": "219",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "GODREJ",
+		"bee_star": "2",
+		"model": "RT EON VALOR 261 P 3.4",
+		"gross_volume_litres": "261",
+		"storage_volume_litres": "240",
+		"energy_units_per_year": "234",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "GODREJ",
+		"bee_star": "2",
+		"model": "RT EON VALOR 290 P 3.4",
+		"gross_volume_litres": "290",
+		"storage_volume_litres": "267",
+		"energy_units_per_year": "241",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "GODREJ",
+		"bee_star": "1",
+		"model": "RT Eon Astra 270 P 2.4",
+		"gross_volume_litres": "270",
+		"storage_volume_litres": "246",
+		"energy_units_per_year": "304",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "GODREJ",
+		"bee_star": "1",
+		"model": "RT Eon Astra 292 P 2.4",
+		"gross_volume_litres": "292",
+		"storage_volume_litres": "265",
+		"energy_units_per_year": "320",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "GODREJ",
+		"bee_star": "2",
+		"model": "RT EON 240 PI 3.4",
+		"gross_volume_litres": "240",
+		"storage_volume_litres": "219",
+		"energy_units_per_year": "246",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "GODREJ",
+		"bee_star": "2",
+		"model": "RT EON 260 PI 3.4",
+		"gross_volume_litres": "260",
+		"storage_volume_litres": "238",
+		"energy_units_per_year": "246",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "GODREJ",
+		"bee_star": "2",
+		"model": "RT EON 350 PCI 3.4",
+		"gross_volume_litres": "350",
+		"storage_volume_litres": "318",
+		"energy_units_per_year": "239",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "GODREJ",
+		"bee_star": "1",
+		"model": "RT EON ASTRA 330 P 2.4",
+		"gross_volume_litres": "330",
+		"storage_volume_litres": "302",
+		"energy_units_per_year": "333",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "GODREJ",
+		"bee_star": "2",
+		"model": "RB NXW AURA 445 MDI 3.4",
+		"gross_volume_litres": "430",
+		"storage_volume_litres": "380",
+		"energy_units_per_year": "286",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "GODREJ",
+		"bee_star": "1",
+		"model": "GF 2362 PTH",
+		"gross_volume_litres": "236",
+		"storage_volume_litres": "219",
+		"energy_units_per_year": "292",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "GODREJ",
+		"bee_star": "1",
+		"model": "GF 2552 PTH",
+		"gross_volume_litres": "255",
+		"storage_volume_litres": "238",
+		"energy_units_per_year": "315",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "GODREJ",
+		"bee_star": "2",
+		"model": "RT EON 261 PC 3.4",
+		"gross_volume_litres": "261",
+		"storage_volume_litres": "240",
+		"energy_units_per_year": "254",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "GODREJ",
+		"bee_star": "3",
+		"model": "RT EON 261 SVBIC 4.4",
+		"gross_volume_litres": "261",
+		"storage_volume_litres": "240",
+		"energy_units_per_year": "198",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "GODREJ",
+		"bee_star": "3",
+		"model": "RT EON 290 SVBIC 4.4",
+		"gross_volume_litres": "290",
+		"storage_volume_litres": "267",
+		"energy_units_per_year": "200",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "GODREJ",
+		"bee_star": "2",
+		"model": "RT EON 241 PC 3.4",
+		"gross_volume_litres": "241",
+		"storage_volume_litres": "220",
+		"energy_units_per_year": "251",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "GODREJ",
+		"bee_star": "2",
+		"model": "RT EON 290 PC 3.4",
+		"gross_volume_litres": "290",
+		"storage_volume_litres": "267",
+		"energy_units_per_year": "261",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "GODREJ",
+		"bee_star": "3",
+		"model": "RT EON 331 SD 4.4",
+		"gross_volume_litres": "331",
+		"storage_volume_litres": "301",
+		"energy_units_per_year": "215",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "GODREJ",
+		"bee_star": "3",
+		"model": "RT EON 311 SD 4.4",
+		"gross_volume_litres": "311",
+		"storage_volume_litres": "281",
+		"energy_units_per_year": "213",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "GODREJ",
+		"bee_star": "3",
+		"model": "RT EON 241 SD 4.4",
+		"gross_volume_litres": "241",
+		"storage_volume_litres": "220",
+		"energy_units_per_year": "201",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "GODREJ",
+		"bee_star": "2",
+		"model": "RT EON 261 PD 3.4",
+		"gross_volume_litres": "261",
+		"storage_volume_litres": "240",
+		"energy_units_per_year": "254",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "GODREJ",
+		"bee_star": "2",
+		"model": "RT EON 290 P 3.4",
+		"gross_volume_litres": "290",
+		"storage_volume_litres": "267",
+		"energy_units_per_year": "261",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "GODREJ",
+		"bee_star": "1",
+		"model": "RB EON NXW 430 SD 2.4",
+		"gross_volume_litres": "430",
+		"storage_volume_litres": "380",
+		"energy_units_per_year": "362",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "GODREJ",
+		"bee_star": "2",
+		"model": "RT EON 331 P 3.4",
+		"gross_volume_litres": "331",
+		"storage_volume_litres": "301",
+		"energy_units_per_year": "268",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "GODREJ",
+		"bee_star": "2",
+		"model": "RT EON 350 P 3.4",
+		"gross_volume_litres": "350",
+		"storage_volume_litres": "318",
+		"energy_units_per_year": "272",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "GODREJ",
+		"bee_star": "2",
+		"model": "RT EON 331 PD 3.4",
+		"gross_volume_litres": "331",
+		"storage_volume_litres": "301",
+		"energy_units_per_year": "268",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "GODREJ",
+		"bee_star": "2",
+		"model": "RT EON 290 PD 3.4",
+		"gross_volume_litres": "290",
+		"storage_volume_litres": "267",
+		"energy_units_per_year": "261",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "GODREJ",
+		"bee_star": "2",
+		"model": "RT EON 350 PD 3.4",
+		"gross_volume_litres": "350",
+		"storage_volume_litres": "318",
+		"energy_units_per_year": "272",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "GODREJ",
+		"bee_star": "2",
+		"model": "RT EON 311 PD 3.4",
+		"gross_volume_litres": "311",
+		"storage_volume_litres": "281",
+		"energy_units_per_year": "265",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "GODREJ",
+		"bee_star": "3",
+		"model": "RT EON 261 SD 4.4",
+		"gross_volume_litres": "261",
+		"storage_volume_litres": "240",
+		"energy_units_per_year": "204",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "GODREJ",
+		"bee_star": "3",
+		"model": "RT EON 290 SD 4.4",
+		"gross_volume_litres": "290",
+		"storage_volume_litres": "267",
+		"energy_units_per_year": "208",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "GODREJ",
+		"bee_star": "1",
+		"model": "RT EON 231 C 2.4",
+		"gross_volume_litres": "231",
+		"storage_volume_litres": "211",
+		"energy_units_per_year": "272",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "GODREJ",
+		"bee_star": "3",
+		"model": "RT EON 350 SD 4.4",
+		"gross_volume_litres": "350",
+		"storage_volume_litres": "318",
+		"energy_units_per_year": "219",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "HITACHI",
+		"bee_star": "1",
+		"model": "R-VG470PND3",
+		"gross_volume_litres": "451",
+		"storage_volume_litres": "395",
+		"energy_units_per_year": "334",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "HITACHI",
+		"bee_star": "1",
+		"model": "R-VG400PND3",
+		"gross_volume_litres": "382",
+		"storage_volume_litres": "335",
+		"energy_units_per_year": "345",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "HITACHI",
+		"bee_star": "1",
+		"model": "R-VG440PND3",
+		"gross_volume_litres": "415",
+		"storage_volume_litres": "365",
+		"energy_units_per_year": "363",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "HITACHI",
+		"bee_star": "2",
+		"model": "R-B500PND6",
+		"gross_volume_litres": "466",
+		"storage_volume_litres": "407",
+		"energy_units_per_year": "303",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "HITACHI",
+		"bee_star": "2",
+		"model": "R-VG540PND7",
+		"gross_volume_litres": "489",
+		"storage_volume_litres": "450",
+		"energy_units_per_year": "317",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "HITACHI",
+		"bee_star": "2",
+		"model": "R-VG660PND7",
+		"gross_volume_litres": "601",
+		"storage_volume_litres": "550",
+		"energy_units_per_year": "334",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "HITACHI",
+		"bee_star": "2",
+		"model": "R-VG610PND7",
+		"gross_volume_litres": "565",
+		"storage_volume_litres": "510",
+		"energy_units_per_year": "334",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "HITACHI",
+		"bee_star": "2",
+		"model": "R-H350PND7K",
+		"gross_volume_litres": "318",
+		"storage_volume_litres": "290",
+		"energy_units_per_year": "274",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "HITACHI",
+		"bee_star": "2",
+		"model": "R-H310PND7K",
+		"gross_volume_litres": "289",
+		"storage_volume_litres": "260",
+		"energy_units_per_year": "266",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "HITACHI",
+		"bee_star": "2",
+		"model": "R-B570PND7",
+		"gross_volume_litres": "525",
+		"storage_volume_litres": "470",
+		"energy_units_per_year": "312",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "HITACHI",
+		"bee_star": "2",
+		"model": "R-H270PND7K",
+		"gross_volume_litres": "253",
+		"storage_volume_litres": "230",
+		"energy_units_per_year": "257",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "HITACHI",
+		"bee_star": "2",
+		"model": "R-VG400PND8",
+		"gross_volume_litres": "375",
+		"storage_volume_litres": "340",
+		"energy_units_per_year": "264",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "HITACHI",
+		"bee_star": "2",
+		"model": "R-VG440PND8",
+		"gross_volume_litres": "403",
+		"storage_volume_litres": "366",
+		"energy_units_per_year": "272",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "HITACHI",
+		"bee_star": "2",
+		"model": "R-VG470PND8",
+		"gross_volume_litres": "443",
+		"storage_volume_litres": "407",
+		"energy_units_per_year": "282",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "PANASONIC",
+		"bee_star": "2",
+		"model": "NR-FBG27VSS3",
+		"gross_volume_litres": "268",
+		"storage_volume_litres": "239",
+		"energy_units_per_year": "229",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "PANASONIC",
+		"bee_star": "2",
+		"model": "NR-FBG31VSS3",
+		"gross_volume_litres": "305",
+		"storage_volume_litres": "276",
+		"energy_units_per_year": "245",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "PANASONIC",
+		"bee_star": "2",
+		"model": "NR-FBG34VSS3",
+		"gross_volume_litres": "335",
+		"storage_volume_litres": "306",
+		"energy_units_per_year": "254.01",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "PANASONIC",
+		"bee_star": "2",
+		"model": "NR-BG342VPA3",
+		"gross_volume_litres": "336",
+		"storage_volume_litres": "307",
+		"energy_units_per_year": "249",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "PANASONIC",
+		"bee_star": "2",
+		"model": "NR-BG312VPA3",
+		"gross_volume_litres": "307",
+		"storage_volume_litres": "278",
+		"energy_units_per_year": "245",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "PANASONIC",
+		"bee_star": "2",
+		"model": "NR-BX468X",
+		"gross_volume_litres": "450",
+		"storage_volume_litres": "369",
+		"energy_units_per_year": "289",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "PANASONIC",
+		"bee_star": "2",
+		"model": "NR-BG271VSS3",
+		"gross_volume_litres": "270",
+		"storage_volume_litres": "241",
+		"energy_units_per_year": "229",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "PANASONIC",
+		"bee_star": "2",
+		"model": "NR-BG341VSS3",
+		"gross_volume_litres": "336",
+		"storage_volume_litres": "307",
+		"energy_units_per_year": "249",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "PANASONIC",
+		"bee_star": "2",
+		"model": "NR-BG311VSS3",
+		"gross_volume_litres": "307",
+		"storage_volume_litres": "278",
+		"energy_units_per_year": "245",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "PANASONIC",
+		"bee_star": "1",
+		"model": "NR-BY608X",
+		"gross_volume_litres": "602",
+		"storage_volume_litres": "504",
+		"energy_units_per_year": "377",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "PANASONIC",
+		"bee_star": "1",
+		"model": "NR-BR307",
+		"gross_volume_litres": "296",
+		"storage_volume_litres": "265",
+		"energy_units_per_year": "326",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "PANASONIC",
+		"bee_star": "1",
+		"model": "NR-BR347",
+		"gross_volume_litres": "342",
+		"storage_volume_litres": "308",
+		"energy_units_per_year": "323",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "PANASONIC",
+		"bee_star": "2",
+		"model": "NR-BX418V",
+		"gross_volume_litres": "407",
+		"storage_volume_litres": "327",
+		"energy_units_per_year": "266",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "PANASONIC",
+		"bee_star": "2",
+		"model": "NR-BX468V",
+		"gross_volume_litres": "450",
+		"storage_volume_litres": "369",
+		"energy_units_per_year": "282",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "PANASONIC",
+		"bee_star": "2",
+		"model": "NR-BG272VGG3",
+		"gross_volume_litres": "270",
+		"storage_volume_litres": "241",
+		"energy_units_per_year": "229",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "PANASONIC",
+		"bee_star": "3",
+		"model": "NR-BG343VDA3",
+		"gross_volume_litres": "336",
+		"storage_volume_litres": "307",
+		"energy_units_per_year": "212",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "PANASONIC",
+		"bee_star": "3",
+		"model": "NR-BG313VDA3",
+		"gross_volume_litres": "307",
+		"storage_volume_litres": "278",
+		"energy_units_per_year": "207",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "PANASONIC",
+		"bee_star": "2",
+		"model": "NR-BG342VGG3",
+		"gross_volume_litres": "336",
+		"storage_volume_litres": "307",
+		"energy_units_per_year": "249",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "PANASONIC",
+		"bee_star": "2",
+		"model": "NR-BG312VGG3",
+		"gross_volume_litres": "307",
+		"storage_volume_litres": "278",
+		"energy_units_per_year": "245",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "PANASONIC",
+		"bee_star": "3",
+		"model": "NR-RBG34VDW3",
+		"gross_volume_litres": "336",
+		"storage_volume_litres": "307",
+		"energy_units_per_year": "212",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "PANASONIC",
+		"bee_star": "3",
+		"model": "NR-RBG31VDW3",
+		"gross_volume_litres": "307",
+		"storage_volume_litres": "278",
+		"energy_units_per_year": "207",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "PANASONIC",
+		"bee_star": "2",
+		"model": "NR-FBG27VPW3",
+		"gross_volume_litres": "268",
+		"storage_volume_litres": "239",
+		"energy_units_per_year": "229",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "PANASONIC",
+		"bee_star": "3",
+		"model": "NR-TH292CUHN",
+		"gross_volume_litres": "280",
+		"storage_volume_litres": "256",
+		"energy_units_per_year": "201",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "PANASONIC",
+		"bee_star": "2",
+		"model": "NR-TG352BUHN",
+		"gross_volume_litres": "338",
+		"storage_volume_litres": "307",
+		"energy_units_per_year": "249",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "PANASONIC",
+		"bee_star": "3",
+		"model": "NR-TH272CUHN",
+		"gross_volume_litres": "260",
+		"storage_volume_litres": "236",
+		"energy_units_per_year": "193",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "PANASONIC",
+		"bee_star": "2",
+		"model": "NR-BX471WGMN",
+		"gross_volume_litres": "465",
+		"storage_volume_litres": "420",
+		"energy_units_per_year": "302",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "PANASONIC",
+		"bee_star": "2",
+		"model": "NR-TX461BPKN",
+		"gross_volume_litres": "450",
+		"storage_volume_litres": "405",
+		"energy_units_per_year": "287",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "PANASONIC",
+		"bee_star": "3",
+		"model": "NR-TG281CUSN",
+		"gross_volume_litres": "271",
+		"storage_volume_litres": "241",
+		"energy_units_per_year": "195",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "PANASONIC",
+		"bee_star": "2",
+		"model": "NR-BX471C",
+		"gross_volume_litres": "465",
+		"storage_volume_litres": "420",
+		"energy_units_per_year": "296",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "PANASONIC",
+		"bee_star": "2",
+		"model": "NR-BX471W",
+		"gross_volume_litres": "459",
+		"storage_volume_litres": "420",
+		"energy_units_per_year": "297",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "PANASONIC",
+		"bee_star": "2",
+		"model": "NR-TH292BUHN",
+		"gross_volume_litres": "280",
+		"storage_volume_litres": "256",
+		"energy_units_per_year": "238",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "PANASONIC",
+		"bee_star": "2",
+		"model": "NR-TG322BUHN",
+		"gross_volume_litres": "309",
+		"storage_volume_litres": "278",
+		"energy_units_per_year": "245",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "PANASONIC",
+		"bee_star": "3",
+		"model": "NR-TG323CUHN",
+		"gross_volume_litres": "309",
+		"storage_volume_litres": "278",
+		"energy_units_per_year": "207",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "PANASONIC",
+		"bee_star": "3",
+		"model": "NR-TG353CUHN",
+		"gross_volume_litres": "338",
+		"storage_volume_litres": "307",
+		"energy_units_per_year": "212",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "CROMA",
+		"bee_star": "2",
+		"model": "CRAR2525",
+		"gross_volume_litres": "541",
+		"storage_volume_litres": "515",
+		"energy_units_per_year": "377.77",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "CROMA",
+		"bee_star": "2",
+		"model": "CRAR2522",
+		"gross_volume_litres": "263",
+		"storage_volume_litres": "248",
+		"energy_units_per_year": "260",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "CROMA",
+		"bee_star": "2",
+		"model": "CRAR2523",
+		"gross_volume_litres": "435",
+		"storage_volume_litres": "410",
+		"energy_units_per_year": "301",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "CROMA",
+		"bee_star": "2",
+		"model": "CRAR2403",
+		"gross_volume_litres": "310",
+		"storage_volume_litres": "280",
+		"energy_units_per_year": "264",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "CROMA",
+		"bee_star": "2",
+		"model": "CRAR2404",
+		"gross_volume_litres": "347",
+		"storage_volume_litres": "313",
+		"energy_units_per_year": "275",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "HAIER",
+		"bee_star": "2",
+		"model": "HEB-26T",
+		"gross_volume_litres": "273",
+		"storage_volume_litres": "248",
+		"energy_units_per_year": "243",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "HAIER",
+		"bee_star": "2",
+		"model": "HEB-24T",
+		"gross_volume_litres": "253",
+		"storage_volume_litres": "228",
+		"energy_units_per_year": "237",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "HAIER",
+		"bee_star": "2",
+		"model": "HEF-24T",
+		"gross_volume_litres": "255",
+		"storage_volume_litres": "232",
+		"energy_units_per_year": "239",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "HAIER",
+		"bee_star": "2",
+		"model": "HEF-26T",
+		"gross_volume_litres": "275",
+		"storage_volume_litres": "252",
+		"energy_units_per_year": "245",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "HAIER",
+		"bee_star": "2",
+		"model": "HRB-475SS",
+		"gross_volume_litres": "450.0",
+		"storage_volume_litres": "386.0",
+		"energy_units_per_year": "291.0",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "HAIER",
+		"bee_star": "2",
+		"model": "HRB-3404",
+		"gross_volume_litres": "320.00",
+		"storage_volume_litres": "278.00",
+		"energy_units_per_year": "265.00",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "HAIER",
+		"bee_star": "2",
+		"model": "HRB-3654",
+		"gross_volume_litres": "345.00",
+		"storage_volume_litres": "303.00",
+		"energy_units_per_year": "270.00",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "HAIER",
+		"bee_star": "2",
+		"model": "HRF-539CA",
+		"gross_volume_litres": "439.00",
+		"storage_volume_litres": "402.00",
+		"energy_units_per_year": "302.00",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "HAIER",
+		"bee_star": "2",
+		"model": "HRF-589CA",
+		"gross_volume_litres": "490.00",
+		"storage_volume_litres": "450.00",
+		"energy_units_per_year": "315.00",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "HAIER",
+		"bee_star": "2",
+		"model": "HRF-589LX",
+		"gross_volume_litres": "486.00",
+		"storage_volume_litres": "438.00",
+		"energy_units_per_year": "312.00",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "HAIER",
+		"bee_star": "2",
+		"model": "HEB-25T",
+		"gross_volume_litres": "256",
+		"storage_volume_litres": "231",
+		"energy_units_per_year": "234",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "HAIER",
+		"bee_star": "2",
+		"model": "HEF-25T",
+		"gross_volume_litres": "258",
+		"storage_volume_litres": "235",
+		"energy_units_per_year": "236",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "HAIER",
+		"bee_star": "2",
+		"model": "HEF-27T",
+		"gross_volume_litres": "278",
+		"storage_volume_litres": "255",
+		"energy_units_per_year": "242",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "HAIER",
+		"bee_star": "2",
+		"model": "HEB-27T",
+		"gross_volume_litres": "276",
+		"storage_volume_litres": "251",
+		"energy_units_per_year": "240",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "HAIER",
+		"bee_star": "3",
+		"model": "HRF-2984",
+		"gross_volume_litres": "278.00",
+		"storage_volume_litres": "255.00",
+		"energy_units_per_year": "185.00",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "HAIER",
+		"bee_star": "2",
+		"model": "HRF-2983",
+		"gross_volume_litres": "278.00",
+		"storage_volume_litres": "255.00",
+		"energy_units_per_year": "242.00",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "HAIER",
+		"bee_star": "2",
+		"model": "HRF-2783",
+		"gross_volume_litres": "258.00",
+		"storage_volume_litres": "235.00",
+		"energy_units_per_year": "236.00",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "HAIER",
+		"bee_star": "3",
+		"model": "HRF-2784",
+		"gross_volume_litres": "258.00",
+		"storage_volume_litres": "235.00",
+		"energy_units_per_year": "182.00",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "HAIER",
+		"bee_star": "2",
+		"model": "HRB-2763",
+		"gross_volume_litres": "256",
+		"storage_volume_litres": "231",
+		"energy_units_per_year": "234",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "HAIER",
+		"bee_star": "3",
+		"model": "HRB-2764",
+		"gross_volume_litres": "256.0",
+		"storage_volume_litres": "231.0",
+		"energy_units_per_year": "180",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "HAIER",
+		"bee_star": "2",
+		"model": "HRB-2963",
+		"gross_volume_litres": "276.00",
+		"storage_volume_litres": "251.00",
+		"energy_units_per_year": "240.00",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "HAIER",
+		"bee_star": "3",
+		"model": "HRB-2964",
+		"gross_volume_litres": "276.00",
+		"storage_volume_litres": "251.00",
+		"energy_units_per_year": "184.00",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "HAIER",
+		"bee_star": "2",
+		"model": "HRF-3304",
+		"gross_volume_litres": "310.00",
+		"storage_volume_litres": "280.00",
+		"energy_units_per_year": "264.00",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "HAIER",
+		"bee_star": "2",
+		"model": "HRF-3554",
+		"gross_volume_litres": "335.00",
+		"storage_volume_litres": "303.00",
+		"energy_units_per_year": "270.00",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "HAIER",
+		"bee_star": "2",
+		"model": "HRF-3674",
+		"gross_volume_litres": "347.00",
+		"storage_volume_litres": "313.00",
+		"energy_units_per_year": "275.00",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "HAIER",
+		"bee_star": "3",
+		"model": "HEB-25",
+		"gross_volume_litres": "256.0",
+		"storage_volume_litres": "231.0",
+		"energy_units_per_year": "180.0",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "HAIER",
+		"bee_star": "3",
+		"model": "HEF-25",
+		"gross_volume_litres": "258.0",
+		"storage_volume_litres": "235.0",
+		"energy_units_per_year": "182.0",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "HAIER",
+		"bee_star": "3",
+		"model": "HEF-27",
+		"gross_volume_litres": "278.00",
+		"storage_volume_litres": "255.00",
+		"energy_units_per_year": "185.00",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "HAIER",
+		"bee_star": "3",
+		"model": "HRF-3654",
+		"gross_volume_litres": "345",
+		"storage_volume_litres": "313",
+		"energy_units_per_year": "212",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "HAIER",
+		"bee_star": "3",
+		"model": "HRF-3954",
+		"gross_volume_litres": "375",
+		"storage_volume_litres": "340",
+		"energy_units_per_year": "218",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "HAIER",
+		"bee_star": "3",
+		"model": "HEB-35T",
+		"gross_volume_litres": "346",
+		"storage_volume_litres": "318",
+		"energy_units_per_year": "210",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "HAIER",
+		"bee_star": "3",
+		"model": "HRB-3664",
+		"gross_volume_litres": "346",
+		"storage_volume_litres": "318",
+		"energy_units_per_year": "210",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "HAIER",
+		"bee_star": "3",
+		"model": "HRB-3964",
+		"gross_volume_litres": "376",
+		"storage_volume_litres": "346",
+		"energy_units_per_year": "215",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "HAIER",
+		"bee_star": "2",
+		"model": "HEB-3404",
+		"gross_volume_litres": "320.00",
+		"storage_volume_litres": "278.00",
+		"energy_units_per_year": "265",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "HAIER",
+		"bee_star": "3",
+		"model": "HEF-39T",
+		"gross_volume_litres": "375",
+		"storage_volume_litres": "340",
+		"energy_units_per_year": "218",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "HAIER",
+		"bee_star": "3",
+		"model": "HEF-35T",
+		"gross_volume_litres": "345",
+		"storage_volume_litres": "313",
+		"energy_units_per_year": "212",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "2",
+		"model": "GL-S292SPZY",
+		"gross_volume_litres": "260",
+		"storage_volume_litres": "234",
+		"energy_units_per_year": "248",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "3",
+		"model": "GL-S292SBEX",
+		"gross_volume_litres": "260",
+		"storage_volume_litres": "234",
+		"energy_units_per_year": "198",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "3",
+		"model": "GL-T292RSPX",
+		"gross_volume_litres": "260",
+		"storage_volume_litres": "234",
+		"energy_units_per_year": "198",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "2",
+		"model": "GL-S292RSCY",
+		"gross_volume_litres": "260",
+		"storage_volume_litres": "234",
+		"energy_units_per_year": "248",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "2",
+		"model": "GL-N292BPGY",
+		"gross_volume_litres": "260",
+		"storage_volume_litres": "235",
+		"energy_units_per_year": "248",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "2",
+		"model": "GL-N292DBPY",
+		"gross_volume_litres": "260",
+		"storage_volume_litres": "237",
+		"energy_units_per_year": "248",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "3",
+		"model": "GL-S292RPSX",
+		"gross_volume_litres": "260",
+		"storage_volume_litres": "234",
+		"energy_units_per_year": "198",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "3",
+		"model": "GL-I292RPSX",
+		"gross_volume_litres": "260",
+		"storage_volume_litres": "237",
+		"energy_units_per_year": "198",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "2",
+		"model": "GL-T502APZY",
+		"gross_volume_litres": "471",
+		"storage_volume_litres": "431",
+		"energy_units_per_year": "297",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "2",
+		"model": "GL-T432ADSY",
+		"gross_volume_litres": "437",
+		"storage_volume_litres": "403",
+		"energy_units_per_year": "291",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "3",
+		"model": "GL-T502XPZ3",
+		"gross_volume_litres": "471",
+		"storage_volume_litres": "431",
+		"energy_units_per_year": "237",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "2",
+		"model": "GL-S372RDSY",
+		"gross_volume_litres": "335",
+		"storage_volume_litres": "307",
+		"energy_units_per_year": "253",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "2",
+		"model": "GL-S402RDSY",
+		"gross_volume_litres": "360",
+		"storage_volume_litres": "327",
+		"energy_units_per_year": "257",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "2",
+		"model": "GL-N292DPDY",
+		"gross_volume_litres": "260",
+		"storage_volume_litres": "237",
+		"energy_units_per_year": "248",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "2",
+		"model": "GL-S292DPDY",
+		"gross_volume_litres": "260",
+		"storage_volume_litres": "234",
+		"energy_units_per_year": "248",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "3",
+		"model": "GL-T502FES3",
+		"gross_volume_litres": "471",
+		"storage_volume_litres": "431",
+		"energy_units_per_year": "237",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "3",
+		"model": "GL-T432FES3",
+		"gross_volume_litres": "437",
+		"storage_volume_litres": "403",
+		"energy_units_per_year": "232",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "2",
+		"model": "GL-T372JDSY",
+		"gross_volume_litres": "335",
+		"storage_volume_litres": "307",
+		"energy_units_per_year": "253",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "4",
+		"model": "GL-T502FES4",
+		"gross_volume_litres": "471",
+		"storage_volume_litres": "431",
+		"energy_units_per_year": "190",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "3",
+		"model": "GL-T292RRS3",
+		"gross_volume_litres": "260",
+		"storage_volume_litres": "234",
+		"energy_units_per_year": "198",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "3",
+		"model": "GL-T372JES3",
+		"gross_volume_litres": "335",
+		"storage_volume_litres": "307",
+		"energy_units_per_year": "212",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "4",
+		"model": "GL-T372JES4",
+		"gross_volume_litres": "335",
+		"storage_volume_litres": "307",
+		"energy_units_per_year": "169",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "3",
+		"model": "GL-T402JES3",
+		"gross_volume_litres": "360",
+		"storage_volume_litres": "327",
+		"energy_units_per_year": "215",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "4",
+		"model": "GL-T432FES4",
+		"gross_volume_litres": "437",
+		"storage_volume_litres": "403",
+		"energy_units_per_year": "186",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "2",
+		"model": "GL-T432FDS2",
+		"gross_volume_litres": "437",
+		"storage_volume_litres": "403",
+		"energy_units_per_year": "291",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "2",
+		"model": "GL-N292DSDY",
+		"gross_volume_litres": "260",
+		"storage_volume_litres": "237",
+		"energy_units_per_year": "248",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "3",
+		"model": "GL-T502FRS3",
+		"gross_volume_litres": "471",
+		"storage_volume_litres": "431",
+		"energy_units_per_year": "237",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "3",
+		"model": "GL-T292RSC3",
+		"gross_volume_litres": "260",
+		"storage_volume_litres": "234",
+		"energy_units_per_year": "198",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "3",
+		"model": "GL-T372JRS3",
+		"gross_volume_litres": "335",
+		"storage_volume_litres": "307",
+		"energy_units_per_year": "212",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "3",
+		"model": "GL-T432FRS3",
+		"gross_volume_litres": "437",
+		"storage_volume_litres": "403",
+		"energy_units_per_year": "232",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "3",
+		"model": "GL-T402JRS3",
+		"gross_volume_litres": "360",
+		"storage_volume_litres": "327",
+		"energy_units_per_year": "215",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "3",
+		"model": "GL-T402JBLN",
+		"gross_volume_litres": "360",
+		"storage_volume_litres": "327",
+		"energy_units_per_year": "215",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "2",
+		"model": "GL-T402JPZU",
+		"gross_volume_litres": "360",
+		"storage_volume_litres": "327",
+		"energy_units_per_year": "253",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "3",
+		"model": "GL-T372JBLN",
+		"gross_volume_litres": "335",
+		"storage_volume_litres": "307",
+		"energy_units_per_year": "212",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "2",
+		"model": "GL-T372JPZU",
+		"gross_volume_litres": "335",
+		"storage_volume_litres": "307",
+		"energy_units_per_year": "249",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "3",
+		"model": "GL-R402JPZN",
+		"gross_volume_litres": "360",
+		"storage_volume_litres": "330",
+		"energy_units_per_year": "216",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "3",
+		"model": "GL-R372JPZN",
+		"gross_volume_litres": "335",
+		"storage_volume_litres": "310",
+		"energy_units_per_year": "213",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "3",
+		"model": "GL-T502FASN",
+		"gross_volume_litres": "471",
+		"storage_volume_litres": "431",
+		"energy_units_per_year": "237",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "3",
+		"model": "GL-T502FBLN",
+		"gross_volume_litres": "471",
+		"storage_volume_litres": "431",
+		"energy_units_per_year": "237",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "2",
+		"model": "GL-T502FPZU",
+		"gross_volume_litres": "471",
+		"storage_volume_litres": "431",
+		"energy_units_per_year": "297",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "3",
+		"model": "GL-T432FASN",
+		"gross_volume_litres": "437",
+		"storage_volume_litres": "403",
+		"energy_units_per_year": "232",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "3",
+		"model": "GL-T432FBLN",
+		"gross_volume_litres": "437",
+		"storage_volume_litres": "403",
+		"energy_units_per_year": "232",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "2",
+		"model": "GL-D432ADSU",
+		"gross_volume_litres": "437",
+		"storage_volume_litres": "410",
+		"energy_units_per_year": "293",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "2",
+		"model": "GL-T432FPZU",
+		"gross_volume_litres": "437",
+		"storage_volume_litres": "403",
+		"energy_units_per_year": "291",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "3",
+		"model": "GL-I472QPZX",
+		"gross_volume_litres": "420",
+		"storage_volume_litres": "388",
+		"energy_units_per_year": "230",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "2",
+		"model": "GL-I372RPZY",
+		"gross_volume_litres": "335",
+		"storage_volume_litres": "310",
+		"energy_units_per_year": "253",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "2",
+		"model": "GL-I402RPZY",
+		"gross_volume_litres": "360",
+		"storage_volume_litres": "330",
+		"energy_units_per_year": "257",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "2",
+		"model": "GL-T292RPGY",
+		"gross_volume_litres": "260",
+		"storage_volume_litres": "234",
+		"energy_units_per_year": "248",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "3",
+		"model": "GL-C292SASX",
+		"gross_volume_litres": "260",
+		"storage_volume_litres": "237",
+		"energy_units_per_year": "198",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "2",
+		"model": "GL-I472QDSY",
+		"gross_volume_litres": "420",
+		"storage_volume_litres": "388",
+		"energy_units_per_year": "287",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "2",
+		"model": "GL-C292RRGY",
+		"gross_volume_litres": "260",
+		"storage_volume_litres": "237",
+		"energy_units_per_year": "248",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "2",
+		"model": "GL-T402LPZU",
+		"gross_volume_litres": "360",
+		"storage_volume_litres": "327",
+		"energy_units_per_year": "253",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "2",
+		"model": "GL-T372LPZU",
+		"gross_volume_litres": "335",
+		"storage_volume_litres": "307",
+		"energy_units_per_year": "249",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "2",
+		"model": "GL-T402RPZU",
+		"gross_volume_litres": "360",
+		"storage_volume_litres": "327",
+		"energy_units_per_year": "253",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "2",
+		"model": "GL-T372RPZU",
+		"gross_volume_litres": "335",
+		"storage_volume_litres": "307",
+		"energy_units_per_year": "249",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "2",
+		"model": "GL-S292RDSY",
+		"gross_volume_litres": "260",
+		"storage_volume_litres": "234",
+		"energy_units_per_year": "248",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "3",
+		"model": "GL-T402JPZN",
+		"gross_volume_litres": "360",
+		"storage_volume_litres": "327",
+		"energy_units_per_year": "215",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "3",
+		"model": "GL-T372JPZN",
+		"gross_volume_litres": "335",
+		"storage_volume_litres": "307",
+		"energy_units_per_year": "212",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "2",
+		"model": "GL-T502FRS2",
+		"gross_volume_litres": "471",
+		"storage_volume_litres": "431",
+		"energy_units_per_year": "297",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "2",
+		"model": "GL-T402JRS2",
+		"gross_volume_litres": "360",
+		"storage_volume_litres": "327",
+		"energy_units_per_year": "253",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "3",
+		"model": "GL-T292RES3",
+		"gross_volume_litres": "260",
+		"storage_volume_litres": "234",
+		"energy_units_per_year": "198",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "2",
+		"model": "GL-T432FRS2",
+		"gross_volume_litres": "437",
+		"storage_volume_litres": "403",
+		"energy_units_per_year": "291",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "2",
+		"model": "GL-S292DSDY",
+		"gross_volume_litres": "260",
+		"storage_volume_litres": "234",
+		"energy_units_per_year": "248",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "2",
+		"model": "GL-S292RPZY",
+		"gross_volume_litres": "260",
+		"storage_volume_litres": "234",
+		"energy_units_per_year": "248",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "2",
+		"model": "GL-T402JDSY",
+		"gross_volume_litres": "360",
+		"storage_volume_litres": "327",
+		"energy_units_per_year": "257",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LG",
+		"bee_star": "4",
+		"model": "GL-T402JES4",
+		"gross_volume_litres": "360",
+		"storage_volume_litres": "327",
+		"energy_units_per_year": "172",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "KORYO",
+		"bee_star": "1",
+		"model": "KFR295SS3",
+		"gross_volume_litres": "270",
+		"storage_volume_litres": "243",
+		"energy_units_per_year": "254",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SIEMENS",
+		"bee_star": "1",
+		"model": "KD53NXI30I",
+		"gross_volume_litres": "454",
+		"storage_volume_litres": "423",
+		"energy_units_per_year": "359",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SIEMENS",
+		"bee_star": "1",
+		"model": "KD46NXI30I",
+		"gross_volume_litres": "401",
+		"storage_volume_litres": "374",
+		"energy_units_per_year": "364",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SIEMENS",
+		"bee_star": "1",
+		"model": "KG57NAI40I",
+		"gross_volume_litres": "505",
+		"storage_volume_litres": "459",
+		"energy_units_per_year": "382",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SIEMENS",
+		"bee_star": "1",
+		"model": "KD56NXI30I",
+		"gross_volume_litres": "507",
+		"storage_volume_litres": "474",
+		"energy_units_per_year": "376",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SIEMENS",
+		"bee_star": "2",
+		"model": "KG56NXX40I",
+		"gross_volume_litres": "559",
+		"storage_volume_litres": "505",
+		"energy_units_per_year": "305",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SHARP",
+		"bee_star": "2",
+		"model": "SJ-GP60T-BK",
+		"gross_volume_litres": "613",
+		"storage_volume_litres": "556",
+		"energy_units_per_year": "348",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SHARP",
+		"bee_star": "2",
+		"model": "SJ-EP60T-SL",
+		"gross_volume_litres": "613",
+		"storage_volume_litres": "556",
+		"energy_units_per_year": "348",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SHARP",
+		"bee_star": "2",
+		"model": "SJ-EP35T-SL",
+		"gross_volume_litres": "342",
+		"storage_volume_litres": "315",
+		"energy_units_per_year": "270",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "3",
+		"model": "RT28A3453BX/HL",
+		"gross_volume_litres": "253",
+		"storage_volume_litres": "234",
+		"energy_units_per_year": "195",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "3",
+		"model": "RT30A3753SL/HL",
+		"gross_volume_litres": "275",
+		"storage_volume_litres": "255",
+		"energy_units_per_year": "199",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "3",
+		"model": "RT37A4513BX/HL",
+		"gross_volume_litres": "345",
+		"storage_volume_litres": "321",
+		"energy_units_per_year": "212",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "3",
+		"model": "RT37A4633S8/HL",
+		"gross_volume_litres": "336",
+		"storage_volume_litres": "310",
+		"energy_units_per_year": "210",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "2",
+		"model": "RT28A3C22CR/HL",
+		"gross_volume_litres": "244",
+		"storage_volume_litres": "222",
+		"energy_units_per_year": "242",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "1",
+		"model": "RT28A3021S8/HL",
+		"gross_volume_litres": "253",
+		"storage_volume_litres": "234",
+		"energy_units_per_year": "306",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "2",
+		"model": "RT30A3A22DX/HL",
+		"gross_volume_litres": "265",
+		"storage_volume_litres": "243",
+		"energy_units_per_year": "246",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "3",
+		"model": "RT28A3743BX/HL",
+		"gross_volume_litres": "253",
+		"storage_volume_litres": "234",
+		"energy_units_per_year": "195",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "3",
+		"model": "RT30A3743BX/HL",
+		"gross_volume_litres": "275",
+		"storage_volume_litres": "255",
+		"energy_units_per_year": "199",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "3",
+		"model": "RT30A3A234R/HL",
+		"gross_volume_litres": "265",
+		"storage_volume_litres": "243",
+		"energy_units_per_year": "197",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "2",
+		"model": "RT28A3022GS/HL",
+		"gross_volume_litres": "253",
+		"storage_volume_litres": "234",
+		"energy_units_per_year": "243",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "2",
+		"model": "RT34A4622BX/HL",
+		"gross_volume_litres": "314",
+		"storage_volume_litres": "288",
+		"energy_units_per_year": "258",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "3",
+		"model": "RT34A4533BX/HL",
+		"gross_volume_litres": "324",
+		"storage_volume_litres": "300",
+		"energy_units_per_year": "209",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "3",
+		"model": "RT28A3C234R/HL",
+		"gross_volume_litres": "244",
+		"storage_volume_litres": "222",
+		"energy_units_per_year": "193",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "2",
+		"model": "RT37A4632S9/HL",
+		"gross_volume_litres": "336",
+		"storage_volume_litres": "310",
+		"energy_units_per_year": "263",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "4",
+		"model": "RT30T3454S8/HL",
+		"gross_volume_litres": "275",
+		"storage_volume_litres": "255",
+		"energy_units_per_year": "159",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "3",
+		"model": "RT28T3453UT/HL",
+		"gross_volume_litres": "253",
+		"storage_volume_litres": "234",
+		"energy_units_per_year": "195",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "1",
+		"model": "RT28M3022PZ/HL",
+		"gross_volume_litres": "253",
+		"storage_volume_litres": "234",
+		"energy_units_per_year": "303",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "2",
+		"model": "RT34M5438B8/HL",
+		"gross_volume_litres": "324",
+		"storage_volume_litres": "300",
+		"energy_units_per_year": "260",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "2",
+		"model": "RT28T3932CR/HL",
+		"gross_volume_litres": "253.00",
+		"storage_volume_litres": "234.00",
+		"energy_units_per_year": "243",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "2",
+		"model": "RT28T3032R8/HL",
+		"gross_volume_litres": "253",
+		"storage_volume_litres": "234",
+		"energy_units_per_year": "243",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "2",
+		"model": "RT28T3082S8/HL",
+		"gross_volume_litres": "251",
+		"storage_volume_litres": "231",
+		"energy_units_per_year": "243",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "2",
+		"model": "RT28T3242S8/HL",
+		"gross_volume_litres": "253",
+		"storage_volume_litres": "234",
+		"energy_units_per_year": "243",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "3",
+		"model": "RT28T3743BS/HL",
+		"gross_volume_litres": "253",
+		"storage_volume_litres": "234",
+		"energy_units_per_year": "195",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "3",
+		"model": "RT28T3743S8/HL",
+		"gross_volume_litres": "253",
+		"storage_volume_litres": "234",
+		"energy_units_per_year": "195",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "4",
+		"model": "RT30T3484S8/HL",
+		"gross_volume_litres": "275",
+		"storage_volume_litres": "255",
+		"energy_units_per_year": "159",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "2",
+		"model": "RT30T3422UT/HL",
+		"gross_volume_litres": "275",
+		"storage_volume_litres": "255",
+		"energy_units_per_year": "248",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "2",
+		"model": "RT30T3082UT/HL",
+		"gross_volume_litres": "272",
+		"storage_volume_litres": "253",
+		"energy_units_per_year": "248",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "3",
+		"model": "RT30T3423BS/HL",
+		"gross_volume_litres": "275",
+		"storage_volume_litres": "255",
+		"energy_units_per_year": "199",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "2",
+		"model": "RT34T4542DU/HL",
+		"gross_volume_litres": "324",
+		"storage_volume_litres": "300",
+		"energy_units_per_year": "260",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "3",
+		"model": "RT34T4413BS/HL",
+		"gross_volume_litres": "324",
+		"storage_volume_litres": "300",
+		"energy_units_per_year": "209",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "3",
+		"model": "RT37T4533S8/HL",
+		"gross_volume_litres": "345",
+		"storage_volume_litres": "321",
+		"energy_units_per_year": "212",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "2",
+		"model": "RT28T3822S8/HL",
+		"gross_volume_litres": "253",
+		"storage_volume_litres": "234",
+		"energy_units_per_year": "243",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "2",
+		"model": "RT28T30226R/HL",
+		"gross_volume_litres": "253",
+		"storage_volume_litres": "234",
+		"energy_units_per_year": "243",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "3",
+		"model": "RT28T3123S8/HL",
+		"gross_volume_litres": "253",
+		"storage_volume_litres": "234",
+		"energy_units_per_year": "195",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "2",
+		"model": "RT28T3522DU/HL",
+		"gross_volume_litres": "244",
+		"storage_volume_litres": "222",
+		"energy_units_per_year": "242",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "3",
+		"model": "RT28T3A336W/HL",
+		"gross_volume_litres": "244",
+		"storage_volume_litres": "222",
+		"energy_units_per_year": "193",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "3",
+		"model": "RT30T37534R/HL",
+		"gross_volume_litres": "275",
+		"storage_volume_litres": "255",
+		"energy_units_per_year": "199",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "3",
+		"model": "RT28T3523S8/HL",
+		"gross_volume_litres": "244",
+		"storage_volume_litres": "222",
+		"energy_units_per_year": "193",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "2",
+		"model": "RT30T3032S8/HL",
+		"gross_volume_litres": "275",
+		"storage_volume_litres": "255",
+		"energy_units_per_year": "248",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "2",
+		"model": "RT34T4632SL/HL",
+		"gross_volume_litres": "314",
+		"storage_volume_litres": "288",
+		"energy_units_per_year": "258",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "3",
+		"model": "RT30T3A23UT/HL",
+		"gross_volume_litres": "265",
+		"storage_volume_litres": "243",
+		"energy_units_per_year": "197",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "3",
+		"model": "RT34T4533SL/HL",
+		"gross_volume_litres": "324",
+		"storage_volume_litres": "300",
+		"energy_units_per_year": "209",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "2",
+		"model": "RT37T4632DX/HL",
+		"gross_volume_litres": "336",
+		"storage_volume_litres": "310",
+		"energy_units_per_year": "263",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "3",
+		"model": "RT37T4533S9/HL",
+		"gross_volume_litres": "345",
+		"storage_volume_litres": "321",
+		"energy_units_per_year": "212",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "3",
+		"model": "RT28R3744SL/HL",
+		"gross_volume_litres": "253",
+		"storage_volume_litres": "234",
+		"energy_units_per_year": "195",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "2",
+		"model": "RT34R5438CR/HL",
+		"gross_volume_litres": "324",
+		"storage_volume_litres": "300",
+		"energy_units_per_year": "260",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "1",
+		"model": "RT28R30A2SE/HL",
+		"gross_volume_litres": "253",
+		"storage_volume_litres": "234",
+		"energy_units_per_year": "303",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "BOSCH",
+		"bee_star": "2",
+		"model": "KDN42VL30I",
+		"gross_volume_litres": "327",
+		"storage_volume_litres": "297",
+		"energy_units_per_year": "270",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "BOSCH",
+		"bee_star": "2",
+		"model": "KGN56LB41I",
+		"gross_volume_litres": "559",
+		"storage_volume_litres": "505",
+		"energy_units_per_year": "326",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "BOSCH",
+		"bee_star": "2",
+		"model": "KDN43VR31I",
+		"gross_volume_litres": "347",
+		"storage_volume_litres": "315",
+		"energy_units_per_year": "275",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "BOSCH",
+		"bee_star": "3",
+		"model": "KDN43VU40I",
+		"gross_volume_litres": "347",
+		"storage_volume_litres": "315",
+		"energy_units_per_year": "221",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "BOSCH",
+		"bee_star": "2",
+		"model": "KDN30VR31I",
+		"gross_volume_litres": "288",
+		"storage_volume_litres": "262",
+		"energy_units_per_year": "262",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "BOSCH",
+		"bee_star": "2",
+		"model": "KGN46XL40I",
+		"gross_volume_litres": "415",
+		"storage_volume_litres": "385",
+		"energy_units_per_year": "286",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "BOSCH",
+		"bee_star": "1",
+		"model": "KDD46XI30I",
+		"gross_volume_litres": "401",
+		"storage_volume_litres": "374",
+		"energy_units_per_year": "364",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "BOSCH",
+		"bee_star": "1",
+		"model": "KDD56XI30I",
+		"gross_volume_litres": "507",
+		"storage_volume_litres": "474",
+		"energy_units_per_year": "376",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "BOSCH",
+		"bee_star": "1",
+		"model": "KDN56XI30I",
+		"gross_volume_litres": "507",
+		"storage_volume_litres": "474",
+		"energy_units_per_year": "376",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "BOSCH",
+		"bee_star": "1",
+		"model": "KDN53XI30I",
+		"gross_volume_litres": "454",
+		"storage_volume_litres": "423",
+		"energy_units_per_year": "359",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "BOSCH",
+		"bee_star": "1",
+		"model": "KGN57AI40I",
+		"gross_volume_litres": "505",
+		"storage_volume_litres": "459",
+		"energy_units_per_year": "382",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "BOSCH",
+		"bee_star": "1",
+		"model": "KDN46XI30I",
+		"gross_volume_litres": "401",
+		"storage_volume_litres": "374",
+		"energy_units_per_year": "364",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "BOSCH",
+		"bee_star": "3",
+		"model": "KDN43VL40I",
+		"gross_volume_litres": "347",
+		"storage_volume_litres": "315",
+		"energy_units_per_year": "221",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "BOSCH",
+		"bee_star": "2",
+		"model": "KGN39IJ4I",
+		"gross_volume_litres": "400",
+		"storage_volume_litres": "366",
+		"energy_units_per_year": "290",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "BOSCH",
+		"bee_star": "3",
+		"model": "KDN43UN30I",
+		"gross_volume_litres": "347",
+		"storage_volume_litres": "315",
+		"energy_units_per_year": "222",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "BOSCH",
+		"bee_star": "3",
+		"model": "KDN42UL30I",
+		"gross_volume_litres": "327",
+		"storage_volume_litres": "297",
+		"energy_units_per_year": "218",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "BOSCH",
+		"bee_star": "3",
+		"model": "KDN30UV30I",
+		"gross_volume_litres": "288",
+		"storage_volume_litres": "262",
+		"energy_units_per_year": "210",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "BOSCH",
+		"bee_star": "2",
+		"model": "KGN56XI40I",
+		"gross_volume_litres": "559",
+		"storage_volume_litres": "505",
+		"energy_units_per_year": "305",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "BOSCH",
+		"bee_star": "3",
+		"model": "CTN27BT3NI",
+		"gross_volume_litres": "263",
+		"storage_volume_litres": "239",
+		"energy_units_per_year": "192",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "BOSCH",
+		"bee_star": "3",
+		"model": "CTC27S03EI",
+		"gross_volume_litres": "263",
+		"storage_volume_litres": "239",
+		"energy_units_per_year": "198",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "Whirlpool",
+		"bee_star": "2",
+		"model": "FF BM CNV 2D 340 B",
+		"gross_volume_litres": "324",
+		"storage_volume_litres": "265",
+		"energy_units_per_year": "226",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "Whirlpool",
+		"bee_star": "3",
+		"model": "FF BM CNV 2D 340 C",
+		"gross_volume_litres": "324",
+		"storage_volume_litres": "265",
+		"energy_units_per_year": "198",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "Whirlpool",
+		"bee_star": "3",
+		"model": "FF BM CNV 2D 370 C",
+		"gross_volume_litres": "353",
+		"storage_volume_litres": "297",
+		"energy_units_per_year": "208",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "Whirlpool",
+		"bee_star": "3",
+		"model": "FF BM 2D 370 C",
+		"gross_volume_litres": "355",
+		"storage_volume_litres": "303",
+		"energy_units_per_year": "208",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "Whirlpool",
+		"bee_star": "3",
+		"model": "FF BM 2D 340 C",
+		"gross_volume_litres": "325",
+		"storage_volume_litres": "267",
+		"energy_units_per_year": "198",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "Whirlpool",
+		"bee_star": "2",
+		"model": "FF BM 2D 340 B",
+		"gross_volume_litres": "325",
+		"storage_volume_litres": "267",
+		"energy_units_per_year": "226",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "Whirlpool",
+		"bee_star": "3",
+		"model": "FF 2D 278 D",
+		"gross_volume_litres": "265",
+		"storage_volume_litres": "238.96",
+		"energy_units_per_year": "190",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "Whirlpool",
+		"bee_star": "3",
+		"model": "FF 2D 305 D",
+		"gross_volume_litres": "292",
+		"storage_volume_litres": "263",
+		"energy_units_per_year": "184.69",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "Whirlpool",
+		"bee_star": "3",
+		"model": "FF 2D 375 D",
+		"gross_volume_litres": "360",
+		"storage_volume_litres": "330",
+		"energy_units_per_year": "212",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "Whirlpool",
+		"bee_star": "3",
+		"model": "FF 2D 355 D",
+		"gross_volume_litres": "340",
+		"storage_volume_litres": "310",
+		"energy_units_per_year": "207",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "Whirlpool",
+		"bee_star": "2",
+		"model": "FF 2D 258 C",
+		"gross_volume_litres": "245",
+		"storage_volume_litres": "222",
+		"energy_units_per_year": "244",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "Whirlpool",
+		"bee_star": "1",
+		"model": "FF 2D 258 3S",
+		"gross_volume_litres": "245",
+		"storage_volume_litres": "222",
+		"energy_units_per_year": "306",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "Whirlpool",
+		"bee_star": "2",
+		"model": "FF 2D 278 4S",
+		"gross_volume_litres": "265",
+		"storage_volume_litres": "239",
+		"energy_units_per_year": "253",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "Whirlpool",
+		"bee_star": "1",
+		"model": "FF 2D 278 3S",
+		"gross_volume_litres": "265",
+		"storage_volume_litres": "239",
+		"energy_units_per_year": "310",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "Whirlpool",
+		"bee_star": "1",
+		"model": "FF 2D 355 3S",
+		"gross_volume_litres": "340",
+		"storage_volume_litres": "310",
+		"energy_units_per_year": "316",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "Whirlpool",
+		"bee_star": "1",
+		"model": "FF 2D 375 3S",
+		"gross_volume_litres": "360",
+		"storage_volume_litres": "330",
+		"energy_units_per_year": "335",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "Whirlpool",
+		"bee_star": "1",
+		"model": "FF 2D 305 3S",
+		"gross_volume_litres": "292",
+		"storage_volume_litres": "263",
+		"energy_units_per_year": "318",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "Whirlpool",
+		"bee_star": "2",
+		"model": "FF 2D 355 4S",
+		"gross_volume_litres": "340",
+		"storage_volume_litres": "310",
+		"energy_units_per_year": "271",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "Whirlpool",
+		"bee_star": "2",
+		"model": "FF 2D 305 4S",
+		"gross_volume_litres": "292",
+		"storage_volume_litres": "263",
+		"energy_units_per_year": "259",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "Whirlpool",
+		"bee_star": "2",
+		"model": "FF 2D 375 4S",
+		"gross_volume_litres": "360",
+		"storage_volume_litres": "330",
+		"energy_units_per_year": "275",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "Whirlpool",
+		"bee_star": "2",
+		"model": "IF 515 C",
+		"gross_volume_litres": "500",
+		"storage_volume_litres": "460",
+		"energy_units_per_year": "285",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "Whirlpool",
+		"bee_star": "2",
+		"model": "IF 480 C",
+		"gross_volume_litres": "465",
+		"storage_volume_litres": "423",
+		"energy_units_per_year": "279",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "Whirlpool",
+		"bee_star": "2",
+		"model": "IF 455 C",
+		"gross_volume_litres": "440",
+		"storage_volume_litres": "401",
+		"energy_units_per_year": "274",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "Whirlpool",
+		"bee_star": "1",
+		"model": "TM585",
+		"gross_volume_litres": "585",
+		"storage_volume_litres": "529",
+		"energy_units_per_year": "383",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "Whirlpool",
+		"bee_star": "3",
+		"model": "IF 455 D",
+		"gross_volume_litres": "440",
+		"storage_volume_litres": "401",
+		"energy_units_per_year": "235",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "Whirlpool",
+		"bee_star": "3",
+		"model": "IF 480 D",
+		"gross_volume_litres": "465",
+		"storage_volume_litres": "423",
+		"energy_units_per_year": "230",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "Whirlpool",
+		"bee_star": "3",
+		"model": "IF 515 D",
+		"gross_volume_litres": "500",
+		"storage_volume_litres": "460",
+		"energy_units_per_year": "248",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "2",
+		"model": "RT39R5588DX/TL",
+		"gross_volume_litres": "392",
+		"storage_volume_litres": "350",
+		"energy_units_per_year": "272",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "2",
+		"model": "RT42R5588DX/TL",
+		"gross_volume_litres": "413",
+		"storage_volume_litres": "372",
+		"energy_units_per_year": "277",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "3",
+		"model": "RT39T551ES8/TL",
+		"gross_volume_litres": "394",
+		"storage_volume_litres": "362",
+		"energy_units_per_year": "221",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "3",
+		"model": "RT42T546ESL/TL",
+		"gross_volume_litres": "415",
+		"storage_volume_litres": "384",
+		"energy_units_per_year": "224",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "3",
+		"model": "RT47T635ESL/TL",
+		"gross_volume_litres": "465",
+		"storage_volume_litres": "440",
+		"energy_units_per_year": "236",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "2",
+		"model": "RT56T6378BS/TL",
+		"gross_volume_litres": "551",
+		"storage_volume_litres": "528",
+		"energy_units_per_year": "317",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "3",
+		"model": "RT47R625EDX/TL",
+		"gross_volume_litres": "465",
+		"storage_volume_litres": "440",
+		"energy_units_per_year": "236",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "3",
+		"model": "RT42R553ES9/TL",
+		"gross_volume_litres": "415",
+		"storage_volume_litres": "384",
+		"energy_units_per_year": "224",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "3",
+		"model": "RT39R553EBS/TL",
+		"gross_volume_litres": "394",
+		"storage_volume_litres": "362",
+		"energy_units_per_year": "221",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "2",
+		"model": "RT49R6738DX/TL",
+		"gross_volume_litres": "476",
+		"storage_volume_litres": "440",
+		"energy_units_per_year": "295",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "3",
+		"model": "RT49M625ES8/TL",
+		"gross_volume_litres": "478",
+		"storage_volume_litres": "453",
+		"energy_units_per_year": "239",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "3",
+		"model": "RT42M553ES8/TL",
+		"gross_volume_litres": "415",
+		"storage_volume_litres": "384",
+		"energy_units_per_year": "224",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "2",
+		"model": "RT42M5538S8/TL",
+		"gross_volume_litres": "415",
+		"storage_volume_litres": "384",
+		"energy_units_per_year": "281",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "2",
+		"model": "RT39M5538S9/TL",
+		"gross_volume_litres": "394",
+		"storage_volume_litres": "362",
+		"energy_units_per_year": "276",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "2",
+		"model": "RT39M5538BS/TL",
+		"gross_volume_litres": "394",
+		"storage_volume_litres": "362",
+		"energy_units_per_year": "276",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "3",
+		"model": "RT39M553ESL/TL",
+		"gross_volume_litres": "394",
+		"storage_volume_litres": "362",
+		"energy_units_per_year": "221",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "3",
+		"model": "RT42M553ESL/TL",
+		"gross_volume_litres": "415",
+		"storage_volume_litres": "384",
+		"energy_units_per_year": "224",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "3",
+		"model": "RT47M623ESL/TL",
+		"gross_volume_litres": "465",
+		"storage_volume_litres": "440",
+		"energy_units_per_year": "236",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "2",
+		"model": "RT39K5518S8/TL",
+		"gross_volume_litres": "394",
+		"storage_volume_litres": "362",
+		"energy_units_per_year": "276",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "2",
+		"model": "RT42K5468SL/TL",
+		"gross_volume_litres": "415",
+		"storage_volume_litres": "384",
+		"energy_units_per_year": "281",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "2",
+		"model": "RT42K5558S9/TL",
+		"gross_volume_litres": "415",
+		"storage_volume_litres": "384",
+		"energy_units_per_year": "281",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "2",
+		"model": "RT47K6358SL/TL",
+		"gross_volume_litres": "465",
+		"storage_volume_litres": "440",
+		"energy_units_per_year": "296",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "2",
+		"model": "RT49K6338BS/TL",
+		"gross_volume_litres": "478",
+		"storage_volume_litres": "453",
+		"energy_units_per_year": "299",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "2",
+		"model": "RT49K6758S9/TL",
+		"gross_volume_litres": "476",
+		"storage_volume_litres": "440",
+		"energy_units_per_year": "295",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "2",
+		"model": "RT54K6558SL/TL",
+		"gross_volume_litres": "523",
+		"storage_volume_litres": "499",
+		"energy_units_per_year": "311",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "2",
+		"model": "RT56K6378SL/TL",
+		"gross_volume_litres": "551",
+		"storage_volume_litres": "528",
+		"energy_units_per_year": "317",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "2",
+		"model": "RT65K7058BS/TL",
+		"gross_volume_litres": "670",
+		"storage_volume_litres": "620",
+		"energy_units_per_year": "341",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "1",
+		"model": "RT28K3022SE/NL",
+		"gross_volume_litres": "253",
+		"storage_volume_litres": "234",
+		"energy_units_per_year": "303",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "2",
+		"model": "RT39T50382C/TL",
+		"gross_volume_litres": "394",
+		"storage_volume_litres": "362",
+		"energy_units_per_year": "276",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "2",
+		"model": "RT42T50682C/TL",
+		"gross_volume_litres": "415",
+		"storage_volume_litres": "384",
+		"energy_units_per_year": "281",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "2",
+		"model": "RT30T3422UT/NL",
+		"gross_volume_litres": "275",
+		"storage_volume_litres": "255",
+		"energy_units_per_year": "248",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "2",
+		"model": "RT28T3082S8/NL",
+		"gross_volume_litres": "251",
+		"storage_volume_litres": "231",
+		"energy_units_per_year": "243",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "2",
+		"model": "RT28T3022SE/NL",
+		"gross_volume_litres": "253",
+		"storage_volume_litres": "234",
+		"energy_units_per_year": "243",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "2",
+		"model": "RT28A3522DU/NL",
+		"gross_volume_litres": "244",
+		"storage_volume_litres": "222",
+		"energy_units_per_year": "242",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "3",
+		"model": "RT39A5C3ESL/TL",
+		"gross_volume_litres": "386",
+		"storage_volume_litres": "354",
+		"energy_units_per_year": "220",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "3",
+		"model": "RT42A5C5EBS/TL",
+		"gross_volume_litres": "407",
+		"storage_volume_litres": "375",
+		"energy_units_per_year": "223",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "2",
+		"model": "RT30A3A22DX/NL",
+		"gross_volume_litres": "265",
+		"storage_volume_litres": "243",
+		"energy_units_per_year": "246",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "3",
+		"model": "RT49R633ESL/TL",
+		"gross_volume_litres": "478",
+		"storage_volume_litres": "453",
+		"energy_units_per_year": "239",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "2",
+		"model": "RT28A3052S8/NL",
+		"gross_volume_litres": "253",
+		"storage_volume_litres": "234",
+		"energy_units_per_year": "243",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "2",
+		"model": "RT39T5C38S9/TL",
+		"gross_volume_litres": "386",
+		"storage_volume_litres": "354",
+		"energy_units_per_year": "275",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "3",
+		"model": "RT39T5C3EDX/TL",
+		"gross_volume_litres": "386",
+		"storage_volume_litres": "354",
+		"energy_units_per_year": "220",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "2",
+		"model": "RT42T5C38S9/TL",
+		"gross_volume_litres": "407",
+		"storage_volume_litres": "375",
+		"energy_units_per_year": "279",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "3",
+		"model": "RT42T5C5EDX/TL",
+		"gross_volume_litres": "407",
+		"storage_volume_litres": "375",
+		"energy_units_per_year": "223",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "2",
+		"model": "RT39A5518S9/TL",
+		"gross_volume_litres": "394",
+		"storage_volume_litres": "362",
+		"energy_units_per_year": "276",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "IKEA",
+		"bee_star": "2",
+		"model": "KYLIG 165/57",
+		"gross_volume_litres": "245",
+		"storage_volume_litres": "222",
+		"energy_units_per_year": "236",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "Voltas.beko",
+		"bee_star": "1",
+		"model": "RFF272I",
+		"gross_volume_litres": "250",
+		"storage_volume_litres": "221",
+		"energy_units_per_year": "275",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "Voltas.beko",
+		"bee_star": "2",
+		"model": "RBM363IF",
+		"gross_volume_litres": "340",
+		"storage_volume_litres": "320",
+		"energy_units_per_year": "262",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "Voltas.beko",
+		"bee_star": "1",
+		"model": "RFF252I",
+		"gross_volume_litres": "230",
+		"storage_volume_litres": "201",
+		"energy_units_per_year": "275",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "Voltas.beko",
+		"bee_star": "2",
+		"model": "RFF533IF",
+		"gross_volume_litres": "510",
+		"storage_volume_litres": "465",
+		"energy_units_per_year": "305",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "Voltas.beko",
+		"bee_star": "2",
+		"model": "RFF383IF",
+		"gross_volume_litres": "360",
+		"storage_volume_litres": "321",
+		"energy_units_per_year": "272",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "Voltas.beko",
+		"bee_star": "2",
+		"model": "RFF493IF",
+		"gross_volume_litres": "470",
+		"storage_volume_litres": "422",
+		"energy_units_per_year": "292",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "Voltas.beko",
+		"bee_star": "2",
+		"model": "RFF633IF",
+		"gross_volume_litres": "610",
+		"storage_volume_litres": "565",
+		"energy_units_per_year": "310",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "Voltas.beko",
+		"bee_star": "2",
+		"model": "RFF293B",
+		"gross_volume_litres": "270",
+		"storage_volume_litres": "241",
+		"energy_units_per_year": "258",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "Voltas.beko",
+		"bee_star": "2",
+		"model": "RFF273B",
+		"gross_volume_litres": "250",
+		"storage_volume_litres": "221",
+		"energy_units_per_year": "252",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "Voltas.beko",
+		"bee_star": "1",
+		"model": "RFF252I2",
+		"gross_volume_litres": "231",
+		"storage_volume_litres": "209",
+		"energy_units_per_year": "300",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "Voltas.beko",
+		"bee_star": "1",
+		"model": "RFF272I2",
+		"gross_volume_litres": "251",
+		"storage_volume_litres": "230",
+		"energy_units_per_year": "310",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "Voltas.beko",
+		"bee_star": "2",
+		"model": "RFF293I2",
+		"gross_volume_litres": "271",
+		"storage_volume_litres": "248",
+		"energy_units_per_year": "250",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "Voltas.beko",
+		"bee_star": "2",
+		"model": "RFF273I2",
+		"gross_volume_litres": "251",
+		"storage_volume_litres": "230",
+		"energy_units_per_year": "250",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "Voltas.beko",
+		"bee_star": "2",
+		"model": "RFF253I2",
+		"gross_volume_litres": "231",
+		"storage_volume_litres": "209",
+		"energy_units_per_year": "245",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "Voltas.beko",
+		"bee_star": "1",
+		"model": "RFF292I2",
+		"gross_volume_litres": "271",
+		"storage_volume_litres": "248",
+		"energy_units_per_year": "325",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "Voltas.beko",
+		"bee_star": "2",
+		"model": "RFF363I",
+		"gross_volume_litres": "339",
+		"storage_volume_litres": "296",
+		"energy_units_per_year": "255",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "Voltas.beko",
+		"bee_star": "2",
+		"model": "RBM433IF",
+		"gross_volume_litres": "421",
+		"storage_volume_litres": "399",
+		"energy_units_per_year": "275",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "Voltas.beko",
+		"bee_star": "2",
+		"model": "RFF463IF",
+		"gross_volume_litres": "432",
+		"storage_volume_litres": "393",
+		"energy_units_per_year": "295",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "Voltas.beko",
+		"bee_star": "2",
+		"model": "RFF253B",
+		"gross_volume_litres": "230",
+		"storage_volume_litres": "201",
+		"energy_units_per_year": "250",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "Voltas.beko",
+		"bee_star": "2",
+		"model": "RBM743IF",
+		"gross_volume_litres": "695",
+		"storage_volume_litres": "615",
+		"energy_units_per_year": "325",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "Voltas.beko",
+		"bee_star": "2",
+		"model": "RFF4653XPCF",
+		"gross_volume_litres": "432",
+		"storage_volume_litres": "393",
+		"energy_units_per_year": "295",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "Voltas.beko",
+		"bee_star": "2",
+		"model": "RFF2553EBC",
+		"gross_volume_litres": "231",
+		"storage_volume_litres": "209",
+		"energy_units_per_year": "245",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "Voltas.beko",
+		"bee_star": "2",
+		"model": "RFF2753DWE",
+		"gross_volume_litres": "251",
+		"storage_volume_litres": "230",
+		"energy_units_per_year": "250",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "Voltas.beko",
+		"bee_star": "2",
+		"model": "RFF2553DWE",
+		"gross_volume_litres": "231",
+		"storage_volume_litres": "209",
+		"energy_units_per_year": "245",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "Voltas.beko",
+		"bee_star": "2",
+		"model": "RFF2953DWE",
+		"gross_volume_litres": "271",
+		"storage_volume_litres": "248",
+		"energy_units_per_year": "250",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "Voltas.beko",
+		"bee_star": "2",
+		"model": "RFF3653XPCF",
+		"gross_volume_litres": "340",
+		"storage_volume_litres": "296",
+		"energy_units_per_year": "260",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "Voltas.beko",
+		"bee_star": "2",
+		"model": "RFF3853XPCF",
+		"gross_volume_litres": "360",
+		"storage_volume_litres": "321",
+		"energy_units_per_year": "270",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "Voltas.beko",
+		"bee_star": "2",
+		"model": "RFF285D",
+		"gross_volume_litres": "268",
+		"storage_volume_litres": "241",
+		"energy_units_per_year": "236",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "Voltas.beko",
+		"bee_star": "2",
+		"model": "RBM365DXPCF",
+		"gross_volume_litres": "340",
+		"storage_volume_litres": "320",
+		"energy_units_per_year": "280",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "Voltas.beko",
+		"bee_star": "2",
+		"model": "RBM365DXBCF",
+		"gross_volume_litres": "340",
+		"storage_volume_litres": "320",
+		"energy_units_per_year": "280",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LIEBHERR",
+		"bee_star": "2",
+		"model": "TDcs 3540",
+		"gross_volume_litres": "350",
+		"storage_volume_litres": "291",
+		"energy_units_per_year": "248",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LIEBHERR",
+		"bee_star": "2",
+		"model": "TDcs 4740",
+		"gross_volume_litres": "472",
+		"storage_volume_litres": "402",
+		"energy_units_per_year": "280",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LIEBHERR",
+		"bee_star": "2",
+		"model": "TCgs 2910",
+		"gross_volume_litres": "290",
+		"storage_volume_litres": "249",
+		"energy_units_per_year": "239",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LIEBHERR",
+		"bee_star": "2",
+		"model": "TDss 4740",
+		"gross_volume_litres": "472",
+		"storage_volume_litres": "402",
+		"energy_units_per_year": "280",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LIEBHERR",
+		"bee_star": "2",
+		"model": "TDcs 4765",
+		"gross_volume_litres": "472",
+		"storage_volume_litres": "402",
+		"energy_units_per_year": "288",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LIEBHERR",
+		"bee_star": "2",
+		"model": "TDcs 3565",
+		"gross_volume_litres": "350",
+		"storage_volume_litres": "291",
+		"energy_units_per_year": "256",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LIEBHERR",
+		"bee_star": "2",
+		"model": "TCbb 2940",
+		"gross_volume_litres": "290",
+		"storage_volume_litres": "249",
+		"energy_units_per_year": "239",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LIEBHERR",
+		"bee_star": "2",
+		"model": "TCrf 2610",
+		"gross_volume_litres": "265",
+		"storage_volume_litres": "225",
+		"energy_units_per_year": "235",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LIEBHERR",
+		"bee_star": "3",
+		"model": "TCsl 2620",
+		"gross_volume_litres": "265",
+		"storage_volume_litres": "225",
+		"energy_units_per_year": "205",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LIEBHERR",
+		"bee_star": "3",
+		"model": "TCbl 3520",
+		"gross_volume_litres": "346",
+		"storage_volume_litres": "301",
+		"energy_units_per_year": "221",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LIEBHERR",
+		"bee_star": "2",
+		"model": "TCgs 2610",
+		"gross_volume_litres": "265",
+		"storage_volume_litres": "225",
+		"energy_units_per_year": "235",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LIEBHERR",
+		"bee_star": "2",
+		"model": "TCgs 3510",
+		"gross_volume_litres": "346",
+		"storage_volume_litres": "301",
+		"energy_units_per_year": "253",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LIEBHERR",
+		"bee_star": "2",
+		"model": "CNPef 4516",
+		"gross_volume_litres": "442",
+		"storage_volume_litres": "413",
+		"energy_units_per_year": "304",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LIEBHERR",
+		"bee_star": "3",
+		"model": "TCss 2620",
+		"gross_volume_litres": "265",
+		"storage_volume_litres": "225",
+		"energy_units_per_year": "205",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LIEBHERR",
+		"bee_star": "3",
+		"model": "TCss 3520",
+		"gross_volume_litres": "346",
+		"storage_volume_litres": "301",
+		"energy_units_per_year": "221",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "TOSHIBA",
+		"bee_star": "2",
+		"model": "GR-AG36IN",
+		"gross_volume_litres": "325",
+		"storage_volume_litres": "305",
+		"energy_units_per_year": "278",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "TOSHIBA",
+		"bee_star": "2",
+		"model": "GR-AG46IN",
+		"gross_volume_litres": "445",
+		"storage_volume_litres": "409",
+		"energy_units_per_year": "296",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "TOSHIBA",
+		"bee_star": "2",
+		"model": "GR-AG55IN",
+		"gross_volume_litres": "541",
+		"storage_volume_litres": "510",
+		"energy_units_per_year": "307",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "TOSHIBA",
+		"bee_star": "2",
+		"model": "GR-AG66INA",
+		"gross_volume_litres": "661",
+		"storage_volume_litres": "586",
+		"energy_units_per_year": "344",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "TOSHIBA",
+		"bee_star": "2",
+		"model": "GR-RT302WE-PMI(UK)",
+		"gross_volume_litres": "252",
+		"storage_volume_litres": "231",
+		"energy_units_per_year": "252",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "TOSHIBA",
+		"bee_star": "2",
+		"model": "GR-RT328WE-PMI(37)",
+		"gross_volume_litres": "272",
+		"storage_volume_litres": "252",
+		"energy_units_per_year": "259",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "TOSHIBA",
+		"bee_star": "3",
+		"model": "GR-RT328WE-PMI(UK)",
+		"gross_volume_litres": "272",
+		"storage_volume_litres": "252",
+		"energy_units_per_year": "206",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "TOSHIBA",
+		"bee_star": "2",
+		"model": "GR-B31INU",
+		"gross_volume_litres": "272",
+		"storage_volume_litres": "252",
+		"energy_units_per_year": "259",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "TOSHIBA",
+		"bee_star": "2",
+		"model": "GR-A28INU",
+		"gross_volume_litres": "252",
+		"storage_volume_litres": "231.0",
+		"energy_units_per_year": "247",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "Flipkart MarQ",
+		"bee_star": "3",
+		"model": "310JF3MQDS",
+		"gross_volume_litres": "308",
+		"storage_volume_litres": "279",
+		"energy_units_per_year": "211",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "Flipkart MarQ",
+		"bee_star": "2",
+		"model": "340JF2MQDS",
+		"gross_volume_litres": "338",
+		"storage_volume_litres": "309",
+		"energy_units_per_year": "250",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "Flipkart MarQ",
+		"bee_star": "2",
+		"model": "272JF2MQDS",
+		"gross_volume_litres": "271",
+		"storage_volume_litres": "242",
+		"energy_units_per_year": "231",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "Flipkart MarQ",
+		"bee_star": "2",
+		"model": "411AF3MQS",
+		"gross_volume_litres": "411",
+		"storage_volume_litres": "379",
+		"energy_units_per_year": "297",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "Flipkart MarQ",
+		"bee_star": "2",
+		"model": "252CFDS3MQ",
+		"gross_volume_litres": "252",
+		"storage_volume_litres": "231",
+		"energy_units_per_year": "247",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LLOYD",
+		"bee_star": "2",
+		"model": "GLFF262EDST1PB",
+		"gross_volume_litres": "252",
+		"storage_volume_litres": "231",
+		"energy_units_per_year": "247",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LLOYD",
+		"bee_star": "2",
+		"model": "GLFF282EDST1PB",
+		"gross_volume_litres": "272",
+		"storage_volume_litres": "252",
+		"energy_units_per_year": "260",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LLOYD",
+		"bee_star": "2",
+		"model": "GLFF282AHGT1PB",
+		"gross_volume_litres": "276",
+		"storage_volume_litres": "243",
+		"energy_units_per_year": "228",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LLOYD",
+		"bee_star": "3",
+		"model": "GLFF313ADST1PB",
+		"gross_volume_litres": "310",
+		"storage_volume_litres": "281",
+		"energy_units_per_year": "207",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LLOYD",
+		"bee_star": "3",
+		"model": "GLFF343ADST1PB",
+		"gross_volume_litres": "340",
+		"storage_volume_litres": "312",
+		"energy_units_per_year": "210",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LLOYD",
+		"bee_star": "2",
+		"model": "GLFF312AHGT1PB",
+		"gross_volume_litres": "310",
+		"storage_volume_litres": "281",
+		"energy_units_per_year": "237",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "LLOYD",
+		"bee_star": "2",
+		"model": "GLFF342AHGT1PB",
+		"gross_volume_litres": "340",
+		"storage_volume_litres": "312",
+		"energy_units_per_year": "239",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SANSUI",
+		"bee_star": "2",
+		"model": "310JF2SNDS",
+		"gross_volume_litres": "308",
+		"storage_volume_litres": "279",
+		"energy_units_per_year": "245",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SANSUI",
+		"bee_star": "3",
+		"model": "340JF3SNDS",
+		"gross_volume_litres": "338",
+		"storage_volume_litres": "309",
+		"energy_units_per_year": "216",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SANSUI",
+		"bee_star": "3",
+		"model": "272JF3SNDS",
+		"gross_volume_litres": "271",
+		"storage_volume_litres": "242",
+		"energy_units_per_year": "199",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "Kelvinator",
+		"bee_star": "2",
+		"model": "KRF-A370HSV",
+		"gross_volume_litres": "350",
+		"storage_volume_litres": "333",
+		"energy_units_per_year": "265",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "Kelvinator",
+		"bee_star": "2",
+		"model": "KRF-A290BGV",
+		"gross_volume_litres": "270",
+		"storage_volume_litres": "250",
+		"energy_units_per_year": "255.62",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "Kelvinator",
+		"bee_star": "2",
+		"model": "KRF-A270BGV",
+		"gross_volume_litres": "252",
+		"storage_volume_litres": "231",
+		"energy_units_per_year": "249.40",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "Kelvinator",
+		"bee_star": "3",
+		"model": "KRF-B290PRV",
+		"gross_volume_litres": "272",
+		"storage_volume_litres": "251",
+		"energy_units_per_year": "207",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "Kelvinator",
+		"bee_star": "3",
+		"model": "KRF-B270PRV",
+		"gross_volume_litres": "252",
+		"storage_volume_litres": "231",
+		"energy_units_per_year": "208",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "Hisense",
+		"bee_star": "2",
+		"model": "RT488N4ASB2",
+		"gross_volume_litres": "411",
+		"storage_volume_litres": "379",
+		"energy_units_per_year": "297",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "BPL",
+		"bee_star": "2",
+		"model": "BRF-3600AVJG",
+		"gross_volume_litres": "340",
+		"storage_volume_litres": "314",
+		"energy_units_per_year": "275",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "BPL",
+		"bee_star": "2",
+		"model": "BRF-3800AVJG",
+		"gross_volume_litres": "365",
+		"storage_volume_litres": "338",
+		"energy_units_per_year": "275",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "MOTOROLA",
+		"bee_star": "3",
+		"model": "310JF3MTBG",
+		"gross_volume_litres": "308",
+		"storage_volume_litres": "279",
+		"energy_units_per_year": "209",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "MOTOROLA",
+		"bee_star": "3",
+		"model": "340JF3MTBG",
+		"gross_volume_litres": "338",
+		"storage_volume_litres": "309",
+		"energy_units_per_year": "216",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "MOTOROLA",
+		"bee_star": "3",
+		"model": "272JF3MTBG",
+		"gross_volume_litres": "271",
+		"storage_volume_litres": "242",
+		"energy_units_per_year": "199",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "amazon basics",
+		"bee_star": "2",
+		"model": "AB2019INRF007",
+		"gross_volume_litres": "411",
+		"storage_volume_litres": "379",
+		"energy_units_per_year": "297",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "amazon basics",
+		"bee_star": "3",
+		"model": "AB2021INRF001",
+		"gross_volume_litres": "305",
+		"storage_volume_litres": "278",
+		"energy_units_per_year": "207",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "amazon basics",
+		"bee_star": "3",
+		"model": "AB2021INRF002",
+		"gross_volume_litres": "335",
+		"storage_volume_litres": "307",
+		"energy_units_per_year": "212",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "amazon basics",
+		"bee_star": "2",
+		"model": "AB2019INRF006",
+		"gross_volume_litres": "345",
+		"storage_volume_litres": "320",
+		"energy_units_per_year": "282",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "Midea",
+		"bee_star": "2",
+		"model": "MDRT349FGI28IND",
+		"gross_volume_litres": "272",
+		"storage_volume_litres": "252",
+		"energy_units_per_year": "259",
+		"valid_date": "31-12-2021"
+	}
+]

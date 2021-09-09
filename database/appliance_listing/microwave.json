@@ -1,0 +1,181 @@
+[{
+		"manufacturer": "WHIRLPOOL",
+		"bee_star": "2",
+		"model": "GT 290",
+		"type": "Convection",
+		"energy_consumption_per_cycle_wh": "55.9",
+		"capacity_litres": "25",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "WHIRLPOOL",
+		"bee_star": "2",
+		"model": "JT 479",
+		"type": "Convection",
+		"energy_consumption_per_cycle_wh": "55.6",
+		"capacity_litres": "33",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "WHIRLPOOL",
+		"bee_star": "1",
+		"model": "MAGICOOK 25L ELITE-BLACK",
+		"type": "Convection",
+		"energy_consumption_per_cycle_wh": "57.8",
+		"capacity_litres": "25",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "2",
+		"model": "CE78JD2-M/TL",
+		"type": "Convection",
+		"energy_consumption_per_cycle_wh": "56",
+		"capacity_litres": "23",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "2",
+		"model": "MC32K7072CK/TL",
+		"type": "Convection",
+		"energy_consumption_per_cycle_wh": "56",
+		"capacity_litres": "32",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "2",
+		"model": "MC32J7032CT/TL",
+		"type": "Convection",
+		"energy_consumption_per_cycle_wh": "56",
+		"capacity_litres": "32",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "2",
+		"model": "CE77JD2-SB/TL",
+		"type": "Convection",
+		"energy_consumption_per_cycle_wh": "56",
+		"capacity_litres": "23",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "2",
+		"model": "MC28H5142VK/TL",
+		"type": "Convection",
+		"energy_consumption_per_cycle_wh": "56",
+		"capacity_litres": "28",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "WHIRLPOOL",
+		"bee_star": "1",
+		"model": "MAGICOOK 30L ELITE-BLACK",
+		"type": "Convection",
+		"energy_consumption_per_cycle_wh": "58.7",
+		"capacity_litres": "30",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "WHIRLPOOL",
+		"bee_star": "2",
+		"model": "MAGICOOK MW20BC",
+		"type": "Convection",
+		"energy_consumption_per_cycle_wh": "55.9",
+		"capacity_litres": "20",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "WHIRLPOOL",
+		"bee_star": "2",
+		"model": "Magicook Pro 26CE Black",
+		"type": "Convection",
+		"energy_consumption_per_cycle_wh": "55.9",
+		"capacity_litres": "24",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SINGER",
+		"bee_star": "2",
+		"model": "SMW20SWT",
+		"type": "Solo",
+		"energy_consumption_per_cycle_wh": "56",
+		"capacity_litres": "20",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "2",
+		"model": "MS23F312EEK/TL",
+		"type": "Solo",
+		"energy_consumption_per_cycle_wh": "56",
+		"capacity_litres": "23",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "WHIRLPOOL",
+		"bee_star": "2",
+		"model": "MAGICOOK PRO 30SE BLACK",
+		"type": "Solo",
+		"energy_consumption_per_cycle_wh": "55.9",
+		"capacity_litres": "30",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "WHIRLPOOL",
+		"bee_star": "2",
+		"model": "MAGICOOK PRO 20SM BLACK",
+		"type": "Solo",
+		"energy_consumption_per_cycle_wh": "55.9",
+		"capacity_litres": "20",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "WHIRLPOOL",
+		"bee_star": "2",
+		"model": "MAGICOOK PRO 20SE BLACK",
+		"type": "Solo",
+		"energy_consumption_per_cycle_wh": "55.9",
+		"capacity_litres": "20",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "2",
+		"model": "MS23T5012UK/TL",
+		"type": "Solo",
+		"energy_consumption_per_cycle_wh": "56",
+		"capacity_litres": "23",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "WHIRLPOOL",
+		"bee_star": "3",
+		"model": "MAGICOOK PRO 25SE BLACK",
+		"type": "Solo",
+		"energy_consumption_per_cycle_wh": "51.9",
+		"capacity_litres": "25",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "SAMSUNG",
+		"bee_star": "2",
+		"model": "MG23T5012CK/TL",
+		"type": "Grill",
+		"energy_consumption_per_cycle_wh": "56",
+		"capacity_litres": "23",
+		"valid_date": "31-12-2021"
+	},
+	{
+		"manufacturer": "WHIRLPOOL",
+		"bee_star": "3",
+		"model": "MAGICOOK PRO 25GE BLACK",
+		"type": "Grill",
+		"energy_consumption_per_cycle_wh": "51.9",
+		"capacity_litres": "25",
+		"valid_date": "31-12-2021"
+	}
+]
