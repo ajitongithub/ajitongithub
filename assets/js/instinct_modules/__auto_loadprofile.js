@@ -76,8 +76,8 @@ let load__drop = e => {
 
         // Get the element
         let marker_offsetTop = e.target.parentElement.offsetParent.children[2].childNodes;
-        let drop_container_row;
-        track_top_value += marker_offsetTop[1].offsetTop;
+        let drop_container_row = 0;
+        track_top_value += marker_offsetTop[0].offsetTop;
         for (let n = 0; n < marker_offsetTop.length; n++) {
             if (marker_offsetTop[n].className == 'load_info' && (marker_offsetTop[n].offsetTop == track_top_value)) {
                 drop_container_row = n;
@@ -88,6 +88,7 @@ let load__drop = e => {
                 e.target.parentElement.offsetParent.children[2].childNodes[n].appendChild(info_data__div);
             }
         }
+        
         //TODO
         // Time Stamp Correction
         let no_of_loads_per_track = e.target.childNodes;
@@ -147,7 +148,7 @@ const add_track_function = e => {
 
 // Realign The Tracks Function
 let re_aligner = () => {
-    console.log("re_aligner");
+    // console.log("re_aligner");
     let marker_group = document.querySelectorAll('.load_marker__div');
     if (marker_group.length > 0) {
         marker_group.forEach(ele => {
@@ -192,7 +193,15 @@ const reassign_trackListeners = () => {
 
 };
 let core_function__drag = () => {
-    console.log("CORE DRAGG");
+    // console.log("CORE DRAGG");
+    // let grid_model_data = document.querySelector('.loads_grid__div');
+    // let grid_info_data = document.querySelector('.load_infobar__div');
+    // grid_model_data.innerHTML = "";
+    // grid_info_data.innerHTML = "";
+    // grid_model_data.innerHTML = `<div class="load_track__div"></div><div class="load_track__div"></div>`;
+    // grid_info_data.innerHTML = `<div class="load_info"></div><div class="load_info"></div>`;
+    // // reassign_trackListeners();
+
     // Initialise-Variables---------------------------------------------------------------------
     branded__items = document.querySelectorAll('.brand_items'); //Select all the generic loads
     load__items = document.querySelectorAll('.load_items'); //Select all the generic loads
@@ -284,7 +293,6 @@ let core_function__drag = () => {
                         e.target.style.width = `${e.target.clientWidth - 5}px`;
                     }
                 }
-                //TODO
                 let full_width = ele.parentElement.clientWidth;
                 let pixel_ratio_sec = 86400 / full_width; // 86400 is no. of seconds in a day
 
@@ -313,7 +321,7 @@ let core_function__drag = () => {
         }
         let sync_elements = document.querySelectorAll('[data-syncdata]');
         let transfer_data = document.querySelector('#transfer_id');
-        //TODO
+   
         sync_elements.forEach(ele => {
             if (ele.className == "load_marker__div" && ele.dataset.syncdata == transfer_data.innerText) {
                 let full_width = ele.parentElement.clientWidth;
@@ -322,6 +330,7 @@ let core_function__drag = () => {
                 ele.style.left = `${(start_time_seconds / pixel_ratio_sec).toFixed(0)}px`;
                 ele.style.width = `${(synced_duration / pixel_ratio_sec).toFixed(0)}px`;
                 // datasets
+                let marker_appname = document.querySelector('#marker_appname');
                 let marker_load_qty = document.querySelector('#marker_load_qty');
                 let marker_load_power = document.querySelector('#marker_load_power');
                 let marker_load_model = document.querySelector('#marker_load_model');
@@ -329,6 +338,7 @@ let core_function__drag = () => {
 
                 ele.dataset.powerdata = marker_load_power.value;
                 ele.dataset.qtydata = marker_load_qty.value;
+                ele.dataset.appname = marker_appname.value;
                 ele.dataset.modellingdata = marker_load_model.value;
                 ele.dataset.schedulabledata = marker_load_schedulable.checked;
 
@@ -342,20 +352,7 @@ let core_function__drag = () => {
         e.target.parentNode.offsetParent.style.transform = "translateX(-100%)";
     });
 
-    //Template Loading Works
-    let template_selection = document.querySelector("#template_selector");
-    template_selection.addEventListener('change', e => {
-        if (e.target.value != "Select a Template") {
-            // console.log(e.target.value);
-            $scope.template_data.forEach(load_node => {
-                // console.log(load_node.arrange_name);
-                if (e.target.value == load_node.arrange_name) {
-                    load_design_loader(load_node);
-                }
-            });
-
-        }
-    });
+   
 
     // Processing the data
     let processin_btn = document.querySelector('#process_data');
@@ -432,6 +429,7 @@ const marker_function_setting = (element) => {
     let start_time_input = document.querySelector('#startTime__input');
     let end_time_input = document.querySelector('#endTime__input');
 
+    let marker_appname = document.querySelector('#marker_appname');
     let marker_load_qty = document.querySelector('#marker_load_qty');
     let marker_load_power = document.querySelector('#marker_load_power');
     let marker_load_model = document.querySelector('#marker_load_model');
@@ -441,6 +439,7 @@ const marker_function_setting = (element) => {
     // console.log(element.dataset);
     marker_load_power.value = element.dataset.powerdata;
     marker_load_qty.value = element.dataset.qtydata;
+    marker_appname.value = element.dataset.appname;
     marker_load_model.value = element.dataset.modellingdata;
     if (element.dataset.schedulabledata == "true" || element.dataset.schedulabledata == "True") {
         marker_load_schedulable.checked = true;
@@ -462,6 +461,30 @@ const marker_function_setting = (element) => {
     transfer_id_data.innerText = element.dataset.syncdata;
 };
 
+
+// The Modelling FUnctions
+const model_functions = (load_parameters, weather_parameters=null)=>{
+    // console.log(load_parameters.length);
+    for (let param = 0; param < load_parameters.length;param++){        
+        //Refrigerator 
+        if (load_parameters[param].modellingdata == "residential-kitchen_refrigeration") {
+            // console.log(load_parameters[param].modellingdata);
+           
+        }
+        //Washing Machine
+        else if (load_parameters[param].modellingdata == "residential-washing"){
+            // console.log(load_parameters[param].modellingdata);
+            console.log(load_parameters[param].power_profile);
+            load_parameters[param].full_year_profile = {};
+
+        }
+    }
+    return load_parameters;
+};
+
+
+
+
 //Load Matrix Generator - Probability Matrix Creation - Function
 const load_matrix_generator = () => {
     // load_martrix_object
@@ -472,8 +495,6 @@ const load_matrix_generator = () => {
     let pixel_ratio_sec = 86400 / full_width.clientWidth;
     //get the tracks
     load__track = document.querySelectorAll('.load_track__div');
-
-    console.log(load__track);
     let track_id = 0;
     load__track.forEach(e => {
         let tracks__node = e.childNodes;
@@ -511,9 +532,14 @@ const load_matrix_generator = () => {
             }
         });
         track_id += 1;
-        console.log(load_matrix_array);
+        // console.log(load_matrix_array);
     });
-    let no_of_loads = load_matrix_array.length;
+
+
+
+
+
+    // let no_of_loads = load_matrix_array.length;
     let time_axis_array = Array(max_array_points_per_load).fill(0);
     //Load Profile Metadata Array
     let final_load_profile = Array(max_array_points_per_load).fill(0);
@@ -522,7 +548,7 @@ const load_matrix_generator = () => {
             final_load_profile[time_id] += parseFloat(load_meta.power_profile[time_id]);
         }
     });
-    console.log(final_load_profile);
+
     for (let i = 0; i < max_array_points_per_load; i++) {
         time_axis_array[i] = i;
     }
@@ -531,7 +557,7 @@ const load_matrix_generator = () => {
     let max_demand = final_load_profile.reduce(function (a, b) {
         return Math.max(a, b);
     }, 0);
-    console.log(max_demand);
+
     let classification_max_demand = [0, 0, 0, 0]; //100,75,50,25]
     for (let i = 0; i < max_array_points_per_load; i++) {
         let percentage_loading = final_load_profile[i] / max_demand;
@@ -552,7 +578,15 @@ const load_matrix_generator = () => {
             classification_max_demand[3] += 1;
         }
     }
-    console.log(classification_max_demand);
+    // console.log(max_demand);
+    // console.log(final_load_profile);
+    // console.log(classification_max_demand);
+    //TODO
+    //Model Incorporatons
+    load_matrix_array = model_functions(load_matrix_array);
+    console.log(load_matrix_array);
+
+
     // Plotly
     let load_profile_plot = document.querySelector('.plotter_1');
     let load_distribution_plot = document.querySelector('.plotter_2');
@@ -618,6 +652,49 @@ napp.directive("callbackOnEnd", function () {
 });
 //auto_load_loader_controller
 napp.controller('auto_load_loader_controller', function ($scope, $http, $rootScope, $q, $window) {
+    //Template Loading
+    let template_data = {};
+    $http.get('../database/load_design.json').then(function (response) {
+        //data sorting        
+        template_data = response.data;
+        $scope.template_data = response.data;
+    }, function (err) {
+        console.log(err);
+    });
+
+    //TODO Template Loading Works
+    let template_selection = document.querySelector("#template_selector");
+    template_selection.addEventListener('change', e => {
+        if (e.target.value != "Select a Template") {
+            console.log(e.target);
+            // console.log(design_data);
+            $scope.template_data.forEach(load_node => {
+                // console.log(load_node.arrange_name);
+                if (e.target.value == load_node.arrange_name) {
+                    load_design_loader(load_node);
+                }
+            });
+        }
+    });
+    let grid_model_data = document.querySelector('.loads_grid__div');
+    let grid_info_data = document.querySelector('.load_infobar__div');
+    grid_model_data.innerHTML = "";
+    grid_info_data.innerHTML = "";
+    grid_model_data.innerHTML = `<div class="load_track__div"></div><div class="load_track__div"></div>`;
+    grid_info_data.innerHTML = `<div class="load_info"></div><div class="load_info"></div>`;
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     // Data loading
     $http.get('../database/loads_appliances.json').then(function (response) {
         //data sorting
@@ -625,15 +702,7 @@ napp.controller('auto_load_loader_controller', function ($scope, $http, $rootSco
     }, function (err) {
         console.log(err);
     });
-    //Template Loading
-    $http.get('../database/load_design.json').then(function (response) {
-        //data sorting
-        // let template_data = response.data;
-        $scope.template_data = response.data;
-        // console.log(template_data);
-    }, function (err) {
-        console.log(err);
-    });
+
 
     // Indian Market Appliance Loading
     $http.get('../database/appliance_listing/AC_fixed.json').then(function (response) {
@@ -904,15 +973,23 @@ napp.controller('auto_load_loader_controller', function ($scope, $http, $rootSco
 
             grid_info_data.innerHTML = "";
             grid_marker_data.innerHTML = "";
+            
+            //load the recent tracks and valuess
+            let design_data = {};
+            $http.get('../database/load_design_recent.json').then(function (response) {
+                //data sorting
+                design_data = response.data;             
+                recent_design_loader();
+            }, function (err) {
+                console.log(err);
+            });
 
-            //load the tracks and bars
-            let design_data = JSON.parse(localStorage.getItem('design_object_test'));
-            console.log(design_data);
-            console.log(design_data.info_data[0].load_id);
-
+           const recent_design_loader = ()=>{
+            //    console.log(design_data);
+               
             let no_of_tracks = parseInt(design_data.tracks_count);
             console.log(no_of_tracks);
-            //First - Generate Tracks and Info Bars..
+            // First - Generate Tracks and Info Bars..
             for (let t_count = 0; t_count < no_of_tracks; t_count++) {
                 //info Bar
                 let new_info_element = document.createElement('div');
@@ -923,6 +1000,7 @@ napp.controller('auto_load_loader_controller', function ($scope, $http, $rootSco
                 new_load_track.classList.add('load_track__div');
                 grid_marker_data.appendChild(new_load_track);
             }
+
             //populate the data
             let no_of_loads = design_data.info_data.length;
             for (let l_count = 0; l_count < no_of_loads; l_count++) {
@@ -959,6 +1037,7 @@ napp.controller('auto_load_loader_controller', function ($scope, $http, $rootSco
                 grid_marker_data.childNodes[parseInt(design_data.loading_data[l_count].track_id)].appendChild(marker_data__div);
             }
             reassign_trackListeners();
+           };
         });
         grid_clear__button.addEventListener('click', e => {
             let grid_model_data = document.querySelector('.loads_grid__div');

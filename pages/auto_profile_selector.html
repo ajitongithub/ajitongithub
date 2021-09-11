@@ -138,6 +138,8 @@
                             <fieldset class="marker_timeInput__div">
                                 <legend>Parameters</legend>
                                 <div class="slide_parameters__div">
+                                    <span>Appliance</span>
+                                    <input type="text" placeholder="Appliance" id="marker_appname">
                                     <span>Quantity</span>
                                     <input type="number" placeholder="Quantity" id="marker_load_qty">
                                     <span>Power in Watts</span>
@@ -162,9 +164,6 @@
                             <div class="loads_container">
                                 <select id="template_selector">
                                     <option>Select a Template</option>
-                                    <!-- <option>1HK - 300 sq.ft</option>
-                                    <option>1BHK - 900 sq.ft</option>
-                                    <option>2BHK - 1300 sq.ft</option> -->
                                     <option ng-repeat="template in template_data">{{template.arrange_name}}</option>
                                 </select>
                                 <div class="template_btnContainer">

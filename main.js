@@ -1130,7 +1130,7 @@ for (i = 0; i < simulation_hours; i++) {
 ipcMain.on('save_load_design', (event, data) => {
   // console.log(data);
   // var sim_txt = JSON.stringify(data);
-  fs.writeFile(resolve(__dirname, 'database/load_design.json'), data, function (err) {
+  fs.writeFile(resolve(__dirname, 'database/load_design_recent.json'), data, function (err) {
     if (err) throw err;
     // event.sender.send('main_responder_channel', "Simulation Data Saved");
     console.log('Load Design Saved');
