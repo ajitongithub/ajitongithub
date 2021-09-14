@@ -14,18 +14,18 @@ let relign_markers = document.querySelector("#align_grid"); //Align Markers
 let load__dragstart = e => {
     dragged__div = e.target;
     dragging__dataset = e.target.dataset;
-    console.log("DRAG START");
-    console.log(dragging__dataset);
+    // console.log("DRAG START");
+    // console.log(dragging__dataset);
     e.dataTransfer.setData("text", e.target.id);
     e.dataTransfer.effectAllowed = "move";
 };
 let load__dragover = e => {
-    console.log("Drag Over1");
+    // console.log("Drag Over1");
     e.preventDefault();
     e.dataTransfer.effectAllowed = "move";
 };
 let load__drag = e => {
-    console.log(e);
+    // console.log(e);
 };
 let load__dragend = e => {
     console.log("Drag End");
@@ -64,14 +64,33 @@ let load__drop = e => {
         drop_data.dataset.syncdata = `load_${marker_timestamp}`;
         drop_data.dataset.type = dragging__dataset.type;
         drop_data.dataset.voltage = dragging__dataset.voltage;
-
+        // TODO
+        // drop_data.dataset.usage_frequency = JSON.stringify({
+        //     "sunday": true,
+        //     "monday": true,
+        //     "tuesday": true,
+        //     "wednesday": true,
+        //     "thursday": true,
+        //     "friday": true,
+        //     "saturday": true
+        // });
+        drop_data.dataset.usage_frequency = JSON.stringify({
+            "0": true,
+            "1": true,
+            "2": true,
+            "3": true,
+            "4": true,
+            "5": true,
+            "6": true
+        });
+        //TODO - ACTIVE WEEKDAYS
+        // drop_data.dataset.usage_frequency = [1,1,1,1,1,1,1]; //1 is active on that weekday, 2 
         drop_data.setAttribute("class", "load_marker__div");
 
         drop_data.setAttribute("draggable", "false");
         drop_data.style.left = `${e.offsetX}px`;
         drop_data.style.width = `${200}px`;
         drop_data.innerHTML = `<div class="marker_left">07:00</div><div class="marker_right">10:00</div>`;
-        // drop_data.innerHTML = `<div class="marker_left">${}</div><div class="marker_right">${}</div>`;
         e.target.appendChild(drop_data);
 
         // Get the element
@@ -340,8 +359,16 @@ let core_function__drag = () => {
                 ele.dataset.qtydata = marker_load_qty.value;
                 ele.dataset.appname = marker_appname.value;
                 ele.dataset.modellingdata = marker_load_model.value;
-                ele.dataset.schedulabledata = marker_load_schedulable.checked;
 
+                //TODO
+                //set the usage _frequency
+                let usage_frequency = document.querySelectorAll('.usage_day__checkbox');
+                let usage_frequency__objects = {};
+                usage_frequency.forEach((ele, index) => {
+                    usage_frequency__objects[index] = ele.checked;
+                });
+                ele.dataset.usage_frequency = JSON.stringify(usage_frequency__objects);                
+                ele.dataset.schedulabledata = marker_load_schedulable.checked;
                 ele.childNodes[0].innerHTML = seconds_to_format(start_time_seconds.toFixed(0));
                 ele.childNodes[1].innerHTML = seconds_to_format(end_time_seconds.toFixed(0));
             }
@@ -435,11 +462,33 @@ const marker_function_setting = (element) => {
     let marker_load_model = document.querySelector('#marker_load_model');
     let marker_load_schedulable = document.querySelector('#marker_load_schedulable');
 
+    // let usage_frequency = document.querySelector('#usage_frequency__form');
+    let usage_frequency = document.querySelectorAll('.usage_day__checkbox');
     //test
     // console.log(element.dataset);
     marker_load_power.value = element.dataset.powerdata;
     marker_load_qty.value = element.dataset.qtydata;
     marker_appname.value = element.dataset.appname;
+    //Usage Frequency Settings
+    
+    let usage_frequency__objects = JSON.parse(element.dataset.usage_frequency);
+    // console.log(usage_frequency__objects);
+    // console.log(usage_frequency);
+    
+    // usage_frequency[0].checked = usage_frequency__objects.sunday;
+    // usage_frequency[1].checked = usage_frequency__objects.monday;
+    // usage_frequency[2].checked = usage_frequency__objects.tuesday;
+    // usage_frequency[3].checked = usage_frequency__objects.wednesday;
+    // usage_frequency[4].checked = usage_frequency__objects.thursday;
+    // usage_frequency[5].checked = usage_frequency__objects.friday;
+    // usage_frequency[6].checked = usage_frequency__objects.saturday;
+
+    
+    usage_frequency.forEach((ele,index)=>{
+        ele.checked = usage_frequency__objects[index];
+    });
+
+    
     marker_load_model.value = element.dataset.modellingdata;
     if (element.dataset.schedulabledata == "true" || element.dataset.schedulabledata == "True") {
         marker_load_schedulable.checked = true;
@@ -463,8 +512,44 @@ const marker_function_setting = (element) => {
 
 
 // The Modelling FUnctions
-const model_functions = (load_parameters, weather_parameters=null)=>{
+const model_functions = async (load_parameters, weather_parameters=null)=>{
     // console.log(load_parameters.length);
+    // progress bars
+    let progress_data = document.querySelector('#model_progress');
+    progress_data.value = 0;
+
+    // console.log(weather_parameters);
+    // Convert hour data into minutse
+    let no_of_minutes = 24*60;//*365;
+    let insol_min__data = [];
+    let temp_min__data = [];
+    // console.log(no_of_minutes);
+    let hour_count__modelling = 0;
+    let newdd =  ()=>{
+         for (let weat_d = 0; weat_d < no_of_minutes; weat_d++) {
+
+            // console.log(weather_parameters.insolation[weat_d]);
+            progress_data.value = Number(weat_d / no_of_minutes);
+             if ((weat_d % 60 == 0)) {
+                // console.log("ITS A DAY");
+                hour_count__modelling++;
+            }
+            insol_min__data[weat_d] = weather_parameters.insolation[hour_count__modelling];
+            temp_min__data[weat_d] = weather_parameters.temperature[hour_count__modelling];
+            // console.log(hour_count__modelling);
+        }
+    };
+    newdd();
+    // let the_promise = new Promise((t_resolve,r_reject)=>{
+    //     t_resolve(() => {
+            
+    //     });
+    //     return await the_promise;
+
+    // });
+
+    // console.log(insol_min__data);
+    // console.log(temp_min__data);
     for (let param = 0; param < load_parameters.length;param++){        
         //Refrigerator 
         if (load_parameters[param].modellingdata == "residential-kitchen_refrigeration") {
@@ -474,7 +559,7 @@ const model_functions = (load_parameters, weather_parameters=null)=>{
         //Washing Machine
         else if (load_parameters[param].modellingdata == "residential-washing"){
             // console.log(load_parameters[param].modellingdata);
-            console.log(load_parameters[param].power_profile);
+            // console.log(load_parameters[param].power_profile);
             load_parameters[param].full_year_profile = {};
 
         }
@@ -583,8 +668,12 @@ const load_matrix_generator = () => {
     // console.log(classification_max_demand);
     //TODO
     //Model Incorporatons
-    load_matrix_array = model_functions(load_matrix_array);
-    console.log(load_matrix_array);
+    
+    // load_matrix_array = model_functions(load_matrix_array, JSON.parse(localStorage.getItem('weather_data')));
+    model_functions(load_matrix_array, JSON.parse(localStorage.getItem('weather_data'))).then(()=>{
+        console.log("ITS DONE");
+    });
+    // console.log(load_matrix_array);
 
 
     // Plotly
@@ -608,19 +697,19 @@ const load_matrix_generator = () => {
     let layout = {
         title: 'Load Profile',
         xaxis: {
-            title: 'x-axis title'
+            title: 'Time in minutes'
         },
         yaxis: {
-            title: 'y-axis title'
+            title: 'Power (Watts)'
         }
     };
     let layout_2 = {
         title: 'Load Distribution',
         xaxis: {
-            title: 'x-axis title'
+            title: 'Power Range'
         },
         yaxis: {
-            title: 'y-axis title'
+            title: 'Frequency'
         }
     };
     Plotly.newPlot(load_profile_plot, load_data, layout);
@@ -652,6 +741,44 @@ napp.directive("callbackOnEnd", function () {
 });
 //auto_load_loader_controller
 napp.controller('auto_load_loader_controller', function ($scope, $http, $rootScope, $q, $window) {
+    $scope.usage_allday = true;
+
+    $scope.usage_frequency = {
+        "sunday": true,
+        "monday": true,
+        "tuesday": true,
+        "wednesday": true,
+        "thursday": true,
+        "friday": true,
+        "saturday": true
+    };
+
+    let usage_all_day = document.querySelector('.usage_allday__checkbox');
+    usage_all_day.addEventListener('change',()=>{
+        if (usage_all_day.checked){
+            console.log($scope.usage_frequency);
+            $scope.usage_frequency = {
+                "sunday": true,
+                "monday": true,
+                "tuesday": true,
+                "wednesday": true,
+                "thursday": true,
+                "friday": true,
+                "saturday": true
+            };
+          }  
+          else{
+            $scope.usage_frequency = {
+                "sunday": false,
+                "monday": false,
+                "tuesday": false,
+                "wednesday": false,
+                "thursday": false,
+                "friday": false,
+                "saturday": false
+            }
+          }
+    });
     //Template Loading
     let template_data = {};
     $http.get('../database/load_design.json').then(function (response) {
@@ -666,7 +793,7 @@ napp.controller('auto_load_loader_controller', function ($scope, $http, $rootSco
     let template_selection = document.querySelector("#template_selector");
     template_selection.addEventListener('change', e => {
         if (e.target.value != "Select a Template") {
-            console.log(e.target);
+            // console.log(e.target);
             // console.log(design_data);
             $scope.template_data.forEach(load_node => {
                 // console.log(load_node.arrange_name);
@@ -949,14 +1076,14 @@ napp.controller('auto_load_loader_controller', function ($scope, $http, $rootSco
             });
             // console.log(load_temp_array);
             // console.log(no_of_tracks);
-            var name_of_design = "Blah Blah";
+            var name_of_design = "Current Design";
             designer_info_object.arrange_name = name_of_design;
             designer_info_object.loading_data = load_temp_array;
             designer_info_object.tracks_count = no_of_tracks;
             console.log(designer_info_object);
             // Store in Local Storage
             let load_design_data = JSON.stringify(designer_info_object);
-            localStorage.setItem('design_object_test', load_design_data );
+            localStorage.setItem('design_object_test', load_design_data);
            
             ipcRenderer.send('save_load_design', load_design_data);
             console.log("DATA SAVED");  
@@ -964,9 +1091,6 @@ napp.controller('auto_load_loader_controller', function ($scope, $http, $rootSco
 
         });
         grid_load__button.addEventListener('click', e => {
-            // let grid_model_data = document.querySelector('#slider_container');
-            // grid_model_data.innerHTML = localStorage.getItem('grid_item');
-            // reassign_trackListeners();
 
             let grid_info_data = document.querySelector('.load_infobar__div');
             let grid_marker_data = document.querySelector('.loads_grid__div');
@@ -1029,6 +1153,7 @@ napp.controller('auto_load_loader_controller', function ($scope, $http, $rootSco
                 marker_data__div.dataset.syncdata = design_data.loading_data[l_count].dataset.syncdata;
                 marker_data__div.dataset.type = design_data.loading_data[l_count].dataset.type;
                 marker_data__div.dataset.voltage = design_data.loading_data[l_count].dataset.voltage;
+                marker_data__div.dataset.usage_frequency = design_data.loading_data[l_count].dataset.usage_frequency;
                 marker_data__div.setAttribute("draggable", "false");
                 marker_data__div.innerHTML = `<div class="marker_left">${design_data.loading_data[l_count].starttime}</div><div class="marker_right">${design_data.loading_data[l_count].endtime}</div>`;
                 marker_data__div.setAttribute("class", "load_marker__div");

@@ -146,6 +146,46 @@
                                     <input type="number" placeholder="Power" id="marker_load_power">
                                     <span>Related Model</span>
                                     <input type="text" placeholder="Model" id="marker_load_model">
+                                    <div class="usage_frequency__div">
+                                        <span>Usage Frequency</span>
+                                        <form ng-model="usage_frequency" id=usage_frequency__form>
+                                            <label>
+                                                <input type="checkbox" class="usage_day__checkbox" ng-model="usage_frequency.sunday"/>
+                                                <span>Sunday</span>
+                                            </label>
+                                            <label>
+                                                <input type="checkbox" class="usage_day__checkbox"  ng-model="usage_frequency.monday"/>
+                                                <span>Monday</span>
+                                            </label>
+                                            <label>
+                                                <input type="checkbox" class="usage_day__checkbox"  ng-model="usage_frequency.tuesday"/>
+                                                <span>Tuesday</span>
+                                            </label>
+                                            <label>
+                                                <input type="checkbox" class="usage_day__checkbox"  ng-model="usage_frequency.wednesday"/>
+                                                <span>Wednesday</span>
+                                            </label>
+                                            <label>
+                                                <input type="checkbox" class="usage_day__checkbox"  ng-model="usage_frequency.thursday"/>
+                                                <span>Thursday</span>
+                                            </label>
+                                            <label>
+                                                <input type="checkbox" class="usage_day__checkbox"  ng-model="usage_frequency.friday"/>
+                                                <span>Friday</span>
+                                            </label>
+                                            <label>
+                                                <input type="checkbox" class="usage_day__checkbox"  ng-model="usage_frequency.saturday"/>
+                                                <span>Saturday</span>
+                                            </label>
+
+                                            <label>
+                                                <input type="checkbox" class="usage_allday__checkbox"  ng-model="usage_allday"/>
+                                                <span>All Day</span>
+                                            </label>
+                                        </form>
+                                        <!-- <input type="text" placeholder="Model" id="marker_load_model"> -->
+                                    </div>
+                                    <br>
                                     <div class="reschedule_container">
                                         <label for="Re-Schedulable">Re-Schedulable</label>
                                         <input type="checkbox" name="Re-Schedulable" value="schedulable" id="marker_load_schedulable">
@@ -375,6 +415,9 @@
                 <section class="processing_info__div">
                     <button id="process_data">PROCESS DATA</button>
                     <div id="status__div"></div>
+                </section>
+                <section>
+                    <progress max="100" min="0" value="10" id="model_progress"></progress>
                 </section>
                 <section class="plotter">
                     <div class="plotter_1">

@@ -573,8 +573,8 @@ h1, h2, h3, h4, h5, h6 {
   transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
   width: 100%;
   z-index: 100;
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
 }
 
 .auto-load__template .sections_wrapper .template_main_container .aside_container .modal_marker_slide .marker_timeInput__div {
@@ -624,6 +624,47 @@ h1, h2, h3, h4, h5, h6 {
   padding: 50px auto;
 }
 
+.auto-load__template .sections_wrapper .template_main_container .aside_container .modal_marker_slide .marker_timeInput__div .slide_parameters__div .usage_frequency__div #usage_frequency__form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  place-items: center;
+  -webkit-column-gap: 2px;
+          column-gap: 2px;
+}
+
+.auto-load__template .sections_wrapper .template_main_container .aside_container .modal_marker_slide .marker_timeInput__div .slide_parameters__div .usage_frequency__div #usage_frequency__form label {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-column: 4;
+  grid-column: 4px;
+  border: solid 1px #353434;
+  border-radius: 4px;
+  place-items: left;
+  padding-left: 10px;
+}
+
+.auto-load__template .sections_wrapper .template_main_container .aside_container .modal_marker_slide .marker_timeInput__div .slide_parameters__div .usage_frequency__div #usage_frequency__form label :hover {
+  background-color: #303030;
+}
+
+.auto-load__template .sections_wrapper .template_main_container .aside_container .modal_marker_slide .marker_timeInput__div .slide_parameters__div .usage_frequency__div .usage_day__checkbox {
+  display: none;
+  all: none;
+  outline: none;
+  visibility: none;
+  opacity: 1;
+}
+
+.auto-load__template .sections_wrapper .template_main_container .aside_container .modal_marker_slide .marker_timeInput__div .slide_parameters__div .usage_frequency__div .usage_allday__checkbox {
+  display: none;
+  all: none;
+  outline: none;
+  visibility: none;
+  opacity: 1;
+}
+
 .auto-load__template .sections_wrapper .template_main_container .aside_container .modal_marker_slide .marker_timeInput__div .slide_parameters__div label {
   font-size: 1.2rem;
 }
@@ -634,6 +675,8 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   -ms-grid-columns: 250px 1fr;
       grid-template-columns: 250px 1fr;
+  border: solid 1px #1f1e1e;
+  border-radius: 4px;
 }
 
 .auto-load__template .sections_wrapper .template_main_container .aside_container .modal_marker_slide .marker_timeInput__div .slide_parameters__div .reschedule_container label {
@@ -641,7 +684,7 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   margin: 0;
   padding: 0;
-  font-size: 18px;
+  font-size: 15px;
   width: auto;
 }
 
@@ -1242,7 +1285,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #13b621;
+  background-color: #0c8b17;
   border-radius: 10px;
   opacity: 0.2;
 }

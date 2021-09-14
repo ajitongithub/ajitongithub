@@ -157,6 +157,12 @@ napp.controller('location_controller', function ($scope, $http, $location, $root
 			// Plotly.restyle(geo_temperature, 'y', [temp_array]);
 			instinct_profile.insolation = insol_array;
 			instinct_profile.temperature = temp_array;
+
+			let environmetal_parameter_store = {};
+			environmetal_parameter_store.insolation = insol_array;
+			environmetal_parameter_store.temperature = temp_array;
+			localStorage.setItem('weather_data', JSON.stringify(environmetal_parameter_store));
+
 		});
 		// $http.get("../database/weather.csv?data="+tstamp).then(function(response){
 		// 	var weather_data_array = response.data.split('\n');

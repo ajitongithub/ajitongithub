@@ -109,7 +109,7 @@
                     transition: transform 250ms ease-in-out;
                     width: 100%;
                     z-index: 100;
-                    transform: translateX(-100%);
+                    transform: translateX(-0%);
 
                     .marker_timeInput__div {
                         display: block;
@@ -153,6 +153,52 @@
                             overflow: auto;
                             padding: 50px auto;
 
+                            .usage_frequency__div {
+
+
+                                // >* {
+                                //     border: solid 2px red;
+                                // }
+
+                                #usage_frequency__form {
+                                    display: grid;
+                                    grid-template-columns: 1fr 1fr;
+                                    // border: solid 2px red;
+                                    place-items: center;
+                                    column-gap: 2px;
+
+                                    label {
+                                        display: grid;
+                                        grid-column: 4px;
+                                        border: solid 1px rgb(53, 52, 52);
+                                        border-radius: 4px;
+                                        place-items: left;
+                                        padding-left: 10px;
+
+                                        :hover {
+                                            background-color: #303030;
+                                        }
+                                    }
+                                }
+
+                                .usage_day__checkbox {
+                                    display: none;
+                                    all: none;
+                                    outline: none;
+                                    visibility: none;
+                                    opacity: 1;
+                                }
+
+                                .usage_allday__checkbox {
+                                    display: none;
+                                    all: none;
+                                    outline: none;
+                                    visibility: none;
+                                    opacity: 1;
+                                }
+
+
+                            }
 
                             label {
                                 font-size: 1.2rem;
@@ -162,13 +208,15 @@
                                 display: grid;
                                 position: relative;
                                 grid-template-columns: 250px 1fr;
+                                border: solid 1px rgb(31, 30, 30);
+                                border-radius: 4px;
 
                                 label {
                                     display: block;
                                     position: relative;
                                     margin: 0;
                                     padding: 0;
-                                    font-size: 18px;
+                                    font-size: 15px;
                                     width: auto;
                                     // transform: translateX(10px);
                                 }
@@ -316,7 +364,7 @@
                         padding: 5px;
                         border-bottom: solid 2px rgb(179, 179, 179);
                         font-weight: 500;
-                        
+
                     }
 
                     legend {
