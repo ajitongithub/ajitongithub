@@ -1292,33 +1292,12 @@ napp.controller('auto_load_loader_controller', function ($scope, $http, $rootSco
         //-------------------FUNCTIONS
         re_aligner();
         core_function__drag();
-//TODO
-        console.log("I'AM READY 2");
         // Branded- Drag Drop - Branded Items
-        console.log(branded__items);
-        
         angular.element(branded__items).ready(()=>{
             branded__items = document.querySelectorAll('.brand_items');
-            console.log(branded__items.length)
-            console.log("NO WAYYYY");
-            // setTimeout(()=>{
-            //     branded__items = document.querySelectorAll('.brand_items');
-            //     branded__items.forEach(brand_element => {
-            //         console.log(brand_element.dataset);
-            //         brand_element.addEventListener("dragstart", load__dragstart, false);
-            //     });
-            //     console.log(branded__items.length);
-            // },10000);
         });
-
-        // branded__items.forEach(brand_element => {
-        //     console.log(brand_element.dataset);
-        //     brand_element.addEventListener("dragstart", load__dragstart, false);
-        // });
-
         // Attach Drag Drop - Load Items
         load__items.forEach(load_element => {
-            // console.log(load_element.dataset);
             load_element.addEventListener("dragstart", load__dragstart, false);
         });
         // Drag Listener
@@ -1331,7 +1310,6 @@ napp.controller('auto_load_loader_controller', function ($scope, $http, $rootSco
             track_element.addEventListener("dragend", load__dragend, false);
             track_element.addEventListener("drop", load__drop, false);
         });
-        // reassign_trackListeners();
         //listerners queryselectors
         add_track__div = document.querySelector("#add_track_id");// Add Track Button Addition
         load__grid = document.querySelector('.loads_grid__div');// The Grid 
@@ -1344,11 +1322,8 @@ napp.controller('auto_load_loader_controller', function ($scope, $http, $rootSco
         let grid_clear__button = document.querySelector("#clear_grid");
 
         grid_save__button.addEventListener('click', e => {
-            //     let grid_model_data = document.querySelector('#slider_container');
             let grid_info_data = document.querySelector('.load_infobar__div');
             let grid_marker_data = document.querySelector('.loads_grid__div');
-            // let grid_arrangement = grid_model_data.innerHTML.toString();
-            // localStorage.setItem('grid_item', grid_arrangement);
 
             // No of info Tracks and Data---------------------
             let designer_info_object = {}; //the ultimate design object
@@ -1388,8 +1363,6 @@ napp.controller('auto_load_loader_controller', function ($scope, $http, $rootSco
                     no_of_tracks += 1;
                 }
             });
-            // console.log(load_temp_array);
-            // console.log(no_of_tracks);
             var name_of_design = "Blah Blah";
             designer_info_object.arrange_name = name_of_design;
             designer_info_object.loading_data = load_temp_array;

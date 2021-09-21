@@ -1,3 +1,16 @@
+let autoloading_config ={};
+autoloading_config.room_width = 12; //Feet
+autoloading_config.room_breadth = 10;//Feet
+autoloading_config.room_height = 10;//Feet
+autoloading_config.room_volume = autoloading_config.room_width * autoloading_config.room_breadth * autoloading_config.room_height;
+autoloading_config.occupants = 2; // No. of people present
+autoloading_config.occupants_heat = 600; // BTU/hr
+autoloading_config.set_temperature = 24;
+autoloading_config.window_area = 16; // Sq. Feet
+autoloading_config.aircon_heat_efficiency = 0.8;
+autoloading_config.heat_influx_walls = 200; //BTU/hr
+autoloading_config.specific_heat_air = 1.012; //kg/kg.celcius
+autoloading_config.air_density = 1.225; // kg / m ^ 3
 
 // Begin Page Controller
 napp.controller('begin_controller', function ($scope, $http) {
@@ -321,8 +334,7 @@ napp.controller('load_profile_controller', function ($scope, $http, $location) {
 	$scope.electricity_bill = "Use Electricity Bill";
 	$scope.max_demand_data = 1500;
 
-	//TODO
-	// template loading
+	//TODO template loading
 	$scope.load_from_template = ()=>{
 		$location.path("/auto_load_loader");
 

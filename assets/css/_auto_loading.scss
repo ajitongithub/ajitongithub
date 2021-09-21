@@ -22,14 +22,18 @@
         border: solid 1px black;
         margin-top: 10px;
         overflow: hidden;
+        border: solid 2px red;
 
-        // .plotter_1 {
-        //     // width: 100%;
-        // }
+        .plotter_1 {
+            grid-column: 1 /-1;
+        }
 
         // .plotter_2 {
         //     // width: 100%;
         // }
+        .plotter_3 {
+            grid-column: 1 /-1;
+        }
     }
 
 

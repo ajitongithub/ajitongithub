@@ -64,6 +64,7 @@ let load__drop = e => {
         drop_data.dataset.syncdata = `load_${marker_timestamp}`;
         drop_data.dataset.type = dragging__dataset.type;
         drop_data.dataset.voltage = dragging__dataset.voltage;
+        drop_data.dataset.misc = dragging__dataset.misc;
         // TODO
         // drop_data.dataset.usage_frequency = JSON.stringify({
         //     "sunday": true,
@@ -191,7 +192,7 @@ let re_aligner = () => {
     }
 };
 //Reassign Tracks
-//TODO Reslign the newly added tracks with times and width
+//Reslign the newly added tracks with times and width
 const reassign_trackListeners = () => {
     //Setup the queryseelctors-core_function_drag
     core_function__drag();
@@ -250,6 +251,8 @@ let core_function__drag = () => {
             }, false);
             ele.addEventListener('click', e => {
                 e.preventDefault();
+                //TODO
+                // console.log(ele.dataset);
                 let modal_identifier = document.querySelector('.modal_marker_slide');
                 // Show the modal screen
                 modal_identifier.style.transform = "translateX(0)";
@@ -359,7 +362,7 @@ let core_function__drag = () => {
                 ele.dataset.qtydata = marker_load_qty.value;
                 ele.dataset.appname = marker_appname.value;
                 ele.dataset.modellingdata = marker_load_model.value;
-
+                
                 //TODO
                 //set the usage _frequency
                 let usage_frequency = document.querySelectorAll('.usage_day__checkbox');
@@ -381,12 +384,12 @@ let core_function__drag = () => {
 
    
 
-    // Processing the data
-    let processin_btn = document.querySelector('#process_data');
-    processin_btn.addEventListener('click', () => {
-        //Load Matrix Generator - Probability Matrix Creation
-        load_matrix_generator();
-    });
+    // // Processing the data
+    // let processin_btn = document.querySelector('#process_data');
+    // processin_btn.addEventListener('click', () => {
+    //     //Load Matrix Generator - Probability Matrix Creation
+    //     console.log(load_matrix_generator());
+    // });
 };
 
 const load_design_loader = (load_design_object) => {
@@ -469,21 +472,8 @@ const marker_function_setting = (element) => {
     marker_load_power.value = element.dataset.powerdata;
     marker_load_qty.value = element.dataset.qtydata;
     marker_appname.value = element.dataset.appname;
-    //Usage Frequency Settings
-    
-    let usage_frequency__objects = JSON.parse(element.dataset.usage_frequency);
-    // console.log(usage_frequency__objects);
-    // console.log(usage_frequency);
-    
-    // usage_frequency[0].checked = usage_frequency__objects.sunday;
-    // usage_frequency[1].checked = usage_frequency__objects.monday;
-    // usage_frequency[2].checked = usage_frequency__objects.tuesday;
-    // usage_frequency[3].checked = usage_frequency__objects.wednesday;
-    // usage_frequency[4].checked = usage_frequency__objects.thursday;
-    // usage_frequency[5].checked = usage_frequency__objects.friday;
-    // usage_frequency[6].checked = usage_frequency__objects.saturday;
-
-    
+    //Usage Frequency Settings    
+    let usage_frequency__objects = JSON.parse(element.dataset.usage_frequency);    
     usage_frequency.forEach((ele,index)=>{
         ele.checked = usage_frequency__objects[index];
     });
@@ -510,58 +500,101 @@ const marker_function_setting = (element) => {
     transfer_id_data.innerText = element.dataset.syncdata;
 };
 
-
+//TODO
 // The Modelling FUnctions
-const model_functions = async (load_parameters, weather_parameters=null)=>{
+const model_functions = (load_parameters, weather_parameters=null) => {
     // console.log(load_parameters.length);
     // progress bars
-    let progress_data = document.querySelector('#model_progress');
-    progress_data.value = 0;
 
-    // console.log(weather_parameters);
+
+
     // Convert hour data into minutse
-    let no_of_minutes = 24*60;//*365;
+    let no_of_minutes = 24*60*1;//*365;
     let insol_min__data = [];
     let temp_min__data = [];
-    // console.log(no_of_minutes);
+    console.log(no_of_minutes);
     let hour_count__modelling = 0;
-    let newdd =  ()=>{
-         for (let weat_d = 0; weat_d < no_of_minutes; weat_d++) {
-
-            // console.log(weather_parameters.insolation[weat_d]);
-            progress_data.value = Number(weat_d / no_of_minutes);
-             if ((weat_d % 60 == 0)) {
-                // console.log("ITS A DAY");
-                hour_count__modelling++;
-            }
-            insol_min__data[weat_d] = weather_parameters.insolation[hour_count__modelling];
-            temp_min__data[weat_d] = weather_parameters.temperature[hour_count__modelling];
-            // console.log(hour_count__modelling);
+    let day_count__modelling = 0;
+ 
+    for (let weat_d = 0; weat_d < no_of_minutes; weat_d++) {
+        // console.log(weather_parameters.insolation[weat_d]);
+        // progress_data.value = Number(weat_d / no_of_minutes);
+        if ((weat_d % 60 == 0)) {
+            // console.log("ITS AN HOUR");
+            hour_count__modelling++;
         }
-    };
-    newdd();
-    // let the_promise = new Promise((t_resolve,r_reject)=>{
-    //     t_resolve(() => {
-            
-    //     });
-    //     return await the_promise;
-
-    // });
+        if ((weat_d % 1440 == 0)) {
+            // console.log("ITS A DAY");
+            day_count__modelling++;
+        }
+        insol_min__data[weat_d] = weather_parameters.insolation[hour_count__modelling];
+        temp_min__data[weat_d] = weather_parameters.temperature[hour_count__modelling];
+        
+    }
+    // console.log(hour_count__modelling);
+    // console.log(day_count__modelling);
 
     // console.log(insol_min__data);
     // console.log(temp_min__data);
-    for (let param = 0; param < load_parameters.length;param++){        
+    // console.log(load_parameters);
+
+    for (let param = 0; param < load_parameters.length;param++){     //no of loads    
+
+        let transfer_data = {};
         //Refrigerator 
         if (load_parameters[param].modellingdata == "residential-kitchen_refrigeration") {
-            // console.log(load_parameters[param].modellingdata);
+            console.log(load_parameters[param].name);
            
         }
-        //Washing Machine
-        else if (load_parameters[param].modellingdata == "residential-washing"){
+        // //Air Conditionnig
+        // else if (load_parameters[param].modellingdata == "residential-room_aircon"){
+        //     // console.log(load_parameters[param].modellingdata);
+        //     // console.log(load_parameters[param].power_profile);
+        //     load_parameters[param].full_year_profile = {};
+        // }
+        //TODO
+        //Air Conditionnig
+        else if (load_parameters[param].modellingdata == "residential-cooling"){
             // console.log(load_parameters[param].modellingdata);
             // console.log(load_parameters[param].power_profile);
             load_parameters[param].full_year_profile = {};
 
+            transfer_data = {};
+            transfer_data.load_parameters = load_parameters;
+            transfer_data.insol_min__data = insol_min__data;
+            transfer_data.temp_min__data = temp_min__data;
+            transfer_data.no_of_minutes = no_of_minutes;
+            transfer_data.param = param;
+            // residential_washing(load_parameters, insol_min__data, temp_min__data, no_of_minutes, param);
+            console.log(residential_cooling__model(transfer_data));
+        }
+        //Washing Machine
+        else if (load_parameters[param].modellingdata == "residential-washing"){
+            console.log(load_parameters[param].name);
+            // console.log(load_parameters[param].modellingdata);
+            // console.log(load_parameters[param].power_profile);
+            // load_parameters[param].full_year_profile = {};
+            // console.log(load_parameters[param].switching_profile);
+            transfer_data = {};
+            transfer_data.load_parameters = load_parameters;
+            transfer_data.insol_min__data = insol_min__data;
+            transfer_data.temp_min__data = temp_min__data;
+            transfer_data.no_of_minutes = no_of_minutes;
+            transfer_data.param = param;
+            // residential_washing(load_parameters, insol_min__data, temp_min__data, no_of_minutes, param);
+            residential_washing__model(transfer_data);
+        }
+        //Exterior Lights
+        else if (load_parameters[param].modellingdata == "residential-exterior-lighting"){
+            // console.log(load_parameters[param].modellingdata);
+            // console.log(load_parameters[param].power_profile);
+            load_parameters[param].full_year_profile = {};
+        }
+        //Office Timings
+        else if (load_parameters[param].modellingdata == "commercial-interior-lighting"){
+            // console.log(load_parameters[param].modellingdata);
+            // console.log(load_parameters[param].power_profile);
+            load_parameters[param].full_year_profile = {};
         }
     }
     return load_parameters;
@@ -580,13 +613,19 @@ const load_matrix_generator = () => {
     let pixel_ratio_sec = 86400 / full_width.clientWidth;
     //get the tracks
     load__track = document.querySelectorAll('.load_track__div');
+
+    console.log(load__track.length);
+
     let track_id = 0;
     load__track.forEach(e => {
         let tracks__node = e.childNodes;
         tracks__node.forEach(node_element => {
             let load_matrix_object = {};
+            //TODO
+            // console.log(node_element.dataset);
             load_matrix_object.name = node_element.dataset.appname;
             load_matrix_object.load_channel = track_id;
+            load_matrix_object.misc = node_element.dataset.misc;
             load_matrix_object.powerdata = node_element.dataset.powerdata;
             load_matrix_object.modellingdata = node_element.dataset.modellingdata;
             load_matrix_object.qtydata = node_element.dataset.qtydata;
@@ -617,13 +656,9 @@ const load_matrix_generator = () => {
             }
         });
         track_id += 1;
-        // console.log(load_matrix_array);
+        
     });
-
-
-
-
-
+    console.log(load_matrix_array);
     // let no_of_loads = load_matrix_array.length;
     let time_axis_array = Array(max_array_points_per_load).fill(0);
     //Load Profile Metadata Array
@@ -666,24 +701,34 @@ const load_matrix_generator = () => {
     // console.log(max_demand);
     // console.log(final_load_profile);
     // console.log(classification_max_demand);
+
+
     //TODO
     //Model Incorporatons
     
-    // load_matrix_array = model_functions(load_matrix_array, JSON.parse(localStorage.getItem('weather_data')));
-    model_functions(load_matrix_array, JSON.parse(localStorage.getItem('weather_data'))).then(()=>{
-        console.log("ITS DONE");
-    });
-    // console.log(load_matrix_array);
+    load_matrix_array = model_functions(load_matrix_array, JSON.parse(localStorage.getItem('weather_data')));
+    // model_functions(load_matrix_array, JSON.parse(localStorage.getItem('weather_data'))).then(()=>{
+    //     console.log("ITS DONE");
+    // });
+    console.log(load_matrix_array);
 
 
     // Plotly
     let load_profile_plot = document.querySelector('.plotter_1');
     let load_distribution_plot = document.querySelector('.plotter_2');
+    let load_switching_plot = document.querySelector('.plotter_3');
 
 
     let load_profile_sketch = {
         x: time_axis_array,
         y: final_load_profile
+    };
+    let load_distribution_inset = {
+        x: ['> 75', '> 50', '> 25', '> 0'],
+        y: classification_max_demand,
+        xaxis: 'x2',
+        yaxis: 'y2',
+        type: 'bar'
     };
     let load_distribution_sketch = {
         x: ['75 - 100', '50 - 75', '25 - 50', '0 - 25'],
@@ -691,16 +736,27 @@ const load_matrix_generator = () => {
         type: 'bar'
     };
 
-    let load_data = [load_profile_sketch];
+    let load_data = [load_profile_sketch, load_distribution_inset];
     let load_distribution_data = [load_distribution_sketch];
 
     let layout = {
         title: 'Load Profile',
+        showlegend: false,
         xaxis: {
             title: 'Time in minutes'
         },
         yaxis: {
             title: 'Power (Watts)'
+        },
+        yaxis2: {
+            title: 'Frequency',
+            domain: [0.7, 1],
+            anchor: 'x2'
+        },
+        xaxis2: {
+            title: 'Power Range',
+            domain: [0.9, 1],
+            anchor: 'y2'
         }
     };
     let layout_2 = {
@@ -712,8 +768,9 @@ const load_matrix_generator = () => {
             title: 'Frequency'
         }
     };
-    Plotly.newPlot(load_profile_plot, load_data, layout);
-    Plotly.newPlot(load_distribution_plot, load_distribution_data, layout_2);
+    Plotly.newPlot(load_profile_plot, load_data, layout, { displayModeBar: false });
+    // Plotly.newPlot(load_distribution_plot, load_distribution_data, layout_2);
+    Plotly.newPlot(load_switching_plot, load_distribution_data, layout_2, { displayModeBar: false });
 
     // Status Bar Program
     let status_bar = document.querySelector("#status__div");
@@ -776,7 +833,7 @@ napp.controller('auto_load_loader_controller', function ($scope, $http, $rootSco
                 "thursday": false,
                 "friday": false,
                 "saturday": false
-            }
+            };
           }
     });
     //Template Loading
@@ -1029,6 +1086,8 @@ napp.controller('auto_load_loader_controller', function ($scope, $http, $rootSco
         let grid_load__button = document.querySelector("#load_grid");
         let grid_clear__button = document.querySelector("#clear_grid");
 
+        let processin_btn = document.querySelector('#process_data');
+
         grid_save__button.addEventListener('click', e => {
             //     let grid_model_data = document.querySelector('#slider_container');
             let grid_info_data = document.querySelector('.load_infobar__div');
@@ -1067,7 +1126,7 @@ napp.controller('auto_load_loader_controller', function ($scope, $http, $rootSco
                         load_containers.load_id = node.dataset.syncdata;
                         load_containers.dataset = node.dataset;
                         load_containers.starttime = node.childNodes[0].innerText;
-                        console.log(format_to_seconds(node.childNodes[0].innerText));
+                        // console.log(format_to_seconds(node.childNodes[0].innerText));
                         load_containers.endtime = node.childNodes[1].innerText;
                         load_temp_array.push(load_containers);
                     });
@@ -1109,10 +1168,8 @@ napp.controller('auto_load_loader_controller', function ($scope, $http, $rootSco
             });
 
            const recent_design_loader = ()=>{
-            //    console.log(design_data);
                
             let no_of_tracks = parseInt(design_data.tracks_count);
-            console.log(no_of_tracks);
             // First - Generate Tracks and Info Bars..
             for (let t_count = 0; t_count < no_of_tracks; t_count++) {
                 //info Bar
@@ -1137,7 +1194,6 @@ napp.controller('auto_load_loader_controller', function ($scope, $http, $rootSco
                 //load the marker data
                 let full_width = grid_marker_data.childNodes[parseInt(design_data.loading_data[l_count].track_id)].clientWidth;
                 let pixel_ratio_sec = 86400 / full_width;
-
                 // left and width data
                 let marker_start = (format_to_seconds(design_data.loading_data[l_count].starttime) / pixel_ratio_sec).toFixed(0);
                 let marker_end = (format_to_seconds(design_data.loading_data[l_count].endtime) / pixel_ratio_sec).toFixed(0);
@@ -1154,6 +1210,7 @@ napp.controller('auto_load_loader_controller', function ($scope, $http, $rootSco
                 marker_data__div.dataset.type = design_data.loading_data[l_count].dataset.type;
                 marker_data__div.dataset.voltage = design_data.loading_data[l_count].dataset.voltage;
                 marker_data__div.dataset.usage_frequency = design_data.loading_data[l_count].dataset.usage_frequency;
+                marker_data__div.dataset.misc = design_data.loading_data[l_count].dataset.misc;
                 marker_data__div.setAttribute("draggable", "false");
                 marker_data__div.innerHTML = `<div class="marker_left">${design_data.loading_data[l_count].starttime}</div><div class="marker_right">${design_data.loading_data[l_count].endtime}</div>`;
                 marker_data__div.setAttribute("class", "load_marker__div");
@@ -1171,7 +1228,97 @@ napp.controller('auto_load_loader_controller', function ($scope, $http, $rootSco
             grid_info_data.innerHTML = `<div class="load_info"></div><div class="load_info"></div>`;
             reassign_trackListeners();
         });
+
+        // Processing the data
+    
+        processin_btn.addEventListener('click', e=> {
+            //Load Matrix Generator - Probability Matrix Creation
+            // console.log(load_matrix_generator());
+            // console.log(e);
+            load_matrix_generator();
+        });
         // console.log('page is fully Load at the end');
     });
     // -----------END
 });// End Of COntroller
+
+const residential_washing__model = (transfer_data)=>{
+    console.log(transfer_data);
+    // let progress_data = document.querySelector('#model_progress');
+    // progress_data.value = 0;   
+    // load_parameters[param].full_year_profile = {};
+    // let hour_count__modelling = 0;
+    // let day_count__modelling = 0;
+    // //iterate the entire profile loadings
+    // for (let weat_d = 0; weat_d < no_of_minutes; weat_d++) {
+
+    //     if (parseInt(insol_min__data[weat_d]) >= 100){
+    //         console.log(`its so bright here at ${weat_d}`);
+    //     }
+    //     // progress_data.value = Number(weat_d / no_of_minutes);
+    //     if ((weat_d % 60 == 0)) {
+    //         // console.log("ITS AN HOUR");
+    //         hour_count__modelling++;
+    //     }
+    //     if ((weat_d % 1440 == 0)) {
+    //         // console.log("ITS A DAY");
+    //         day_count__modelling++;
+    //     }
+    //     console.log("Washing");
+    //     progress_data.value = ((weat_d / no_of_minutes)*100).toFixed(0);
+    //     console.log(progress_data.value);
+    // }
+    
+};
+
+const residential_cooling__model = (transfer_data)=>{
+    console.log(transfer_data);
+    let app_name = transfer_data.load_parameters[transfer_data.param].name;
+    let adjusted_switching_profile = [];
+
+    //For Residential cooling - Air Con
+    if (app_name == 'Air Conditioner'){
+        transfer_data.temp_min__data.forEach((tempr, index) => {
+            let app_state = transfer_data.load_parameters[transfer_data.param].switching_profile[index];
+
+            if ((parseFloat(tempr) >= 24) && app_state) {
+                console.log("AC is Active");
+                adjusted_switching_profile.push(1);
+            }
+            else {
+                adjusted_switching_profile.push(0);
+            }
+        });
+        transfer_data.load_parameters[transfer_data.param].full_year_profile = adjusted_switching_profile;
+        return transfer_data;
+    }
+    //TODOInverter Air Con
+    else if (app_name == 'Air Conditioners (Inverter)'){
+        let ac_parameters_misc = JSON.parse(transfer_data.load_parameters[transfer_data.param].misc);
+        console.log(ac_parameters_misc);
+        transfer_data.temp_min__data.forEach((tempr, index) => {
+            let app_state = transfer_data.load_parameters[transfer_data.param].switching_profile[index];
+            
+            let temp_indoor = parseFloat(tempr);
+            let temp_outdoor = parseFloat(tempr);
+            console.log(app_state);
+            if ((temp_outdoor >= 24) && app_state) {
+                console.log("AC Inv is Active");
+                adjusted_switching_profile.push(1);
+            }
+            else {
+                adjusted_switching_profile.push(0);
+            }
+        });
+        transfer_data.load_parameters[transfer_data.param].full_year_profile = adjusted_switching_profile;
+        return transfer_data;
+    }
+    else if (app_name == 'Fan'){
+        console.log("Its a Fan");
+        return transfer_data;
+    }
+    else{
+        return transfer_data;
+    }
+
+};

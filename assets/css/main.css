@@ -482,6 +482,15 @@ h1, h2, h3, h4, h5, h6 {
   border: solid 1px black;
   margin-top: 10px;
   overflow: hidden;
+  border: solid 2px red;
+}
+
+.auto-load__template .plotter .plotter_1 {
+  grid-column: 1 /-1;
+}
+
+.auto-load__template .plotter .plotter_3 {
+  grid-column: 1 /-1;
 }
 
 .auto-load__template .sections_wrapper {
@@ -1285,7 +1294,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #0c8b17;
+  background-color: #668d3c;
   border-radius: 10px;
   opacity: 0.2;
 }

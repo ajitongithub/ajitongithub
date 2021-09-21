@@ -376,7 +376,6 @@ napp.controller('auto_load_loader_controller', function ($scope, $http, $rootSco
                             e.target.style.width = `${e.target.clientWidth - 5}px`;
                         }
                     }
-                    //TODO
                     let full_width = ele.parentElement.clientWidth;
                     let pixel_ratio_sec = 86400 / full_width; // 86400 is no. of seconds in a day
 
@@ -606,7 +605,7 @@ napp.controller('auto_load_loader_controller', function ($scope, $http, $rootSco
         }
         let sync_elements = document.querySelectorAll('[data-syncdata]');
         let transfer_data = document.querySelector('#transfer_id');
-        //TODO
+
         sync_elements.forEach(ele => {
             if (ele.className == "load_marker__div" && ele.dataset.syncdata == transfer_data.innerText) {
                 let full_width = ele.parentElement.clientWidth;

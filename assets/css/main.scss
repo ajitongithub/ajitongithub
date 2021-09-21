@@ -6,6 +6,14 @@
 @import "summary_sidebar_right";
 @import "auto_loading";
 
+:root {
+  --darkchocolate__earth: #493829;
+  --grey__earth: #4E6172;
+  --lightgrey__earth: #83929F;
+  --lightergrey__earth: #A3ADB9;
+  --white: #faf0e6;
+}
+
 * {
     font-size: 12px;
     // border: solid 1px red;
@@ -39,7 +47,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: rgb(12, 139, 23);
+    background-color: rgb(102, 141, 60);
     // outline: 1px solid slategrey;
     border-radius: 10px;
     opacity: 0.2;
@@ -1397,6 +1405,7 @@ input[type="checkbox"]:checked {
     opacity: 1;
     background-color: red;
 }
+
 .checkboxgroup {
     width: 100%;
 }

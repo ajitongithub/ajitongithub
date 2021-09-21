@@ -233,7 +233,8 @@
                                 data-scenario="{{load.scenario}}"
                                 data-manufacturer="{{load.manufacturer}}"
                                 data-type="{{load.type}}"
-                                data-voltage="{{load.voltage}}">
+                                data-voltage="{{load.voltage}}"
+                                data-misc='Generic'>
                                 {{load.name}}
                                 </div>
                             </div>
@@ -244,113 +245,115 @@
                             <details class="brands_container">
                                 <summary>Air Conditioners (Inverter)</summary>
                                 <div class="brand_items" ng-repeat="item in load__inverter_ac" callback-on-end="onEnd()"
-                                    data-powerdata="{{item.energy_units_per_year}}" data-qtyData="1" data-modellingData="ac_inverter_model"
-                                    data-schedulableData="false" draggable="true" data-appName="Air Conditioners (Inverter)">
+                                    data-powerdata="{{item.energy_units_per_year}}" data-qtyData="1" data-modellingData="residential-cooling"
+                                    data-schedulableData="false" draggable="true" data-appName="Air Conditioners (Inverter)" data-misc={{item}}
+                                    data-manufacturer="{{item.manufacturer}}" data-powerfactor="0.9" data-voltage="230" data-type="Cooling" data-scenario="Residential">
                                     {{item.manufacturer}} - {{item.energy_units_per_year}} W - ({{item.bee_star}} Star)
                                 </div>
                             </details>
                             <details class="brands_container">
                                 <summary>Air Conditioners (Non-Inverter)</summary>
                                 <div class="brand_items" ng-repeat="item in load__ac_fixed" callback-on-end="onEnd()" data-powerdata="{{item.power_consumption_watts}}" data-qtyData="1"
-                                    data-modellingData="ac_fixed_model" data-schedulableData="false" draggable="true" data-appName="Air Conditioners (Non-Inverter)">
+                                    data-modellingData="residential-cooling" data-schedulableData="false" draggable="true" data-appName="Air Conditioners (Non-Inverter)" data-misc={{item}} data-manufacturer="{{item.manufacturer}}" data-powerfactor="0.9" data-voltage="230" data-type="Cooling" data-scenario="Residential">
                                     {{item.manufacturer}} - {{item.tonnage}} TON - ({{item.type}} - ({{item.bee_star}} Star)                            
                                 </div>
                             </details>
                             <details class="brands_container">
                                 <summary>Ceiling Fans</summary>
                                 <div class="brand_items" ng-repeat="item in load__ceiling_fan" callback-on-end="onEnd()" data-powerdata="{{item.input_power_watts}}" data-qtyData="1"
-                                    data-modellingData="ceiling_fan_model" data-schedulableData="false" draggable="true" data-appName="Ceiling Fans">
+                                    data-modellingData="ceiling_fan_model" data-schedulableData="false" draggable="true" data-appName="Ceiling Fans" data-misc={{item}} data-manufacturer="{{item.manufacturer}}" data-powerfactor="0.9" data-voltage="230" data-type="Cooling" data-scenario="Residential">
                                     {{item.manufacturer}} - {{item.input_power_watts}} W - ({{item.bee_star}} Star)                            
                                 </div>
                             </details>
                             <details class="brands_container">
                                 <summary>Computer Monitors</summary>
                                 <div class="brand_items" ng-repeat="item in load__computer_monitors" callback-on-end="onEnd()" data-powerdata="{{item.onmode_power_watts}}" data-qtyData="1"
-                                    data-modellingData="flat_model" data-schedulableData="false" draggable="true" data-appName="Computer Monitors">
+                                    data-modellingData="flat_model" data-schedulableData="false" draggable="true" data-appName="Computer Monitors" data-misc={{item}} data-manufacturer="{{item.manufacturer}}" data-powerfactor="0.9" data-voltage="230" data-type="Office" data-scenario="Residential">
                                     {{item.manufacturer}} - {{item.onmode_power_watts}} W - ({{item.bee_star}} Star)                            
                                 </div>
                             </details>
                             <details class="brands_container">
                                 <summary>Deep Freezer</summary>
                                 <div class="brand_items" ng-repeat="item in load__deep_freezer" callback-on-end="onEnd()" data-powerdata="{{(item.annual_energy_kwh_per_year * 1000) / (365*24)}}" data-qtyData="1"
-                                    data-modellingData="flat_model" data-schedulableData="false" draggable="true" data-appName="Deep Freezer">
+                                    data-modellingData="flat_model" data-schedulableData="false" draggable="true" data-appName="Deep Freezer" data-misc={{item}} data-manufacturer="{{item.manufacturer}}" data-powerfactor="0.9" data-voltage="230" data-type="Refrigerator" data-scenario="Residential">
                                     {{item.manufacturer}} - {{item.storage_volume_litres}} L - ({{item.bee_star}} Star)                            
                                 </div>
                             </details>
                             <details class="brands_container">
                                 <summary>Frost Free Refrigerator</summary>
                                 <div class="brand_items" ng-repeat="item in load__frost_free_refrigerator" callback-on-end="onEnd()" data-powerdata="{{(item.energy_units_per_year * 1000) / (365*24)}}" data-qtyData="1"
-                                    data-modellingData="refrigerator_model" data-schedulableData="false" draggable="true" data-appName="Frost Free Refrigerator">
+                                    data-modellingData="refrigerator_model" data-schedulableData="false" draggable="true" data-appName="Frost Free Refrigerator" data-misc={{item}} data-manufacturer="{{item.manufacturer}}" data-powerfactor="0.9" data-voltage="230" data-type="Refrigerator" data-scenario="Residential">
                                     {{item.manufacturer}} - {{item.storage_volume_litres}} L - ({{item.bee_star}} Star)                            
                                 </div>
                             </details>
                             <details class="brands_container">
                                 <summary>LED Lamp</summary>
                                 <div class="brand_items" ng-repeat="item in load__LED_lamps" callback-on-end="onEnd()" data-powerdata="{{item.power_watts}}" data-qtyData="1"
-                                    data-modellingData="lighting_model" data-schedulableData="false" draggable="true" data-appName="LED Lamp">
+                                    data-modellingData="lighting_model" data-schedulableData="false" draggable="true" data-appName="LED Lamp" data-misc={{item}} data-manufacturer="{{item.manufacturer}}" data-powerfactor="0.9" data-voltage="230" data-type="Lighting" data-scenario="Residential">
                                     {{item.manufacturer}} - {{item.power_watts}}W - ({{item.bee_star}} Star)                            
                                 </div>
                             </details>
                             <details class="brands_container">
                                 <summary>Flourescent Lamp</summary>
                                 <div class="brand_items" ng-repeat="item in load__TFL" callback-on-end="onEnd()" data-powerdata="{{item.input_power_watts}}" data-qtyData="1"
-                                    data-modellingData="lighting_model" data-schedulableData="false" draggable="true" data-appName="Flourescent Lamp">
+                                    data-modellingData="lighting_model" data-schedulableData="false" draggable="true" data-appName="Flourescent Lamp" data-misc={{item}} data-manufacturer="{{item.manufacturer}}" data-powerfactor="0.9" data-voltage="230" data-type="Lighting" data-scenario="Residential">
                                     {{item.manufacturer}} - {{item.input_power_watts}}W - ({{item.bee_star}} Star)                            
                                 </div>
                             </details>
                             <details class="brands_container">
                                 <summary>Submersible Pump</summary>
                                 <div class="brand_items" ng-repeat="item in load__submersible_pump" callback-on-end="onEnd()" data-powerdata="{{(item.rating_kw * 1000)}}" data-qtyData="1"
-                                    data-modellingData="pump_model" data-schedulableData="false" draggable="true" data-appName="Submersible Pump">
+                                    data-modellingData="pump_model" data-schedulableData="false" draggable="true" data-appName="Submersible Pump" data-misc={{item}} data-manufacturer="{{item.manufacturer}}" data-powerfactor="0.9" data-voltage="230" data-type="Irrigation" data-scenario="Residential">
                                     {{item.manufacturer}} - {{item.rating_kw}}kW - ({{item.bee_star}} Star)                            
                                 </div>
                             </details>
                             <details class="brands_container">
                                 <summary>Microwave</summary>
                                 <div class="brand_items" ng-repeat="item in load__microwave" callback-on-end="onEnd()" data-powerdata="{{2000}}" data-qtyData="1"
-                                    data-modellingData="kitchen_model" data-schedulableData="false" draggable="true" data-appName="Microwave">
+                                    data-modellingData="kitchen_model" data-schedulableData="false" draggable="true" data-appName="Microwave" data-misc={{item}} data-manufacturer="{{item.manufacturer}}" data-powerfactor="0.9" data-voltage="230" data-type="Appliance - Kitchen" data-scenario="Residential">
                                     {{item.manufacturer}} - {{item.capacity_litres}}L - ({{item.bee_star}} Star)                            
                                 </div>
                             </details>
                             <details class="brands_container">
                                 <summary>Water Heater</summary>
                                 <div class="brand_items" ng-repeat="item in load__water_heater" callback-on-end="onEnd()" data-powerdata="{{item.rated_power_watts}}" data-qtyData="1"
-                                    data-modellingData="bathroom_model" data-schedulableData="false" draggable="true" data-appName="Water Heater">
+                                    data-modellingData="bathroom_model" data-schedulableData="false" draggable="true" data-appName="Water Heater" data-misc={{item}} data-manufacturer="{{item.manufacturer}}" data-powerfactor="0.9" data-voltage="230" data-type="Heating" data-scenario="Residential">
                                     {{item.manufacturer}} - {{item.rated_capacity_litres}}L - ({{item.bee_star}} Star)                            
                                 </div>
                             </details>
                             <details class="brands_container">
                                 <summary>Chillers</summary>
                                 <div class="brand_items" ng-repeat="item in load__chillers" callback-on-end="onEnd()" data-powerdata="{{item.cooling_capacity_kw}}" data-qtyData="1"
-                                    data-modellingData="cooling_model" data-schedulableData="false" draggable="true" data-appName="Chillers">
+                                    data-modellingData="cooling_model" data-schedulableData="false" draggable="true" data-appName="Chillers" data-misc={{item}} data-manufacturer="{{item.manufacturer}}" data-powerfactor="0.9" data-voltage="230" data-type="Refrigerator" data-scenario="Residential">
                                     {{item.manufacturer}} - {{item.tonnage}} Ton - ({{item.bee_star}} Star)                            
                                 </div>
                             </details>
                             <details class="brands_container">
                                 <summary>Washing Machine</summary>
                                 <div class="brand_items" ng-repeat="item in load__washing_machine" callback-on-end="onEnd()" data-powerdata="{{2000}}" data-qtyData="1"
-                                    data-modellingData="cooling_model" data-schedulableData="false" draggable="true" data-appName="Washing Machine">
+                                    data-modellingData="cooling_model" data-schedulableData="false" draggable="true" data-appName="Washing Machine" data-misc={{item}} data-manufacturer="{{item.manufacturer}}" data-powerfactor="0.9" data-voltage="230" data-type="Home Appliance" data-scenario="Residential">
                                     {{item.manufacturer}} - {{item.capacity_kg}} Kg - ({{item.bee_star}} Star)                            
                                 </div>
                             </details>
                             <details class="brands_container">
                                 <summary>Openwell Submersible Pump</summary>
                                 <div class="brand_items" ng-repeat="item in load__openwell_sub_pump" callback-on-end="onEnd()" data-powerdata="{{item.rating_in_kw * 1000}}" data-qtyData="1"
-                                    data-modellingData="pump_model" data-schedulableData="false" draggable="true" data-appName="Openwell Submersible Pump">
+                                    data-modellingData="pump_model" data-schedulableData="false" draggable="true" data-appName="Openwell Submersible Pump" data-misc={{item}} data-manufacturer="{{item.manufacturer}}" data-powerfactor="0.9" data-voltage="230" data-type="Irrigation" data-scenario="Residential">
                                     {{item.manufacturer}} - {{item.rating_in_kw}} kW - ({{item.bee_star}} Star)                            
                                 </div>
                             </details>
                             <details class="brands_container">
                                 <summary>Monoset Pump</summary>
                                 <div class="brand_items" ng-repeat="item in load__monoset_pump" callback-on-end="onEnd()" data-powerdata="{{item.pump_set_rating_kw * 1000}}" data-qtyData="1"
-                                    data-modellingData="pump_model" data-schedulableData="false" draggable="true" data-appName="Monoset Pump">
+                                    data-modellingData="pump_model" data-schedulableData="false" draggable="true" data-appName="Monoset Pump" data-misc={{item}} data-manufacturer="{{item.manufacturer}}" data-powerfactor="0.9" data-voltage="230" data-type="Refrigerator" data-scenario="Residential">
                                     {{item.manufacturer}} - {{item.pump_set_rating_kw}} kW - ({{item.bee_star}} Star)                            
                                 </div>
                             </details>
                             <details class="brands_container">
                                 <summary>Direct Cool Refrigerator</summary>
                                 <div class="brand_items" ng-repeat="item in load__direct_cool_refrigerator" callback-on-end="onEnd()" data-powerdata="{{(item.energy_consumption_per_year * 1000)/(365*24)}}" data-qtyData="1"
-                                    data-modellingData="refrigerator_model" data-schedulableData="false" draggable="true" data-appName="Direct Cool Refrigerator">
+                                    data-modellingData="refrigerator_model" data-schedulableData="false" draggable="true" data-appName="Direct Cool Refrigerator" data-misc={{item}} 
+                                    data-manufacturer="{{item.manufacturer}}" data-powerfactor="0.9" data-voltage="230" data-type="Refrigerator" data-scenario="Residential">
                                     {{item.manufacturer}} - {{item.storage_volume_litres}} L - ({{item.bee_star}} Star)                            
                                 </div>
                             </details>
@@ -421,10 +424,12 @@
                 </section>
                 <section class="plotter">
                     <div class="plotter_1">
-
                     </div>
-                    <div class="plotter_2">
-
+                    <!-- <div class="plotter_2">
+                    </div> -->
+                </section>
+                <section class="plotter">
+                    <div class="plotter_3">
                     </div>
                 </section>
                 <!-- For Bottom Control -->
