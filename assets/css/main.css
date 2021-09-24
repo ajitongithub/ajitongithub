@@ -582,8 +582,8 @@ h1, h2, h3, h4, h5, h6 {
   transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
   width: 100%;
   z-index: 100;
-  -webkit-transform: translateX(0%);
-          transform: translateX(0%);
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
 }
 
 .auto-load__template .sections_wrapper .template_main_container .aside_container .modal_marker_slide .marker_timeInput__div {
@@ -857,8 +857,14 @@ h1, h2, h3, h4, h5, h6 {
   position: -webkit-sticky;
   position: sticky;
   top: 2px;
-  background-color: rgba(0, 0, 0, 0.89);
+  background-color: rgba(0, 0, 0, 0.79);
   color: beige;
+  border-radius: 7px;
+  width: 90%;
+  display: -ms-grid;
+  display: grid;
+  margin: 0 auto;
+  padding-left: 10px;
 }
 
 .auto-load__template .sections_wrapper .template_main_container .aside_container .load_types__fields .loads_container #template_selector {
@@ -1255,6 +1261,26 @@ h1, h2, h3, h4, h5, h6 {
   bottom: 0;
   -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
+}
+
+.auto-load__template .sections_wrapper .progress_bar__div #model_progress {
+  display: block;
+  width: 100%;
+}
+
+:root {
+  --primary-darkchocolate: #493829;
+  --secondary-darkchocolate: #816C5B;
+  --primary-white: #FAF0E6;
+  --primary-black: #2b2b2b;
+  --primary-darkgreen: #404F24;
+  --primary-green: #668D3C;
+  --primary-blue: #4E6172;
+  --primary-lightblue: #83929F;
+  --primary-lightestblue: #A3ADB8;
+  --primary-orangered: #8F3B1B;
+  --primary-orange: #D57500;
+  --primary-yellow: #DBCA69;
 }
 
 * {
@@ -2306,7 +2332,6 @@ footer {
   padding: 0;
   -webkit-transition: all 250ms ease-in-out;
   transition: all 250ms ease-in-out;
-  border: solid 2px red;
 }
 
 .auto_profile_selector {
@@ -2315,10 +2340,11 @@ footer {
   border: solid 2px white;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
   height: 100%;
   place-items: center;
+  border: solid 2px red;
 }
 
 .auto_profile_selector .btn_auto_profile {
@@ -2372,11 +2398,12 @@ footer {
       grid-template-columns: 1fr;
   -ms-grid-rows: 50px 200px 100px;
       grid-template-rows: 50px 200px 100px;
+  row-gap: 20px;
   justify-items: space-between;
   background-color: #3d3d3d;
   border: solid 2px #474747;
   border-radius: 5px;
-  height: 350px;
+  height: 400px;
   width: 80%;
   margin: 0;
   padding: 0;

@@ -58,7 +58,6 @@
             grid-template-columns: 0.4fr 1fr;
             position: relative;
 
-
             .aside_container {
                 border-radius: 5px;
                 border: solid 1px rgba(236, 13, 13, 0.555);
@@ -113,7 +112,7 @@
                     transition: transform 250ms ease-in-out;
                     width: 100%;
                     z-index: 100;
-                    transform: translateX(-0%);
+                    transform: translateX(-100%);
 
                     .marker_timeInput__div {
                         display: block;
@@ -399,8 +398,14 @@
                         #load_search {
                             position: sticky;
                             top: 2px;
-                            background-color: rgba(0, 0, 0, 0.89);
+                            background-color: rgba(0, 0, 0, 0.79);
                             color: beige;
+                            border-radius: 7px;
+                            width: 90%;
+                            display: grid;
+                            margin: 0 auto;
+                            padding-left: 10px;
+
                         }
 
                         #template_selector {
@@ -776,6 +781,13 @@
                 transform: translateY(100%);
                 bottom: 0;
                 transition: all 300ms ease-in-out;
+            }
+        }
+
+        .progress_bar__div {
+            #model_progress{
+                display: block;
+                width: 100%;
             }
         }
     }

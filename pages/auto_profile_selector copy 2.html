@@ -2,11 +2,11 @@
     <div class="auto-load-loading__scroll_container">
         <div class="auto-load__main-splash">
             <div class="auto_profile_selector">
-                <!-- <div class="auto_prof_splash_card">
+                <div class="auto_prof_splash_card">
                     <h3>Design Manually</h3>
                     <img src="../assets/images/design_manually.png">
                     <button ng-click="manual_selection('-100%')" class="btn_auto_profile btn_orangish">SELECT</button>
-                </div> -->
+                </div>
                 <div class="auto_prof_splash_card">
                     <h3>Load from Template</h3>
                     <img src="../assets/images/template_design.png">
@@ -111,7 +111,7 @@
                             <fieldset class="marker_timeInput__div">
                                 <legend>Start Time</legend>
                                 <input type="time" id="startTime__input">
-                                <fieldset disabled>
+                                <fieldset>
                                     <legend>Start Transition (Experimental)</legend>
                                     <input type="radio" id="start_trans_step" name="start_time_rise" value="Step">
                                                                       
@@ -125,7 +125,7 @@
                             <fieldset class="marker_timeInput__div">
                                 <legend>End Time</legend>
                                 <input type="time" id="endTime__input">
-                                <fieldset disabled>
+                                <fieldset>
                                     <legend>End Transition (Experimental)</legend>
                                     <input class="with-gap" type="radio" id="end_trans_step" name="end_time_rise" value="Step"><label
                                         for="end_trans_step">Step</label>
@@ -206,10 +206,10 @@
                                     <option>Select a Template</option>
                                     <option ng-repeat="template in template_data">{{template.arrange_name}}</option>
                                 </select>
-                                <!-- <div class="template_btnContainer">
+                                <div class="template_btnContainer">
                                     <button id="template_OK">OK</button>
                                     <button id="template_Cancel">CANCEL</button>
-                                </div> -->
+                                </div>
                                 <!-- <div class="load_items" data-powerData="250" data-qtyData="1" data-modellingData="refrigerator_model"
                                         data-schedulableData="false" draggable="true" data-appName="Refrigerator">
                                         Refrigerator
@@ -220,7 +220,7 @@
                         <fieldset class="load_types__fields">
                             <legend>Generic Loads</legend>
                             <div class="loads_container">
-                                <input type="text" placeholder="Search" id="load_search" ng-model="load_search">
+                                <input type="text" placeholder="Search" id="load_search">
                                 <!-- Repeat loads -->
                                 <div class="load_items" ng-repeat="load in loads_data"
                                 draggable="true" 
@@ -419,8 +419,8 @@
                     <button id="process_data">PROCESS DATA</button>
                     <div id="status__div"></div>
                 </section>
-                <section class="progress_bar__div">
-                    <progress max="100" min="0" value="0" id="model_progress"></progress>
+                <section>
+                    <progress max="100" min="0" value="10" id="model_progress"></progress>
                 </section>
                 <section class="plotter">
                     <div class="plotter_1">

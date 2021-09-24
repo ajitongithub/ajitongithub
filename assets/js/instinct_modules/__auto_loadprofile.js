@@ -500,13 +500,13 @@ const marker_function_setting = (element) => {
     transfer_id_data.innerText = element.dataset.syncdata;
 };
 
-//TODO
+//TODO - Model Functions
 // The Modelling FUnctions
 const model_functions = (load_parameters, weather_parameters=null) => {
     // console.log(load_parameters.length);
     // progress bars
-
-
+    let p_bar = document.querySelector("#model_progress");
+    p_bar.value = 0;
 
     // Convert hour data into minutse
     let no_of_minutes = 24*60*1;//*365;
@@ -527,19 +527,16 @@ const model_functions = (load_parameters, weather_parameters=null) => {
             // console.log("ITS A DAY");
             day_count__modelling++;
         }
+        // console.log(((hour_count__modelling/24)*100).toFixed(0));
+        //TODO Progress Bar
+        progress_data(((weat_d / no_of_minutes) * 100).toFixed(0));
+        // let p_bar = document.querySelector("#model_progress");
+        // p_bar.value = 33;
         insol_min__data[weat_d] = weather_parameters.insolation[hour_count__modelling];
         temp_min__data[weat_d] = weather_parameters.temperature[hour_count__modelling];
         
     }
-    // console.log(hour_count__modelling);
-    // console.log(day_count__modelling);
-
-    // console.log(insol_min__data);
-    // console.log(temp_min__data);
-    // console.log(load_parameters);
-
-    for (let param = 0; param < load_parameters.length;param++){     //no of loads    
-
+    for (let param = 0; param < load_parameters.length;param++){     //no of loads
         let transfer_data = {};
         //Refrigerator 
         if (load_parameters[param].modellingdata == "residential-kitchen_refrigeration") {
@@ -558,7 +555,6 @@ const model_functions = (load_parameters, weather_parameters=null) => {
             // console.log(load_parameters[param].modellingdata);
             // console.log(load_parameters[param].power_profile);
             load_parameters[param].full_year_profile = {};
-
             transfer_data = {};
             transfer_data.load_parameters = load_parameters;
             transfer_data.insol_min__data = insol_min__data;
@@ -600,9 +596,6 @@ const model_functions = (load_parameters, weather_parameters=null) => {
     return load_parameters;
 };
 
-
-
-
 //Load Matrix Generator - Probability Matrix Creation - Function
 const load_matrix_generator = () => {
     // load_martrix_object
@@ -614,7 +607,7 @@ const load_matrix_generator = () => {
     //get the tracks
     load__track = document.querySelectorAll('.load_track__div');
 
-    console.log(load__track.length);
+    // console.log(load__track.length);
 
     let track_id = 0;
     load__track.forEach(e => {
@@ -798,6 +791,8 @@ napp.directive("callbackOnEnd", function () {
 });
 //auto_load_loader_controller
 napp.controller('auto_load_loader_controller', function ($scope, $http, $rootScope, $q, $window) {
+
+    
     $scope.usage_allday = true;
 
     $scope.usage_frequency = {
@@ -1296,12 +1291,15 @@ const residential_cooling__model = (transfer_data)=>{
     else if (app_name == 'Air Conditioners (Inverter)'){
         let ac_parameters_misc = JSON.parse(transfer_data.load_parameters[transfer_data.param].misc);
         console.log(ac_parameters_misc);
+        progress_data(0);
         transfer_data.temp_min__data.forEach((tempr, index) => {
             let app_state = transfer_data.load_parameters[transfer_data.param].switching_profile[index];
             
             let temp_indoor = parseFloat(tempr);
             let temp_outdoor = parseFloat(tempr);
             console.log(app_state);
+            // progress_data();
+            progress_data((index/1440).toFixed(0));
             if ((temp_outdoor >= 24) && app_state) {
                 console.log("AC Inv is Active");
                 adjusted_switching_profile.push(1);
@@ -1321,4 +1319,14 @@ const residential_cooling__model = (transfer_data)=>{
         return transfer_data;
     }
 
+
+};
+
+const progress_data = (meter_data)=>{
+    // console.log(meter_data);
+    let p_bar = document.querySelector("#model_progress");
+    // p_bar.value = 100;
+    setTimeout(() => {
+        p_bar.value = meter_data;
+    }, 1);
 };
