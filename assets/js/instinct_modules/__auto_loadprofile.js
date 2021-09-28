@@ -1,3 +1,5 @@
+const { array } = require("@0xcmdr/numjs");
+
 // Variables---------------------------------------------------------------------
 let branded__items = document.querySelectorAll('.brand_items');
 let load__items = document.querySelectorAll('.load_items'); //Select all the generic loads
@@ -503,57 +505,129 @@ const marker_function_setting = (element) => {
 //TODO - Model Functions
 // The Modelling FUnctions
 const model_functions = (load_parameters, weather_parameters=null) => {
-    // console.log(load_parameters.length);
     // progress bars
-    let p_bar = document.querySelector("#model_progress");
-    p_bar.value = 0;
-
+    progress_data(0);
+    
     // Convert hour data into minutse
-    let no_of_minutes = 24*60*1;//*365;
+    let no_of_days = 7;
+    let no_of_minutes = 24 * 60 * no_of_days;//*365;
+    let weekly_min_array = [...Array(no_of_minutes).keys()];
     let insol_min__data = [];
     let temp_min__data = [];
-    console.log(no_of_minutes);
     let hour_count__modelling = 0;
     let day_count__modelling = 0;
- 
-    for (let weat_d = 0; weat_d < no_of_minutes; weat_d++) {
-        // console.log(weather_parameters.insolation[weat_d]);
-        // progress_data.value = Number(weat_d / no_of_minutes);
+    // usage and frequency - identification        
+    let plotting_load_set = []; 
+    let new_load_parameters = [];
+    let temp_load_param_object = {};
+    //TODO Weekly variation record
+    load_parameters.forEach(load_data=>{
+        temp_load_param_object = {};
+        temp_load_param_object = load_data;
+        // load arrangement
+        
+        // console.log(temp_load_param_object);
+        let full_week_switching = new Array(no_of_minutes).fill(0);
+        let usage_day_count = -1;
+        let usage_frequency = (JSON.parse(load_data.usage_frequency));
+        for(let m=0;m<=no_of_minutes-1;m++){
+            if(m % 1440 == 0){
+                usage_day_count++;
+            }
+            if(usage_day_count % 7 == 0){
+                if (usage_frequency[0]){
+                    full_week_switching[m] = 1 * parseInt(load_data.switching_profile[m % 1440]);
+                }                
+            }
+            else if(usage_day_count % 7 == 1){
+                if (usage_frequency[1]) {
+                    full_week_switching[m] = 1 * parseInt(load_data.switching_profile[m % 1440]);
+                }
+            }
+            else if(usage_day_count % 7 == 2){
+                if (usage_frequency[2]) {
+                    full_week_switching[m] = 1 * parseInt(load_data.switching_profile[m % 1440]);
+                }
+            }
+            else if(usage_day_count % 7 == 3){
+                if (usage_frequency[3]) {
+                    full_week_switching[m] = 1 * parseInt(load_data.switching_profile[m % 1440]);
+                }
+            }
+            else if(usage_day_count % 7 == 4){
+                if (usage_frequency[4]) {
+                    full_week_switching[m] = 1 * parseInt(load_data.switching_profile[m % 1440]);
+                }
+            }
+            else if(usage_day_count % 7 == 5){
+                if (usage_frequency[5]) {
+                    full_week_switching[m] = 1 * parseInt(load_data.switching_profile[m % 1440]);
+                }
+            }
+            else if(usage_day_count % 7 == 6){
+                if (usage_frequency[6]) {
+                    full_week_switching[m] = 1 * parseInt(load_data.switching_profile[m % 1440]);
+                }
+            }
+        }
+        //Data Pushing
+        plotting_load_set.push(full_week_switching);
+        temp_load_param_object.full_week_usage = full_week_switching;
+        new_load_parameters.push(temp_load_param_object);
+        // console.log(full_week_switching);
+    });
+    // console.log(new_load_parameters);
+    //TODO - Check the load parameter variable
+    load_parameters = new_load_parameters;
+
+    let load_switching_plot = document.querySelector('#plotter_switching');
+    let load_switching_data = [];
+    progress_data(10);
+    plotting_load_set.forEach((array_data,index)=>{
+        // console.log(load_parameters);
+        let intermitt_plot__data = {};
+        intermitt_plot__data.y = array_data;
+        intermitt_plot__data.name = load_parameters[index].name;
+        // intermitt_plot__data.mode = 'markers';
+        // intermitt_plot__data.type = 'line';
+        load_switching_data.push(intermitt_plot__data);
+    });
+    // console.log(load_switching_data);
+    let layout_switching = {
+        title: 'Switching Frequencies - Week',
+        xaxis: {
+            title: 'Minutes of the Week'
+        },
+        yaxis: {
+            title: 'State of Appliance'
+        }
+    };
+    Plotly.newPlot(load_switching_plot, load_switching_data, layout_switching, { displayModeBar: false });
+
+    // Weather Param loading
+    let mins_in_year = 365*24*60;
+    for (let weat_d = 0; weat_d < mins_in_year; weat_d++) {
+        //Hour Counter
         if ((weat_d % 60 == 0)) {
-            // console.log("ITS AN HOUR");
             hour_count__modelling++;
         }
-        if ((weat_d % 1440 == 0)) {
-            // console.log("ITS A DAY");
-            day_count__modelling++;
-        }
-        // console.log(((hour_count__modelling/24)*100).toFixed(0));
         //TODO Progress Bar
         progress_data(((weat_d / no_of_minutes) * 100).toFixed(0));
-        // let p_bar = document.querySelector("#model_progress");
-        // p_bar.value = 33;
+        //Loading Weather-params
         insol_min__data[weat_d] = weather_parameters.insolation[hour_count__modelling];
         temp_min__data[weat_d] = weather_parameters.temperature[hour_count__modelling];
         
     }
+    progress_data(60);
     for (let param = 0; param < load_parameters.length;param++){     //no of loads
         let transfer_data = {};
         //Refrigerator 
         if (load_parameters[param].modellingdata == "residential-kitchen_refrigeration") {
             console.log(load_parameters[param].name);
-           
         }
-        // //Air Conditionnig
-        // else if (load_parameters[param].modellingdata == "residential-room_aircon"){
-        //     // console.log(load_parameters[param].modellingdata);
-        //     // console.log(load_parameters[param].power_profile);
-        //     load_parameters[param].full_year_profile = {};
-        // }
         //TODO
-        //Air Conditionnig
+        //Air Conditioning
         else if (load_parameters[param].modellingdata == "residential-cooling"){
-            // console.log(load_parameters[param].modellingdata);
-            // console.log(load_parameters[param].power_profile);
             load_parameters[param].full_year_profile = {};
             transfer_data = {};
             transfer_data.load_parameters = load_parameters;
@@ -561,16 +635,9 @@ const model_functions = (load_parameters, weather_parameters=null) => {
             transfer_data.temp_min__data = temp_min__data;
             transfer_data.no_of_minutes = no_of_minutes;
             transfer_data.param = param;
-            // residential_washing(load_parameters, insol_min__data, temp_min__data, no_of_minutes, param);
-            console.log(residential_cooling__model(transfer_data));
         }
         //Washing Machine
         else if (load_parameters[param].modellingdata == "residential-washing"){
-            console.log(load_parameters[param].name);
-            // console.log(load_parameters[param].modellingdata);
-            // console.log(load_parameters[param].power_profile);
-            // load_parameters[param].full_year_profile = {};
-            // console.log(load_parameters[param].switching_profile);
             transfer_data = {};
             transfer_data.load_parameters = load_parameters;
             transfer_data.insol_min__data = insol_min__data;
@@ -584,7 +651,7 @@ const model_functions = (load_parameters, weather_parameters=null) => {
         else if (load_parameters[param].modellingdata == "residential-exterior-lighting"){
             // console.log(load_parameters[param].modellingdata);
             // console.log(load_parameters[param].power_profile);
-            load_parameters[param].full_year_profile = {};
+            load_parameters[param].full_year_profile = {};  
         }
         //Office Timings
         else if (load_parameters[param].modellingdata == "commercial-interior-lighting"){
@@ -593,6 +660,45 @@ const model_functions = (load_parameters, weather_parameters=null) => {
             load_parameters[param].full_year_profile = {};
         }
     }
+    let power_array__weekly = [];
+    let weekly_powerProfile = new Array(no_of_minutes).fill(0);//Power profile of the loads in a week
+
+    load_parameters.forEach((load_data,index,array)=>{
+        let powerData_weekly = load_data.full_week_usage.map((data)=>{
+            return data  * load_data.powerdata;
+        });
+        power_array__weekly.push(powerData_weekly);
+        //populate-load_params into main object
+        array[index].weekly_powerProfile = powerData_weekly;
+
+        weekly_powerProfile = powerData_weekly.map((p_data,p_index)=>{
+            return p_data + weekly_powerProfile[p_index];
+        });      
+    });
+    console.log(load_parameters); //Load Data with FUll Week Power Data
+    progress_data(80);
+        //load profile-WEEK-Display model
+    let weekly_profile__plot = document.querySelector('#plotter_weekly_loading');
+    
+    let weekly_powerPlot = {};
+    weekly_powerPlot.x = weekly_min_array;
+    weekly_powerPlot.y = weekly_powerProfile;
+    weekly_powerPlot.mode = 'lines';
+    // weekly_powerPlot.line = { shape: 'spline' };
+    weekly_powerPlot.type = 'scatter';
+    weekly_powerPlot.name = "Load Profile - Weekly";
+    let weekly_profile__layout = {
+        title: 'Load Profile - Week',
+        xaxis: {
+            title: 'Minutes of the Week'
+        },
+        yaxis: {
+            title: 'Power Rating'
+        }
+    };
+    Plotly.newPlot(weekly_profile__plot, [weekly_powerPlot], weekly_profile__layout, { displayModeBar: false });
+
+    progress_data(100);
     return load_parameters;
 };
 
@@ -623,6 +729,7 @@ const load_matrix_generator = () => {
             load_matrix_object.modellingdata = node_element.dataset.modellingdata;
             load_matrix_object.qtydata = node_element.dataset.qtydata;
             load_matrix_object.schedulabledata = node_element.dataset.schedulabledata;
+            load_matrix_object.usage_frequency = node_element.dataset.usage_frequency;
             load_matrix_object.startTime = ((node_element.offsetLeft * pixel_ratio_sec) / 60).toFixed(0);
             load_matrix_object.endTime = (((node_element.clientWidth + node_element.offsetLeft) * pixel_ratio_sec) / 60).toFixed(0);
 
@@ -703,18 +810,19 @@ const load_matrix_generator = () => {
     // model_functions(load_matrix_array, JSON.parse(localStorage.getItem('weather_data'))).then(()=>{
     //     console.log("ITS DONE");
     // });
-    console.log(load_matrix_array);
+    // console.log(load_matrix_array);
 
 
     // Plotly
     let load_profile_plot = document.querySelector('.plotter_1');
-    let load_distribution_plot = document.querySelector('.plotter_2');
-    let load_switching_plot = document.querySelector('.plotter_3');
+    // let load_distribution_plot = document.querySelector('.plotter_3');
+    
 
 
     let load_profile_sketch = {
         x: time_axis_array,
         y: final_load_profile
+        // line: { shape: 'spline' }
     };
     let load_distribution_inset = {
         x: ['> 75', '> 50', '> 25', '> 0'],
@@ -723,14 +831,8 @@ const load_matrix_generator = () => {
         yaxis: 'y2',
         type: 'bar'
     };
-    let load_distribution_sketch = {
-        x: ['75 - 100', '50 - 75', '25 - 50', '0 - 25'],
-        y: classification_max_demand,
-        type: 'bar'
-    };
 
     let load_data = [load_profile_sketch, load_distribution_inset];
-    let load_distribution_data = [load_distribution_sketch];
 
     let layout = {
         title: 'Load Profile',
@@ -752,18 +854,18 @@ const load_matrix_generator = () => {
             anchor: 'y2'
         }
     };
-    let layout_2 = {
-        title: 'Load Distribution',
-        xaxis: {
-            title: 'Power Range'
-        },
-        yaxis: {
-            title: 'Frequency'
-        }
-    };
+    // let layout_2 = {
+    //     title: 'Load Distribution',
+    //     xaxis: {
+    //         title: 'Power Range'
+    //     },
+    //     yaxis: {
+    //         title: 'Frequency'
+    //     }
+    // };
     Plotly.newPlot(load_profile_plot, load_data, layout, { displayModeBar: false });
     // Plotly.newPlot(load_distribution_plot, load_distribution_data, layout_2);
-    Plotly.newPlot(load_switching_plot, load_distribution_data, layout_2, { displayModeBar: false });
+    // Plotly.newPlot(load_distribution_plot, load_distribution_data, layout_2, { displayModeBar: false });
 
     // Status Bar Program
     let status_bar = document.querySelector("#status__div");
@@ -791,10 +893,37 @@ napp.directive("callbackOnEnd", function () {
 });
 //auto_load_loader_controller
 napp.controller('auto_load_loader_controller', function ($scope, $http, $rootScope, $q, $window) {
+    $scope.template_save_enabled = true;
+    $scope.template_name__change = ()=>{
+        if ($scope.template_name__modal != null){
+            if ($scope.template_name__modal.length > 3) {
+                $scope.template_save_enabled = false;
+            }
+            else {
+                $scope.template_save_enabled = true;
+            }       
+        }
+       
+    };    
+    // $scope.template_refresh__btn = ()=>{
+    //     // $scope.template_save_enabled = false;
+    // };
+    let template_refresh__btn = document.querySelector("#template_REFRESH");
+    template_refresh__btn.addEventListener('click', () => {
 
-    
+        $http.get('../database/load_design_templates.json').then(function (response) {
+            //data sorting        
+            template_data = response.data;
+            $scope.template_data = response.data;
+            status_activate("Templates are refreshed", 2000, "#668D3C", "#FAF0E6");
+        }, function (err) {
+            console.log(err);
+        });
+
+    });
+
+
     $scope.usage_allday = true;
-
     $scope.usage_frequency = {
         "sunday": true,
         "monday": true,
@@ -808,7 +937,6 @@ napp.controller('auto_load_loader_controller', function ($scope, $http, $rootSco
     let usage_all_day = document.querySelector('.usage_allday__checkbox');
     usage_all_day.addEventListener('change',()=>{
         if (usage_all_day.checked){
-            console.log($scope.usage_frequency);
             $scope.usage_frequency = {
                 "sunday": true,
                 "monday": true,
@@ -832,8 +960,9 @@ napp.controller('auto_load_loader_controller', function ($scope, $http, $rootSco
           }
     });
     //Template Loading
+    //TODO Template
     let template_data = {};
-    $http.get('../database/load_design.json').then(function (response) {
+    $http.get('../database/load_design_templates.json').then(function (response) {
         //data sorting        
         template_data = response.data;
         $scope.template_data = response.data;
@@ -1053,7 +1182,11 @@ napp.controller('auto_load_loader_controller', function ($scope, $http, $rootSco
         //-------------------FUNCTIONS
         re_aligner();
         core_function__drag();
-//TODO        
+//TODO  
+
+        //Template load controls
+        template_controls();
+
         // Attach Drag Drop - Load Items
         load__items.forEach(load_element => {
             // console.log(load_element.dataset);
@@ -1134,13 +1267,14 @@ napp.controller('auto_load_loader_controller', function ($scope, $http, $rootSco
             designer_info_object.arrange_name = name_of_design;
             designer_info_object.loading_data = load_temp_array;
             designer_info_object.tracks_count = no_of_tracks;
-            console.log(designer_info_object);
+
+            // console.log(designer_info_object);
             // Store in Local Storage
-            let load_design_data = JSON.stringify(designer_info_object);
-            localStorage.setItem('design_object_test', load_design_data);
-           
-            ipcRenderer.send('save_load_design', load_design_data);
-            console.log("DATA SAVED");  
+            // let load_design_data = JSON.stringify(designer_info_object);
+            save_current_template(JSON.stringify(designer_info_object)); 
+            // localStorage.setItem('design_object_test', load_design_data);           
+            // ipcRenderer.send('save_load_design', load_design_data);
+            // console.log("DATA SAVED");  
             // console.log(ipcRenderer);
 
         });
@@ -1238,7 +1372,7 @@ napp.controller('auto_load_loader_controller', function ($scope, $http, $rootSco
 });// End Of COntroller
 
 const residential_washing__model = (transfer_data)=>{
-    console.log(transfer_data);
+    // console.log(transfer_data);
     // let progress_data = document.querySelector('#model_progress');
     // progress_data.value = 0;   
     // load_parameters[param].full_year_profile = {};
@@ -1267,7 +1401,7 @@ const residential_washing__model = (transfer_data)=>{
 };
 
 const residential_cooling__model = (transfer_data)=>{
-    console.log(transfer_data);
+    // console.log(transfer_data);
     let app_name = transfer_data.load_parameters[transfer_data.param].name;
     let adjusted_switching_profile = [];
 
@@ -1290,14 +1424,14 @@ const residential_cooling__model = (transfer_data)=>{
     //TODOInverter Air Con
     else if (app_name == 'Air Conditioners (Inverter)'){
         let ac_parameters_misc = JSON.parse(transfer_data.load_parameters[transfer_data.param].misc);
-        console.log(ac_parameters_misc);
+        // console.log(ac_parameters_misc);
         progress_data(0);
         transfer_data.temp_min__data.forEach((tempr, index) => {
             let app_state = transfer_data.load_parameters[transfer_data.param].switching_profile[index];
             
             let temp_indoor = parseFloat(tempr);
             let temp_outdoor = parseFloat(tempr);
-            console.log(app_state);
+            // console.log(app_state);
             // progress_data();
             progress_data((index/1440).toFixed(0));
             if ((temp_outdoor >= 24) && app_state) {
@@ -1330,3 +1464,93 @@ const progress_data = (meter_data)=>{
         p_bar.value = meter_data;
     }, 1);
 };
+
+const save_current_template = (load_design_data)=>{
+    localStorage.setItem('design_object_test', load_design_data);
+    ipcRenderer.send('save_recent_design', load_design_data);
+    console.log("DATA SAVED");  
+};
+const save_the_template = (load_design_data)=>{
+    // localStorage.setItem('design_object_test', load_design_data);
+    ipcRenderer.send('save_template_design', load_design_data);
+    console.log("DATA SAVED");  
+};
+
+// let template_save__btn = document.querySelector("#template_SAVE");
+// let template_refresh__btn = document.querySelector("#template_REFRESH");
+// console.log(template_save__btn);
+
+const template_controls = () => {
+    let template_save__btn = document.querySelector("#template_SAVE");
+    // let template_refresh__btn = document.querySelector("#template_REFRESH");
+    // // console.log(template_save__btn);
+    // template_refresh__btn.addEventListener('click',()=>{
+
+    // });
+
+    template_save__btn.addEventListener('click', () => {
+        let grid_info_data = document.querySelector('.load_infobar__div');
+        let grid_marker_data = document.querySelector('.loads_grid__div');
+        // No of info Tracks and Data---------------------
+        let designer_info_object = {}; //the ultimate design object
+        let no_of_tracks = 0;
+        let info_containers = {};
+        let info_temp_array = [];
+        // console.log(grid_info_data);
+        grid_info_data.childNodes.forEach(info_element => {
+            if (info_element.className == "load_info") {
+                info_containers = {};
+                info_element.childNodes.forEach(node => {
+                    info_containers.track_id = no_of_tracks;
+                    info_containers.load_name = node.childNodes[0].innerText;
+                    info_containers.load_id = node.dataset.syncdata;
+                    info_temp_array.push(info_containers);
+                });
+                no_of_tracks += 1;
+            }
+        });
+        designer_info_object.info_data = info_temp_array;
+        //---MARKERS data_loading
+        no_of_tracks = 0;
+        let load_containers = {};
+        let load_temp_array = [];
+        grid_marker_data.childNodes.forEach(load_element => {
+            if (load_element.className == "load_track__div") {
+                load_element.childNodes.forEach(node => {
+                    load_containers = {};
+                    load_containers.track_id = no_of_tracks;
+                    // load_containers.load_name = node.childNodes[0].innerText;
+                    load_containers.load_id = node.dataset.syncdata;
+                    load_containers.dataset = node.dataset;
+                    load_containers.starttime = node.childNodes[0].innerText;
+                    // console.log(format_to_seconds(node.childNodes[0].innerText));
+                    load_containers.endtime = node.childNodes[1].innerText;
+                    load_temp_array.push(load_containers);
+                });
+                no_of_tracks += 1;
+            }
+        });
+
+        let arrangement_name = document.querySelector("#template_name__textbox");
+
+        // console.log(arrangement_name.value);
+        var name_of_design = arrangement_name.value;
+        designer_info_object.arrange_name = name_of_design;
+        designer_info_object.loading_data = load_temp_array;
+        designer_info_object.tracks_count = no_of_tracks;
+
+        // Check for load count
+        console.log(designer_info_object.info_data.length);
+        if (designer_info_object.info_data.length > 0) {
+            save_the_template(JSON.stringify(designer_info_object));
+            status_activate("Saved your arrangement successfully", 5000, "#668D3C","#FAF0E6");
+        }
+        else{
+            status_activate("Cannot Save, please add load and try again", 5000, "#8F3B1B", "#FAF0E6");
+        }
+        // 
+        // console.log(JSON.stringify(designer_info_object));
+        console.log(designer_info_object);
+    });
+};
+

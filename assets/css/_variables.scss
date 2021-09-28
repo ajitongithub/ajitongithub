@@ -9,9 +9,9 @@ $forecolor-dark-highlight:rgb(56, 56, 56);
 $fontcolor-dark:rgb(202, 198, 198);
 
 // Side Bar COlor
-$sidebar-background-dark:rgba(255,255,255,0.7);
-$sidebar-forecolor-dark:rgba(37, 131, 76, 1);
-$sidebar-forecolor-dark-hover:rgb(27, 102, 58);
+$sidebar-background-dark:rgba(255, 255, 255, 0.7);
+$sidebar-forecolor-dark:#668D3C; //rgba(37, 131, 76, 1);
+$sidebar-forecolor-dark-hover:#404F24;//rgb(27, 102, 58);
 $sidebar-fontcolor-dark:rgba(243, 243, 243, 1);
 // Other variables
 $summary-tab-handle-width: 70px;
@@ -22,30 +22,52 @@ $menubar-left-fontsize: 1.35rem;
 $ins_btn_foreground: rgb(209, 255, 211);
 $ins_btn_font: rgb(209, 255, 211);
 
-*, html{
+//Earth Tones
+$primary-darkchocolate: #493829;
+$secondary-darkchocolate: #816C5B;
+$primary-white: #FAF0E6;
+$primary-black: #2b2b2b;
+$primary-darkgreen: #404F24;
+$primary-green: #668D3C;
+$primary-blue: #4E6172;
+$primary-lightblue: #83929F;
+$primary-lightestblue: #A3ADB8;
+$primary-orangered: #8F3B1B;
+$primary-orange: #D57500;
+$primary-yellow: #DBCA69;
+
+*,
+html {
     margin: 0;
-    padding: 0;    
+    padding: 0;
     box-sizing: border-box;
     font-size: 12px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-html{
+html {
     width: 100vw;
     height: 100vh;
 }
+
 i.material-icons {
     vertical-align: middle;
- }
+}
 
-h1,h2,h3,h4,h5,h6{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     color: $fontcolor-dark;
 }
 
-.landing_center{
+.landing_center {
     color: $fontcolor-dark;
 }
-.header_underline{
+
+.header_underline {
     padding: 0;
     margin: 0;
     // width: 100vw;         

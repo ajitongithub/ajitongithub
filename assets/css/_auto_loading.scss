@@ -28,10 +28,11 @@
             grid-column: 1 /-1;
         }
 
-        // .plotter_2 {
-        //     // width: 100%;
-        // }
-        .plotter_3 {
+        #plotter_switching {
+            grid-column: 1 /-1;
+        }
+
+        #plotter_weekly_loading {
             grid-column: 1 /-1;
         }
     }
@@ -59,45 +60,94 @@
             position: relative;
 
             .aside_container {
+
                 border-radius: 5px;
                 border: solid 1px rgba(236, 13, 13, 0.555);
                 display: grid;
-                grid-auto-rows: 15% 45% 40%;
+                // grid-auto-rows: 15% 45% 40%;
                 grid-template-columns: 1fr;
                 min-width: 200px;
                 overflow: auto;
                 position: relative;
 
-                .template_btnContainer {
+                .load_types__fields .templates_container {
                     display: block;
                     width: 100%;
+                    // border: solid 2px green;
+                    position: relative;
+                    padding: 0;
+                    margin: 0;
 
-                    #template_OK {
-                        border: none;
-                        outline: none;
-                        background-color: rgb(55, 192, 55);
-                        font-weight: 500;
-                        color: wheat;
-                        cursor: pointer;
+                    .template_btnContainer {
+                        display: block;
+                        width: 100%;
+                        padding: 0;
+                        margin: 0;
+                        // border: solid 2px blue;
 
-                        &:hover {
-                            background-color: rgb(36, 126, 36);
+                        #template__form {
+                            display: grid;
+                            position: relative;
+                            padding: 0;
+                            margin: 0;
+                            grid-template-columns: repeat(6, 1fr);
+                            column-gap: 4px;
+                            width: 100%;
+                            padding: 4px;
+                            // border: solid 2px red;
+
+                            input[type="text"] {
+                                text-transform: uppercase;
+                                grid-column: 1/-1;
+                                color: beige;
+                            }
+
+                            #template_SAVE {
+                                grid-column: 1/4;
+                                border: none;
+                                outline: none;
+                                background-color: var(--primary-green);
+                                font-weight: 500;
+                                color: wheat;
+                                cursor: pointer;
+                                padding: 10px;
+                                border-radius: 4px;
+
+                                &:hover {
+                                    background-color: rgb(36, 126, 36);
+                                }
+
+                                [disabled],
+                                &:disabled {
+                                    background-color: grey;
+                                    color: white;
+                                    cursor: not-allowed;
+                                }
+                            }
+
+                            #template_REFRESH {
+                                grid-column: 4/-1;
+                                border: none;
+                                outline: none;
+                                background-color: var(--primary-orangered);
+                                font-weight: 500;
+                                color: wheat;
+                                cursor: pointer;
+                                padding: 10px;
+                                border-radius: 4px;
+
+                                &:hover {
+                                    background-color: rgb(134, 38, 38);
+                                }
+                            }
                         }
+
+
+
                     }
 
-                    #template_Cancel {
-                        border: none;
-                        outline: none;
-                        background-color: rgb(192, 55, 55);
-                        font-weight: 500;
-                        color: wheat;
-                        cursor: pointer;
-
-                        &:hover {
-                            background-color: rgb(134, 38, 38);
-                        }
-                    }
                 }
+
 
                 // Modal Items
                 .modal_marker_slide {
@@ -785,7 +835,7 @@
         }
 
         .progress_bar__div {
-            #model_progress{
+            #model_progress {
                 display: block;
                 width: 100%;
             }

@@ -6,13 +6,6 @@
     place-items: center;
     place-content: center;
     overflow: hidden;
-    // outline: solid 2px red;
-    // &:hover{
-    //     background-color: wheat;
-    // }
-    // align-items: center;
-    // justify-content: center;
-
     .begin_btn{
         width: 270px;
         height: 70px;
@@ -31,8 +24,8 @@
             // outline: 5px solid rgba(47, 231, 118, 0.459);
             // outline-offset: 200px;
             border: solid 2px $fontcolor-dark;
-            background-color: rgb(156, 163, 255);//$fontcolor-dark;
-            color: $forecolor-dark;
+            background-color: $primary-green;//$fontcolor-dark;
+            color: $primary-white;
             cursor: pointer;
         }
     }

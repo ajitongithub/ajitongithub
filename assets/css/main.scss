@@ -144,6 +144,7 @@ header {
         color: $fontcolor-dark;
         // border: solid 2px violet;
         justify-self: flex-end;
+        user-select: none;
 
         span {
             // display: inline;
@@ -151,11 +152,12 @@ header {
             text-align: center;
             font-size: 1.3rem;
             padding: 15px;
+            user-select: none;
 
-            // padding-right: 15px;
             a {
                 font-size: 1.3rem;
                 color: $fontcolor-dark;
+                user-select: none;
             }
         }
     }

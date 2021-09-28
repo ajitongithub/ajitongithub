@@ -32,7 +32,7 @@
                 transform: translateX(0);
                 border-radius: $menu-left-border-radius;
                 .active {
-                    background-color: rgb(255, 94, 0);
+                    background-color: var(--primary-orangered);//rgb(255, 94, 0);
                     border-radius: 0;
                     transform: translateX(10px);
                     i{

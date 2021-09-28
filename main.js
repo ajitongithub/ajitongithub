@@ -1127,14 +1127,61 @@ for (i = 0; i < simulation_hours; i++) {
 });
 
 // New Functions
-ipcMain.on('save_load_design', (event, data) => {
-  // console.log(data);
+ipcMain.on('save_recent_design', (event, data) => {
+  console.log(data);
   // var sim_txt = JSON.stringify(data);
   fs.writeFile(resolve(__dirname, 'database/load_design_recent.json'), data, function (err) {
     if (err) throw err;
     // event.sender.send('main_responder_channel', "Simulation Data Saved");
     console.log('Load Design Saved');
   });
+});
+ipcMain.on('save_template_design', (event, data) => {
+  // console.log(data);
+  let new_template = JSON.parse(data);
+  //Get the existing templates
+  let template_data = fs.readFileSync(resolve(__dirname, 'database/load_design_templates.json'));
+  template_data = JSON.parse(template_data);
+
+
+  const write_new_template = (new_template, templates_collection) => {
+    let new_collection = [];
+    templates_collection.forEach(template_data => {
+      new_collection.push(template_data); //Redo-old entries
+    });
+    new_collection.push(new_template); //Last and the latest
+    new_collection = JSON.stringify(new_collection);
+    fs.writeFile(resolve(__dirname, 'database/load_design_templates.json'), new_collection, function (err) {
+      if (err) throw err;
+      console.log('Load Template Saved');
+    });
+  };
+
+
+
+  template_data.forEach((the_template)=>{
+    if (the_template.arrange_name != new_template.arrange_name){
+      write_new_template(new_template, template_data);
+    }
+    else{
+      console.log("CANNOT SAVE - ARRANGEMENT ALREADY EXISTS");
+    }
+    
+  });
+
+
+
+
+  // console.log(template_data[0].arrange_name);
+  // console.log(template_data.length);
+
+  // let testdata = JSON.parse(data);
+  
+  // newdata.push(testdata);
+  // let newobjj = JSON.stringify(newdata);
+
+
+
 });
 
 // ipcMain.on('promisesTest', (event, data) => {

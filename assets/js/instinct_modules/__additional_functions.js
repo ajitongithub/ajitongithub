@@ -40,12 +40,14 @@ napp.filter('priceCorrection',function(){
 });
 
 //status function display
-function status_activate(status_content, content_duration){
+function status_activate(status_content, content_duration, background_color = "rgb(180, 180, 180)", font_color ="rgb(139, 114, 114)"){
 	//status_bar
 	var status_bar = document.getElementById('info_bar');
 	var status_bar_content = document.getElementById('status_info');
 	status_bar_content.innerText = status_content;
 	status_bar.style.transform = "translateY(calc(-30% - 15px))";
+	status_bar.style.backgroundColor = background_color;
+	status_bar_content.style.color = font_color;
 	setTimeout(() => {
 		status_bar.style.transform = "translateY(100%)";
 	}, content_duration);
