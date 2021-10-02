@@ -76,10 +76,12 @@ napp.controller("insti-controller", function ($scope, $location, $http, $rootSco
 
 
 	side_summary.addEventListener("click", function (e) {
-		// console.log(e.path[1].style.transform);
+		console.log(e.target.parentElement);
 		if (e.path[1].style.transform == "translate(-100%, 0%) translate(6px, 0px)") {
 			gsap.to(".main_summary", { duration: 0.15, xPercent: 0 });
 			gsap.to("#sum_chevron", { duration: 0.25, rotate: 0 });
+
+			// e.target.parentElement.style.backgroundColor = 'red';
 		}
 		else {
 			gsap.to(".main_summary", { duration: 0.25, xPercent: -100, yoyo: true });

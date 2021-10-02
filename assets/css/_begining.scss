@@ -18,11 +18,8 @@
         background-color: transparent;
         font-size: 3rem;
         text-align: center;
-        // outline: 2px solid rgba(245, 222, 179, 0);
-        // outline-offset: 15px;
         &:hover{        
-            // outline: 5px solid rgba(47, 231, 118, 0.459);
-            // outline-offset: 200px;
+
             border: solid 2px $fontcolor-dark;
             background-color: $primary-green;//$fontcolor-dark;
             color: $primary-white;
