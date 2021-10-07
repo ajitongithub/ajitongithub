@@ -1,4 +1,3 @@
-const { array } = require("@0xcmdr/numjs");
 
 // Variables---------------------------------------------------------------------
 let branded__items = document.querySelectorAll('.brand_items');
@@ -67,16 +66,7 @@ let load__drop = e => {
         drop_data.dataset.type = dragging__dataset.type;
         drop_data.dataset.voltage = dragging__dataset.voltage;
         drop_data.dataset.misc = dragging__dataset.misc;
-        // TODO
-        // drop_data.dataset.usage_frequency = JSON.stringify({
-        //     "sunday": true,
-        //     "monday": true,
-        //     "tuesday": true,
-        //     "wednesday": true,
-        //     "thursday": true,
-        //     "friday": true,
-        //     "saturday": true
-        // });
+
         drop_data.dataset.usage_frequency = JSON.stringify({
             "0": true,
             "1": true,
@@ -87,9 +77,7 @@ let load__drop = e => {
             "6": true
         });
         //TODO - ACTIVE WEEKDAYS
-        // drop_data.dataset.usage_frequency = [1,1,1,1,1,1,1]; //1 is active on that weekday, 2 
         drop_data.setAttribute("class", "load_marker__div");
-
         drop_data.setAttribute("draggable", "false");
         drop_data.style.left = `${e.offsetX}px`;
         drop_data.style.width = `${200}px`;
@@ -215,15 +203,6 @@ const reassign_trackListeners = () => {
 
 };
 let core_function__drag = () => {
-    // console.log("CORE DRAGG");
-    // let grid_model_data = document.querySelector('.loads_grid__div');
-    // let grid_info_data = document.querySelector('.load_infobar__div');
-    // grid_model_data.innerHTML = "";
-    // grid_info_data.innerHTML = "";
-    // grid_model_data.innerHTML = `<div class="load_track__div"></div><div class="load_track__div"></div>`;
-    // grid_info_data.innerHTML = `<div class="load_info"></div><div class="load_info"></div>`;
-    // // reassign_trackListeners();
-
     // Initialise-Variables---------------------------------------------------------------------
     branded__items = document.querySelectorAll('.brand_items'); //Select all the generic loads
     load__items = document.querySelectorAll('.load_items'); //Select all the generic loads

@@ -10,11 +10,11 @@
                 <div class="auto_prof_splash_card">
                     <h3>Load from Template</h3>
                     <img src="../assets/images/template_design.png">
-                    <button ng-click="manual_selection('-200%')" class="btn_auto_profile btn_royal_blue">SELECT</button>
+                    <button ng-click="manual_selection('-100%')" class="btn_auto_profile btn_royal_blue">SELECT</button>
                 </div>
             </div>
         </div>
-        <div class="auto-load__manual">
+                <!--<div class="auto-load__manual">
             <div class="manual_load_design">
                 <h3>Design Manually</h3>
                 <div class="manual_load_design__div">
@@ -25,10 +25,8 @@
                                 <fieldset>
                                     <legend>Load Selection</legend>
                                     <select size="2">
-                                        <!-- <optgroup label="Theropods">
-                                            <option ng-repeat="x in loads_data">{{x.Name}}</option>
-                                        </optgroup> -->
-                                        <optgroup ng-repeat="load_type in load_types" label="{{load_type}}">
+                    
+                               <optgroup ng-repeat="load_type in load_types" label="{{load_type}}">
                                             <option ng-repeat="x in loads_data | filter:load_type"
                                                 ng-click="detectIndex(x)">{{x.Name}}</option>
                                         </optgroup>
@@ -80,8 +78,6 @@
                     </div>
 
 
-
-                    <!-- <div style="width: 100%; background-color: red; height: 5900px;">TEST</div> -->
                 </div>
                 <div class="manual_load_design__btn_container">
                     <button ng-click="manual_selection('0')"
@@ -91,7 +87,7 @@
                 </div>
 
             </div>
-        </div>
+        </div> -->
 
 
         <div class="auto-load__template">
