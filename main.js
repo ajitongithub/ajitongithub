@@ -8,7 +8,7 @@ var fs = require('fs');
 var rand_gen = require('random-seed');
 var nj = require('./assets/js/dependencies/numjs.min.js');
 const console = require('console');
-const { time } = require('console');
+const { time, Console } = require('console');
 const { resolve } = require('path');
 const { rejects } = require('assert');
 
@@ -1136,6 +1136,7 @@ ipcMain.on('save_recent_design', (event, data) => {
     console.log('Load Design Saved');
   });
 });
+//Save Template
 ipcMain.on('save_template_design', (event, data) => {
   // console.log(data);
   let new_template = JSON.parse(data);
@@ -1168,63 +1169,49 @@ ipcMain.on('save_template_design', (event, data) => {
     }
     
   });
-
-
-
-
-  // console.log(template_data[0].arrange_name);
-  // console.log(template_data.length);
-
-  // let testdata = JSON.parse(data);
-  
-  // newdata.push(testdata);
-  // let newobjj = JSON.stringify(newdata);
-
-
-
 });
+// Delete Template
+ipcMain.on('delete_template_design', (event, data) => {
+  console.log(data);
+  // let new_template = JSON.parse(data);
+  //Get the existing templates
+  let template_data = fs.readFileSync(resolve(__dirname, 'database/load_design_templates.json'));
+  template_data = JSON.parse(template_data);
+  // console.log(template_data);
 
-// ipcMain.on('promisesTest', (event, data) => {
-//   console.log("Started");
-
-//   const newP = new Promise((resolve, reject) => {
-//     let file1 = fs.readFileSync(resolve(__dirname, 'database/temp_data.json'));
-//     if (file1) {
-//       event.reply('simulation-response', '1');
-//       resolve(file1);
-//     } else {
-//       reject("Not Loaded");
-//     }
-//   });
-//   newP
-//     .then((tre) => {
-//       event.reply('simulation-response', '3');
-//       console.log(tre);
-//     })
-//     .catch((mess) => {
-//       console.log(mess);
-//     });
-
-//   event.reply('simulation-response', '2');
-//   // let file1 = fs.readFileSync('database/temp_data.json');
-//   // event.reply('simulation-response', file1);
-
-//   console.log("Finished");
-// });
+  // const write_new_template = (new_template, templates_collection) => {
+  //   let new_collection = [];
+  //   templates_collection.forEach(template_data => {
+  //     new_collection.push(template_data); //Redo-old entries
+  //   });
+  //   new_collection.push(new_template); //Last and the latest
+  //   new_collection = JSON.stringify(new_collection);
+  //   fs.writeFile(resolve(__dirname, 'database/load_design_templates.json'), new_collection, function (err) {
+  //     if (err) throw err;
+  //     console.log('Load Template DELETED');
+  //   });
+  // };
 
 
-// Main Functions
 
-//----------------------------------NEW
-// Simulation Program
-// ipcMain.handle('simulation_run1', (event, data) => {
-//   let instinct_config;
-//   fs.readFile(resolve(__dirname, 'database/temp_data.json'), function (err, data) {
-//     instinct_config = JSON.parse(data);
-//     // seed
-//     var seed = 1;
-//     rand1 = rand_gen.create(seed);
-//     console.log('Program is Started running... \n');
-//     // console.log(instinct_config);
-//   });
-// });
+  template_data.forEach((the_template, index, t_data) => {
+    if (the_template.arrange_name == data) {
+      // console.log(index);
+      t_data.splice(index);
+      // console.log(t_data);
+
+      let new_templates = [];
+      new_templates = JSON.stringify(t_data);
+      // console.log(new_templates);
+      fs.writeFile(resolve(__dirname, 'database/load_design_templates.json'), new_templates, function (err) {
+        if (err) throw err;
+        console.log('Load Template DELETED');
+      });
+      // write_new_template(new_template, template_data);
+    }
+    // else{
+    //   console.log("CANNOT DELETE - ARRANGEMENT DOES NOT EXISTS");
+    // }
+    
+  });
+});

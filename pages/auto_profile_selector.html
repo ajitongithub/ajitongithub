@@ -202,18 +202,15 @@
                                     <option>Select a Template</option>
                                     <option ng-repeat="template in template_data">{{template.arrange_name}}</option>
                                 </select>
+                                <button id="template_REFRESH" ng-click="template_refresh__btn()">REFRESH</button>
                                 <div class="template_btnContainer">
                                     <form id="template__form">
                                         <input id="template_name__textbox" type="text" placeholder="Name (minimum 4 letters)" ng-model="template_name__modal" ng-change="template_name__change()">
                                         <button id="template_SAVE" ng-disabled='template_save_enabled'>SAVE TEMPLATE</button>
-                                        <button id="template_REFRESH" ng-click="template_refresh__btn()">REFRESH</button>
+                                        <button id="template_DELETE" ng-click="template_delete__btn()">DELETE</button>
                                     </form>
 
                                 </div>
-                                <!-- <div class="load_items" data-powerData="250" data-qtyData="1" data-modellingData="refrigerator_model"
-                                        data-schedulableData="false" draggable="true" data-appName="Refrigerator">
-                                        Refrigerator
-                                    </div> -->
                             </div>
                         </fieldset>
                         <!-- load items -->

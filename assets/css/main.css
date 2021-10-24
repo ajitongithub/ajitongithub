@@ -470,12 +470,8 @@ h6 {
 
 .auto-load__template {
   display: block;
-  border: solid 2px green;
-  overflow-y: auto;
-}
-
-.auto-load__template > * {
-  border: solid 1px red;
+  min-width: 1230px;
+  overflow: auto;
 }
 
 .auto-load__template .plotter {
@@ -544,15 +540,43 @@ h6 {
 }
 
 .auto-load__template .sections_wrapper .template_main_container .aside_container .load_types__fields .templates_container {
-  display: block;
+  display: -ms-grid;
+  display: grid;
+  -webkit-column-gap: 5px;
+          column-gap: 5px;
   width: 100%;
+  -ms-grid-columns: (1fr)[12];
+      grid-template-columns: repeat(12, 1fr);
+  border: solid 2px green;
   position: relative;
   padding: 0;
   margin: 0;
 }
 
+.auto-load__template .sections_wrapper .template_main_container .aside_container .load_types__fields .templates_container #template_selector {
+  grid-column: 1 / -5;
+}
+
+.auto-load__template .sections_wrapper .template_main_container .aside_container .load_types__fields .templates_container #template_REFRESH {
+  grid-column: -5/-1;
+  border: none;
+  outline: none;
+  background-color: var(--primary-yellow);
+  font-weight: 500;
+  color: black;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.auto-load__template .sections_wrapper .template_main_container .aside_container .load_types__fields .templates_container #template_REFRESH:hover {
+  background-color: #dbcf27;
+}
+
 .auto-load__template .sections_wrapper .template_main_container .aside_container .load_types__fields .templates_container .template_btnContainer {
   display: block;
+  grid-column: 1 / -1;
   width: 100%;
   padding: 0;
   margin: 0;
@@ -602,7 +626,7 @@ h6 {
   cursor: not-allowed;
 }
 
-.auto-load__template .sections_wrapper .template_main_container .aside_container .load_types__fields .templates_container .template_btnContainer #template__form #template_REFRESH {
+.auto-load__template .sections_wrapper .template_main_container .aside_container .load_types__fields .templates_container .template_btnContainer #template__form #template_DELETE {
   grid-column: 4/-1;
   border: none;
   outline: none;
@@ -612,10 +636,17 @@ h6 {
   cursor: pointer;
   padding: 10px;
   border-radius: 4px;
+  font-size: 12px;
 }
 
-.auto-load__template .sections_wrapper .template_main_container .aside_container .load_types__fields .templates_container .template_btnContainer #template__form #template_REFRESH:hover {
+.auto-load__template .sections_wrapper .template_main_container .aside_container .load_types__fields .templates_container .template_btnContainer #template__form #template_DELETE:hover {
   background-color: #862626;
+}
+
+.auto-load__template .sections_wrapper .template_main_container .aside_container .load_types__fields .templates_container .template_btnContainer #template__form #template_DELETE [disabled], .auto-load__template .sections_wrapper .template_main_container .aside_container .load_types__fields .templates_container .template_btnContainer #template__form #template_DELETE:disabled {
+  background-color: grey;
+  color: white;
+  cursor: not-allowed;
 }
 
 .auto-load__template .sections_wrapper .template_main_container .aside_container .modal_marker_slide {

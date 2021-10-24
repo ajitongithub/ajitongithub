@@ -374,14 +374,20 @@ let core_function__drag = () => {
 };
 
 const load_design_loader = (load_design_object) => {
+    console.log(load_design_object);
     let grid_info_data = document.querySelector('.load_infobar__div');
     let grid_marker_data = document.querySelector('.loads_grid__div');
 
     grid_info_data.innerHTML = "";
     grid_marker_data.innerHTML = "";
 
+
+    //TODO Parsing Design Data
+
+
     //load the tracks and bars
     let design_data = load_design_object;//JSON.parse(localStorage.getItem('design_object_test'));
+    console.log(JSON.parse(localStorage.getItem('design_object_test')));
     console.log(design_data);
     console.log(design_data.info_data[0].load_id);
 
@@ -426,6 +432,10 @@ const load_design_loader = (load_design_object) => {
         marker_data__div.dataset.syncdata = design_data.loading_data[l_count].dataset.syncdata;
         marker_data__div.dataset.type = design_data.loading_data[l_count].dataset.type;
         marker_data__div.dataset.voltage = design_data.loading_data[l_count].dataset.voltage;
+        
+        marker_data__div.dataset.usage_frequency = design_data.loading_data[l_count].dataset.usage_frequency;
+        marker_data__div.dataset.misc = design_data.loading_data[l_count].dataset.misc;
+        
         marker_data__div.setAttribute("draggable", "false");
         marker_data__div.innerHTML = `<div class="marker_left">${design_data.loading_data[l_count].starttime}</div><div class="marker_right">${design_data.loading_data[l_count].endtime}</div>`;
         marker_data__div.setAttribute("class", "load_marker__div");
@@ -486,7 +496,7 @@ const marker_function_setting = (element) => {
 const model_functions = (load_parameters, weather_parameters=null) => {
     // progress bars
     progress_data(0);
-    
+    console.log(load_parameters);
     // Convert hour data into minutse
     let no_of_days = 7;
     let no_of_minutes = 24 * 60 * no_of_days;//*365;
@@ -504,10 +514,13 @@ const model_functions = (load_parameters, weather_parameters=null) => {
         temp_load_param_object = {};
         temp_load_param_object = load_data;
         // load arrangement
-        
+        console.log(load_data);
         // console.log(temp_load_param_object);
         let full_week_switching = new Array(no_of_minutes).fill(0);
         let usage_day_count = -1;
+
+
+        //TODO Issue with JSON when clearing the tracks
         let usage_frequency = (JSON.parse(load_data.usage_frequency));
         for(let m=0;m<=no_of_minutes-1;m++){
             if(m % 1440 == 0){
@@ -700,7 +713,7 @@ const load_matrix_generator = () => {
         tracks__node.forEach(node_element => {
             let load_matrix_object = {};
             //TODO
-            // console.log(node_element.dataset);
+            console.log(node_element.dataset);
             load_matrix_object.name = node_element.dataset.appname;
             load_matrix_object.load_channel = track_id;
             load_matrix_object.misc = node_element.dataset.misc;
@@ -784,7 +797,6 @@ const load_matrix_generator = () => {
 
     //TODO
     //Model Incorporatons
-    
     load_matrix_array = model_functions(load_matrix_array, JSON.parse(localStorage.getItem('weather_data')));
     // model_functions(load_matrix_array, JSON.parse(localStorage.getItem('weather_data'))).then(()=>{
     //     console.log("ITS DONE");
@@ -872,6 +884,11 @@ napp.directive("callbackOnEnd", function () {
 });
 //auto_load_loader_controller
 napp.controller('auto_load_loader_controller', function ($scope, $http, $rootScope, $q, $window) {
+    document.querySelector("#template_DELETE").disabled = true;
+    
+    
+    
+    
     $scope.template_save_enabled = true;
     $scope.template_name__change = ()=>{
         if ($scope.template_name__modal != null){
@@ -952,8 +969,9 @@ napp.controller('auto_load_loader_controller', function ($scope, $http, $rootSco
     //TODO Template Loading Works
     let template_selection = document.querySelector("#template_selector");
     template_selection.addEventListener('change', e => {
+        let template_delete__btn = document.querySelector("#template_DELETE");
         if (e.target.value != "Select a Template") {
-            // console.log(e.target);
+            template_delete__btn.disabled = false;
             // console.log(design_data);
             $scope.template_data.forEach(load_node => {
                 // console.log(load_node.arrange_name);
@@ -961,6 +979,9 @@ napp.controller('auto_load_loader_controller', function ($scope, $http, $rootSco
                     load_design_loader(load_node);
                 }
             });
+        }
+        else{
+            template_delete__btn.disabled = true;
         }
     });
     let grid_model_data = document.querySelector('.loads_grid__div');
@@ -1461,6 +1482,7 @@ const save_the_template = (load_design_data)=>{
 
 const template_controls = () => {
     let template_save__btn = document.querySelector("#template_SAVE");
+    let template_delete__btn = document.querySelector("#template_DELETE");
     // let template_refresh__btn = document.querySelector("#template_REFRESH");
     // // console.log(template_save__btn);
     // template_refresh__btn.addEventListener('click',()=>{
@@ -1512,14 +1534,13 @@ const template_controls = () => {
 
         let arrangement_name = document.querySelector("#template_name__textbox");
 
-        // console.log(arrangement_name.value);
         var name_of_design = arrangement_name.value;
         designer_info_object.arrange_name = name_of_design;
         designer_info_object.loading_data = load_temp_array;
         designer_info_object.tracks_count = no_of_tracks;
 
         // Check for load count
-        console.log(designer_info_object.info_data.length);
+        // console.log(designer_info_object);
         if (designer_info_object.info_data.length > 0) {
             save_the_template(JSON.stringify(designer_info_object));
             status_activate("Saved your arrangement successfully", 5000, "#668D3C","#FAF0E6");
@@ -1529,7 +1550,18 @@ const template_controls = () => {
         }
         // 
         // console.log(JSON.stringify(designer_info_object));
-        console.log(designer_info_object);
+        // console.log(designer_info_object);
+    });
+    template_delete__btn.addEventListener('click',()=>{
+        let template_selection = document.querySelector("#template_selector");
+        delete_the_template(template_selection);
     });
 };
 
+const delete_the_template = (template_selection)=>{
+    console.log(template_selection.value);
+    ipcRenderer.send('delete_template_design', template_selection.value);
+    console.log("DATA DELETED");  
+
+    status_activate("Selected Template Deleted Successfully", 5000, "#668D3C", "#FAF0E6");
+};

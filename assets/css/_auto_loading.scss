@@ -5,14 +5,9 @@
 
 .auto-load__template {
     display: block;
-    border: solid 2px green;
-    overflow-y: auto;
-
-    >* {
-        border: solid 1px red;
-    }
-
-
+    // border: solid 12px green;
+    min-width: 1230px;
+    overflow: auto;
 
     .plotter {
         display: grid;
@@ -71,20 +66,42 @@
                 position: relative;
 
                 .load_types__fields .templates_container {
-                    display: block;
+                    display: grid;
+                    column-gap: 5px;
                     width: 100%;
-                    // border: solid 2px green;
+                    grid-template-columns: repeat(12,1fr);
+                    border: solid 2px green;
                     position: relative;
                     padding: 0;
                     margin: 0;
 
+                    #template_selector {
+                        grid-column: 1 / -5;
+                    }
+
+                    #template_REFRESH {
+                        grid-column: -5/-1;
+                        border: none;
+                        outline: none;
+                        background-color: var(--primary-yellow);
+                        font-weight: 500;
+                        color: black;
+                        cursor: pointer;
+                        padding: 10px;
+                        border-radius: 4px;
+                        font-size: 12px;
+                        &:hover {
+                            background-color: rgb(219, 207, 39);
+                        }
+                    }
                     .template_btnContainer {
                         display: block;
+                        grid-column: 1 / -1;
                         width: 100%;
                         padding: 0;
                         margin: 0;
                         // border: solid 2px blue;
-
+          
                         #template__form {
                             display: grid;
                             position: relative;
@@ -124,22 +141,29 @@
                                     cursor: not-allowed;
                                 }
                             }
+                    #template_DELETE {
+                        grid-column: 4/-1;
+                        border: none;
+                        outline: none;
+                        background-color: var(--primary-orangered);
+                        font-weight: 500;
+                        color: wheat;
+                        cursor: pointer;
+                        padding: 10px;
+                        border-radius: 4px;
+                        font-size: 12px;
 
-                            #template_REFRESH {
-                                grid-column: 4/-1;
-                                border: none;
-                                outline: none;
-                                background-color: var(--primary-orangered);
-                                font-weight: 500;
-                                color: wheat;
-                                cursor: pointer;
-                                padding: 10px;
-                                border-radius: 4px;
+                        &:hover {
+                            background-color: rgb(134, 38, 38);
+                        }
+                        [disabled],
+                        &:disabled {
+                            background-color: grey;
+                            color: white;
+                            cursor: not-allowed;
+                        }
+                    }
 
-                                &:hover {
-                                    background-color: rgb(134, 38, 38);
-                                }
-                            }
                         }
 
 
