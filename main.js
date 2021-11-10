@@ -4,6 +4,8 @@ const { webContents } = require('electron');
 const { PythonShell } = require('python-shell');
 const { Series, DataFrame } = require('pandas-js');
 
+const { dialog } = require('electron');
+
 var fs = require('fs');
 var rand_gen = require('random-seed');
 var nj = require('./assets/js/dependencies/numjs.min.js');
@@ -25,9 +27,9 @@ const { hours_to_days, linear_regression } = require("./assets/js/core/main_driv
 
 // let pyshell = new PythonShell('processors/main_processor.py');
 // let instinct_program = new PythonShell('processors/instinct_full_program.py');
-
+var mainWindow;
 function createWindow() {
-  const mainWindow = new BrowserWindow({
+    mainWindow = new BrowserWindow({
     title: "INSTINCT II",
     fullscreen: false,
     // skipTaskbar:true,
@@ -36,6 +38,8 @@ function createWindow() {
     opacity: 1,
     width: 1200,
     height: 800,
+    minWidth:1200,
+    minHeight: 800,
     icon: './icon/instinct2.ico',
     webPreferences: {
       nodeIntegration: true,
@@ -51,6 +55,9 @@ function createWindow() {
   mainWindow.webContents.openDevTools();
   mainWindow.webContents.on('did-finish-load', e => {
     // mainWindow.webContents.console("Loading Complete");
+    console.log(mainWindow.devToolsWebContents);
+
+
     console.log("DONE");
     // console.log(remote);
   });
@@ -127,29 +134,62 @@ ipcMain.on('simulation_parameters', (event, data) => {
   var sim_txt = JSON.stringify(data);
   fs.writeFile(resolve(__dirname, 'database/temp_data.json'), sim_txt, function (err) {
     if (err) throw err;
+    event.returnValue = "Success";
     event.sender.send('main_responder_channel', "Simulation Data Saved");
     // console.log('Simulation Data Saved');
   });
 });
 
+// const simulation_progress = async(identi,data_1)=>{
 
+// };
+
+const testms = async ()=>{
+  for(var i=0;i<10000;i++){
+    i += 2;
+    
+    console.log(i);
+  }
+// setTimeout(()=>{
+  return "Data Loaded";
+// },10000);
+};
 
 // Simulation Program
-ipcMain.on('simulation_run', (event, data) => {
+ipcMain.on('simulation_run', async (event, data) => {
   // event.reply('simulation-response', 'Start');
   event.sender.send('simulation-response', 'Start');
 
-  //loading configurations
-  let instinct_config = fs.readFileSync(resolve(__dirname, 'database/temp_data copy.json'));
-  event.sender.send('simulation-response', 'Data Loaded');
+  
 
+  
+  // await event.sender.send('state_of_sim', 'Started');
+
+  //loading configurations
+  let instinct_config = await fs.readFileSync(resolve(__dirname, 'database/temp_data copy.json'));
+  
+
+  // console.log(testms);
+  
+  console.time();
+  var teeeee = await testms();
+  event.sender.send('simulation-response', teeeee);
+  console.timeEnd();
+  // await event.sender.send('state_of_sim', console.timeEnd());
+  // event.sender.send('simulation-response', 'Data Loaded');
+  mainWindow.webContents.send('progress_of_sim',"30");
   instinct_config = JSON.parse(instinct_config);
   // seed
   var seed = 1;
   rand1 = rand_gen.create(seed);
   console.log('Program is Started running... \n');
 
+  console.time();
+  var teeeee = await testms();
+  event.sender.send('simulation-response', teeeee);
+  console.timeEnd();
 
+  mainWindow.webContents.send('progress_of_sim', "50");
   //climatic
   let climatic_rise_per_year = 1.28; //degrees celcius temperature rise per year..  
 
@@ -266,7 +306,7 @@ ipcMain.on('simulation_run', (event, data) => {
   let modified_temperature_data = [];
 
 
-
+  mainWindow.webContents.send('progress_of_sim', "60");
 
   // Charge Controller Compensation
   let CC_eff = 0.94; //95%
@@ -359,6 +399,7 @@ ipcMain.on('simulation_run', (event, data) => {
   let batt_energy_pure =  Array(simulation_hours).fill(0);
   let batt_temp_compensated_energy;
   let excess_energy;
+  await event.sender.send('state_of_sim', 'Weekend Detection');
   // Weekend Detection
   for (count_hours; count_hours < hours_array.length; count_hours++) {
     reset_hours += 1;
@@ -417,8 +458,9 @@ ipcMain.on('simulation_run', (event, data) => {
       }
     }
   }
-
+  await event.sender.send('state_of_sim', 'Load Profile Data Generated');
   //Load Parameters Extraction
+  
   for (i = 0; i < simulation_hours; i++) {
     load_current_demand_AC.push(generated_load_profile[i] / (power_factor * load_voltage));
   }
@@ -784,7 +826,7 @@ for (i = 0; i < simulation_hours; i++) {
   }
 } //End of the simulation loop
 
-
+  mainWindow.webContents.send('progress_of_sim', "85");
 
   // Demand Energy and Energy Saved
   // load - unmet energy
@@ -959,7 +1001,7 @@ for (i = 0; i < simulation_hours; i++) {
   // console.log(linear_regression(nj.array([0,1,2,3,4,5]),nj.array([98.9,12,6,9,5,2])));
 
   var regressive_data = linear_regression(nj_X_data, SOH_nj);
-
+  mainWindow.webContents.send('progress_of_sim', "95");
   simulation_outputs.batt_SOH_line_equation = regressive_data;
 
   var fitted_curve = [];
@@ -1092,6 +1134,7 @@ for (i = 0; i < simulation_hours; i++) {
   // event.reply('simulation_end_cue', 'sim_ended');
 
   //File Saving/creating for all the data
+  mainWindow.webContents.send('progress_of_sim', "98");
 
   // let base_output_folder = "outputs/";
   let base_output_folder = resolve(__dirname, 'outputs');
@@ -1123,7 +1166,10 @@ for (i = 0; i < simulation_hours; i++) {
     console.log('SIMLUATION OUTPUT SAVED');
   });
 
+
   event.reply('simulation-response', 'Over');
+  mainWindow.webContents.send('progress_of_sim', "100");
+  event.returnValue = "Simulation Complete";
 });
 
 // New Functions
@@ -1172,46 +1218,59 @@ ipcMain.on('save_template_design', (event, data) => {
 });
 // Delete Template
 ipcMain.on('delete_template_design', (event, data) => {
-  console.log(data);
-  // let new_template = JSON.parse(data);
   //Get the existing templates
   let template_data = fs.readFileSync(resolve(__dirname, 'database/load_design_templates.json'));
   template_data = JSON.parse(template_data);
-  // console.log(template_data);
-
-  // const write_new_template = (new_template, templates_collection) => {
-  //   let new_collection = [];
-  //   templates_collection.forEach(template_data => {
-  //     new_collection.push(template_data); //Redo-old entries
-  //   });
-  //   new_collection.push(new_template); //Last and the latest
-  //   new_collection = JSON.stringify(new_collection);
-  //   fs.writeFile(resolve(__dirname, 'database/load_design_templates.json'), new_collection, function (err) {
-  //     if (err) throw err;
-  //     console.log('Load Template DELETED');
-  //   });
-  // };
-
-
-
   template_data.forEach((the_template, index, t_data) => {
     if (the_template.arrange_name == data) {
-      // console.log(index);
-      t_data.splice(index);
-      // console.log(t_data);
+      let options = {
+        type: 'question',
+        title: 'Confirmation',
+        buttons: ["Yes,Please", "No, Thank You"],
+        message: "Do you really want to Delete the Arrangement?",
+        detail: 'Deleting will permenently delete the selected load arrangement from your INSTINCT database'
+      };
+      dialog.showMessageBox(options).then(result =>{        
+        if (result.response == 0){
+          t_data.splice(index, 1);
+          let new_templates = [];
+          new_templates = JSON.stringify(t_data);
+          fs.writeFile(resolve(__dirname, 'database/load_design_templates.json'), new_templates, function (err) {
+            if (err) throw err;
+            // console.log('Load Template DELETED');
+            event.reply('delete_status',"DELETED");
+          });
+        }
+        else{
 
-      let new_templates = [];
-      new_templates = JSON.stringify(t_data);
-      // console.log(new_templates);
-      fs.writeFile(resolve(__dirname, 'database/load_design_templates.json'), new_templates, function (err) {
-        if (err) throw err;
-        console.log('Load Template DELETED');
+          event.reply('delete_status', "NOT DELETED");
+        }
       });
-      // write_new_template(new_template, template_data);
     }
-    // else{
-    //   console.log("CANNOT DELETE - ARRANGEMENT DOES NOT EXISTS");
-    // }
-    
   });
 });
+
+// ipcMain.handle('some-name', async (event, someArgument) => {
+//   const result = tehh();
+//   return result;
+// });
+
+// const doSomeWork = (t_data)=>{
+//   dialog.showMessageBox(options).then(result => {
+
+//     if (result.response == 0) {
+//       t_data.splice(index, 1);
+//       let new_templates = [];
+//       new_templates = JSON.stringify(t_data);
+//       fs.writeFile(resolve(__dirname, 'database/load_design_templates.json'), new_templates, function (err) {
+//         if (err) throw err;
+//         console.log('Load Template DELETED');
+//         return "DELETED";
+//       });
+//     }
+//     else {
+//       console.log("NO NO NO");
+//       return "DID NOT DELETE";
+//     }
+//   });
+// };

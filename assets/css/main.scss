@@ -124,6 +124,7 @@ header {
         // top: 0;
         // border: solid 2px red;
         // z-index: 120;
+
     }
 
     h3 {
@@ -135,6 +136,8 @@ header {
         // width: 100%;
         padding: 0;
         margin: 0;
+        // Allows u to use this as drag
+        // -webkit-app-region: drag;
     }
 
     .user_tag {

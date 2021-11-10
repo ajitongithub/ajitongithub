@@ -819,21 +819,42 @@ napp.controller('simulation_data_controller', function ($scope, $http, $q, $loca
 		Plotly.restyle(simulation_first_graph, 'y', [instinct_profile.load_profile, ldc_profile]);
 	};
 	// FInal data
-	$scope.simulation_final = function () {
+	$scope.simulation_final = async function () {
 		console.log("This is a test message");
 		document.getElementById("simu_prepare_btn").innerText = "Preparing..";
 		instinct_profile.simulation_data = $scope.simulation_data;
 		console.log(instinct_profile);
-		ipcRenderer.send('simulation_parameters', instinct_profile);
-		setTimeout(function () {
+		let preparation_setting = ipcRenderer.sendSync('simulation_parameters', instinct_profile);
+
+		if (preparation_setting == "Success"){
 			document.getElementById("simu_runner_btn").disabled = false;
 			document.getElementById("simu_prepare_btn").innerText = "Prepared";
 			document.getElementById("simu_prepare_btn").style.backgroundColor = "rgba(0, 255, 55, 0.664)";
 			document.getElementById("simu_prepare_btn").style.color = "white";
-		}, 5000);
+			status_activate("Successfully Prepared");
+			//Simulation Run Command Function
+			let sim_stat = await sim_run_cmd();
+			console.log(sim_stat);
+		}
+		else{
+			document.getElementById("simu_runner_btn").disabled = false;
+			document.getElementById("simu_prepare_btn").innerText = "Error";
+			document.getElementById("simu_prepare_btn").style.backgroundColor = "rgba(0, 255, 55, 0.664)";
+			document.getElementById("simu_prepare_btn").style.color = "white";
+			status_activate("Error");
+		}
 	};
-	// Run
-	$scope.simulation_run = function () {
+
+	ipcRenderer.on('state_of_sim', (event, data) => {
+		console.log(data);
+	});
+	ipcRenderer.on('progress_of_sim', (event, data) => {
+		var sim_prog = document.querySelector("#sim_progress_ux");	
+		sim_prog.value = data;
+		console.log("HIT");
+	});
+//Simulation Run Command Function
+	const sim_run_cmd = async ()=>{
 		let simulation_modal_curtain = document.getElementById('simulation_modal_curtain');
 		simulation_modal_curtain.style.transform = "translateY(0px)";
 
@@ -844,13 +865,48 @@ napp.controller('simulation_data_controller', function ($scope, $http, $q, $loca
 		}
 		else {
 			sim_modal.style.transform = "translateY(0px)";
-			setTimeout(() => {
-				console.log("SIMULATION START");
-				document.getElementById('sim_modal_progress').innerHTML = "Simulation in progress";
-				document.getElementById('sim_modal_progress').style.color = "yellow	 ";
-				ipcRenderer.send('simulation_run');
-			}, 3000);
+			
+			// setTimeout(() => {
+			// 	console.log("SIMULATION START");
+			// 	document.getElementById('sim_modal_progress').innerHTML = "Simulation in progress";
+			// 	document.getElementById('sim_modal_progress').style.color = "yellow	 ";
+			// 	ipcRenderer.send('simulation_run');
+			// }, 3000);
 		}
+		//TODO Simulation UX Enhancement
+		console.log("SIMULATION START");
+		document.getElementById('sim_modal_progress').innerHTML = "Simulation in progress";
+		document.getElementById('sim_modal_progress').style.color = "yellow	 ";
+		ipcRenderer.send('simulation_run');
+		// let simluation_state = await ipcRenderer.send('simulation_run');
+		return "Simulation Transfer Complete";
+	};
+
+	// Run
+	$scope.simulation_run = function () {
+		// let simulation_modal_curtain = document.getElementById('simulation_modal_curtain');
+		// simulation_modal_curtain.style.transform = "translateY(0px)";
+
+		// var sim_modal = document.getElementById("simulation_result_modal");
+		// var sim_modal_val = sim_modal.style.transform;
+		// if (sim_modal_val == "translateY(0px)") {
+		// 	sim_modal.style.transform = "translateY(-500%)";
+		// }
+		// else {
+		// 	sim_modal.style.transform = "translateY(0px)";
+		// 	//TODO Simulation UX Enhancement
+		// 		// console.log("SIMULATION START");
+		// 		// document.getElementById('sim_modal_progress').innerHTML = "Simulation in progress";
+		// 		// document.getElementById('sim_modal_progress').style.color = "yellow	 ";
+		// 		// ipcRenderer.send('simulation_run');
+
+		// 	setTimeout(() => {
+		// 		console.log("SIMULATION START");
+		// 		document.getElementById('sim_modal_progress').innerHTML = "Simulation in progress";
+		// 		document.getElementById('sim_modal_progress').style.color = "yellow	 ";
+		// 		ipcRenderer.send('simulation_run');
+		// 	}, 3000);
+		// }
 	};
 
 

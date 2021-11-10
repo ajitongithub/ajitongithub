@@ -92,10 +92,22 @@ ipcRenderer.on('main_responder_channel',(e,data)=>{
 	console.log(data);
 });
 
+
 // SImluation Control
 ipcRenderer.on('simulation-response', (event, arg) => {
-		
+	var sim_prog = document.querySelector("#sim_progress_ux");	
+	if (arg == "Start") {
+		sim_prog.value = "0";
+		document.getElementById('sim_modal_progress').innerHTML = "Simulation Started";
+		document.getElementById('sim_modal_progress').style.color = "red";
+	}
+	// if (arg == "Data Loaded") {
+	// 	sim_prog.value = "20";
+	// 	document.getElementById('sim_modal_progress').innerHTML = "Data loading complete";
+	// 	document.getElementById('sim_modal_progress').style.color = "blue";
+	// }
 	if(arg == "Over"){
+		sim_prog.value = "100";
 		document.getElementById('sim_modal_progress').innerHTML = "Simulation Completed Preparing Results..";
 		document.getElementById('sim_modal_progress').style.color = "green";
 		setTimeout(function(){

@@ -1,3 +1,6 @@
+// 'use strict'
+// Preload (Isolated World)
+const { contextBridge } = require('electron');
 
 // Variables---------------------------------------------------------------------
 let branded__items = document.querySelectorAll('.brand_items');
@@ -906,7 +909,7 @@ napp.controller('auto_load_loader_controller', function ($scope, $http, $rootSco
     // };
     let template_refresh__btn = document.querySelector("#template_REFRESH");
     template_refresh__btn.addEventListener('click', () => {
-
+        // console.log("CLICKED");
         $http.get('../database/load_design_templates.json').then(function (response) {
             //data sorting        
             template_data = response.data;
@@ -1559,9 +1562,38 @@ const template_controls = () => {
 };
 
 const delete_the_template = (template_selection)=>{
-    console.log(template_selection.value);
+    // ipcRenderer.invoke('some-name', template_selection).then((result) => {
+    //     console.log(result); 
+    // });
+    // // console.log(template_selection.value);
     ipcRenderer.send('delete_template_design', template_selection.value);
-    console.log("DATA DELETED");  
+    
+    ipcRenderer.on('delete_status',(event,data)=>{
+        console.log(data);
+        if (data == "DELETED"){
+            console.log("DATA DELETED");  
+            status_activate("Selected Template Deleted Successfully.", 5000, "#668D3C", "#FAF0E6");
+            // auto refresh
+            setTimeout(() => {
+                document.querySelector("#template_REFRESH").click(); 
+            }, 2000);
+        }
+        else{
+            status_activate("Data Not Deleted. You data is safe.", 5000, "#668D3C", "#FAF0E6");
+        }
+    });
 
-    status_activate("Selected Template Deleted Successfully", 5000, "#668D3C", "#FAF0E6");
+    
+    
+    
+
 };
+
+
+
+// contextBridge.exposeInMainWorld(
+//     'electron',
+//     {
+//         doThing: () => ipcRenderer.send('do-a-thing')
+//     }
+// )
