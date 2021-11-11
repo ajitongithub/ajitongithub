@@ -36,7 +36,7 @@ napp.filter('priceCorrection',function(){
 		else{
 			return input;
 		}		
-	}
+	};
 });
 
 //status function display
@@ -77,7 +77,7 @@ let find_best_location = (sel_lat, sel_long,links_data)=>{
 			loc_temp_minLong = long_diff;
 			loc_min_long_name = item.name;
 		}
-	})	
+	});
 	// location_url = loc_min_lat_name;
 	// console.log(loc_min_lat_name);
 	// console.log(loc_min_long_name);
@@ -85,8 +85,8 @@ let find_best_location = (sel_lat, sel_long,links_data)=>{
 	return{
 		"selected_place":loc_min_lat_name,
 		"the_url":loc_file_id
-	}
-}
+	};
+};
 
 ipcRenderer.on('main_responder_channel',(e,data)=>{
 	console.log(data);

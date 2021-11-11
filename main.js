@@ -14,7 +14,8 @@ const { time, Console } = require('console');
 const { resolve } = require('path');
 const { rejects } = require('assert');
 
-// const { remote }= require('electron');
+// const { remote } = require('@electron/remote');
+require('@electron/remote/main').initialize();
 
 //custom modules
 const { batt_temp_adjustment, batt_discharge_current_compensation } = require("./assets/js/core/battery_logic");
@@ -29,7 +30,7 @@ const { hours_to_days, linear_regression } = require("./assets/js/core/main_driv
 // let instinct_program = new PythonShell('processors/instinct_full_program.py');
 var mainWindow;
 function createWindow() {
-    mainWindow = new BrowserWindow({
+  mainWindow = new BrowserWindow({
     title: "INSTINCT II",
     fullscreen: false,
     // skipTaskbar:true,
@@ -38,7 +39,7 @@ function createWindow() {
     opacity: 1,
     width: 1200,
     height: 800,
-    minWidth:1200,
+    minWidth: 1200,
     minHeight: 800,
     icon: './icon/instinct2.ico',
     webPreferences: {
@@ -96,11 +97,10 @@ app.on('activate', () => {
   }
 });
 
-// Python Data Exchanger
-// pyshell.on('message', function (message) {
-//   // received a message sent from the Python script (a simple "print" statement)
-//     console.log(message);
-//   });
+ipcMain.on('exit_command',(event,data)=>{
+  console.log(data);
+  app.quit();
+});
 
 // Location File Saving - 1
 ipcMain.on('location_done', (event, data) => {
@@ -144,15 +144,15 @@ ipcMain.on('simulation_parameters', (event, data) => {
 
 // };
 
-const testms = async ()=>{
-  for(var i=0;i<10000;i++){
+const testms = async () => {
+  for (var i = 0; i < 10000; i++) {
     i += 2;
-    
+
     console.log(i);
   }
-// setTimeout(()=>{
+  // setTimeout(()=>{
   return "Data Loaded";
-// },10000);
+  // },10000);
 };
 
 // Simulation Program
@@ -160,34 +160,34 @@ ipcMain.on('simulation_run', async (event, data) => {
   // event.reply('simulation-response', 'Start');
   event.sender.send('simulation-response', 'Start');
 
-  
 
-  
+
+
   // await event.sender.send('state_of_sim', 'Started');
 
   //loading configurations
   let instinct_config = await fs.readFileSync(resolve(__dirname, 'database/temp_data copy.json'));
-  
+
 
   // console.log(testms);
-  
-  console.time();
-  var teeeee = await testms();
-  event.sender.send('simulation-response', teeeee);
-  console.timeEnd();
+
+  // console.time();
+  // var teeeee = await testms();
+  // event.sender.send('simulation-response', teeeee);
+  // console.timeEnd();
   // await event.sender.send('state_of_sim', console.timeEnd());
   // event.sender.send('simulation-response', 'Data Loaded');
-  mainWindow.webContents.send('progress_of_sim',"30");
+  mainWindow.webContents.send('progress_of_sim', "30");
   instinct_config = JSON.parse(instinct_config);
   // seed
   var seed = 1;
   rand1 = rand_gen.create(seed);
   console.log('Program is Started running... \n');
 
-  console.time();
-  var teeeee = await testms();
-  event.sender.send('simulation-response', teeeee);
-  console.timeEnd();
+  // console.time();
+  // var teeeee = await testms();
+  // event.sender.send('simulation-response', teeeee);
+  // console.timeEnd();
 
   mainWindow.webContents.send('progress_of_sim', "50");
   //climatic
@@ -396,7 +396,7 @@ ipcMain.on('simulation_run', async (event, data) => {
   let batt_discharge_current_relation = true;
 
   //energy Array
-  let batt_energy_pure =  Array(simulation_hours).fill(0);
+  let batt_energy_pure = Array(simulation_hours).fill(0);
   let batt_temp_compensated_energy;
   let excess_energy;
   await event.sender.send('state_of_sim', 'Weekend Detection');
@@ -460,7 +460,7 @@ ipcMain.on('simulation_run', async (event, data) => {
   }
   await event.sender.send('state_of_sim', 'Load Profile Data Generated');
   //Load Parameters Extraction
-  
+
   for (i = 0; i < simulation_hours; i++) {
     load_current_demand_AC.push(generated_load_profile[i] / (power_factor * load_voltage));
   }
@@ -622,209 +622,209 @@ ipcMain.on('simulation_run', async (event, data) => {
     batt_charging_flag_array[i] = (CC_output_power[i] > 0) && (batt_recharge_power[i] > 0);
   }
 
-//Battery Aging Effects - Initial SOH
-batt_inst_energy = (batt_design_WH * batt_init_SOH); //Effective of initial Aging
+  //Battery Aging Effects - Initial SOH
+  batt_inst_energy = (batt_design_WH * batt_init_SOH); //Effective of initial Aging
 
-//Energy of Battery at 12 AM. Compensation of pre-simulated energy
-batt_inst_energy = batt_inst_energy - pre_sim_energy; // Energy of the battery at that instant
+  //Energy of Battery at 12 AM. Compensation of pre-simulated energy
+  batt_inst_energy = batt_inst_energy - pre_sim_energy; // Energy of the battery at that instant
 
-//reverfy charge/discharge possibilities
-if(batt_design_WH > batt_inst_energy){batt_chargable = true;} else {batt_chargable = false;}
-if(batt_inst_energy != 0){batt_dischargable = true;} else {batt_dischargable = false;}
+  //reverfy charge/discharge possibilities
+  if (batt_design_WH > batt_inst_energy) { batt_chargable = true; } else { batt_chargable = false; }
+  if (batt_inst_energy != 0) { batt_dischargable = true; } else { batt_dischargable = false; }
 
-//Pre-fill DOD Averaging Window
-for (i = 0; i < batt_DOD_averagingWindow; i++) {
-  batt_DOD_day_max_array.push(batt_DOD);
-}
-//create the varying capacity model - Capacity degradation effect
-batt_real_WH = batt_design_WH;
-// Battery Charging / Discharging Loop
-for (i = 0; i < simulation_hours; i++) {
-  //Charging the Battery Loop --------------------------------------------------------------
-  if (batt_charging_flag_array[i]) {
-
-
-    //SOH adjustment - flag test
-    if(true){
-      // batt_real_WH = 
-    }
-
-    //Recharge Factor Compensation
+  //Pre-fill DOD Averaging Window
+  for (i = 0; i < batt_DOD_averagingWindow; i++) {
+    batt_DOD_day_max_array.push(batt_DOD);
+  }
+  //create the varying capacity model - Capacity degradation effect
+  batt_real_WH = batt_design_WH;
+  // Battery Charging / Discharging Loop
+  for (i = 0; i < simulation_hours; i++) {
+    //Charging the Battery Loop --------------------------------------------------------------
+    if (batt_charging_flag_array[i]) {
 
 
-
-    //check if next step shoots above SOC
-    if (batt_chargable) {
-      let batt_effective_recharge_power = batt_recharge_factor_compen(batt_recharge_power[i], batt_recharge_factor);
-      let batt_energy_final = (batt_inst_energy + batt_effective_recharge_power -(batt_recharge_losses * batt_recharge_power[i]));
-
-      if (batt_energy_final < batt_real_WH) { // Battery Can be Charged
-
-
-
-        // check --- LOGIC
-        //Recharge Power Variable - Absortive, Trickle, Float
-        // batt_recharge_power[i] = batt_recharge_power_modelling(batt_recharge_power[i],batt_SOC,system_voltage,no_of_batteries);
-
-
-        batt_inst_energy += batt_effective_recharge_power - (batt_recharge_losses * batt_recharge_power[i]);
-        batt_chargable = true; //Possible to recharge in the next cycle too
-        batt_dischargable = true;
-        energy_surplus[i] = 0; //Extra Energy Wasted or which can be given back to grid
-
-
+      //SOH adjustment - flag test
+      if (true) {
+        // batt_real_WH = 
       }
-      else if (batt_energy_final == batt_real_WH) {  //Battery in Float State
-        batt_inst_energy += batt_effective_recharge_power - (batt_recharge_losses * batt_recharge_power[i]);
-        batt_chargable = false; //No Need to charge- Fully Charged
-        batt_dischargable = true;
-        energy_surplus[i] = 0;//Extra Energy Wasted or which can be given back to grid
-        // console.log("Battery Floating ..1 " + batt_inst_energy);
+
+      //Recharge Factor Compensation
+
+
+
+      //check if next step shoots above SOC
+      if (batt_chargable) {
+        let batt_effective_recharge_power = batt_recharge_factor_compen(batt_recharge_power[i], batt_recharge_factor);
+        let batt_energy_final = (batt_inst_energy + batt_effective_recharge_power - (batt_recharge_losses * batt_recharge_power[i]));
+
+        if (batt_energy_final < batt_real_WH) { // Battery Can be Charged
+
+
+
+          // check --- LOGIC
+          //Recharge Power Variable - Absortive, Trickle, Float
+          // batt_recharge_power[i] = batt_recharge_power_modelling(batt_recharge_power[i],batt_SOC,system_voltage,no_of_batteries);
+
+
+          batt_inst_energy += batt_effective_recharge_power - (batt_recharge_losses * batt_recharge_power[i]);
+          batt_chargable = true; //Possible to recharge in the next cycle too
+          batt_dischargable = true;
+          energy_surplus[i] = 0; //Extra Energy Wasted or which can be given back to grid
+
+
+        }
+        else if (batt_energy_final == batt_real_WH) {  //Battery in Float State
+          batt_inst_energy += batt_effective_recharge_power - (batt_recharge_losses * batt_recharge_power[i]);
+          batt_chargable = false; //No Need to charge- Fully Charged
+          batt_dischargable = true;
+          energy_surplus[i] = 0;//Extra Energy Wasted or which can be given back to grid
+          // console.log("Battery Floating ..1 " + batt_inst_energy);
+        }
+        else if (batt_energy_final > batt_real_WH) {
+          excess_energy = ((batt_inst_energy + batt_recharge_power[i]) - batt_real_WH);
+          batt_inst_energy = batt_real_WH;
+          batt_chargable = false;//Excess Energy
+          batt_dischargable = true;
+          energy_surplus[i] = excess_energy;//Extra Energy Wasted or which can be given back to grid
+          // console.log("Battery Floating .. 2 " + excess_energy);
+        }
+        else {
+          console.log("NO BLOCKS ACTIVATED- CHECK CHARGING LOOP");
+        }
       }
-      else if (batt_energy_final > batt_real_WH) {
-        excess_energy = ((batt_inst_energy + batt_recharge_power[i]) - batt_real_WH);
+      else if (!batt_chargable) {
         batt_inst_energy = batt_real_WH;
         batt_chargable = false;//Excess Energy
         batt_dischargable = true;
-        energy_surplus[i] = excess_energy;//Extra Energy Wasted or which can be given back to grid
-        // console.log("Battery Floating .. 2 " + excess_energy);
+        energy_surplus[i] = batt_recharge_power[i];//Extra Energy Wasted or which can be given back to grid
+        console.log("Battery Floating .. 3 " + batt_recharge_power[i]);
       }
-      else {
-        console.log("NO BLOCKS ACTIVATED- CHECK CHARGING LOOP");
+
+      //do program for limiting current for c10
+      batt_DOD = 1 - (batt_inst_energy / batt_real_WH);
+      // batt_DOD = 1 - (batt_inst_energy / (1 * batt_total_WH));
+      // console.log("DOD DATA" + batt_DOD); 
+      batt_DOD_array[i] = batt_DOD;
+      //Battery AH Loading  
+      batt_inst_WH_array[i] = batt_inst_energy;
+      energy_unmet[i] = 0;//for equuilizing the days
+
+      //End of Charging the Battery Loop --------------------------------------------------------------
+    }
+
+
+    //Discharge - discharge limit (DOD = user input)----------------------------------------------
+    else if (!batt_charging_flag_array[i]) {
+
+      //SOH - SOC caliberations
+      batt_real_WH = (batt_inst_SOH * batt_design_WH);
+      //Test Conditions Check -------------------------------------
+
+      //discharge current effects - Caliberated Energy - already done in the previous loop
+      batt_energy_buffer = batt_POWER_OUTPUT[i]; //power output for 1 hour >> is Wh => Energy
+      //Battery Temperature Compenstaion Flagging
+      if (instinct_config.simulation_data.batt_temperature_flag) {
+        batt_energy_buffer = batt_temp_adjustment(batt_POWER_OUTPUT[i], modified_temperature_data[i], batt_real_WH);
       }
-    }
-    else if (!batt_chargable) {
-      batt_inst_energy = batt_real_WH;
-      batt_chargable = false;//Excess Energy
-      batt_dischargable = true;
-      energy_surplus[i ]= batt_recharge_power[i];//Extra Energy Wasted or which can be given back to grid
-      console.log("Battery Floating .. 3 " + batt_recharge_power[i]);
-    }
+      // Pre-sim - DOD check for loop variant analysis
+      batt_test_DOD = 1 - ((batt_inst_energy - batt_energy_buffer) / batt_real_WH);
+      //Test Conditions Check ----------END  ------------------
 
-    //do program for limiting current for c10
-    batt_DOD = 1 - (batt_inst_energy / batt_real_WH);
-    // batt_DOD = 1 - (batt_inst_energy / (1 * batt_total_WH));
-    // console.log("DOD DATA" + batt_DOD); 
-    batt_DOD_array[i] = batt_DOD;
-    //Battery AH Loading  
-    batt_inst_WH_array[i] = batt_inst_energy;
-    energy_unmet[i] = 0;//for equuilizing the days
+      //Check if next step shoots above SOC
+      if (batt_dischargable) {
+        if (batt_test_DOD < batt_limited_DOD) { // Passed the DOD limit set by the user
+          //Remaining energy in the battery after this hour's loading power
+          batt_inst_energy = batt_inst_energy - batt_energy_buffer;
+          batt_energy_pure[i] = batt_inst_energy;
+          //Loop Variables  
+          batt_chargable = true;//Possible to recharge in the next cycle
+          batt_dischargable = true;
+          energy_unmet[i] = 0;
+        }
+        else if (batt_test_DOD == batt_limited_DOD) {
+          batt_inst_energy = batt_inst_energy - batt_energy_buffer;
+          batt_energy_pure[i] = batt_inst_energy;
 
-  //End of Charging the Battery Loop --------------------------------------------------------------
-  }
-
-
-  //Discharge - discharge limit (DOD = user input)----------------------------------------------
-  else if (!batt_charging_flag_array[i]) {
-
-    //SOH - SOC caliberations
-    batt_real_WH = (batt_inst_SOH * batt_design_WH);
-    //Test Conditions Check -------------------------------------
-
-    //discharge current effects - Caliberated Energy - already done in the previous loop
-    batt_energy_buffer = batt_POWER_OUTPUT[i]; //power output for 1 hour >> is Wh => Energy
-    //Battery Temperature Compenstaion Flagging
-    if(instinct_config.simulation_data.batt_temperature_flag){
-      batt_energy_buffer = batt_temp_adjustment(batt_POWER_OUTPUT[i], modified_temperature_data[i], batt_real_WH);
-    }    
-    // Pre-sim - DOD check for loop variant analysis
-    batt_test_DOD = 1 - ((batt_inst_energy - batt_energy_buffer) / batt_real_WH);
-    //Test Conditions Check ----------END  ------------------
-
-    //Check if next step shoots above SOC
-    if (batt_dischargable) {      
-      if (batt_test_DOD < batt_limited_DOD) { // Passed the DOD limit set by the user
-        //Remaining energy in the battery after this hour's loading power
-        batt_inst_energy = batt_inst_energy - batt_energy_buffer;
+          //Loop Variables    
+          batt_chargable = true; //Possible to recharge in the next cycle
+          batt_dischargable = false;
+          energy_unmet[i] = 0;
+        }
+        else if (batt_test_DOD > batt_limited_DOD) {
+          batt_inst_energy = (1 - batt_limited_DOD) * batt_real_WH;// energy remaining in the battery
+          batt_energy_pure[i] = batt_inst_energy;
+          batt_chargable = true;  //Possible to recharge in the next cycle
+          batt_dischargable = false;
+          energy_unmet[i] = batt_real_WH * (batt_test_DOD - batt_limited_DOD);// energy provided till DOD limit, rest is unmet. Find the rest
+          batt_fail_count += 1; //hours
+        }
+      }
+      else if (!batt_dischargable) {
+        batt_inst_energy = ((1 - batt_limited_DOD) * batt_real_WH) + inverter_standby_power;
+        //include the inverter standby power consumption ~ 10W or more
         batt_energy_pure[i] = batt_inst_energy;
-        //Loop Variables  
         batt_chargable = true;//Possible to recharge in the next cycle
-        batt_dischargable = true;
-        energy_unmet[i] = 0;
-      }
-      else if (batt_test_DOD == batt_limited_DOD) {
-        batt_inst_energy = batt_inst_energy - batt_energy_buffer; 
-        batt_energy_pure[i] = batt_inst_energy;
-        
-        //Loop Variables    
-        batt_chargable = true; //Possible to recharge in the next cycle
         batt_dischargable = false;
-        energy_unmet[i] = 0;
+        energy_unmet[i] = batt_OUT_current[i] * system_voltage;//Unmet Energy or which requires grid suppport
+        batt_fail_count += 1;
+        // console.log("Battery Discharge Limit Reached.. 4 " + batt_inst_energy); 
       }
-      else if (batt_test_DOD > batt_limited_DOD) {
-        batt_inst_energy = (1 - batt_limited_DOD) * batt_real_WH;// energy remaining in the battery
-        batt_energy_pure[i] = batt_inst_energy;
-        batt_chargable = true;  //Possible to recharge in the next cycle
-        batt_dischargable = false;
-        energy_unmet[i] = batt_real_WH * (batt_test_DOD - batt_limited_DOD);// energy provided till DOD limit, rest is unmet. Find the rest
-        batt_fail_count += 1; //hours
-      }
-    }
-    else if (!batt_dischargable) {
-      batt_inst_energy = ((1 - batt_limited_DOD) * batt_real_WH) + inverter_standby_power;
-      //include the inverter standby power consumption ~ 10W or more
-      batt_energy_pure[i] = batt_inst_energy ;
-      batt_chargable = true;//Possible to recharge in the next cycle
-      batt_dischargable = false;
-      energy_unmet[i] = batt_OUT_current[i] * system_voltage;//Unmet Energy or which requires grid suppport
-      batt_fail_count += 1;
-      // console.log("Battery Discharge Limit Reached.. 4 " + batt_inst_energy); 
-    }
-    //Post Processing of the loop
-    //do program for limiting current for c10
-    batt_DOD = 1 - (batt_inst_energy / batt_real_WH);
-    batt_DOD_array[i] = batt_DOD;
+      //Post Processing of the loop
+      //do program for limiting current for c10
+      batt_DOD = 1 - (batt_inst_energy / batt_real_WH);
+      batt_DOD_array[i] = batt_DOD;
 
-    energy_surplus[i] = 0;//for equuilizing the days
-    //Battery AH Loading  
-    batt_inst_WH_array[i] = batt_inst_energy;
+      energy_surplus[i] = 0;//for equuilizing the days
+      //Battery AH Loading  
+      batt_inst_WH_array[i] = batt_inst_energy;
 
 
 
-    //COMPLEX 1 --------------------- PERMANENT EFFECTS PROGRAM
-    // Day finder and DOD extraction for SOH
-    batt_DOD_hourly.push(batt_DOD);
-    batt_TEMP_hourly.push(modified_temperature_data[i]);
+      //COMPLEX 1 --------------------- PERMANENT EFFECTS PROGRAM
+      // Day finder and DOD extraction for SOH
+      batt_DOD_hourly.push(batt_DOD);
+      batt_TEMP_hourly.push(modified_temperature_data[i]);
 
-    // Day finder and DOD extraction for SOH
-    if (i % 24 == 0) { //all daily program
-      main_loop_count_days++;
-      if (i != 0) {
-        var largest = 0;
-        for (n = 0; n < batt_DOD_hourly.length; n++) {
-          if (largest < batt_DOD_hourly[n]) {
-            largest = batt_DOD_hourly[n];
+      // Day finder and DOD extraction for SOH
+      if (i % 24 == 0) { //all daily program
+        main_loop_count_days++;
+        if (i != 0) {
+          var largest = 0;
+          for (n = 0; n < batt_DOD_hourly.length; n++) {
+            if (largest < batt_DOD_hourly[n]) {
+              largest = batt_DOD_hourly[n];
+            }
+          }
+          //shift data to left and then load the new data
+          batt_DOD_day_max_array.shift();
+          batt_DOD_day_max_array.push(largest); //everyday maximum DOD record
+          batt_DOD_hourly = []; //reset the hourly data of the day for the next day
+          //find the total DOD 
+          batt_DOD_accumulatedDays += batt_DOD_day_max_array[batt_DOD_day_max_array.length - 1];
+          if ((main_loop_count_days % batt_DOD_averagingWindow) == 0 && (main_loop_count_days != 0)) {
+            //find the average of the data  
+            batt_DOD_window_average = (batt_DOD_day_max_array.reduce((x, y) => x + y)) / batt_DOD_day_max_array.length;// array.average(batt_DOD_day_max_array);
+          }
+          //temperature modification
+          batt_TEMP_day_average.push((batt_TEMP_hourly.reduce((x, y) => x + y)) / batt_TEMP_hourly.length);
+          batt_TEMP_hourly = [];
+          batt_DOD_SOH_buffer = batt_DOD_compensation_program(batt_DOD_window_average * 100);
+          batt_BATT_arhenius.push(batt_arhennius_compensation_program(batt_DOD_SOH_buffer, batt_TEMP_day_average[batt_TEMP_day_average.length - 1], 25));
+
+          //aging effects of battery
+          if (instinct_config.simulation_data.batt_aging_flag) {
+            batt_inst_SOH = (batt_SOH_compensation_program(80, batt_BATT_arhenius[batt_BATT_arhenius.length - 1], batt_DOD_accumulatedDays) / 100);
+            batt_SOH_final.push(batt_inst_SOH * 100);
+          }
+          else {
+            batt_inst_SOH = 1;
           }
         }
-        //shift data to left and then load the new data
-        batt_DOD_day_max_array.shift();
-        batt_DOD_day_max_array.push(largest); //everyday maximum DOD record
-        batt_DOD_hourly = []; //reset the hourly data of the day for the next day
-        //find the total DOD 
-        batt_DOD_accumulatedDays += batt_DOD_day_max_array[batt_DOD_day_max_array.length - 1];
-        if ((main_loop_count_days % batt_DOD_averagingWindow) == 0 && (main_loop_count_days != 0)) {
-          //find the average of the data  
-          batt_DOD_window_average = (batt_DOD_day_max_array.reduce((x, y) => x + y)) / batt_DOD_day_max_array.length;// array.average(batt_DOD_day_max_array);
-        }
-        //temperature modification
-        batt_TEMP_day_average.push((batt_TEMP_hourly.reduce((x, y) => x + y)) / batt_TEMP_hourly.length);
-        batt_TEMP_hourly = [];
-        batt_DOD_SOH_buffer = batt_DOD_compensation_program(batt_DOD_window_average * 100);
-        batt_BATT_arhenius.push(batt_arhennius_compensation_program(batt_DOD_SOH_buffer, batt_TEMP_day_average[batt_TEMP_day_average.length - 1], 25));
-        
-        //aging effects of battery
-        if(instinct_config.simulation_data.batt_aging_flag){
-          batt_inst_SOH = (batt_SOH_compensation_program(80, batt_BATT_arhenius[batt_BATT_arhenius.length - 1], batt_DOD_accumulatedDays) / 100);
-          batt_SOH_final.push(batt_inst_SOH * 100);
-        }
-        else{
-          batt_inst_SOH = 1;
-        }       
       }
+      //COMPLEX 1 -----END --------- PERMANENT EFFECTS PROGRAM
     }
-    //COMPLEX 1 -----END --------- PERMANENT EFFECTS PROGRAM
-  }
-} //End of the simulation loop
+  } //End of the simulation loop
 
   mainWindow.webContents.send('progress_of_sim', "85");
 
@@ -872,7 +872,7 @@ for (i = 0; i < simulation_hours; i++) {
   let energy_saved_per_month = [];
   let energy_saved_per_day_sum = 0;
   let energy_saved_per_month_sum = 0;
-// Energy Calculation Counter
+  // Energy Calculation Counter
 
   for (counter = 0; counter <= simulation_hours; counter++) {
     // Energy Saved 
@@ -1140,28 +1140,28 @@ for (i = 0; i < simulation_hours; i++) {
   let base_output_folder = resolve(__dirname, 'outputs');
   //ENERGY UNMET
   // fs.writeFile(base_output_folder + 'output_energy_unmet.json', JSON.stringify(energy_unmet), function (err) {
-  fs.writeFile(resolve(base_output_folder,'output_energy_unmet.json'), JSON.stringify(energy_unmet), function (err) {
+  fs.writeFile(resolve(base_output_folder, 'output_energy_unmet.json'), JSON.stringify(energy_unmet), function (err) {
     if (err) throw err;
     console.log('ENERGY_UNMET-SAVED');
   });
   //BATT_ENERGY_SURPLUS ARRAY
-  fs.writeFile(resolve(base_output_folder,'output_energy_surplus.json'), JSON.stringify(energy_surplus), function (err) {
+  fs.writeFile(resolve(base_output_folder, 'output_energy_surplus.json'), JSON.stringify(energy_surplus), function (err) {
     if (err) throw err;
     console.log('ENERGY_SURPLUS-SAVED');
   });
   //BATT_SOH ARRAY
-  fs.writeFile(resolve(base_output_folder,'output_batt_SOH.json'), JSON.stringify(batt_SOH_final), function (err) {
+  fs.writeFile(resolve(base_output_folder, 'output_batt_SOH.json'), JSON.stringify(batt_SOH_final), function (err) {
     if (err) throw err;
     console.log('BATT_SOH-SAVED');
   });
   //BATT_DOD ARRAY
-  fs.writeFile(resolve(base_output_folder,'output_batt_DOD.json'), JSON.stringify(batt_DOD_array), function (err) {
+  fs.writeFile(resolve(base_output_folder, 'output_batt_DOD.json'), JSON.stringify(batt_DOD_array), function (err) {
     if (err) throw err;
     console.log('BATT-DOD-SAVED');
   });
 
   //OUTPUTS
-  fs.writeFile(resolve(base_output_folder,'simulation_outputs.json'), JSON.stringify(simulation_outputs), function (err) {
+  fs.writeFile(resolve(base_output_folder, 'simulation_outputs.json'), JSON.stringify(simulation_outputs), function (err) {
     if (err) throw err;
     console.log('SIMLUATION OUTPUT SAVED');
   });
@@ -1206,14 +1206,14 @@ ipcMain.on('save_template_design', (event, data) => {
 
 
 
-  template_data.forEach((the_template)=>{
-    if (the_template.arrange_name != new_template.arrange_name){
+  template_data.forEach((the_template) => {
+    if (the_template.arrange_name != new_template.arrange_name) {
       write_new_template(new_template, template_data);
     }
-    else{
+    else {
       console.log("CANNOT SAVE - ARRANGEMENT ALREADY EXISTS");
     }
-    
+
   });
 });
 // Delete Template
@@ -1230,18 +1230,18 @@ ipcMain.on('delete_template_design', (event, data) => {
         message: "Do you really want to Delete the Arrangement?",
         detail: 'Deleting will permenently delete the selected load arrangement from your INSTINCT database'
       };
-      dialog.showMessageBox(options).then(result =>{        
-        if (result.response == 0){
+      dialog.showMessageBox(options).then(result => {
+        if (result.response == 0) {
           t_data.splice(index, 1);
           let new_templates = [];
           new_templates = JSON.stringify(t_data);
           fs.writeFile(resolve(__dirname, 'database/load_design_templates.json'), new_templates, function (err) {
             if (err) throw err;
             // console.log('Load Template DELETED');
-            event.reply('delete_status',"DELETED");
+            event.reply('delete_status', "DELETED");
           });
         }
-        else{
+        else {
 
           event.reply('delete_status', "NOT DELETED");
         }

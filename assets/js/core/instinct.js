@@ -1,5 +1,5 @@
 const { ipcRenderer } = require('electron');
-const { remote } = require('electron');
+const { remote } = require('@electron/remote');
 const { promises } = require('fs');
 const { url } = require('inspector');
 const { resolve } = require('path');
@@ -63,7 +63,7 @@ napp.controller("insti-controller", function ($scope, $location, $http, $rootSco
 
 	let quit_button = document.getElementById("quit_app");
 	quit_button.addEventListener('click', (e) => {
-		remote.app.quit();
+		ipcRenderer.send('exit_command','exit');
 	});
 
 	$scope.software_name = "INSTI CLOV";
