@@ -1,1 +1,54 @@
-{"info_data":[{"track_id":0,"load_name":"Air Cooler","load_id":"load_56bb.b333334"},{"track_id":1,"load_name":"Air Conditioners (Inverter)","load_id":"load_d6bd"}],"arrange_name":"Current Design","loading_data":[{"track_id":0,"load_id":"load_56bb.b333334","dataset":{"appname":"Air Cooler","manufacturer":"Generic","modellingdata":"residential-cooling","powerdata":"80","powerfactor":"0.8","qtydata":"1","scenario":"URBAN","schedulabledata":"true","syncdata":"load_56bb.b333334","type":"Standard Household","voltage":"230","usage_frequency":"{\"0\":true,\"1\":true,\"2\":true,\"3\":true,\"4\":true,\"5\":true,\"6\":true}","misc":"Generic"},"starttime":"02:01","endtime":"08:16"},{"track_id":1,"load_id":"load_d6bd","dataset":{"appname":"Air Conditioners (Inverter)","manufacturer":"HITACHI","modellingdata":"residential-cooling","powerdata":"816.15","powerfactor":"0.9","qtydata":"1","scenario":"Residential","schedulabledata":"true","syncdata":"load_d6bd","type":"Cooling","voltage":"230","misc":"{\"manufacturer\":\"HITACHI\",\"bee_star\":\"5\",\"model\":\"RSA518CBEA\",\"type\":\"Split air conditioner\",\"iseer_wh_per_wh\":\"5\",\"capacity_tonnage\":\"1.5\",\"energy_units_per_year\":\"816.15\",\"valid_date\":\"31-12-2021\"}","usage_frequency":"{\"0\":false,\"1\":true,\"2\":false,\"3\":true,\"4\":false,\"5\":true,\"6\":false}"},"starttime":"06:01","endtime":"12:15"}],"tracks_count":2}
+{
+    "info_data": [{
+        "track_id": 0,
+        "load_name": "Air Cooler",
+        "load_id": "load_56bb.b333334"
+    }, {
+        "track_id": 1,
+        "load_name": "Air Conditioners (Inverter)",
+        "load_id": "load_d6bd"
+    }],
+    "arrange_name": "Current Design",
+    "loading_data": [{
+        "track_id": 0,
+        "load_id": "load_56bb.b333334",
+        "dataset": {
+            "appname": "Air Cooler",
+            "manufacturer": "Generic",
+            "modellingdata": "residential-cooling",
+            "powerdata": "80",
+            "powerfactor": "0.8",
+            "qtydata": "1",
+            "scenario": "URBAN",
+            "schedulabledata": "true",
+            "syncdata": "load_56bb.b333334",
+            "type": "Standard Household",
+            "voltage": "230",
+            "usage_frequency": "{\"0\":true,\"1\":true,\"2\":true,\"3\":true,\"4\":true,\"5\":true,\"6\":true}",
+            "misc": "Generic"
+        },
+        "starttime": "02:01",
+        "endtime": "08:16"
+    }, {
+        "track_id": 1,
+        "load_id": "load_d6bd",
+        "dataset": {
+            "appname": "Air Conditioners (Inverter)",
+            "manufacturer": "HITACHI",
+            "modellingdata": "residential-cooling",
+            "powerdata": "816.15",
+            "powerfactor": "0.9",
+            "qtydata": "1",
+            "scenario": "Residential",
+            "schedulabledata": "true",
+            "syncdata": "load_d6bd",
+            "type": "Cooling",
+            "voltage": "230",
+            "misc": "{\"manufacturer\":\"HITACHI\",\"bee_star\":\"5\",\"model\":\"RSA518CBEA\",\"type\":\"Split air conditioner\",\"iseer_wh_per_wh\":\"5\",\"capacity_tonnage\":\"1.5\",\"energy_units_per_year\":\"816.15\",\"valid_date\":\"31-12-2021\"}",
+            "usage_frequency": "{\"0\":false,\"1\":true,\"2\":false,\"3\":true,\"4\":false,\"5\":true,\"6\":false}"
+        },
+        "starttime": "06:01",
+        "endtime": "12:15"
+    }],
+    "tracks_count": 2
+}

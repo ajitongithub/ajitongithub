@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>INSTINCT II</title>
-    <script  type="application/javascript" src="../assets/js/instinct_modules/__variables.js"></script>
+    <script type="application/javascript" src="../assets/js/instinct_modules/__variables.js"></script>
 
-    <script type="application/javascript" src="../assets/js/dependencies/jquery-3.4.1.min.js"></script>    
+    <script type="application/javascript" src="../assets/js/dependencies/jquery-3.4.1.min.js"></script>
     <script type="application/javascript" src="../assets/js/dependencies/gsap.min.js"></script>
     <script type="application/javascript" src="../assets/js/dependencies/angular.min.js"></script>
     <script type="application/javascript" src="../assets/js/dependencies/materialize.min.js"></script>
@@ -20,26 +21,27 @@
     <script type="application/javascript" src="../assets/js/howler.min.js"></script>
     <script type="application/javascript" src="../assets/js/howler.spatial.min.js"></script>
     <script type="application/javascript" src="../assets/js/leaflet.js"></script> -->
-    
-    <script  type="application/javascript" src="../assets/js/core/instinct.js"></script>
 
-    <script  type="application/javascript" src="../assets/js/instinct_modules/__controllers.js"></script>
-    <script  type="application/javascript" src="../assets/js/instinct_modules/__auto_loadprofile.js"></script>
-    <script  type="application/javascript" src="../assets/js/instinct_modules/__additional_functions.js"></script>
+    <script type="application/javascript" src="../assets/js/core/instinct.js"></script>
+
+    <script type="application/javascript" src="../assets/js/instinct_modules/__controllers.js"></script>
+    <script type="application/javascript" src="../assets/js/instinct_modules/__auto_loadprofile.js"></script>
+    <script type="application/javascript" src="../assets/js/instinct_modules/__additional_functions.js"></script>
 
     <script type="application/javascript" src="../assets/js/dependencies/mapbox-gl.js"></script>
     <script type="application/javascript" src="../assets/js/dependencies/loading-bar.js"></script>
-    
+
     <link rel="stylesheet" href="../assets/css/font-materials.css">
     <link type="text/css" rel="stylesheet" href="../assets/css/materialize.min.css" media="screen,projection">
     <!-- <link type="text/css" rel="stylesheet" href="../assets/css/leaflet.css"> -->
-    <link type="text/css" rel="stylesheet" href="../assets/css/animate.min.css"> 
+    <link type="text/css" rel="stylesheet" href="../assets/css/animate.min.css">
     <link type="text/css" rel="stylesheet" href="../assets/css/main.css">
     <link type="text/css" rel="stylesheet" href="../assets/css/mapbox-gl.css">
     <link type="text/css" rel="stylesheet" href="../assets/css/nouislider.min.css">
     <link type="text/css" rel="stylesheet" href="../assets/css/sweetalert2.css">
     <link type="text/css" rel="stylesheet" href="../assets/css/loading-bar.css">
 </head>
+
 <body ng-app="insti-app" ng-controller="insti-controller">
     <div id="loading-bar-container"></div>
     <div class="main_container">
@@ -52,27 +54,33 @@
                     <li><a>About</a></li>
                     <li><a id="quit_app">Quit</a></li>
                 </ul>
-                
+
             </nav>
             <h3>{{software_name}}</h3>
-            
+
             <div class="user_tag">
                 <i class="small material-icons">person</i><span><a href="#">Ajit Paul Abraham</a></span>
-            </div>            
+            </div>
         </header>
         <hr class="header_underline">
         <!-- Central -->
         <div class="main-div">
-        <!-- Side Menu - Data (Left) -->
-           <div class="main_sidebar">
+            <!-- Side Menu - Data (Left) -->
+            <div class="main_sidebar">
                 <ul>
                     <li><a href="#!/" class="left_side_menu"><i class="small material-icons">beenhere</i>Start</a></li>
-                    <li><a href="#!/location" class="left_side_menu"><i class="small material-icons">location_city</i>Location</a></li>
-                    <li><a href="#!/load_profile" class="left_side_menu"><i class="small material-icons">trending_up</i>Load Profile</a></li>
-                    <li><a href="#!/component_selection" class="left_side_menu"><i class="small material-icons">wb_incandescent</i>Component Selections</a></li>
-                    <li><a href="#!/simulation_data" class="left_side_menu"><i class="small material-icons">queue_play_next</i>Simulation Data</a></li>
-                    <li><a href="#!/environment_assess" class="left_side_menu"><i class="small material-icons">spa</i>Environmental Parameters</a></li>
-                    <li><a href="#!/auto_load_loader" class="left_side_menu"><i class="small material-icons">create</i>Design</a></li>                
+                    <li><a href="#!/location" class="left_side_menu"><i
+                                class="small material-icons">location_city</i>Location</a></li>
+                    <li><a href="#!/load_profile" class="left_side_menu"><i
+                                class="small material-icons">trending_up</i>Load Profile</a></li>
+                    <li><a href="#!/component_selection" class="left_side_menu"><i
+                                class="small material-icons">wb_incandescent</i>Component Selections</a></li>
+                    <li><a href="#!/simulation_data" class="left_side_menu"><i
+                                class="small material-icons">queue_play_next</i>Simulation Data</a></li>
+                    <li><a href="#!/environment_assess" class="left_side_menu"><i
+                                class="small material-icons">spa</i>Environmental Parameters</a></li>
+                    <li><a href="#!/auto_load_loader" class="left_side_menu"><i
+                                class="small material-icons">create</i>Design</a></li>
                 </ul>
             </div>
             <!-- Main View -->
@@ -105,16 +113,22 @@
                         <summary><i class="small material-icons">power</i> Inverter</summary>
                         <p>You have selected</p>
                     </details>
+                    <!-- Configuration Tools -->
+                    <div class="config-bar">
+                        <button id="config-btn">Config</button>
+                    </div>
                 </div>
+
             </div> <!-- summary right end ends -->
         </div> <!-- Central End -->
         <div class="info_bar_bottom" id="info_bar">
             <div id="status_info">
-                
+
             </div>
         </div>
         <!-- Footer -->
-        <footer>Copyrights to IIT Bombay</footer>    
+        <footer>Copyrights to IIT Bombay</footer>
     </div> <!-- Main Container ends -->
 </body>
+
 </html>

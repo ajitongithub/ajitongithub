@@ -52,7 +52,7 @@ function createWindow() {
     }
   });
 
-  mainWindow.loadFile('pages/main.html');
+  mainWindow.loadFile('pages/z_main.html');
   mainWindow.webContents.openDevTools();
   mainWindow.webContents.on('did-finish-load', e => {
     // mainWindow.webContents.console("Loading Complete");
@@ -154,6 +154,126 @@ const testms = async () => {
   return "Data Loaded";
   // },10000);
 };
+
+
+
+//Generate year Profile
+ipcMain.on('load_profile_yearly', (event, instinct_config)=>{
+  console.log(instinct_config);
+
+  let the_responseObject = [];
+
+  var seed = 1;
+  let rand_load = rand_gen.create(seed);
+  let simulation_hours = 365 * 24;
+  let load_variability = 0;
+  let load_variability_tolerance = 3;
+  let hour_id = 0;
+  let generated_load_profile = Array(simulation_hours).fill(0);
+  let count_days = 0;
+  let weekend_load_rise = 2;
+  let weekend_detect_array = Array(simulation_hours).fill(0);
+  let count_hours = 0;
+  let count_weeks = 0;
+  let load_data = instinct_config.load_profile;
+  let reset_hours = 0;
+  let reset_weekDays = 0;
+  let hours_array = Array.from({ length: simulation_hours }, (x, i) => i);
+  for (count_hours; count_hours < hours_array.length; count_hours++) {
+    reset_hours += 1;
+    // Weekend Start Detection-----
+    if (reset_weekDays > 4) {
+      weekend_detect_array[count_hours] = 1; //Weekend hours flag
+    }
+    //Day counter
+    if (reset_hours % 24 == 0) {
+      count_days += 1;
+      reset_weekDays += 1;
+      reset_hours = 0;
+    }
+    //Week Detection   
+    if (reset_weekDays == 7) {
+      count_weeks += 1;
+      reset_weekDays = 0;
+    }
+    //Month Detection
+    count_months = (count_weeks / 4);
+  }
+
+
+  
+  for (load_data_inst = 0; load_data_inst < simulation_hours; load_data_inst++) {
+    //variability randomizer
+    load_variability = rand_load.floatBetween((-1 * load_variability_tolerance), load_variability_tolerance) * 0.01;
+
+    hour_id = load_data_inst % 24;
+    if ((hour_id == 0) && (load_data_inst != 0)) { count_days += 1; }
+    generated_load_profile[load_data_inst] = load_data[hour_id]; //actual load
+
+    //Variability Addition 
+    //variability - flag check
+    if (true) {
+      generated_load_profile[load_data_inst] += (generated_load_profile[load_data_inst] * load_variability); //adding variability
+    }
+    //load_inflation - flag check ( yearly increment - )
+    if (true && (Math.round(load_data_inst / 8760) > 0)) {
+      //load Inflation addition    
+      generated_load_profile[load_data_inst] += (load_data[hour_id]  * Math.round(load_data_inst / 8760)); //adding load inflation
+    }
+    //Weekend Effects - flag
+    if (true) {
+      if ((weekend_load_rise != 0) && (weekend_detect_array[load_data_inst] == 1)) {
+        generated_load_profile[load_data_inst] += (generated_load_profile[load_data_inst] * (weekend_load_rise / 100));
+      }
+    }
+  }
+
+  the_responseObject.load_profile = generated_load_profile;
+  the_responseObject.max_demand_load = generated_load_profile.reduce((a, b) => Math.max(a, b));
+  the_responseObject.energy_demand_load = generated_load_profile.reduce((a, b) => a + b);
+  
+  
+  let tempRecom = [];
+  ///Battery Combinations Possible
+  instinct_config.system_voltage.forEach((sys_voltage)=>{
+    console.log(sys_voltage);
+
+    
+    //no.of series required
+    
+    instinct_config.batt_voltages.forEach((batt_voltage) => {
+
+
+      var batt_start_AH = parseInt(instinct_config.batt_AH_ranges[0]);
+      var batt_end_AH = parseInt(instinct_config.batt_AH_ranges[1]);
+      var batt_step_AH = parseInt(instinct_config.batt_AH_ranges[2]);
+
+      var batt_start_parallel = parseInt(instinct_config.batt_parallel_qty[0]);
+      var batt_end_parallel = parseInt(instinct_config.batt_parallel_qty[1]);
+      
+      for (i = batt_start_AH; i <= batt_end_AH; i += batt_step_AH){
+        for (n = batt_start_parallel; n <= batt_end_parallel; n += 1){
+          let objRecom = {};
+          objRecom.systemVoltage = sys_voltage;
+          objRecom.noOfSeries = sys_voltage / batt_voltage;
+          objRecom.batt_AH = i;
+          objRecom.noOfParallel = n;
+          tempRecom.push(objRecom);
+        }        
+      }
+    });
+    
+  });
+
+  the_responseObject.battery_recomns = tempRecom;
+  console.log(tempRecom);
+
+  event.returnValue = the_responseObject;
+});
+
+
+
+
 
 // Simulation Program
 ipcMain.on('simulation_run', async (event, data) => {
@@ -1170,6 +1290,12 @@ ipcMain.on('simulation_run', async (event, data) => {
   event.reply('simulation-response', 'Over');
   mainWindow.webContents.send('progress_of_sim', "100");
   event.returnValue = "Simulation Complete";
+});
+
+ipcMain.on('call-configuration',async(event,data)=>{
+
+  console.log("CREATE NEW WINDOW FOR CONFIG");
+
 });
 
 // New Functions

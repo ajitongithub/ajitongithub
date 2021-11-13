@@ -405,6 +405,14 @@ header {
                 border-radius: 5px;
                 margin: 10px 0;
                 padding: 10px;
+                #load-profile-info{
+                    position: relative;
+                    border: solid 2px $primary-lightblue;
+                    border-radius: 5px;
+                    margin: 10px;
+                    color: $primary-white;
+                    padding: 10px;
+                }
             }
 
             h5 {
@@ -806,15 +814,27 @@ footer {
 }
 
 
-.modal_simulation_progress {
-    position: absolute;
-    background-color: black;
-    opacity: 0.8;
-    width: 100%;
-    color: black;
+#simulation_result_modal {
+    position: fixed;
+    background-color: $primary-black;
+    opacity: 0.9;
+    width: 85%;
+    color: $primary-black;
     z-index: 900;
     transform: translateY(-1000px);
     transition: all 150ms ease;
+    // border: solid 2px red;
+    padding: 20px;
+    margin: 0 auto;
+    // >*{
+    //     border: solid 2px red;
+    // }
+    h3{
+        text-align: center;
+    }
+    #sim_progress_ux{
+        width: 100%;
+    }
 }
 
 // #sim_modal_result_button{

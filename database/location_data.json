@@ -1,1 +1,19 @@
-{"location_data":{"latitude":76.12471679687422,"longitude":27.499704924403375,"satellite":"MERRA-2 and Others"}}{"location_data":{"latitude":73.16500133762364,"longitude":19.021109079508648,"satellite":"MERRA-2 and Others"}}{"location_data":{"latitude":74.26592865546095,"longitude":25.67953736942013,"satellite":"MERRA-2 and Others"}}
+[{
+    "location_data": {
+        "latitude": 76.12471679687422,
+        "longitude": 27.499704924403375,
+        "satellite": "MERRA-2 and Others"
+    }
+}, {
+    "location_data": {
+        "latitude": 73.16500133762364,
+        "longitude": 19.021109079508648,
+        "satellite": "MERRA-2 and Others"
+    }
+}, {
+    "location_data": {
+        "latitude": 74.26592865546095,
+        "longitude": 25.67953736942013,
+        "satellite": "MERRA-2 and Others"
+    }
+}]

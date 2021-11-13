@@ -4,15 +4,13 @@
     grid-template-rows: 1fr;
     // justify-content: space-between;
     position: relative;
-    
+    // outline: solid 3px red;
     box-sizing: border-box;
     flex-direction: column;
-    background-color: $sidebar-background-dark;
-    color: $sidebar-fontcolor-dark;
-    border-left: solid 2px limegreen;
-    // padding-right: 50px;
-    color: white;
-    transform: translateX(2%);
+    background-color: $primary-blue;
+    color: $primary-white;
+    border-left: solid 2px $primary-yellow;
+    transform: translateX(5%);
     transition: all 150ms ease-in-out;
     height: 100%;
     width: 300px;
@@ -38,31 +36,20 @@
             i{
                 padding: 0;
                 margin: 0;
-                color: black;
+                color: $primary-white;
                 position: relative;
                 transform: translateX(-25%);
                 
             }
         }
         &:hover{
-            background-color: rgb(161, 226, 118);
+            background-color: $primary-lightestblue;
             cursor: pointer;
             // i{
             //    animation: chevron_attend 500ms ease-in-out infinite alternate;
             // }
         }
     }
-// @keyframes chevron_attend {
-//     from{
-//         transform:  initial;
-//         transform:  translateX(-25%);
-        
-//     }
-//     to{
-//         // background-color: blue;
-//         transform:  translateX(0%);
-//     }
-// }
     .summary_list{
         background-color: rgba(0, 0, 0, 0.253);
         
@@ -72,27 +59,56 @@
         details{
             all: unset;
             width: 80%;
-            color: grey;
-            background-color: bisque;
+            color: $primary-white;
+            background-color: $primary-black;
             border-radius: 5px;
             margin: 10px;
             padding: 10px;
             list-style: none;
             cursor: pointer;
-            border-left: solid 5px black;
+            border-left: solid 5px $primary-orangered;
         }
         summary{
             all: unset;
             width: 100%;
-            color: grey;
-            background-color: bisque;
+            color: $primary-white;
+            background-color: $primary-black;
             border-radius: 5px;
             // margin: 10px;
             // padding: 10px;
             list-style: none;
             font-size: 1.5rem;
-            border-left: solid 5px black;
-            caret-color: aqua;
+            border-left: solid 5px $primary-orangered;
+            caret-color: white;
         }
+
+            .config-bar {
+                // border: solid 2px red;
+                position: absolute;
+                bottom: 50px;
+                width: 90%;
+                #config-btn{
+                    all: unset;
+                    color: $primary-white;
+                    background-color: $primary-orangered;
+                    width: 100%;
+                    height: 30px;
+                    border-radius: 4px;
+                    font-size: 16px;
+                    font-weight: bolder;
+                    padding: auto;
+                    text-align: center;
+                    &:hover{
+                        // color: ;
+                        background-color: $primary-blue;
+                        cursor: pointer;
+                    }
+                    &:active{
+                        background-color: $primary-black;
+                    }
+                }
+            }
     }
+
+
 }

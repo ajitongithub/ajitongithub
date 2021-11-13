@@ -141,9 +141,15 @@
             <div class="card_content_container">
                 <div id="load_profile_final" >
                 </div>
+                <div id="load-profile-info">
+                    <p>Maximum Demand - {{max_demand_display}}</p>
+                    <p>24-hour Energy Demand - {{energy_demand_display}} kWh</p>
+                    <p>Minimum Demand - {{min_demand_display}} Watts</p>
+                </div>
              </div>
              <div class="card_btn_container">
                 <button class="btn_class_type1" ng-click="reset_load_selection()">RESET</button>
+                <button class="btn_class_type1" id="processLoadProfile">PROCESS LOAD</button>
                 <button id="btn_load_profile_final" class="btn_class_type1" ng-click="load_profile_upload()"> SET THE LOAD </button>
             </div>            
         </div>

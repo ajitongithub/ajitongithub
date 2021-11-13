@@ -1,3 +1,5 @@
+// const { ipcRenderer } = require("electron");
+
 let autoloading_config ={};
 autoloading_config.room_width = 12; //Feet
 autoloading_config.room_breadth = 10;//Feet
@@ -285,6 +287,10 @@ napp.controller('location_controller', function ($scope, $http, $location, $root
 });
 // Load Profile Controller
 napp.controller('load_profile_controller', function ($scope, $http, $location) {
+	
+	$scope.max_demand_display = "Not Defined Yet";
+	$scope.energy_demand_display = "Not Defined Yet";
+	$scope.min_demand_display = "Not Defined Yet";
 	// Active Button Changer 
 	var side_menu_active_system = document.getElementsByClassName('left_side_menu');
 	for (i = 0; i < side_menu_active_system.length; i++) {
@@ -619,11 +625,52 @@ napp.controller('load_profile_controller', function ($scope, $http, $location) {
 		if ($scope.selectedLoad.load_profile) {
 			btn_load_profile_database.disabled = false;
 		}
-		else {
-			btn_load_profile_database.disabled = true;
-		}
+		else {btn_load_profile_database.disabled = true;}
 		instinct_profile.load_profile = $scope.selectedLoad.load_profile;
 		Plotly.restyle(load_profile_final, 'y', [$scope.selectedLoad.load_profile]);
+		//information display
+		var sel_load = $scope.selectedLoad.load_profile;
+		var max_demand_load = sel_load.reduce((a,b)=>Math.max(a,b));
+		var min_demand_load = sel_load.reduce((a,b)=>Math.min(a,b));
+		var energy_demand_load = sel_load.reduce((a,b)=>a+b);
+		// console.log(max_demand_load);
+		// console.log(energy_demand_load);
+
+		if (max_demand_load > 1000){
+			$scope.max_demand_display = `${Math.round(max_demand_load/1000)} kW`;
+		}
+		else { $scope.max_demand_display = `${max_demand_load} W`;}
+		
+		$scope.energy_demand_display = `${Math.round(energy_demand_load/1000)} kWh`;
+		// $scope.min_demand_display = "Not Defined Yet";
+		if (min_demand_load > 1000) {
+			$scope.min_demand_display = `${Math.round(min_demand_load / 1000)} kW`;
+		}
+		else { $scope.min_demand_display = `${min_demand_load} W`; }
+
+
+
+
+		//Generate the transfer object
+		// let load_profile_transfer = [];
+		// load_profile_transfer.load_profile = sel_load;
+
+		// generate full year profile
+		let fullYear_loadProfile = document.querySelector("#processLoadProfile");
+		// console.log(instinct_profile);
+
+		//Recommendation Ranges
+		instinct_profile.system_voltage = [12,24,36,48,96,120,240];
+		instinct_profile.batt_voltages = [2,6,12];
+		instinct_profile.batt_AH_ranges = [50,500,10]; //start,end,step
+		instinct_profile.batt_series_qty = [1,120];
+		instinct_profile.batt_parallel_qty = [1,4];
+
+		fullYear_loadProfile.addEventListener("click", () => {
+			let success_result = ipcRenderer.sendSync("load_profile_yearly", instinct_profile);
+			console.log(success_result);
+		});
+
 
 	};
 	//load profile 
@@ -635,6 +682,7 @@ napp.controller('load_profile_controller', function ($scope, $http, $location) {
 		$location.path("/component_selection");
 	};
 
+	
 });
 // Component Controller
 napp.controller('components_controller', function ($scope, $http, $location) {
@@ -873,6 +921,10 @@ napp.controller('simulation_data_controller', function ($scope, $http, $q, $loca
 			// 	ipcRenderer.send('simulation_run');
 			// }, 3000);
 		}
+
+
+
+
 		//TODO Simulation UX Enhancement
 		console.log("SIMULATION START");
 		document.getElementById('sim_modal_progress').innerHTML = "Simulation in progress";
@@ -1307,3 +1359,8 @@ napp.controller('env_assess_controller', function ($scope, $http, $rootScope) {
 	//load usage stats
 
 });
+
+
+
+
+

@@ -69,7 +69,7 @@
                     display: grid;
                     column-gap: 5px;
                     width: 100%;
-                    grid-template-columns: repeat(12,1fr);
+                    grid-template-columns: repeat(12, 1fr);
                     border: solid 2px green;
                     position: relative;
                     padding: 0;
@@ -90,10 +90,12 @@
                         padding: 10px;
                         border-radius: 4px;
                         font-size: 12px;
+
                         &:hover {
                             background-color: rgb(219, 207, 39);
                         }
                     }
+
                     .template_btnContainer {
                         display: block;
                         grid-column: 1 / -1;
@@ -101,7 +103,7 @@
                         padding: 0;
                         margin: 0;
                         // border: solid 2px blue;
-          
+
                         #template__form {
                             display: grid;
                             position: relative;
@@ -141,28 +143,30 @@
                                     cursor: not-allowed;
                                 }
                             }
-                    #template_DELETE {
-                        grid-column: 4/-1;
-                        border: none;
-                        outline: none;
-                        background-color: var(--primary-orangered);
-                        font-weight: 500;
-                        color: wheat;
-                        cursor: pointer;
-                        padding: 10px;
-                        border-radius: 4px;
-                        font-size: 12px;
 
-                        &:hover {
-                            background-color: rgb(134, 38, 38);
-                        }
-                        [disabled],
-                        &:disabled {
-                            background-color: grey;
-                            color: white;
-                            cursor: not-allowed;
-                        }
-                    }
+                            #template_DELETE {
+                                grid-column: 4/-1;
+                                border: none;
+                                outline: none;
+                                background-color: var(--primary-orangered);
+                                font-weight: 500;
+                                color: wheat;
+                                cursor: pointer;
+                                padding: 10px;
+                                border-radius: 4px;
+                                font-size: 12px;
+
+                                &:hover {
+                                    background-color: rgb(134, 38, 38);
+                                }
+
+                                [disabled],
+                                &:disabled {
+                                    background-color: grey;
+                                    color: white;
+                                    cursor: not-allowed;
+                                }
+                            }
 
                         }
 
@@ -766,11 +770,11 @@
         .grid_control__div {
             display: grid;
             width: 100%;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr 1fr 2fr;
             column-gap: 10px;
             // height: 50px;
             place-content: center;
-            border: solid 2px green;
+            border: solid 2px $primary-darkgreen;
 
             button {
                 background: none;
@@ -781,12 +785,27 @@
                 transition: all 150ms ease;
                 border-radius: 3px;
                 height: 40px;
+            }
 
+            #process_data {
+                background: none;
+                outline: none;
+                background-color: $primary-green;
+                color: white;
+                font-size: 2.5ch;
+                padding: 4px;
+                border-radius: 5px;
+                transition: all 150ms ease-in-out;
+                // width: 100%;
+                cursor: pointer;
 
+                &:hover {
+                    background-color: $primary-blue;
+                }
             }
 
             #save_grid {
-                background-color: #91eba77c;
+                background-color: $primary-darkgreen;
 
                 &:hover {
                     background-color: #18f750a9;
@@ -794,7 +813,7 @@
             }
 
             #load_grid {
-                background-color: #f8ef697c;
+                background-color: $primary-orange;
 
                 &:hover {
                     background-color: #f8ef69e7;
@@ -802,7 +821,7 @@
             }
 
             #align_grid {
-                background-color: #6848f77c;
+                background-color: $secondary-darkchocolate;
 
                 &:hover {
                     background-color: #1e0b757c;
@@ -810,7 +829,7 @@
             }
 
             #clear_grid {
-                background-color: #ff97977c;
+                background-color: $primary-orangered;
 
                 &:hover {
                     background-color: #ff9797;
@@ -825,22 +844,22 @@
             width: 100%;
             overflow: hidden;
 
-            #process_data {
-                background: none;
-                outline: none;
-                background-color: #079762;
-                color: white;
-                font-size: 2.5ch;
-                padding: 4px;
-                border-radius: 5px;
-                transition: all 150ms ease-in-out;
-                // width: 100%;
-                cursor: pointer;
+            // #process_data {
+            //     background: none;
+            //     outline: none;
+            //     background-color: #079762;
+            //     color: white;
+            //     font-size: 2.5ch;
+            //     padding: 4px;
+            //     border-radius: 5px;
+            //     transition: all 150ms ease-in-out;
+            //     // width: 100%;
+            //     cursor: pointer;
 
-                &:hover {
-                    background-color: #046944;
-                }
-            }
+            //     &:hover {
+            //         background-color: #046944;
+            //     }
+            // }
 
             #status__div {
                 display: grid;
