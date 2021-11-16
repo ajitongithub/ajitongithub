@@ -159,6 +159,7 @@ const testms = async () => {
 
 ipcMain.on('solarRecom', (event,instinct_config)=>{ 
 
+  let istes =0;
   instinct_config = fs.readFileSync(resolve(__dirname, 'database/temp_data copy.json'));
 
   instinct_config = JSON.parse(instinct_config);
