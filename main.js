@@ -155,9 +155,88 @@ const testms = async () => {
   // },10000);
 };
 
+//Solar Recom Model
+
+ipcMain.on('solarRecom', (event,instinct_config)=>{ 
+
+  instinct_config = fs.readFileSync(resolve(__dirname, 'database/temp_data copy.json'));
+
+  instinct_config = JSON.parse(instinct_config);
+  let dailyInsolData = [];
+  let insolAggregator =0;
+  instinct_config.insolation.forEach((currentInsolation, index)=>{
+    
+    if(parseFloat(currentInsolation) > 0){
+      insolAggregator += parseFloat(currentInsolation);
+      console.log(currentInsolation,index);
+    }
+    
+    if(index % 24 == 0 && index !=0){
+      dailyInsolData.push(insolAggregator);
+      insolAggregator =0;
+    }
+  });
+
+  let tempEfficiency = instinct_profile.panelEffi; 
+
+  let solarPowerGeneratedPerDay = dailyInsolData.map((data)=>data*tempEfficiency);
+  console.log(dailyInsolData); //maximum insolation available per day W/m2
+  console.log(solarPowerGeneratedPerDay); //maximum insolation available per day W/m2
+
+  // let temperature_data = new Series(instinct_config.temperature, { name: 'Temperature Profile' });
+  // let insolation_data = new Series(instinct_config.insolation, { name: 'Insolation Profile' });
+  // //Temperature Data
+  // temperature_data_df = Array.from(temperature_data.values);
+  // //Insolation Data
+  // insolation_data_df = Array.from(insolation_data.values); //Watts
+
+  // console.log(insolation_data_df);
+
+  // let additional_hours_needed = hours_in_year - temperature_data.length;
+  // let temperature_final = temperature_data_df;
+  // let insolation_final = insolation_data_df;
 
 
-//Generate year Profile
+  // let solar_Wp = 400; //watts
+  // let solar_efficiency = 0.1986;
+  // let solar_Voc = 49.39; //Open Circuit Voltage
+  // let solar_Isc = 10.42;  //Short circuit current
+  // let solar_Vm = 40.07;  //Peak Voltage
+  // let solar_Im = 10.02;  //Peak current
+
+
+  // let solar_fill_factor = (solar_Vm * solar_Im) / (solar_Voc * solar_Isc);
+
+  // let real_area = solar_Wp / (solar_efficiency * 1000);
+  // //real_area = 1.221543587 // from datasheet
+  // //calculated_area = solar_Wp / 1000 // m2
+  // //print("\nReal Area =" + str(real_area) + "Calculated area = " + str(calculated_area)+"\n")
+  // let solar_series = 3;
+  // let solar_parallel = 3;
+  // let stc_temperature = 25; // degrees celcius
+  // let solar_pure_output = Array(simulation_hours).fill(0);
+  // let solar_derated_output = Array(simulation_hours).fill(0);
+
+
+  // let mod_eff_aging = [];
+  // let modified_insolation_data = [];
+  // let modified_temperature_data = [];
+
+
+  event.returnValue = solarPowerGeneratedPerDay;
+
+
+
+
+
+
+
+
+//end of solar recomm program
+
+});
+
+//Generate year Profile and Battery Energy Model
 ipcMain.on('load_profile_yearly', (event, instinct_config)=>{
   console.log(instinct_config);
 
@@ -228,22 +307,27 @@ ipcMain.on('load_profile_yearly', (event, instinct_config)=>{
     }
   }
 
-  the_responseObject.load_profile = generated_load_profile;
-  the_responseObject.max_demand_load = generated_load_profile.reduce((a, b) => Math.max(a, b));
-  the_responseObject.energy_demand_load = generated_load_profile.reduce((a, b) => a + b);
+  the_responseObject.load_profile_yearly = generated_load_profile;
+  the_responseObject.max_demand_load_yearly = generated_load_profile.reduce((a, b) => Math.max(a, b));
+  the_responseObject.energy_demand_load_yearly = generated_load_profile.reduce((a, b) => a + b);
   
+  //Normalized energy demand with DOD, DOA, efficiency,
+  let batt_recom_DOD = instinct_config.batt_recom_DOD;
+  let batt_recom_min_DOA = instinct_config.batt_recom_min_DOA; //Days of autonomy
+  let batt_recom_eff = instinct_config.batt_recom_eff; //couloumbic eff.
+
+  // let normalized_energy_demand_perDay = (the_responseObject.max_demand_load * batt_recom_min_DOA) / (batt_recom_DOD * batt_recom_eff);
+  let normalized_energy_demand_perDay = (instinct_config.energy_demand * batt_recom_min_DOA) / (batt_recom_DOD * batt_recom_eff);
+  
+  // console.log(`Max Demand${the_responseObject.max_demand}`);
+  // console.log(`Normalized Demand${normalized_energy_demand_perDay}`);
   
   let tempRecom = [];
   ///Battery Combinations Possible
   instinct_config.system_voltage.forEach((sys_voltage)=>{
-    console.log(sys_voltage);
-
-    
-    //no.of series required
-    
+    // console.log(sys_voltage);    
+    //no.of series required    
     instinct_config.batt_voltages.forEach((batt_voltage) => {
-
-
       var batt_start_AH = parseInt(instinct_config.batt_AH_ranges[0]);
       var batt_end_AH = parseInt(instinct_config.batt_AH_ranges[1]);
       var batt_step_AH = parseInt(instinct_config.batt_AH_ranges[2]);
@@ -254,24 +338,28 @@ ipcMain.on('load_profile_yearly', (event, instinct_config)=>{
       for (i = batt_start_AH; i <= batt_end_AH; i += batt_step_AH){
         for (n = batt_start_parallel; n <= batt_end_parallel; n += 1){
           let objRecom = {};
-          objRecom.systemVoltage = sys_voltage;
-          objRecom.noOfSeries = sys_voltage / batt_voltage;
-          objRecom.batt_AH = i;
-          objRecom.noOfParallel = n;
-          tempRecom.push(objRecom);
+          let batt_total_energy = n * (sys_voltage / batt_voltage) * i * sys_voltage;
+          if (batt_total_energy >= normalized_energy_demand_perDay && batt_total_energy < (normalized_energy_demand_perDay * 1.2)){
+            objRecom.systemVoltage = sys_voltage;
+            objRecom.battVoltage = batt_voltage;
+            objRecom.noOfSeries = sys_voltage / batt_voltage;
+            objRecom.batt_AH = i;
+            objRecom.noOfParallel = n;
+            objRecom.energyCapacity = batt_total_energy;
+            objRecom.normalizedEnergyDemand = normalized_energy_demand_perDay;
+            objRecom.totalCost = Math.round(104 * i * n * (sys_voltage / batt_voltage)); // unit price 104x => from Prices-appliances.xls
+            tempRecom.push(objRecom);
+          }
         }        
       }
-    });
-    
+    });    
   });
 
   the_responseObject.battery_recomns = tempRecom;
-  console.log(tempRecom);
-
   event.returnValue = the_responseObject;
 });
 
-
+///Generate solar panel power
 
 
 
@@ -279,10 +367,6 @@ ipcMain.on('load_profile_yearly', (event, instinct_config)=>{
 ipcMain.on('simulation_run', async (event, data) => {
   // event.reply('simulation-response', 'Start');
   event.sender.send('simulation-response', 'Start');
-
-
-
-
   // await event.sender.send('state_of_sim', 'Started');
 
   //loading configurations

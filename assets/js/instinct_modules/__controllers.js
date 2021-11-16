@@ -1,4 +1,3 @@
-// const { ipcRenderer } = require("electron");
 
 let autoloading_config ={};
 autoloading_config.room_width = 12; //Feet
@@ -633,9 +632,6 @@ napp.controller('load_profile_controller', function ($scope, $http, $location) {
 		var max_demand_load = sel_load.reduce((a,b)=>Math.max(a,b));
 		var min_demand_load = sel_load.reduce((a,b)=>Math.min(a,b));
 		var energy_demand_load = sel_load.reduce((a,b)=>a+b);
-		// console.log(max_demand_load);
-		// console.log(energy_demand_load);
-
 		if (max_demand_load > 1000){
 			$scope.max_demand_display = `${Math.round(max_demand_load/1000)} kW`;
 		}
@@ -647,17 +643,15 @@ napp.controller('load_profile_controller', function ($scope, $http, $location) {
 			$scope.min_demand_display = `${Math.round(min_demand_load / 1000)} kW`;
 		}
 		else { $scope.min_demand_display = `${min_demand_load} W`; }
-
-
-
-
 		//Generate the transfer object
-		// let load_profile_transfer = [];
-		// load_profile_transfer.load_profile = sel_load;
-
 		// generate full year profile
 		let fullYear_loadProfile = document.querySelector("#processLoadProfile");
-		// console.log(instinct_profile);
+
+
+
+
+
+
 
 		//Recommendation Ranges
 		instinct_profile.system_voltage = [12,24,36,48,96,120,240];
@@ -665,11 +659,41 @@ napp.controller('load_profile_controller', function ($scope, $http, $location) {
 		instinct_profile.batt_AH_ranges = [50,500,10]; //start,end,step
 		instinct_profile.batt_series_qty = [1,120];
 		instinct_profile.batt_parallel_qty = [1,4];
+		instinct_profile.batt_recom_DOD = 0.8;
+		instinct_profile.batt_recom_min_DOA = 1; //Days of autonomy
+		instinct_profile.batt_recom_eff = 0.92; //couloumbic eff.
+		instinct_profile.max_demand = max_demand_load; // compass for inverter
+		instinct_profile.energy_demand = energy_demand_load;
 
+
+
+
+		instinct_profile.panelEffi = 0.17;
+		
+
+
+
+		console.log(instinct_profile);
 		fullYear_loadProfile.addEventListener("click", () => {
-			let success_result = ipcRenderer.sendSync("load_profile_yearly", instinct_profile);
-			console.log(success_result);
+			let loadBattRecomm_result = ipcRenderer.sendSync("load_profile_yearly", instinct_profile);
+			console.log(loadBattRecomm_result);
+
+
+
+			console.log(instinct_profile);
+
+
+			//Solar Recom Model
+			let solarRecomm_result = ipcRenderer.sendSync('solarRecom',instinct_profile);
+			console.log(solarRecomm_result);
 		});
+
+
+
+
+
+
+
 
 
 	};
@@ -913,17 +937,7 @@ napp.controller('simulation_data_controller', function ($scope, $http, $q, $loca
 		}
 		else {
 			sim_modal.style.transform = "translateY(0px)";
-			
-			// setTimeout(() => {
-			// 	console.log("SIMULATION START");
-			// 	document.getElementById('sim_modal_progress').innerHTML = "Simulation in progress";
-			// 	document.getElementById('sim_modal_progress').style.color = "yellow	 ";
-			// 	ipcRenderer.send('simulation_run');
-			// }, 3000);
 		}
-
-
-
 
 		//TODO Simulation UX Enhancement
 		console.log("SIMULATION START");
