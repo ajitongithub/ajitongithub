@@ -1,6 +1,6 @@
 {
-  "name": "insti-clov_v3",
-  "version": "3.0.0",
+  "name": "instinct-2",
+  "version": "4.0.0",
   "description": "Microgrid Simulator",
   "main": "main.js",
   "devDependencies": {
@@ -23,5 +23,17 @@
     "python-shell": "^3.0.1",
     "random-seed": "^0.3.0",
     "scijs": "^0.7.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ajitongithub/instinct-2.git"
+  },
+  "keywords": [
+    "Microgrid",
+    "Simulator"
+  ],
+  "bugs": {
+    "url": "https://github.com/ajitongithub/instinct-2/issues"
+  },
+  "homepage": "https://github.com/ajitongithub/instinct-2#readme"
 }
