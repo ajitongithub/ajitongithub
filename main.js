@@ -177,7 +177,7 @@ ipcMain.on('solarRecom', (event,instinct_config)=>{
     }
   });
 
-  let tempEfficiency = instinct_profile.panelEffi; 
+  let tempEfficiency = instinct_config.panelEffi; 
 
   let solarPowerGeneratedPerDay = dailyInsolData.map((data)=>data*tempEfficiency);
   console.log(dailyInsolData); //maximum insolation available per day W/m2
