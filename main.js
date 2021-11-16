@@ -157,7 +157,7 @@ const testms = async () => {
 
 //Solar Recom Model
 
-ipcMain.on('solarRecom', (event,instinct_config)=>{ 
+ipcMain.on('solarRecom', (event, instinct_profile)=>{ 
 
   let istes =0;
   instinct_config = fs.readFileSync(resolve(__dirname, 'database/temp_data copy.json'));
@@ -169,7 +169,7 @@ ipcMain.on('solarRecom', (event,instinct_config)=>{
     
     if(parseFloat(currentInsolation) > 0){
       insolAggregator += parseFloat(currentInsolation);
-      console.log(currentInsolation,index);
+      // console.log(currentInsolation,index);
     }
     
     if(index % 24 == 0 && index !=0){
@@ -178,7 +178,8 @@ ipcMain.on('solarRecom', (event,instinct_config)=>{
     }
   });
 
-  let tempEfficiency = instinct_config.panelEffi; 
+  let tempEfficiency = instinct_profile.panelEffi; 
+  console.log(tempEfficiency);
 
   let solarPowerGeneratedPerDay = dailyInsolData.map((data)=>data*tempEfficiency);
   console.log(dailyInsolData); //maximum insolation available per day W/m2
