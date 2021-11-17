@@ -665,9 +665,7 @@ napp.controller('load_profile_controller', function ($scope, $http, $location) {
 		instinct_profile.max_demand = max_demand_load; // compass for inverter
 		instinct_profile.energy_demand = energy_demand_load;
 
-
-
-
+		//Solar Data
 		instinct_profile.panelEffi = 0.17;
 		
 
