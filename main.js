@@ -164,18 +164,34 @@ ipcMain.on('solarRecom', (event, instinct_profile)=>{
   instinct_config = JSON.parse(instinct_config);
   let dailyInsolData = [];
   let insolAggregator =0;
+  let insolLimitAggregator =0;
+  let batt_active_array = Array(simulation_hours).fill(0);
+
+
+
   instinct_config.insolation.forEach((currentInsolation, index)=>{
     
+    //Insolation Aggregator for one day
     if(parseFloat(currentInsolation) > 0){
       insolAggregator += parseFloat(currentInsolation);
       // console.log(currentInsolation,index);
     }
+
+    //Weak Daylight Detection 
+    if (parseFloat(currentInsolation) >= instinct_profile.insolationLimit){
+      insolLimitAggregator += parseFloat(currentInsolation);
+    }
     
+    //Day complete detection
     if(index % 24 == 0 && index !=0){
       dailyInsolData.push(insolAggregator);
       insolAggregator =0;
     }
   });
+
+
+
+
 
   let tempEfficiency = instinct_profile.panelEffi; 
   console.log(tempEfficiency);

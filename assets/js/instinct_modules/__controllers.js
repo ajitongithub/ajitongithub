@@ -667,6 +667,7 @@ napp.controller('load_profile_controller', function ($scope, $http, $location) {
 
 		//Solar Data
 		instinct_profile.panelEffi = 0.17;
+		instinct_profile.insolationLimit = 100;
 		
 
 
