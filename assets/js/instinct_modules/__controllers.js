@@ -712,6 +712,8 @@ napp.controller('load_profile_controller', function ($scope, $http, $location) {
 
 
 			let solarAreaConstant = 10; // m2
+
+			
 			let battEnergy_state = panelPower_output.map((panelPowerData,index)=>{
 				battEnergy_array[index] = battEnergy_instant + (panelPowerData * solarAreaConstant) - solarRecomm_result.load_profile[index];
 				battEnergy_instant = battEnergy_array[index];
