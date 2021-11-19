@@ -158,14 +158,18 @@ const testms = async () => {
 //Solar Recom Model
 
 ipcMain.on('solarRecom', (event, instinct_profile)=>{ 
-
   instinct_config = fs.readFileSync(resolve(__dirname, 'database/temp_data copy.json'));
-
   instinct_config = JSON.parse(instinct_config);
-  let dailyInsolData = [];
+
+  let tempData = instinct_config.temperature;
+  let simulation_days = 365;
+  let simulation_hours = simulation_days*24;
+
+  let dailyInsolData = [];  
   let insolAggregator =0;
   let insolLimitAggregator =0;
   let batt_active_array = Array(simulation_hours).fill(0);
+  let batt_full_SOC_failure = Array(simulation_days).fill(0);
 
 
 
@@ -190,15 +194,41 @@ ipcMain.on('solarRecom', (event, instinct_profile)=>{
   });
 
 
-
-
-
+ 
   let tempEfficiency = instinct_profile.panelEffi; 
   console.log(tempEfficiency);
 
   let solarPowerGeneratedPerDay = dailyInsolData.map((data)=>data*tempEfficiency);
-  console.log(dailyInsolData); //maximum insolation available per day W/m2
-  console.log(solarPowerGeneratedPerDay); //maximum insolation available per day W/m2
+  let solarPowerGeneratedPerDay_tempCompen = solarPowerGeneratedPerDay.map((data, index)=>data /(((-0.38*(parseInt(tempData[index])-25)/100))+1));
+  
+  
+  
+  instinct_profile.solarPowerGeneratedPerDay = solarPowerGeneratedPerDay;
+  instinct_profile.solarPowerGeneratedPerDay_tempCompen = solarPowerGeneratedPerDay_tempCompen;
+  instinct_profile.dailyInsolData = dailyInsolData;
+  instinct_profile.insolation = instinct_config.insolation;
+  instinct_profile.temperature = tempData;
+
+  // console.log(dailyInsolData); //maximum insolation available per day W/m2
+  // console.log(solarPowerGeneratedPerDay); //maximum insolation available per day W/m2
+  // console.log(solarPowerGeneratedPerDay_tempCompen); //maximum insolation available per day W/m2
+
+
+  //We have Generated Solar Power with and without temperature compensation
+  //Next we need to find the total power needed to charge the batteries and provide for load demand
+
+  //Energy consumed by battery till 12.. An Approximation
+
+  let energyBatt_till_12 = instinct_profile.load_profile.reduce((prev_data,current_data,index)=>{if(index>=17){
+    return prev_data + current_data;    
+  } else { return 0; }});
+
+  // console.log(instinct_profile.load_profile);
+  // console.log(energyBatt_till_12);
+
+  instinct_profile.energyBatt_till_12 = energyBatt_till_12;
+  event.returnValue = instinct_profile;
+
 
   // let temperature_data = new Series(instinct_config.temperature, { name: 'Temperature Profile' });
   // let insolation_data = new Series(instinct_config.insolation, { name: 'Insolation Profile' });
@@ -240,7 +270,7 @@ ipcMain.on('solarRecom', (event, instinct_profile)=>{
   // let modified_temperature_data = [];
 
 
-  event.returnValue = solarPowerGeneratedPerDay;
+  
 
 
 
@@ -255,7 +285,7 @@ ipcMain.on('solarRecom', (event, instinct_profile)=>{
 
 //Generate year Profile and Battery Energy Model
 ipcMain.on('load_profile_yearly', (event, instinct_config)=>{
-  console.log(instinct_config);
+  // console.log(instinct_config);
 
   let the_responseObject = [];
 

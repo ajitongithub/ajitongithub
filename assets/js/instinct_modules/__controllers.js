@@ -672,19 +672,60 @@ napp.controller('load_profile_controller', function ($scope, $http, $location) {
 
 
 
-		console.log(instinct_profile);
+		// console.log(instinct_profile);
 		fullYear_loadProfile.addEventListener("click", () => {
 			let loadBattRecomm_result = ipcRenderer.sendSync("load_profile_yearly", instinct_profile);
-			console.log(loadBattRecomm_result);
-
-
-
-			console.log(instinct_profile);
-
-
+			instinct_profile.battLoad_Recom = loadBattRecomm_result;
+			// console.log(loadBattRecomm_result);
+			// console.log(instinct_profile);
 			//Solar Recom Model
 			let solarRecomm_result = ipcRenderer.sendSync('solarRecom',instinct_profile);
 			console.log(solarRecomm_result);
+
+			//work the program for recommedation
+
+			// console.table(solarRecomm_result.battLoad_Recom.battery_recomns);
+			let oneDay_insol = Array(24).fill(0);
+			let panelPower_output = Array(24).fill(0); //W/m2
+			let tempData = solarRecomm_result.temperature;
+
+			for(let i=0;i<24;i++){
+				oneDay_insol[i] = solarRecomm_result.insolation[i] * solarRecomm_result.panelEffi;
+
+				//W/m2 output from the a solar panel
+				panelPower_output[i] = oneDay_insol[i] / (((-0.38 * (parseInt(tempData[i]) - 25) / 100)) + 1);
+
+
+			}
+			
+			//Best Day for Solar and Worst Day for Solar
+
+
+			//Battery Energy Test - Beta
+			let battEnergy_underTest = 12960;
+			let energy_till12 = solarRecomm_result.energyBatt_till_12;
+			let battEnergy_instant = battEnergy_underTest - energy_till12;
+			let battEnergy_array = Array(24).fill(0);
+			console.log(oneDay_insol);
+			console.log(panelPower_output); // W/m2
+			console.log(solarRecomm_result.load_profile);
+
+
+			let solarAreaConstant = 10; // m2
+			let battEnergy_state = panelPower_output.map((panelPowerData,index)=>{
+				battEnergy_array[index] = battEnergy_instant + (panelPowerData * solarAreaConstant) - solarRecomm_result.load_profile[index];
+				battEnergy_instant = battEnergy_array[index];
+				//conditions
+				if (battEnergy_instant / battEnergy_underTest >= (1 - solarRecomm_result.batt_recom_DOD)){
+					if (battEnergy_instant <= battEnergy_underTest){
+						return battEnergy_instant;
+					}
+					else { return battEnergy_underTest;}
+					
+				}
+				else{return 0;}
+			});
+			console.log(battEnergy_state);
 		});
 
 
