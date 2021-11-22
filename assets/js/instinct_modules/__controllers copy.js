@@ -1,5 +1,5 @@
 
-let autoloading_config = {};
+let autoloading_config ={};
 autoloading_config.room_width = 12; //Feet
 autoloading_config.room_breadth = 10;//Feet
 autoloading_config.room_height = 10;//Feet
@@ -28,7 +28,7 @@ napp.controller('begin_controller', function ($scope, $http) {
 napp.controller('location_controller', function ($scope, $http, $location, $rootScope) {
 	//test code
 	let tstamp = Date.now();
-	let location_links_data = {};
+	let location_links_data = { };
 	// // selected location
 	// let location_object = {};
 	$http.get("../database/location_link.json?data=" + tstamp).then(function (response) {
@@ -62,9 +62,9 @@ napp.controller('location_controller', function ($scope, $http, $location, $root
 
 	console.log("location_controller ");
 	// Location Object File
-	instinct_profile.insolation = {};
-	instinct_profile.temperature = {};
-	instinct_profile.location_data = {};
+	instinct_profile.insolation = { };
+	instinct_profile.temperature = { };
+	instinct_profile.location_data = { };
 
 	let loc_mod_button = document.getElementById("curtain_buttton");
 
@@ -286,7 +286,7 @@ napp.controller('location_controller', function ($scope, $http, $location, $root
 });
 // Load Profile Controller
 napp.controller('load_profile_controller', function ($scope, $http, $location) {
-
+	
 	$scope.max_demand_display = "Not Defined Yet";
 	$scope.energy_demand_display = "Not Defined Yet";
 	$scope.min_demand_display = "Not Defined Yet";
@@ -308,7 +308,7 @@ napp.controller('load_profile_controller', function ($scope, $http, $location) {
 	btn_load_profile_final.disabled = true;
 	btn_load_profile_database.disabled = true;
 
-	instinct_profile.load_profile = {};
+	instinct_profile.load_profile = { };
 	// RESET
 	$scope.reset_load_selection = function () {
 		btn_load_profile_final.disabled = true;
@@ -340,7 +340,7 @@ napp.controller('load_profile_controller', function ($scope, $http, $location) {
 	$scope.max_demand_data = 1500;
 
 	//TODO template loading
-	$scope.load_from_template = () => {
+	$scope.load_from_template = ()=>{
 		$location.path("/auto_load_loader");
 
 	};
@@ -620,33 +620,24 @@ napp.controller('load_profile_controller', function ($scope, $http, $location) {
 		instinct_profile.load_profile = $scope.selectedLoad.load_profile;
 		Plotly.restyle(load_profile_final, 'y', [$scope.selectedLoad.load_profile]);
 	};
-	//load profile 
-	$scope.load_profile_upload = function () {
-		console.log("Load Profile Loading");
-		console.log(instinct_profile);
-		// instinct_profile["load_profile"] = load_profile_array;
-		ipcRenderer.send('load_profile_done', instinct_profile);
-		$location.path("/component_selection");
-	};
-	
 	$scope.load_changer = function () {
 		if ($scope.selectedLoad.load_profile) {
 			btn_load_profile_database.disabled = false;
 		}
-		else { btn_load_profile_database.disabled = true; }
+		else {btn_load_profile_database.disabled = true;}
 		instinct_profile.load_profile = $scope.selectedLoad.load_profile;
 		Plotly.restyle(load_profile_final, 'y', [$scope.selectedLoad.load_profile]);
 		//information display
 		var sel_load = $scope.selectedLoad.load_profile;
-		var max_demand_load = sel_load.reduce((a, b) => Math.max(a, b));
-		var min_demand_load = sel_load.reduce((a, b) => Math.min(a, b));
-		var energy_demand_load = sel_load.reduce((a, b) => a + b);
-		if (max_demand_load > 1000) {
-			$scope.max_demand_display = `${Math.round(max_demand_load / 1000)} kW`;
+		var max_demand_load = sel_load.reduce((a,b)=>Math.max(a,b));
+		var min_demand_load = sel_load.reduce((a,b)=>Math.min(a,b));
+		var energy_demand_load = sel_load.reduce((a,b)=>a+b);
+		if (max_demand_load > 1000){
+			$scope.max_demand_display = `${Math.round(max_demand_load/1000)} kW`;
 		}
-		else { $scope.max_demand_display = `${max_demand_load} W`; }
-
-		$scope.energy_demand_display = `${Math.round(energy_demand_load / 1000)} kWh`;
+		else { $scope.max_demand_display = `${max_demand_load} W`;}
+		
+		$scope.energy_demand_display = `${Math.round(energy_demand_load/1000)} kWh`;
 		// $scope.min_demand_display = "Not Defined Yet";
 		if (min_demand_load > 1000) {
 			$scope.min_demand_display = `${Math.round(min_demand_load / 1000)} kW`;
@@ -657,12 +648,17 @@ napp.controller('load_profile_controller', function ($scope, $http, $location) {
 		let fullYear_loadProfile = document.querySelector("#processLoadProfile");
 
 
+
+
+
+
+
 		//Recommendation Ranges
-		instinct_profile.system_voltage = [12, 24, 36, 48, 96, 120, 240];
-		instinct_profile.batt_voltages = [2, 6, 12];
-		instinct_profile.batt_AH_ranges = [50, 500, 10]; //start,end,step
-		instinct_profile.batt_series_qty = [1, 120];
-		instinct_profile.batt_parallel_qty = [1, 4];
+		instinct_profile.system_voltage = [12,24,36,48,96,120,240];
+		instinct_profile.batt_voltages = [2,6,12];
+		instinct_profile.batt_AH_ranges = [50,500,10]; //start,end,step
+		instinct_profile.batt_series_qty = [1,120];
+		instinct_profile.batt_parallel_qty = [1,4];
 		instinct_profile.batt_recom_DOD = 0.8;
 		instinct_profile.batt_recom_min_DOA = 1; //Days of autonomy
 		instinct_profile.batt_recom_eff = 0.92; //couloumbic eff.
@@ -672,35 +668,80 @@ napp.controller('load_profile_controller', function ($scope, $http, $location) {
 		//Solar Data
 		instinct_profile.panelEffi = 0.17;
 		instinct_profile.insolationLimit = 100;
+		
+
+
 
 		// console.log(instinct_profile);
 		fullYear_loadProfile.addEventListener("click", () => {
 			let loadBattRecomm_result = ipcRenderer.sendSync("load_profile_yearly", instinct_profile);
 			instinct_profile.battLoad_Recom = loadBattRecomm_result;
 			//Solar Recom Model
-			let solarRecomm_result = ipcRenderer.sendSync('solarRecom', instinct_profile);
+			let solarRecomm_result = ipcRenderer.sendSync('solarRecom',instinct_profile);
+
 			//work the program for recommedation
 			let oneDay_insol = Array(24).fill(0);
 			let panelPower_output = Array(24).fill(0); //W/m2
 			let tempData = solarRecomm_result.temperature;
-			for (let i = 0; i < 24; i++) {
+			for(let i=0;i<24;i++){
 				oneDay_insol[i] = solarRecomm_result.insolation[i] * solarRecomm_result.panelEffi;
 				//W/m2 output from the a solar panel
 				panelPower_output[i] = oneDay_insol[i] / (((-0.38 * (parseInt(tempData[i]) - 25) / 100)) + 1);
 			}
-			// //Best Day for Solar and Worst Day for Solar	
+			
+			// //Best Day for Solar and Worst Day for Solar
+			// //Battery Energy Test - Beta
+			// let battEnergy_underTest = 12960;
+			// let energy_till12 = solarRecomm_result.energyBatt_till_12;
+			// let battEnergy_instant = battEnergy_underTest - energy_till12;
+			// let battEnergy_array = Array(24).fill(0);
+			// console.log(oneDay_insol);
+			// console.log(panelPower_output); // W/m2
+			// console.log(solarRecomm_result.load_profile);
+
+
+			// let solarAreaConstant = 10; // m2			
+			// let battEnergy_state = panelPower_output.map((panelPowerData,index)=>{
+			// 	battEnergy_array[index] = battEnergy_instant + (panelPowerData * solarAreaConstant) - solarRecomm_result.load_profile[index];
+			// 	battEnergy_instant = battEnergy_array[index];
+			// 	//conditions
+			// 	if (battEnergy_instant / battEnergy_underTest >= (1 - solarRecomm_result.batt_recom_DOD)){
+			// 		if (battEnergy_instant <= battEnergy_underTest){
+			// 			return battEnergy_instant;
+			// 		}
+			// 		else { return battEnergy_underTest;}					
+			// 	}
+			// 	else{return 0;}
+			// });
+
+			// console.log(battEnergy_state);
+
+			// solarRecomm_result.solarRecomm = battEnergy_state;
 			solarRecomm_result.panelPowerOutput = panelPower_output;
+
+			// console.log(solarRecomm_result);
+
 			//Solar panel Rotoscopic Program
 			let recommendationArray = [];
 			let batt_recom_array = solarRecomm_result.battLoad_Recom.battery_recomns;
 			batt_recom_array.forEach((batt_recom) => {
 				recommendationArray.push(solorRotoscoper(batt_recom, solarRecomm_result));
-			});
-			console.log(recommendationArray);
+			});		
+			// console.log(recommendationArray);
 
 		});
 	};
 
+
+
+	//load profile 
+	$scope.load_profile_upload = function () {
+		console.log("Load Profile Loading");
+		console.log(instinct_profile);
+		// instinct_profile["load_profile"] = load_profile_array;
+		ipcRenderer.send('load_profile_done', instinct_profile);
+		$location.path("/component_selection");
+	};	
 });
 
 // Solar Recommender System
@@ -720,61 +761,45 @@ const solorRotoscoper = (batt_recom, solarRecomm_result) => {
 	recommObj.battery_recomm.battVoltage = batt_recom.battVoltage;
 	recommObj.battery_recomm.batt_AH = batt_recom.batt_AH;
 	recommObj.battery_recomm.totalCost = batt_recom.totalCost;
-
+	
 	//Best Day for Solar and Worst Day for Solar
 	//Battery Energy Test - Beta
 	let battEnergy_underTest = batt_recom.energyCapacity;
 	let energy_till12 = solarRecomm_result.energyBatt_till_12;
 	let battEnergy_instant = battEnergy_underTest - energy_till12;
-	let battEnergy_array = Array(24).fill(0);
+	let battEnergy_array = Array(24).fill(0);	
 	let solarRecharge_array = [];
-	// console.log(solarRecomm_result);
 
-
-	// for (let areaConst = 0; areaConst < 2; areaConst += 0.5) {
-	let areaConst = 4;
-		recommObj.solar_recomm = {};	
-		recommObj.solar_recomm.solarArrayPower =0;	
+	for(let areaConst = 0; areaConst < 2;areaConst += 0.5){
+		recommObj.solar_recomm ={};
 		let battEnergy_state = solarRecomm_result.panelPowerOutput.map((panelPowerData, index) => {
-			// recommObj.solar_recomm.solarArrayPower = panelPowerData * areaConst;
-			if (!(recommObj.solar_recomm.solarArrayPower >= (panelPowerData * areaConst))){
-				recommObj.solar_recomm.solarArrayPower = panelPowerData * areaConst;
-			}
-			
-
-
 			battEnergy_array[index] = battEnergy_instant + (panelPowerData * areaConst) - solarRecomm_result.load_profile[index];
 			battEnergy_instant = battEnergy_array[index];
-
-			if (battEnergy_instant <= battEnergy_underTest) {
-				return battEnergy_instant;
+			if (battEnergy_instant / battEnergy_underTest >= (1 - solarRecomm_result.batt_recom_DOD)) {
+				if (battEnergy_instant <= battEnergy_underTest) {
+					return battEnergy_instant;
+				}
+				else { return battEnergy_underTest; }
 			}
-			else { return battEnergy_underTest; }
-			// if (battEnergy_instant / battEnergy_underTest >= (1 - solarRecomm_result.batt_recom_DOD)) {
-			// 	if (battEnergy_instant <= battEnergy_underTest) {
-			// 		return battEnergy_instant;
-			// 	}
-			// 	else { return battEnergy_underTest; }
-			// }
-			// else { return 0; }
+			else { return 0; }
 		});
-		// console.log(battEnergy_state);
+		console.log(battEnergy_state);
 		//check feasibility ad 
-		if (battEnergy_state[23] > battEnergy_state[0]) {
+		if (battEnergy_state[23] > battEnergy_state[0]){
 			recommObj.solar_recomm.areaConstant = areaConst; //Area constant
 			recommObj.solar_recomm.feasible = "YES"; //Area constant
 			recommObj.solar_recomm.rechargeEnergyArray = battEnergy_state; //Area constant
 		}
-		else {
+		else{
 			recommObj.solar_recomm.areaConstant = areaConst; //Area constant
 			recommObj.solar_recomm.feasible = "NO"; //Area constant
 			recommObj.solar_recomm.rechargeEnergyArray = battEnergy_state; //Area constant
 		}
 		solarRecharge_array.push(recommObj);
-	// }
+	}
 	// recommObj.battery_recomm.battEnergy_stateArray = battEnergy_state;
 	// recommObj.battEnergy_stateArray = battEnergy_state; //Battery Energy
-	return solarRecharge_array;
+	return solarRecharge_array; 
 };
 
 
@@ -789,7 +814,7 @@ napp.controller('components_controller', function ($scope, $http, $location) {
 	side_menu_active_system[3].classList.add("active");
 
 
-	let comp_counter = {};
+	let comp_counter = { };
 	comp_counter.inverter = 0;
 	comp_counter.battery = 0;
 	comp_counter.solar = 0;
@@ -798,7 +823,7 @@ napp.controller('components_controller', function ($scope, $http, $location) {
 	$scope.lbl_component_info = "Please select the components to proceed further";
 
 
-	instinct_profile.components = {};
+	instinct_profile.components = { };
 	$scope.component_accept = 1;
 
 	// loads components database
@@ -888,7 +913,7 @@ napp.controller('simulation_data_controller', function ($scope, $http, $q, $loca
 	// modal
 	let sim_modal_result_button = document.getElementById("sim_modal_result_button");
 	sim_modal_result_button.disabled = true;
-	$scope.simulation_data = {};
+	$scope.simulation_data = { };
 	// Set preset data
 	$scope.simulation_data.grid_reliability = 0;
 	$scope.simulation_data.grid_dependency = true;
@@ -969,7 +994,7 @@ napp.controller('simulation_data_controller', function ($scope, $http, $q, $loca
 		console.log(instinct_profile);
 		let preparation_setting = ipcRenderer.sendSync('simulation_parameters', instinct_profile);
 
-		if (preparation_setting == "Success") {
+		if (preparation_setting == "Success"){
 			document.getElementById("simu_runner_btn").disabled = false;
 			document.getElementById("simu_prepare_btn").innerText = "Prepared";
 			document.getElementById("simu_prepare_btn").style.backgroundColor = "rgba(0, 255, 55, 0.664)";
@@ -979,7 +1004,7 @@ napp.controller('simulation_data_controller', function ($scope, $http, $q, $loca
 			let sim_stat = await sim_run_cmd();
 			console.log(sim_stat);
 		}
-		else {
+		else{
 			document.getElementById("simu_runner_btn").disabled = false;
 			document.getElementById("simu_prepare_btn").innerText = "Error";
 			document.getElementById("simu_prepare_btn").style.backgroundColor = "rgba(0, 255, 55, 0.664)";
@@ -992,12 +1017,12 @@ napp.controller('simulation_data_controller', function ($scope, $http, $q, $loca
 		console.log(data);
 	});
 	ipcRenderer.on('progress_of_sim', (event, data) => {
-		var sim_prog = document.querySelector("#sim_progress_ux");
+		var sim_prog = document.querySelector("#sim_progress_ux");	
 		sim_prog.value = data;
 		console.log("HIT");
 	});
-	//Simulation Run Command Function
-	const sim_run_cmd = async () => {
+//Simulation Run Command Function
+	const sim_run_cmd = async ()=>{
 		let simulation_modal_curtain = document.getElementById('simulation_modal_curtain');
 		simulation_modal_curtain.style.transform = "translateY(0px)";
 
@@ -1156,7 +1181,7 @@ napp.controller('simulation_first_result_controller', function ($scope, $http, $
 
 
 
-	let simulation_output_data = {};
+	let simulation_output_data = { };
 	//sim_results_graph_1 - BATT- SOH
 	let sim_results_graph_1 = document.getElementById('sim_results_graph_1');
 	let sim_results_graph_2 = document.getElementById('sim_results_graph_2');
@@ -1444,3 +1469,8 @@ napp.controller('env_assess_controller', function ($scope, $http, $rootScope) {
 	//load usage stats
 
 });
+
+
+
+
+
