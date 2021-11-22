@@ -730,15 +730,19 @@ const solorRotoscoper = (batt_recom, solarRecomm_result) => {
 	let solarRecharge_array = [];
 	// console.log(solarRecomm_result);
 
-	//While loop Start
+
 	// for (let areaConst = 0; areaConst < 2; areaConst += 0.5) {
-		let areaConst = 4;
+	let areaConst = 4;
 		recommObj.solar_recomm = {};	
 		recommObj.solar_recomm.solarArrayPower =0;	
 		let battEnergy_state = solarRecomm_result.panelPowerOutput.map((panelPowerData, index) => {
+			// recommObj.solar_recomm.solarArrayPower = panelPowerData * areaConst;
 			if (Not(recommObj.solar_recomm.solarArrayPower >= (panelPowerData * areaConst))){
 				recommObj.solar_recomm.solarArrayPower = panelPowerData * areaConst;
 			}
+			
+
+
 			battEnergy_array[index] = battEnergy_instant + (panelPowerData * areaConst) - solarRecomm_result.load_profile[index];
 			battEnergy_instant = battEnergy_array[index];
 
@@ -746,7 +750,15 @@ const solorRotoscoper = (batt_recom, solarRecomm_result) => {
 				return battEnergy_instant;
 			}
 			else { return battEnergy_underTest; }
+			// if (battEnergy_instant / battEnergy_underTest >= (1 - solarRecomm_result.batt_recom_DOD)) {
+			// 	if (battEnergy_instant <= battEnergy_underTest) {
+			// 		return battEnergy_instant;
+			// 	}
+			// 	else { return battEnergy_underTest; }
+			// }
+			// else { return 0; }
 		});
+		// console.log(battEnergy_state);
 		//check feasibility ad 
 		if (battEnergy_state[23] > battEnergy_state[0]) {
 			recommObj.solar_recomm.areaConstant = areaConst; //Area constant
@@ -760,9 +772,6 @@ const solorRotoscoper = (batt_recom, solarRecomm_result) => {
 		}
 		solarRecharge_array.push(recommObj);
 	// }
-	//While loop end
-
-
 	// recommObj.battery_recomm.battEnergy_stateArray = battEnergy_state;
 	// recommObj.battEnergy_stateArray = battEnergy_state; //Battery Energy
 	return solarRecharge_array;
