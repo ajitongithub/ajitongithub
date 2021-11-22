@@ -737,7 +737,7 @@ const solorRotoscoper = (batt_recom, solarRecomm_result) => {
 		recommObj.solar_recomm.solarArrayPower =0;	
 		let battEnergy_state = solarRecomm_result.panelPowerOutput.map((panelPowerData, index) => {
 			// recommObj.solar_recomm.solarArrayPower = panelPowerData * areaConst;
-			if (!(recommObj.solar_recomm.solarArrayPower >= (panelPowerData * areaConst))){
+			if (Not(recommObj.solar_recomm.solarArrayPower >= (panelPowerData * areaConst))){
 				recommObj.solar_recomm.solarArrayPower = panelPowerData * areaConst;
 			}
 			
