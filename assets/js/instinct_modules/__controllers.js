@@ -689,7 +689,7 @@ napp.controller('load_profile_controller', function ($scope, $http, $location) {
 				panelPower_output[i] = oneDay_insol[i] / (((-0.38 * (parseInt(tempData[i]) - 25) / 100)) + 1);
 			}
 			// //Best Day for Solar and Worst Day for Solar	
-			solarRecomm_result.panelPowerOutput = panelPower_output;
+			solarRecomm_result.maxPanelPowerOutput = panelPower_output;
 			//Solar panel Rotoscopic Program
 			let recommendationArray = [];
 			let batt_recom_array = solarRecomm_result.battLoad_Recom.battery_recomns;
@@ -705,6 +705,7 @@ napp.controller('load_profile_controller', function ($scope, $http, $location) {
 
 // Solar Recommender System
 const solorRotoscoper = (batt_recom, solarRecomm_result) => {
+	// console.log(solarRecomm_result);
 	let recommObj = {};
 	recommObj.system = {};
 	recommObj.load = {};
@@ -716,7 +717,7 @@ const solorRotoscoper = (batt_recom, solarRecomm_result) => {
 	recommObj.battery_recomm.energyCapacity = batt_recom.energyCapacity;
 	recommObj.battery_recomm.sizingDeviation = parseFloat((100 * (batt_recom.energyCapacity - batt_recom.normalizedEnergyDemand) / batt_recom.normalizedEnergyDemand).toFixed(2));
 	recommObj.battery_recomm.noOfParallel = batt_recom.noOfParallel;
-	recommObj.battery_recomm.noOfParallel = batt_recom.noOfSeries;
+	recommObj.battery_recomm.noOfSeries = batt_recom.noOfSeries;
 	recommObj.battery_recomm.battVoltage = batt_recom.battVoltage;
 	recommObj.battery_recomm.batt_AH = batt_recom.batt_AH;
 	recommObj.battery_recomm.totalCost = batt_recom.totalCost;
@@ -731,14 +732,21 @@ const solorRotoscoper = (batt_recom, solarRecomm_result) => {
 	// console.log(solarRecomm_result);
 
 	//While loop Start
-	// for (let areaConst = 0; areaConst < 2; areaConst += 0.5) {
-		let areaConst = 4;
-		recommObj.solar_recomm = {};	
-		recommObj.solar_recomm.solarArrayPower =0;	
-		let battEnergy_state = solarRecomm_result.panelPowerOutput.map((panelPowerData, index) => {
-			if (Not(recommObj.solar_recomm.solarArrayPower >= (panelPowerData * areaConst))){
+	let areaConst = 0;
+	let areaStepRise = 0.01;
+	let conditionFulfilled = false;
+	while (!conditionFulfilled){
+		recommObj.solar_recomm = {};
+		recommObj.solar_recomm.solarArrayPower = 0;	
+		battEnergy_array = Array(24).fill(0);
+		battEnergy_instant = battEnergy_underTest - energy_till12;
+		let battEnergy_state = solarRecomm_result.maxPanelPowerOutput.map((panelPowerData, index) => {
+			if ((recommObj.solar_recomm.solarArrayPower < (panelPowerData * areaConst))) {
 				recommObj.solar_recomm.solarArrayPower = panelPowerData * areaConst;
 			}
+			// console.log(battEnergy_instant); 
+			// console.log(panelPowerData * areaConst); 
+			// console.log(solarRecomm_result.load_profile[index]);
 			battEnergy_array[index] = battEnergy_instant + (panelPowerData * areaConst) - solarRecomm_result.load_profile[index];
 			battEnergy_instant = battEnergy_array[index];
 
@@ -747,24 +755,24 @@ const solorRotoscoper = (batt_recom, solarRecomm_result) => {
 			}
 			else { return battEnergy_underTest; }
 		});
-		//check feasibility ad 
+		// console.log(battEnergy_state);
+		//check feasibility return the best possible measure
 		if (battEnergy_state[23] > battEnergy_state[0]) {
 			recommObj.solar_recomm.areaConstant = areaConst; //Area constant
 			recommObj.solar_recomm.feasible = "YES"; //Area constant
 			recommObj.solar_recomm.rechargeEnergyArray = battEnergy_state; //Area constant
+			conditionFulfilled = true;
 		}
 		else {
 			recommObj.solar_recomm.areaConstant = areaConst; //Area constant
 			recommObj.solar_recomm.feasible = "NO"; //Area constant
 			recommObj.solar_recomm.rechargeEnergyArray = battEnergy_state; //Area constant
+			conditionFulfilled = false;
 		}
-		solarRecharge_array.push(recommObj);
-	// }
+		areaConst += areaStepRise;
+	}
+	solarRecharge_array.push(recommObj);
 	//While loop end
-
-
-	// recommObj.battery_recomm.battEnergy_stateArray = battEnergy_state;
-	// recommObj.battEnergy_stateArray = battEnergy_state; //Battery Energy
 	return solarRecharge_array;
 };
 

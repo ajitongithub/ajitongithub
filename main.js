@@ -173,35 +173,29 @@ ipcMain.on('solarRecom', (event, instinct_profile)=>{
 
 
 
-  instinct_config.insolation.forEach((currentInsolation, index)=>{
-    
+  instinct_config.insolation.forEach((currentInsolation, index)=>{    
     //Insolation Aggregator for one day
     if(parseFloat(currentInsolation) > 0){
       insolAggregator += parseFloat(currentInsolation);
       // console.log(currentInsolation,index);
     }
-
     //Weak Daylight Detection 
     if (parseFloat(currentInsolation) >= instinct_profile.insolationLimit){
       insolLimitAggregator += parseFloat(currentInsolation);
-    }
-    
+    }    
     //Day complete detection
     if(index % 24 == 0 && index !=0){
       dailyInsolData.push(insolAggregator);
       insolAggregator =0;
     }
   });
-
-
  
   let tempEfficiency = instinct_profile.panelEffi; 
   console.log(tempEfficiency);
 
   let solarPowerGeneratedPerDay = dailyInsolData.map((data)=>data*tempEfficiency);
   let solarPowerGeneratedPerDay_tempCompen = solarPowerGeneratedPerDay.map((data, index)=>data /(((-0.38*(parseInt(tempData[index])-25)/100))+1));
-  
-  
+    
   
   instinct_profile.solarPowerGeneratedPerDay = solarPowerGeneratedPerDay;
   instinct_profile.solarPowerGeneratedPerDay_tempCompen = solarPowerGeneratedPerDay_tempCompen;
@@ -209,75 +203,12 @@ ipcMain.on('solarRecom', (event, instinct_profile)=>{
   instinct_profile.insolation = instinct_config.insolation;
   instinct_profile.temperature = tempData;
 
-  // console.log(dailyInsolData); //maximum insolation available per day W/m2
-  // console.log(solarPowerGeneratedPerDay); //maximum insolation available per day W/m2
-  // console.log(solarPowerGeneratedPerDay_tempCompen); //maximum insolation available per day W/m2
-
-
-  //We have Generated Solar Power with and without temperature compensation
-  //Next we need to find the total power needed to charge the batteries and provide for load demand
-
-  //Energy consumed by battery till 12.. An Approximation
-
   let energyBatt_till_12 = instinct_profile.load_profile.reduce((prev_data,current_data,index)=>{if(index>=17){
     return prev_data + current_data;    
   } else { return 0; }});
 
-  // console.log(instinct_profile.load_profile);
-  // console.log(energyBatt_till_12);
-
   instinct_profile.energyBatt_till_12 = energyBatt_till_12;
   event.returnValue = instinct_profile;
-
-
-  // let temperature_data = new Series(instinct_config.temperature, { name: 'Temperature Profile' });
-  // let insolation_data = new Series(instinct_config.insolation, { name: 'Insolation Profile' });
-  // //Temperature Data
-  // temperature_data_df = Array.from(temperature_data.values);
-  // //Insolation Data
-  // insolation_data_df = Array.from(insolation_data.values); //Watts
-
-  // console.log(insolation_data_df);
-
-  // let additional_hours_needed = hours_in_year - temperature_data.length;
-  // let temperature_final = temperature_data_df;
-  // let insolation_final = insolation_data_df;
-
-
-  // let solar_Wp = 400; //watts
-  // let solar_efficiency = 0.1986;
-  // let solar_Voc = 49.39; //Open Circuit Voltage
-  // let solar_Isc = 10.42;  //Short circuit current
-  // let solar_Vm = 40.07;  //Peak Voltage
-  // let solar_Im = 10.02;  //Peak current
-
-
-  // let solar_fill_factor = (solar_Vm * solar_Im) / (solar_Voc * solar_Isc);
-
-  // let real_area = solar_Wp / (solar_efficiency * 1000);
-  // //real_area = 1.221543587 // from datasheet
-  // //calculated_area = solar_Wp / 1000 // m2
-  // //print("\nReal Area =" + str(real_area) + "Calculated area = " + str(calculated_area)+"\n")
-  // let solar_series = 3;
-  // let solar_parallel = 3;
-  // let stc_temperature = 25; // degrees celcius
-  // let solar_pure_output = Array(simulation_hours).fill(0);
-  // let solar_derated_output = Array(simulation_hours).fill(0);
-
-
-  // let mod_eff_aging = [];
-  // let modified_insolation_data = [];
-  // let modified_temperature_data = [];
-
-
-  
-
-
-
-
-
-
-
 
 //end of solar recomm program  
 
@@ -385,7 +316,8 @@ ipcMain.on('load_profile_yearly', (event, instinct_config)=>{
       for (i = batt_start_AH; i <= batt_end_AH; i += batt_step_AH){
         for (n = batt_start_parallel; n <= batt_end_parallel; n += 1){
           let objRecom = {};
-          let batt_total_energy = n * (sys_voltage / batt_voltage) * i * sys_voltage;
+          // let batt_total_energy = n * (sys_voltage / batt_voltage) * i * sys_voltage;
+          let batt_total_energy = n * sys_voltage * i;
           if (batt_total_energy >= normalized_energy_demand_perDay && batt_total_energy < (normalized_energy_demand_perDay * 1.2)){
             objRecom.systemVoltage = sys_voltage;
             objRecom.battVoltage = batt_voltage;
