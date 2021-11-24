@@ -350,6 +350,13 @@ header {
             height: 400px;
         }
 
+        #recomm_card_tables{
+            grid-column-start: 1;
+            grid-column-end: -1;
+            &:hover {
+                transform: none;
+            }
+        }
         #final_load_graph {
             grid-column-start: 1;
             grid-column-end: -1;

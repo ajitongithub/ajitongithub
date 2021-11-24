@@ -145,14 +145,27 @@
                     <p>Maximum Demand - {{max_demand_display}}</p>
                     <p>24-hour Energy Demand - {{energy_demand_display}}</p>
                     <p>Minimum Demand - {{min_demand_display}}</p>
+                    <progress max="100" min="0" id="recomm_progress_ux" style="width: 100%;"></progress>
                 </div>
              </div>
              <div class="card_btn_container">
                 <button class="btn_class_type1" ng-click="reset_load_selection()">RESET</button>
-                <button class="btn_class_type1" id="processLoadProfile">PROCESS LOAD</button>
+                <button class="btn_class_type1" id="processLoadProfile" ng-click="recomm_btn()">PROCESS LOAD</button>
                 <button id="btn_load_profile_final" class="btn_class_type1" ng-click="load_profile_upload()"> SET THE LOAD </button>
             </div>            
         </div>
-        
+        <div class="load_cards" id="recomm_card_tables">
+            <div>
+                {{ajii}} sgd
+            </div>
+            <table>
+                <th>SN</th>
+                <th>Energy</th>
+                <tr ng-repeat="recomm in recomm_array">
+                    <td>{{$index}}</td>
+                    <td>{{A}}</td>
+                </tr>
+            </table>
+        </div>
     </div>
 </div>

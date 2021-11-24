@@ -216,7 +216,7 @@ napp.controller('location_controller', function ($scope, $http, $location, $root
 			modal_geo.style.transform = "translateY(-100%)";
 		}
 		else {
-			modal_geo.style.transform = "translateY(0px)";		
+			modal_geo.style.transform = "translateY(0px)";
 		}
 	};
 
@@ -582,7 +582,7 @@ napp.controller('load_profile_controller', function ($scope, $http, $location) {
 		ipcRenderer.send('load_profile_done', instinct_profile);
 		$location.path("/component_selection");
 	};
-	
+
 	$scope.load_changer = function () {
 		if ($scope.selectedLoad.load_profile) {
 			btn_load_profile_database.disabled = false;
@@ -628,33 +628,20 @@ napp.controller('load_profile_controller', function ($scope, $http, $location) {
 		instinct_profile.insolationLowlightThreshold = 100;
 
 		// console.log(instinct_profile);
-		fullYear_loadProfile.addEventListener("click", () => {
+		$scope.recomm_btn = ()=>{
+			$scope.ajii = "YOOOO";
 			let loadBattRecomm_result = ipcRenderer.sendSync("load_profile_yearly", instinct_profile);
 			instinct_profile.battLoad_Recom = loadBattRecomm_result;
 			//Solar Recom Model
 			let solarRecomm_result = ipcRenderer.sendSync('solarRecom', instinct_profile);
 			//work the program for recommedation
-			// let oneDay_insol = Array(24).fill(0);
-			// let panelPower_output = Array(24).fill(0); //W/m2
 			let tempData = solarRecomm_result.temperature;
-
-			//Redundent - Looop
-			// for (let i = 0; i < 24; i++) {
-			// 	oneDay_insol[i] = solarRecomm_result.insolation[i] * solarRecomm_result.panelEffi;
-			// 	//W/m2 output from the a solar panel
-			// 	panelPower_output[i] = oneDay_insol[i] / (((-0.38 * (parseInt(tempData[i]) - 25) / 100)) + 1);
-			// }
-
-			//Testing Rramge
 			let dailyInsolData = [];
 			let insolAggregator = 0;
-			// console.log(`Insolation Length ${solarRecomm_result.insolation.length}`);
-
 			solarRecomm_result.insolation.forEach((currentInsolation, index) => {
 				//Insolation Aggregator for one day
 				if (parseFloat(currentInsolation) > 0) {
 					insolAggregator += parseFloat(currentInsolation);
-					// console.log(currentInsolation,index);
 				}
 				//Day complete detection 
 				if ((index + 1) % 24 == 0) {
@@ -662,29 +649,20 @@ napp.controller('load_profile_controller', function ($scope, $http, $location) {
 					insolAggregator = 0;
 				}
 			});
-			// console.log(`Days Counter ${dailyInsolData.length}`);
-			// console.log(`Data ${dailyInsolData}`);
-			// console.log(dailyInsolData);
-
-			
 			//Max Panel Power per area W/m2
 			//Change the efficiency HERE for MONO and POLY
-			let panelPowerOutput_8740hours = solarRecomm_result.insolation.map((insol_perHour,index)=>{
+			let panelPowerOutput_8740hours = solarRecomm_result.insolation.map((insol_perHour, index) => {
 				let result = (insol_perHour * solarRecomm_result.panelEffi) / (((-0.38 * (parseInt(tempData[index]) - 25) / 100)) + 1);
 				return result;
 			});
-			// console.log(panelPowerOutput_8740hours.length);
-			// console.log(panelPowerOutput_8740hours);
 			solarRecomm_result.panelPowerOutput_8740hours = panelPowerOutput_8740hours;
-
 			//Max Panel Power per area W/m2...aggregated per day
 			let panelPowerOutput_365days = [];
-			let panelPowerAggregator =0;
-			panelPowerOutput_8740hours.forEach((currentInsolation,index)=>{
+			let panelPowerAggregator = 0;
+			panelPowerOutput_8740hours.forEach((currentInsolation, index) => {
 				//Insolation Aggregator for one day
 				if (parseFloat(currentInsolation) > 0) {
 					panelPowerAggregator += parseFloat(currentInsolation);
-					// console.log(currentInsolation,index);
 				}
 				//Day complete detection 
 				if ((index + 1) % 24 == 0) {
@@ -692,43 +670,21 @@ napp.controller('load_profile_controller', function ($scope, $http, $location) {
 					panelPowerAggregator = 0;
 				}
 			});
-
-			// let panelPowerOutput_365days = solarRecomm_result.insolation.map((insol_perHour,index)=>{
-			// 	let result = (insol_perHour * solarRecomm_result.panelEffi) / (((-0.38 * (parseInt(tempData[index]) - 25) / 100)) + 1);
-			// 	return result;
-			// });
-			// console.log(panelPowerOutput_365days.length);
-			// console.log(panelPowerOutput_365days);
-
 			solarRecomm_result.panelPowerOutput_365days = panelPowerOutput_365days;
-
-
-
-
-
-
 			//START OF BEST/WORST/AVG DAYS in YEAR
-			//Best Day for Solar and Worst Day for Solar	//Best day-Worst Day Program
-			// let solarData_tempCompensated_perDay = solarRecomm_result.solarPowerGeneratedPerDay_tempCompen;
-			// console.log(solarData_tempCompensated_perDay.length);
-
+			//Best Day for Solar and Worst Day for Solar
 			let splSolarDays = {};
 			splSolarDays.best = {};
 			splSolarDays.best.energyOfTheDay = 0;
-			splSolarDays.worst= {};
+			splSolarDays.worst = {};
 			splSolarDays.worst.energyOfTheDay = 10000;
 			splSolarDays.avg = {};
 			splSolarDays.avg.energyOfTheDay = 0;
 
-
 			let meanEnergy_year = panelPowerOutput_365days.reduce((a, b) => (a + b));
-			// console.log(meanEnergy_year);
 			let solarData_length = panelPowerOutput_365days.length;
 			meanEnergy_year = meanEnergy_year / solarData_length;
-			// console.log(meanEnergy_year);
 			let min_meanEnergy = Math.abs(meanEnergy_year - panelPowerOutput_365days[0]);
-			// console.log(min_meanEnergy);
-
 			panelPowerOutput_365days.forEach((insol_daily, index) => {
 				//Best Day
 				if (splSolarDays.best.energyOfTheDay < insol_daily) {
@@ -748,24 +704,22 @@ napp.controller('load_profile_controller', function ($scope, $http, $location) {
 				}
 			});
 
-			
-
 			//Probability of Failure Concept
 			let best_days = 0;
 			let worst_days = 0;
 			let average_days = 0; //days counted for all days below the average limit
 			panelPowerOutput_365days.forEach((insol_daily) => {
 				//Best Day Probability
-				if (splSolarDays.best.energyOfTheDay <= insol_daily){
-					best_days +=1;
+				if (splSolarDays.best.energyOfTheDay <= insol_daily) {
+					best_days += 1;
 				}
 				//Worst Day Probability
-				if (splSolarDays.worst.energyOfTheDay <= insol_daily){
-					worst_days +=1;
+				if (splSolarDays.worst.energyOfTheDay <= insol_daily) {
+					worst_days += 1;
 				}
 				//Average Day Probability
-				if (splSolarDays.avg.energyOfTheDay <= insol_daily){
-					average_days +=1;
+				if (splSolarDays.avg.energyOfTheDay <= insol_daily) {
+					average_days += 1;
 				}
 			});
 
@@ -773,84 +727,207 @@ napp.controller('load_profile_controller', function ($scope, $http, $location) {
 			solarRecomm_result.probabilityOfSuccess.bestDay = best_days / solarData_length;
 			solarRecomm_result.probabilityOfSuccess.worstDay = worst_days / solarData_length;
 			solarRecomm_result.probabilityOfSuccess.avgDay = average_days / solarData_length;
-			// console.log(best_days / solarData_length, worst_days / solarData_length, average_days / solarData_length);
-			
 
 			//24hours of the 3 types of days
-			// console.log(panelPowerOutput_8740hours);
-			// solarRecomm_result.panelPowerOutput_8740hours = panelPowerOutput_8740hours;
 			//best_day_insolProfile
 			let best_day_insolProfile = [];
-			panelPowerOutput_8740hours.forEach((data,index)=>{
-				if (index >= ((splSolarDays.best.dayOfYear) * 24) && (index < ((splSolarDays.best.dayOfYear+1)*24))){
-					// console.log(splSolarDays.best.dayOfYear);
+			panelPowerOutput_8740hours.forEach((data, index) => {
+				if (index >= ((splSolarDays.best.dayOfYear) * 24) && (index < ((splSolarDays.best.dayOfYear + 1) * 24))) {
 					best_day_insolProfile.push(data);
 				}
 			});
-			// console.log(best_day_insolProfile);
-			// console.log(best_day_insolProfile.length);
-
-			splSolarDays.best.panelProfile = best_day_insolProfile;
 
 			//worst_day_insolProfile
 			let worst_day_insolProfile = [];
-			panelPowerOutput_8740hours.forEach((data,index)=>{
-				if (index >= ((splSolarDays.worst.dayOfYear) * 24) && (index < ((splSolarDays.worst.dayOfYear+1)*24))){
+			panelPowerOutput_8740hours.forEach((data, index) => {
+				if (index >= ((splSolarDays.worst.dayOfYear) * 24) && (index < ((splSolarDays.worst.dayOfYear + 1) * 24))) {
 					// console.log(splSolarDays.worst.dayOfYear);
 					worst_day_insolProfile.push(data);
 				}
 			});
-			// console.log(worst_day_insolProfile);
-			// console.log(worst_day_insolProfile.length);
-			splSolarDays.worst.panelProfile = worst_day_insolProfile;
 			//avg_day_insolProfile
 			let avg_day_insolProfile = [];
-			panelPowerOutput_8740hours.forEach((data,index)=>{
-				if (index >= ((splSolarDays.avg.dayOfYear) * 24) && (index < ((splSolarDays.avg.dayOfYear+1)*24))){
-					// console.log(splSolarDays.avg.dayOfYear);
+			panelPowerOutput_8740hours.forEach((data, index) => {
+				if (index >= ((splSolarDays.avg.dayOfYear) * 24) && (index < ((splSolarDays.avg.dayOfYear + 1) * 24))) {
 					avg_day_insolProfile.push(data);
 				}
 			});
-			// console.log(avg_day_insolProfile);
-			// console.log(avg_day_insolProfile.length);
 			splSolarDays.avg.panelProfile = avg_day_insolProfile;
-
-			// console.log(splSolarDays);
-
-
-		// 	//END OF BEST/WORST/AVG DAYS in YEAR
-
-
-
-			// solarRecomm_result.bestPanelPowerOutput = splSolarDays.best.panelProfile;
-			// solarRecomm_result.worstPanelPowerOutput = splSolarDays.worst.panelProfile;
-			// solarRecomm_result.avgPanelPowerOutput = splSolarDays.avg.panelProfile;
+			splSolarDays.best.panelProfile = best_day_insolProfile;
+			splSolarDays.worst.panelProfile = worst_day_insolProfile;
+			//END OF BEST/WORST/AVG DAYS in YEAR
 			solarRecomm_result.splSolarDays = splSolarDays;
 			console.log(solarRecomm_result);
-		// 	//Solar panel Rotoscopic Program
-		// 	let recommendationArray = [];
-		// 	let batt_recom_array = solarRecomm_result.battLoad_Recom.battery_recomns;
-		// 	batt_recom_array.forEach((batt_recom) => {
-		// 		recommendationArray.push(solorRotoscoper(batt_recom, solarRecomm_result));
-		// 	});
-		// 	console.log(recommendationArray);
+			//Solar panel Rotoscopic Program
+			let recommendationArray = [];
+			let batt_recom_array = solarRecomm_result.battLoad_Recom.battery_recomns;
+			batt_recom_array.forEach((batt_recom, index, the_array) => {
+				recommendationArray.push(solorRotoscoper(batt_recom, solarRecomm_result, index, the_array.length));
+			});
+			console.log(recommendationArray[0][1].solar_recomm);
 
-		});
+			$scope.recomm_array = recommendationArray;
+		};
+		// fullYear_loadProfile.addEventListener("click", () => {
+			// let loadBattRecomm_result = ipcRenderer.sendSync("load_profile_yearly", instinct_profile);
+			// instinct_profile.battLoad_Recom = loadBattRecomm_result;
+			// //Solar Recom Model
+			// let solarRecomm_result = ipcRenderer.sendSync('solarRecom', instinct_profile);
+			// //work the program for recommedation
+			// let tempData = solarRecomm_result.temperature;
+			// let dailyInsolData = [];
+			// let insolAggregator = 0;
+			// solarRecomm_result.insolation.forEach((currentInsolation, index) => {
+			// 	//Insolation Aggregator for one day
+			// 	if (parseFloat(currentInsolation) > 0) {
+			// 		insolAggregator += parseFloat(currentInsolation);
+			// 	}
+			// 	//Day complete detection 
+			// 	if ((index + 1) % 24 == 0) {
+			// 		dailyInsolData.push(insolAggregator);
+			// 		insolAggregator = 0;
+			// 	}
+			// });
+			// //Max Panel Power per area W/m2
+			// //Change the efficiency HERE for MONO and POLY
+			// let panelPowerOutput_8740hours = solarRecomm_result.insolation.map((insol_perHour, index) => {
+			// 	let result = (insol_perHour * solarRecomm_result.panelEffi) / (((-0.38 * (parseInt(tempData[index]) - 25) / 100)) + 1);
+			// 	return result;
+			// });
+			// solarRecomm_result.panelPowerOutput_8740hours = panelPowerOutput_8740hours;
+			// //Max Panel Power per area W/m2...aggregated per day
+			// let panelPowerOutput_365days = [];
+			// let panelPowerAggregator = 0;
+			// panelPowerOutput_8740hours.forEach((currentInsolation, index) => {
+			// 	//Insolation Aggregator for one day
+			// 	if (parseFloat(currentInsolation) > 0) {
+			// 		panelPowerAggregator += parseFloat(currentInsolation);
+			// 	}
+			// 	//Day complete detection 
+			// 	if ((index + 1) % 24 == 0) {
+			// 		panelPowerOutput_365days.push(panelPowerAggregator);
+			// 		panelPowerAggregator = 0;
+			// 	}
+			// });
+			// solarRecomm_result.panelPowerOutput_365days = panelPowerOutput_365days;
+			// //START OF BEST/WORST/AVG DAYS in YEAR
+			// //Best Day for Solar and Worst Day for Solar
+			// let splSolarDays = {};
+			// splSolarDays.best = {};
+			// splSolarDays.best.energyOfTheDay = 0;
+			// splSolarDays.worst = {};
+			// splSolarDays.worst.energyOfTheDay = 10000;
+			// splSolarDays.avg = {};
+			// splSolarDays.avg.energyOfTheDay = 0;
+
+			// let meanEnergy_year = panelPowerOutput_365days.reduce((a, b) => (a + b));
+			// let solarData_length = panelPowerOutput_365days.length;
+			// meanEnergy_year = meanEnergy_year / solarData_length;
+			// let min_meanEnergy = Math.abs(meanEnergy_year - panelPowerOutput_365days[0]);
+			// panelPowerOutput_365days.forEach((insol_daily, index) => {
+			// 	//Best Day
+			// 	if (splSolarDays.best.energyOfTheDay < insol_daily) {
+			// 		splSolarDays.best.energyOfTheDay = insol_daily;
+			// 		splSolarDays.best.dayOfYear = index;
+			// 	}
+			// 	//worstDay_obj
+			// 	if (splSolarDays.worst.energyOfTheDay > insol_daily) {
+			// 		splSolarDays.worst.energyOfTheDay = insol_daily;
+			// 		splSolarDays.worst.dayOfYear = index;
+			// 	}
+			// 	//Aversge Day Detection
+			// 	if (min_meanEnergy > Math.abs(meanEnergy_year - insol_daily)) {
+			// 		min_meanEnergy = Math.abs(meanEnergy_year - insol_daily);
+			// 		splSolarDays.avg.energyOfTheDay = insol_daily;
+			// 		splSolarDays.avg.dayOfYear = index;
+			// 	}
+			// });
+
+			// //Probability of Failure Concept
+			// let best_days = 0;
+			// let worst_days = 0;
+			// let average_days = 0; //days counted for all days below the average limit
+			// panelPowerOutput_365days.forEach((insol_daily) => {
+			// 	//Best Day Probability
+			// 	if (splSolarDays.best.energyOfTheDay <= insol_daily) {
+			// 		best_days += 1;
+			// 	}
+			// 	//Worst Day Probability
+			// 	if (splSolarDays.worst.energyOfTheDay <= insol_daily) {
+			// 		worst_days += 1;
+			// 	}
+			// 	//Average Day Probability
+			// 	if (splSolarDays.avg.energyOfTheDay <= insol_daily) {
+			// 		average_days += 1;
+			// 	}
+			// });
+
+			// solarRecomm_result.probabilityOfSuccess = {};
+			// solarRecomm_result.probabilityOfSuccess.bestDay = best_days / solarData_length;
+			// solarRecomm_result.probabilityOfSuccess.worstDay = worst_days / solarData_length;
+			// solarRecomm_result.probabilityOfSuccess.avgDay = average_days / solarData_length;
+
+			// //24hours of the 3 types of days
+			// //best_day_insolProfile
+			// let best_day_insolProfile = [];
+			// panelPowerOutput_8740hours.forEach((data, index) => {
+			// 	if (index >= ((splSolarDays.best.dayOfYear) * 24) && (index < ((splSolarDays.best.dayOfYear + 1) * 24))) {
+			// 		best_day_insolProfile.push(data);
+			// 	}
+			// });
+
+			// //worst_day_insolProfile
+			// let worst_day_insolProfile = [];
+			// panelPowerOutput_8740hours.forEach((data, index) => {
+			// 	if (index >= ((splSolarDays.worst.dayOfYear) * 24) && (index < ((splSolarDays.worst.dayOfYear + 1) * 24))) {
+			// 		// console.log(splSolarDays.worst.dayOfYear);
+			// 		worst_day_insolProfile.push(data);
+			// 	}
+			// });
+			// //avg_day_insolProfile
+			// let avg_day_insolProfile = [];
+			// panelPowerOutput_8740hours.forEach((data, index) => {
+			// 	if (index >= ((splSolarDays.avg.dayOfYear) * 24) && (index < ((splSolarDays.avg.dayOfYear + 1) * 24))) {
+			// 		avg_day_insolProfile.push(data);
+			// 	}
+			// });
+			// splSolarDays.avg.panelProfile = avg_day_insolProfile;
+			// splSolarDays.best.panelProfile = best_day_insolProfile;
+			// splSolarDays.worst.panelProfile = worst_day_insolProfile;
+			// //END OF BEST/WORST/AVG DAYS in YEAR
+			// solarRecomm_result.splSolarDays = splSolarDays;
+			// console.log(solarRecomm_result);
+			// //Solar panel Rotoscopic Program
+			// let recommendationArray = [];
+			// let batt_recom_array = solarRecomm_result.battLoad_Recom.battery_recomns;
+			// batt_recom_array.forEach((batt_recom,index,the_array) => {
+			// 	recommendationArray.push(solorRotoscoper(batt_recom, solarRecomm_result, index, the_array.length));
+			// });
+			// console.log(recommendationArray);
+			
+
+		// });
+	
 	};
 
 });
 
 // Solar Recommender System
-const solorRotoscoper = (batt_recom, solarRecomm_result) => {
+const solorRotoscoper = (batt_recom, solarRecomm_result,current_index,size) => {
 	// console.log(solarRecomm_result);
+	var recomm_progress = document.querySelector("#recomm_progress_ux");
+	recomm_progress.value = ((current_index / size)*100).toFixed(0);
+	// console.log((((current_index+1) / size) * 100).toFixed(0));
 	let recommObj = {};
 	recommObj.system = {};
 	recommObj.load = {};
 	recommObj.battery_recomm = {};
+	recommObj.solar_recomm = {};
 	recommObj.system.systemVoltage = batt_recom.systemVoltage;
 	recommObj.load.normalizedEnergyDemand = Math.round(batt_recom.normalizedEnergyDemand);
-	recommObj.load.loadProfile_day = "loadProfile_day";
-	recommObj.load.loadProfile_year = "loadProfile_year";
+	recommObj.load.loadProfile_day = solarRecomm_result.load_profile;
+	recommObj.load.loadProfile_year = solarRecomm_result.battLoad_Recom.load_profile_yearly;
+
 	recommObj.battery_recomm.energyCapacity = batt_recom.energyCapacity;
 	recommObj.battery_recomm.sizingDeviation = parseFloat((100 * (batt_recom.energyCapacity - batt_recom.normalizedEnergyDemand) / batt_recom.normalizedEnergyDemand).toFixed(2));
 	recommObj.battery_recomm.noOfParallel = batt_recom.noOfParallel;
@@ -866,29 +943,31 @@ const solorRotoscoper = (batt_recom, solarRecomm_result) => {
 	let battEnergy_instant = battEnergy_underTest - energy_till12;
 	let battEnergy_array = Array(24).fill(0);
 	let solarRecharge_array = [];
-	// console.log(solarRecomm_result);
-	
-
-
-
 
 	//While loop Start	
 	let areaConst = 0;
-	let areaStepRise = 0.01;
+	let areaStepRise = 0.1;
 	let conditionFulfilled = false;
-	while (!conditionFulfilled){
+	while (!conditionFulfilled) {
 		recommObj.solar_recomm = {};
-		recommObj.solar_recomm.solarArrayPower = 0;	
+		recommObj.solar_recomm.solarArrayPower = 0;
+		recommObj.solar_recomm.insolationLowlightThreshold = solarRecomm_result.insolationLowlightThreshold;
+		recommObj.solar_recomm.panelPowerOutput_365days = solarRecomm_result.panelPowerOutput_365days;
+		recommObj.solar_recomm.panelPowerOutput_8740hours = solarRecomm_result.panelPowerOutput_8740hours;
+		recommObj.solar_recomm.panelEfficiency_POLY = solarRecomm_result.panelEffi;
+		recommObj.solar_recomm.panelEfficiency_MONO = solarRecomm_result.panelEffi;
+		recommObj.solar_recomm.probabilityOfSuccess = solarRecomm_result.probabilityOfSuccess;
+		recommObj.solar_recomm.splSolarDays = solarRecomm_result.splSolarDays;
+
 		battEnergy_array = Array(24).fill(0);
 		battEnergy_instant = battEnergy_underTest - energy_till12;
 		//For Best Day in an year
-		let battEnergy_state = solarRecomm_result.bestPanelPowerOutput.map((panel_PowerData, index) => {
+		let bestSolarDay_profile = solarRecomm_result.splSolarDays.best.panelProfile;
+
+		let battEnergy_state = bestSolarDay_profile.map((panel_PowerData, index) => {
 			if ((recommObj.solar_recomm.solarArrayPower < (panel_PowerData * areaConst))) {
 				recommObj.solar_recomm.solarArrayPower = panel_PowerData * areaConst;
 			}
-			// console.log(battEnergy_instant); 
-			// console.log(panelPowerData * areaConst); 
-			// console.log(solarRecomm_result.load_profile[index]);
 			battEnergy_array[index] = battEnergy_instant + (panel_PowerData * areaConst) - solarRecomm_result.load_profile[index];
 			battEnergy_instant = battEnergy_array[index];
 
@@ -912,9 +991,8 @@ const solorRotoscoper = (batt_recom, solarRecomm_result) => {
 			conditionFulfilled = false;
 		}
 		areaConst += areaStepRise;
-	}
-	solarRecharge_array.push(recommObj);
-	//While loop end
+		solarRecharge_array.push(recommObj);		
+	} //while loop ender
 	return solarRecharge_array;
 };
 

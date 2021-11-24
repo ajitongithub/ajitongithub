@@ -1731,6 +1731,17 @@ header .user_tag span a {
   height: 400px;
 }
 
+.load_profile .load_selection #recomm_card_tables {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: -1;
+}
+
+.load_profile .load_selection #recomm_card_tables:hover {
+  -webkit-transform: none;
+          transform: none;
+}
+
 .load_profile .load_selection #final_load_graph {
   -ms-grid-column: 1;
       grid-column-start: 1;
