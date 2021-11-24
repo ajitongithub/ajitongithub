@@ -56,23 +56,23 @@ function createWindow() {
   mainWindow.webContents.openDevTools();
   mainWindow.webContents.on('did-finish-load', e => {
     // mainWindow.webContents.console("Loading Complete");
-    console.log(mainWindow.devToolsWebContents);
+    // console.log(mainWindow.devToolsWebContents);
 
 
-    console.log("DONE");
+    // console.log("DONE");
     // console.log(remote);
   });
   mainWindow.webContents.on('did-start-loading', e => {
     // mainWindow.webContents.console("Loading Complete");
-    console.log("FRAME START");
+    // console.log("FRAME START");
   });
   mainWindow.webContents.on('did-stop-loading', e => {
     // mainWindow.webContents.console("Loading Complete");
-    console.log("FRAME STOP");
+    // console.log("FRAME STOP");
   });
   mainWindow.webContents.on('dom-ready', e => {
     // mainWindow.webContents.console("Loading Complete");
-    console.log("FRAME DONE");
+    // console.log("FRAME DONE");
   });
   // mainWindow.webContents.on('did-navigate-in-page',e =>{
   //   // mainWindow.webContents.console("Loading Complete");
@@ -104,6 +104,7 @@ ipcMain.on('exit_command',(event,data)=>{
 
 // Location File Saving - 1
 ipcMain.on('location_done', (event, data) => {
+
   var loc_txt = JSON.stringify(data);
   fs.writeFile(resolve(__dirname, 'database/temp_data.json'), loc_txt, function (err) {
     if (err) throw err;
@@ -173,32 +174,34 @@ ipcMain.on('solarRecom', (event, instinct_profile)=>{
 
 
 
-  instinct_config.insolation.forEach((currentInsolation, index)=>{    
-    //Insolation Aggregator for one day
-    if(parseFloat(currentInsolation) > 0){
-      insolAggregator += parseFloat(currentInsolation);
-      // console.log(currentInsolation,index);
-    }
-    //Weak Daylight Detection 
-    if (parseFloat(currentInsolation) >= instinct_profile.insolationLimit){
-      insolLimitAggregator += parseFloat(currentInsolation);
-    }    
-    //Day complete detection
-    if(index % 24 == 0 && index !=0){
-      dailyInsolData.push(insolAggregator);
-      insolAggregator =0;
-    }
-  });
+  // instinct_config.insolation.forEach((currentInsolation, index)=>{    
+  //   //Insolation Aggregator for one day
+  //   if(parseFloat(currentInsolation) > 0){
+  //     insolAggregator += parseFloat(currentInsolation);
+  //     // console.log(currentInsolation,index);
+  //   }
+  //   //Weak Daylight Detection 
+  //   if (parseFloat(currentInsolation) >= instinct_profile.insolationLimit){
+  //     insolLimitAggregator += parseFloat(currentInsolation);
+  //   }    
+  //   //Day complete detection
+  //   if((index + 1)% 24 == 0){
+  //     dailyInsolData.push(insolAggregator);
+  //     insolAggregator =0;
+  //   }
+  // });
  
-  let tempEfficiency = instinct_profile.panelEffi; 
-  console.log(tempEfficiency);
+  // let tempEfficiency = instinct_profile.panelEffi; 
+  // // console.log(tempEfficiency);
+  // // console.log(instinct_config.insolation.length);
+  // // console.log(dailyInsolData.length);
 
-  let solarPowerGeneratedPerDay = dailyInsolData.map((data)=>data*tempEfficiency);
-  let solarPowerGeneratedPerDay_tempCompen = solarPowerGeneratedPerDay.map((data, index)=>data /(((-0.38*(parseInt(tempData[index])-25)/100))+1));
+  // let solarPowerGeneratedPerDay = dailyInsolData.map((data)=>data*tempEfficiency);
+  // let solarPowerGeneratedPerDay_tempCompen = solarPowerGeneratedPerDay.map((data, index)=>data /(((-0.38*(parseInt(tempData[index])-25)/100))+1));
     
   
-  instinct_profile.solarPowerGeneratedPerDay = solarPowerGeneratedPerDay;
-  instinct_profile.solarPowerGeneratedPerDay_tempCompen = solarPowerGeneratedPerDay_tempCompen;
+  // instinct_profile.solarPowerGeneratedPerDay = solarPowerGeneratedPerDay;
+  // instinct_profile.solarPowerGeneratedPerDay_tempCompen = solarPowerGeneratedPerDay_tempCompen;
   instinct_profile.dailyInsolData = dailyInsolData;
   instinct_profile.insolation = instinct_config.insolation;
   instinct_profile.temperature = tempData;
