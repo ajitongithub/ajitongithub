@@ -163,19 +163,29 @@
                 <th>Battery</th>
                 <th>Batt AH</th>
                 <th>Energy</th>
-                <th>Parallel Qty</th>
-                <th>Series Qty</th>
-                <th>Cost</th>
-            
+                <th>Parallel</th>
+                <th>Series</th>
+                <th>Sizing</th>
+                <th>Batt. Cost (Est)</th>
+                <th>Solar Power (Est)</th>
+                <th>Area</th>
+                <th>Mono Solar Cost (Est)</th>
+                <th>Poly Solar Cost (Est)</th>
                 <tr ng-repeat="recomm in recomm_array | orderBy:'battery_recomm.totalCost'">
                     <td>{{$index+1}}</td>
-                    <td>{{recomm.battery_recomm.systemVoltage}}</td>
+                    <td>{{recomm.system.systemVoltage}}</td>
                     <td>{{recomm.battery_recomm.battVoltage}}</td>
                     <td>{{recomm.battery_recomm.batt_AH}}</td>
                     <td>{{recomm.battery_recomm.energyCapacity}}</td>
                     <td>{{recomm.battery_recomm.noOfParallel}}</td>
                     <td>{{recomm.battery_recomm.noOfSeries}}</td>
-                    <td>{{recomm.battery_recomm.totalCost}}</td>
+                    <td>{{recomm.battery_recomm.sizingDeviation}}</td>
+                    <td>{{recomm.battery_recomm.totalCost | currency:'₹ '}}</td>
+                    <!-- <td>{{recomm.solar_recomm.solarArrayPower + ' @ '+ recomm.solar_recomm.panelEfficiency_POLY + ' % '}}</td> -->
+                    <td>{{recomm.solar_recomm.solarArrayPower | number:2}}</td>
+                    <td>{{recomm.solar_recomm.areaConstant | number:2}}</td>
+                    <td>{{recomm.solar_recomm.costMONO | currency:'₹ '}}</td>
+                    <td>{{recomm.solar_recomm.costPOLY | currency:'₹ '}}</td>
                 </tr>
             </table>
             </div>

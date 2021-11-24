@@ -624,12 +624,11 @@ napp.controller('load_profile_controller', function ($scope, $http, $location) {
 		instinct_profile.energy_demand = energy_demand_load;
 
 		//Solar Data
-		instinct_profile.panelEffi = 0.17; // Different for poly and mono
+		instinct_profile.panelEffi = 0.18; // Different for poly and mono
 		instinct_profile.insolationLowlightThreshold = 100;
 
 		// console.log(instinct_profile);
 		$scope.recomm_btn = ()=>{
-			$scope.ajii = "YOOOO";
 			let loadBattRecomm_result = ipcRenderer.sendSync("load_profile_yearly", instinct_profile);
 			instinct_profile.battLoad_Recom = loadBattRecomm_result;
 			//Solar Recom Model
@@ -764,25 +763,18 @@ napp.controller('load_profile_controller', function ($scope, $http, $location) {
 			batt_recom_array.forEach((batt_recom, index, the_array) => {
 				recommendationArray.push(solorRotoscoper(batt_recom, solarRecomm_result, index, the_array.length));
 			});
-			// console.log(recommendationArray[0][1].solar_recomm);
-			console.log(recommendationArray.length);
-			// console.log(recommendationArray[1][1]);
+			console.log(recommendationArray);
 
 			//array cleanup
 			let recomm_finalArray =[];
-
 			for (let i = 0; i < recommendationArray.length;i++){
 				recomm_finalArray.push(recommendationArray[i][0]);
 			}
-			// recommendationArray.forEach((data,index)=>{
-			// 	recomm_finalArray.push(data[index][0]);
-			// });
-			// recomm_finalArray.push(recommendationArray[0][0]);
-			// recomm_finalArray.push(recommendationArray[1][0]);
-			// recomm_finalArray.push(recommendationArray[185][0]);
-			$scope.recomm_array = recomm_finalArray;
+			$scope.recomm_array = recomm_finalArray;	
+			//Finding Array Config
+			console.log(recomm_finalArray[0].system.systemVoltage);
+			console.log(recomm_finalArray[0].system.systemVoltage);
 
-			
 		};	
 	};
 
@@ -821,7 +813,7 @@ const solorRotoscoper = (batt_recom, solarRecomm_result,current_index,size) => {
 
 	//While loop Start	
 	let areaConst = 0;
-	let areaStepRise = 1;
+	let areaStepRise = 0.1;
 	let conditionFulfilled = false;
 	while (!conditionFulfilled) {
 		recommObj.solar_recomm = {};
@@ -855,6 +847,8 @@ const solorRotoscoper = (batt_recom, solarRecomm_result,current_index,size) => {
 		//check feasibility return the best possible measure
 		if (battEnergy_state[23] > battEnergy_state[0]) {
 			recommObj.solar_recomm.areaConstant = areaConst; //Area constant
+			recommObj.solar_recomm.costMONO = (47.339 * (recommObj.solar_recomm.solarArrayPower)).toFixed(0);
+			recommObj.solar_recomm.costPOLY = (5194.3 * Math.log((recommObj.solar_recomm.solarArrayPower)) - 16736).toFixed(0);
 			recommObj.solar_recomm.feasible = "YES"; //Area constant
 			recommObj.solar_recomm.rechargeEnergyArray = battEnergy_state; //Area constant
 			conditionFulfilled = true;
