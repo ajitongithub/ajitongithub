@@ -351,10 +351,44 @@ header {
         }
 
         #recomm_card_tables{
+            position: relative;
             grid-column-start: 1;
             grid-column-end: -1;
+            height: 400px;
+            overflow: auto;
             &:hover {
                 transform: none;
+            }
+            h3{
+                position: sticky;
+                top: 4px;
+                background-color: #272727;
+                opacity: 0.6;
+                padding: 5px;
+                border-radius: 6px;
+            }
+            //Tables
+            table{
+                width: 100%;
+                height: auto;
+                overflow: auto;
+                user-select: auto;
+                transition: transform 150ms ease-in-out;
+                transform: scaleY(1);
+                position: relative;
+                th{
+                    position: sticky;
+                    top: 50px;
+                    background-color: #272727;
+
+                }
+                tr{
+                    &:hover{
+                        background-color: #272727;
+                        transform: scaleY(1.02);
+                    }
+                    
+                }
             }
         }
         #final_load_graph {

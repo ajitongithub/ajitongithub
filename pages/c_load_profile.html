@@ -155,17 +155,31 @@
             </div>            
         </div>
         <div class="load_cards" id="recomm_card_tables">
+            <h3>Battery Configrations and Costing</h3>
             <div>
-                {{ajii}} sgd
-            </div>
             <table>
                 <th>SN</th>
+                <th>System</th>
+                <th>Battery</th>
+                <th>Batt AH</th>
                 <th>Energy</th>
-                <tr ng-repeat="recomm in recomm_array">
-                    <td>{{$index}}</td>
-                    <td>{{A}}</td>
+                <th>Parallel Qty</th>
+                <th>Series Qty</th>
+                <th>Cost</th>
+            
+                <tr ng-repeat="recomm in recomm_array | orderBy:'battery_recomm.totalCost'">
+                    <td>{{$index+1}}</td>
+                    <td>{{recomm.battery_recomm.systemVoltage}}</td>
+                    <td>{{recomm.battery_recomm.battVoltage}}</td>
+                    <td>{{recomm.battery_recomm.batt_AH}}</td>
+                    <td>{{recomm.battery_recomm.energyCapacity}}</td>
+                    <td>{{recomm.battery_recomm.noOfParallel}}</td>
+                    <td>{{recomm.battery_recomm.noOfSeries}}</td>
+                    <td>{{recomm.battery_recomm.totalCost}}</td>
                 </tr>
             </table>
+            </div>
+
         </div>
     </div>
 </div>

@@ -1732,14 +1732,57 @@ header .user_tag span a {
 }
 
 .load_profile .load_selection #recomm_card_tables {
+  position: relative;
   -ms-grid-column: 1;
       grid-column-start: 1;
   grid-column-end: -1;
+  height: 400px;
+  overflow: auto;
 }
 
 .load_profile .load_selection #recomm_card_tables:hover {
   -webkit-transform: none;
           transform: none;
+}
+
+.load_profile .load_selection #recomm_card_tables h3 {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 4px;
+  background-color: #272727;
+  opacity: 0.6;
+  padding: 5px;
+  border-radius: 6px;
+}
+
+.load_profile .load_selection #recomm_card_tables table {
+  width: 100%;
+  height: auto;
+  overflow: auto;
+  -webkit-user-select: auto;
+     -moz-user-select: auto;
+      -ms-user-select: auto;
+          user-select: auto;
+  -webkit-transition: -webkit-transform 150ms ease-in-out;
+  transition: -webkit-transform 150ms ease-in-out;
+  transition: transform 150ms ease-in-out;
+  transition: transform 150ms ease-in-out, -webkit-transform 150ms ease-in-out;
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+  position: relative;
+}
+
+.load_profile .load_selection #recomm_card_tables table th {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 50px;
+  background-color: #272727;
+}
+
+.load_profile .load_selection #recomm_card_tables table tr:hover {
+  background-color: #272727;
+  -webkit-transform: scaleY(1.02);
+          transform: scaleY(1.02);
 }
 
 .load_profile .load_selection #final_load_graph {
