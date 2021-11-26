@@ -4,8 +4,8 @@
     <h5>Lets find out what load profile you have?</h5>
     <div class="load_profile_popup" id="the_popup">
         <div class="load_profile_popup_container">
-           <h5>Move the sliders to design your load model</h5>
-            
+            <h5>Move the sliders to design your load model</h5>
+
             <div class="load_slider_farm">
                 <div id="slider_0" class="load_slider"></div>
                 <div id="slider_1" class="load_slider"></div>
@@ -31,21 +31,22 @@
                 <div id="slider_21" class="load_slider"></div>
                 <div id="slider_22" class="load_slider"></div>
                 <div id="slider_23" class="load_slider"></div>
-                
+
             </div>
             <div id="load_profile_usermodelled"></div>
             <div class="load_pop_max_demand">
                 <div>
                     <label>Maximum Demand in Watts</label>
-                    <input type="number" id="max_demand_input" ng-model="max_demand_data">    
+                    <input type="number" id="max_demand_input" ng-model="max_demand_data">
                 </div>
                 <button class="btn_class_type1 " ng-click=set_max_demand()>RESET AND SET MAXIMUM DEMAND</button>
-                <button id="btn_load_profile_modelled" class="btn_class_type1 " ng-click="load_profile_user_modelled()"> SET PROFILE </button>
+                <button id="btn_load_profile_modelled" class="btn_class_type1 " ng-click="load_profile_user_modelled()">
+                    SET PROFILE </button>
 
-            
+
             </div>
-                
-            
+
+
         </div>
     </div>
     <div class="load_selection">
@@ -56,23 +57,25 @@
             <div class="card_content_container">
                 <form id="loads_database_form">
                     <div>Select the preferred load profile</div>
-                    <select id="loads_database" name="loads_list" form="loads_database_form" ng-model="selectedLoad" ng-change="load_changer()">
+                    <select id="loads_database" name="loads_list" form="loads_database_form" ng-model="selectedLoad"
+                        ng-change="load_changer()">
                         <!-- <option>Choose your load</option> -->
-                        <option ng-repeat="loads in preset_loads" ng-value="{{loads}}" >{{loads.aoi_name}}</option>
+                        <option ng-repeat="loads in preset_loads" ng-value="{{loads}}">{{loads.aoi_name}}</option>
                     </select>
                 </form>
                 <p>
                     Datalogged load profiles from various places
                 </p>
-             </div>
-
-            <div class="card_btn_container">
-                <button id="btn_load_profile_database" class="btn_class_type1" ng-click="load_database()"> SELECT</button>
             </div>
 
-            
+            <div class="card_btn_container">
+                <button id="btn_load_profile_database" class="btn_class_type1" ng-click="load_database()">
+                    SELECT</button>
+            </div>
+
+
         </div>
-        
+
         <!-- User Profile Modelling-->
         <div class="load_cards">
             <div class="load_cards_auto_curtain"></div>
@@ -83,11 +86,11 @@
                 </p>
             </div>
             <!-- PLOTLY -->
-            
+
             <div class="card_btn_container">
                 <button class="btn_class_type1" ng-click="load_profile_user_modelled()"> SELECT </button>
             </div>
-        </div>  
+        </div>
 
         <!-- upload  Profile -->
         <div class="load_cards">
@@ -95,17 +98,18 @@
             <h5>{{upload_profile}}</h5>
             <div class="card_content_container">
                 <div>
-                    <input class="btn_class_type1" type="file" id="load_file" name="load_file"/>
-                    <button class="btn_class_type1" id="clickerid" ng-click="load_profile_upload()">Set the File</button>
+                    <input class="btn_class_type1" type="file" id="load_file" name="load_file" />
+                    <button class="btn_class_type1" id="clickerid" ng-click="load_profile_upload()">Set the
+                        File</button>
                 </div>
                 <div>
                     Make sure the uploaded file resort to the required format, otherwise it will not work.
                 </div>
-             </div>
-             <div class="card_btn_container">
+            </div>
+            <div class="card_btn_container">
                 <button class="btn_class_type1" ng-click="load_profile_sel('uploaded')"> SELECT </button>
             </div>
-            
+
         </div>
 
         <!-- appliance Auto Profile -->
@@ -116,7 +120,7 @@
                 <p>
                     Select this method if you want to manually design or use architectural templates for load design.
                 </p>
-            </div>            
+            </div>
             <div class="card_btn_container">
                 <button class="btn_class_type1" ng-click="load_from_template()"> SELECT </button>
             </div>
@@ -129,7 +133,7 @@
                 <p>
                     Select this method if you want use information from electricity bill for designing load profile.
                 </p>
-            </div>            
+            </div>
             <div class="card_btn_container">
                 <button class="btn_class_type1" ng-click="load_profile_user_modelled()"> SELECT </button>
             </div>
@@ -139,7 +143,7 @@
         <div class="load_cards" id="final_load_graph">
             <h5>The Load</h5>
             <div class="card_content_container">
-                <div id="load_profile_final" >
+                <div id="load_profile_final">
                 </div>
                 <div id="load-profile-info">
                     <p>Maximum Demand - {{max_demand_display}}</p>
@@ -147,47 +151,93 @@
                     <p>Minimum Demand - {{min_demand_display}}</p>
                     <progress max="100" min="0" id="recomm_progress_ux" style="width: 100%;"></progress>
                 </div>
-             </div>
-             <div class="card_btn_container">
+            </div>
+            <div class="card_btn_container">
                 <button class="btn_class_type1" ng-click="reset_load_selection()">RESET</button>
                 <button class="btn_class_type1" id="processLoadProfile" ng-click="recomm_btn()">PROCESS LOAD</button>
-                <button id="btn_load_profile_final" class="btn_class_type1" ng-click="load_profile_upload()"> SET THE LOAD </button>
-            </div>            
+                <button id="btn_load_profile_final" class="btn_class_type1" ng-click="load_profile_upload()"> SET THE
+                    LOAD </button>
+            </div>
         </div>
+        <div class="load_cards" id="recomm_solarBest_result_card">
+            <div>
+                <i class="large material-icons">wb_sunny</i>
+            </div>
+            <div>
+                <h6>Most Insolated Day</h6>
+                <p>Energy available = {{energyOfTheDay_best| number:2}} Wh/day</p>
+                <p>Area Required = {{areaConstant_bestDay | number:2}} m<sup>2</sup></p>
+                <!-- <p>Minimum Array Power Required = {{solarArrayPower_bestDay | number:2}} Watts Array</p>
+                <p>Sizing Failure Probability = {{probabilityOfSuccess_bestDay | number:2}} %</p>
+                <p>Cost Projection (MonoPERC) = {{costMono_bestDay | currency:'₹ '}}</p>
+                <p>Cost Projection (Poly) = {{costPoly_bestDay| currency:'₹ '}} </p> -->
+            </div>
+        </div>
+        <div class="load_cards" id="recomm_solarAvg_result_card">
+            <div>
+                <i class="large material-icons">cloud_queue</i>
+            </div>
+            <div>
+                <h6>Average Day</h6>
+                <p>Energy available = {{energyOfTheDay_avg| number:2}} Wh/day</p>
+                <p>Area Required = {{areaConstant_avgDay | number:2}} m<sup>2</sup></p>
+                <!-- <p>Minimum Array Power Required = {{solarArrayPower_avgDay | number:2}} Watts Array</p>
+                <p>Sizing Failure Probability = {{probabilityOfSuccess_avgDay | number:2}} %</p>
+                <p>Cost Projection (MonoPERC) = {{costMono_avgDay | currency:'₹ '}}</p>
+                <p>Cost Projection (Poly) = {{costPoly_avgDay| currency:'₹ '}} </p> -->
+            </div>
+        </div>
+
+
+        <div class="load_cards" id="recomm_solarWorst_result_card">
+            <div>
+                <i class="large material-icons">wb_cloudy</i>
+            </div>
+            <div>
+                <h6>Least Insolated Day</h6>
+                <p>Energy available = {{energyOfTheDay_worst| number:2}} Wh/day</p>
+                <p>Area Required (m<sup>2</sup>) = {{areaConstant_worstDay | number:2}} m<sup>2</sup></p>
+                <!-- <p>Minimum Array Power Required = {{solarArrayPower_worstDay | number:2}} Watts Array</p>
+                <p>Sizing Failure Probability = {{probabilityOfSuccess_worstDay | number:2}} %</p>
+                <p>Cost Projection (MonoPERC) = {{costMono_worstDay | currency:'₹ '}}</p>
+                <p>Cost Projection (Poly) = {{costPoly_worstDay| currency:'₹ '}} </p> -->
+            </div>
+        </div>
+
+
         <div class="load_cards" id="recomm_card_tables">
             <h3>Battery Configrations and Costing</h3>
             <div>
-            <table>
-                <th>SN</th>
-                <th>System</th>
-                <th>Battery</th>
-                <th>Batt AH</th>
-                <th>Energy</th>
-                <th>Parallel</th>
-                <th>Series</th>
-                <th>Sizing</th>
-                <th>Batt. Cost (Est)</th>
-                <th>Solar Power (Est)</th>
-                <th>Area</th>
-                <th>Mono Solar Cost (Est)</th>
-                <th>Poly Solar Cost (Est)</th>
-                <tr ng-repeat="recomm in recomm_array | orderBy:'battery_recomm.totalCost'">
-                    <td>{{$index+1}}</td>
-                    <td>{{recomm.system.systemVoltage}}</td>
-                    <td>{{recomm.battery_recomm.battVoltage}}</td>
-                    <td>{{recomm.battery_recomm.batt_AH}}</td>
-                    <td>{{recomm.battery_recomm.energyCapacity}}</td>
-                    <td>{{recomm.battery_recomm.noOfParallel}}</td>
-                    <td>{{recomm.battery_recomm.noOfSeries}}</td>
-                    <td>{{recomm.battery_recomm.sizingDeviation}}</td>
-                    <td>{{recomm.battery_recomm.totalCost | currency:'₹ '}}</td>
-                    <!-- <td>{{recomm.solar_recomm.solarArrayPower + ' @ '+ recomm.solar_recomm.panelEfficiency_POLY + ' % '}}</td> -->
-                    <td>{{recomm.solar_recomm.solarArrayPower | number:2}}</td>
-                    <td>{{recomm.solar_recomm.areaConstant | number:2}}</td>
-                    <td>{{recomm.solar_recomm.costMONO | currency:'₹ '}}</td>
-                    <td>{{recomm.solar_recomm.costPOLY | currency:'₹ '}}</td>
-                </tr>
-            </table>
+                <table>
+                    <th>SN</th>
+                    <th>System</th>
+                    <th>Battery</th>
+                    <th>Batt AH</th>
+                    <th>Energy</th>
+                    <th>Parallel</th>
+                    <th>Series</th>
+                    <th>Sizing</th>
+                    <th>Batt. Cost (Est)</th>
+                    <!-- <th>Solar Power (Est)</th>
+                    <th>Area</th>
+                    <th>Mono Solar Cost (Est)</th>
+                    <th>Poly Solar Cost (Est)</th> -->
+                    <tr ng-repeat="recomm in recomm_array_bestDay | orderBy:'battery_recomm.totalCost'">
+                        <td>{{$index+1}}</td>
+                        <td>{{recomm.system.systemVoltage}}</td>
+                        <td>{{recomm.battery_recomm.battVoltage}}</td>
+                        <td>{{recomm.battery_recomm.batt_AH}}</td>
+                        <td>{{recomm.battery_recomm.energyCapacity}}</td>
+                        <td>{{recomm.battery_recomm.noOfParallel}}</td>
+                        <td>{{recomm.battery_recomm.noOfSeries}}</td>
+                        <td>{{recomm.battery_recomm.sizingDeviation}}</td>
+                        <td>{{recomm.battery_recomm.totalCost | currency:'₹ '}}</td>
+                        <!-- <td>{{recomm.solar_recomm.solarArrayPower_bestDay | number:2}}</td>
+                        <td>{{recomm.solar_recomm.areaConstant_bestDay | number:2}}</td>
+                        <td>{{recomm.solar_recomm.costMONO | currency:'₹ '}}</td>
+                        <td>{{recomm.solar_recomm.costPOLY | currency:'₹ '}}</td> -->
+                    </tr>
+                </table>
             </div>
 
         </div>

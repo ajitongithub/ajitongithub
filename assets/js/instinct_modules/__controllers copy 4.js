@@ -766,46 +766,15 @@ napp.controller('load_profile_controller', function ($scope, $http, $location) {
 			console.log(recommendationArray);
 
 			//array cleanup
-			let recomm_finalArray_bestArray =[];
-			let recomm_finalArray_worstArray =[];
-			let recomm_finalArray_avgArray =[];
+			let recomm_finalArray =[];
 			for (let i = 0; i < recommendationArray.length;i++){
-				recomm_finalArray_bestArray.push(recommendationArray[i][0]);
-				recomm_finalArray_worstArray.push(recommendationArray[i][1]);
-				recomm_finalArray_avgArray.push(recommendationArray[i][2]);
+				recomm_finalArray.push(recommendationArray[i][0]);
 			}
-			$scope.recomm_array_bestDay = recomm_finalArray_bestArray;	
+			$scope.recomm_array = recomm_finalArray;	
+			//Finding Array Config
+			console.log(recomm_finalArray[0].system.systemVoltage);
+			console.log(recomm_finalArray[0].system.systemVoltage);
 
-			console.log(recomm_finalArray_bestArray);
-
-			//Finding Array Config 
-			//TODO correct Array Power
-			$scope.solarArrayPower_bestDay = recomm_finalArray_bestArray[0].solar_recomm.solarArrayPower_bestDay;
-			$scope.solarArrayPower_worstDay = recomm_finalArray_worstArray[0].solar_recomm.solarArrayPower_worstDay;
-			$scope.solarArrayPower_avgDay = recomm_finalArray_avgArray[0].solar_recomm.solarArrayPower_avgDay ;
-			
-			$scope.areaConstant_bestDay = recomm_finalArray_bestArray[0].solar_recomm.areaConstant_bestDay;
-			$scope.areaConstant_worstDay = recomm_finalArray_worstArray[0].solar_recomm.areaConstant_worstDay;
-			$scope.areaConstant_avgDay = recomm_finalArray_avgArray[0].solar_recomm.areaConstant_avgDay ;
-			
-			
-			$scope.energyOfTheDay_best = recomm_finalArray_bestArray[0].solar_recomm.splSolarDays.best.energyOfTheDay;
-			$scope.energyOfTheDay_worst = recomm_finalArray_worstArray[0].solar_recomm.splSolarDays.worst.energyOfTheDay;
-			$scope.energyOfTheDay_avg = recomm_finalArray_avgArray[0].solar_recomm.splSolarDays.avg.energyOfTheDay;
-			
-			
-			$scope.probabilityOfSuccess_bestDay = (1 - recomm_finalArray_bestArray[0].solar_recomm.probabilityOfSuccess.bestDay)*100;
-			$scope.probabilityOfSuccess_worstDay = (1 - recomm_finalArray_worstArray[0].solar_recomm.probabilityOfSuccess.worstDay)*100;
-			$scope.probabilityOfSuccess_avgDay = (1 - recomm_finalArray_avgArray[0].solar_recomm.probabilityOfSuccess.avgDay) * 100; 
-			
-			$scope.costMono_bestDay = recomm_finalArray_bestArray[0].solar_recomm.costMONO; 
-			$scope.costPoly_bestDay = recomm_finalArray_bestArray[0].solar_recomm.costPOLY; 
-
-			$scope.costMono_worstDay = recomm_finalArray_worstArray[0].solar_recomm.costMONO; 
-			$scope.costPoly_worstDay = recomm_finalArray_worstArray[0].solar_recomm.costPOLY; 
-
-			$scope.costMono_avgDay = recomm_finalArray_avgArray[0].solar_recomm.costMONO; 
-			$scope.costPoly_avgDay = recomm_finalArray_avgArray[0].solar_recomm.costPOLY; 
 		};	
 	};
 
@@ -834,7 +803,7 @@ const solorRotoscoper = (batt_recom, solarRecomm_result,current_index,size) => {
 	recommObj.battery_recomm.batt_AH = batt_recom.batt_AH;
 	recommObj.battery_recomm.totalCost = batt_recom.totalCost;
 
-	//Best Day for Solar
+	//Best Day for Solar and Worst Day for Solar
 	//Battery Energy Test - Beta
 	let battEnergy_underTest = batt_recom.energyCapacity;
 	let energy_till12 = solarRecomm_result.energyBatt_till_12;
@@ -845,10 +814,8 @@ const solorRotoscoper = (batt_recom, solarRecomm_result,current_index,size) => {
 	let areaConst_bestDay = 0;
 	let areaStepRise = 0.1;
 	let conditionFulfilled_bestDay = false;
-
-
-
-			recommObj.solar_recomm = {};
+	while (!conditionFulfilled_bestDay) {
+		recommObj.solar_recomm = {};
 		recommObj.solar_recomm.solarArrayPower_bestDay = 0;
 		recommObj.solar_recomm.insolationLowlightThreshold = solarRecomm_result.insolationLowlightThreshold;
 		recommObj.solar_recomm.panelPowerOutput_365days = solarRecomm_result.panelPowerOutput_365days;
@@ -857,11 +824,6 @@ const solorRotoscoper = (batt_recom, solarRecomm_result,current_index,size) => {
 		recommObj.solar_recomm.panelEfficiency_MONO = solarRecomm_result.panelEffi;
 		recommObj.solar_recomm.probabilityOfSuccess = solarRecomm_result.probabilityOfSuccess;
 		recommObj.solar_recomm.splSolarDays = solarRecomm_result.splSolarDays;
-
-
-
-	while (!conditionFulfilled_bestDay) {
-
 
 		battEnergy_array = Array(24).fill(0);
 		battEnergy_instant = battEnergy_underTest - energy_till12;
@@ -905,176 +867,9 @@ const solorRotoscoper = (batt_recom, solarRecomm_result,current_index,size) => {
 
 
 
-	//Worst Day for Solar
-
-	recommObj = {};
-	recommObj.system = {};
-	recommObj.load = {};
-	recommObj.battery_recomm = {};
-	recommObj.solar_recomm = {};
-	recommObj.system.systemVoltage = batt_recom.systemVoltage;
-	recommObj.load.normalizedEnergyDemand = Math.round(batt_recom.normalizedEnergyDemand);
-	recommObj.load.loadProfile_day = solarRecomm_result.load_profile;
-	recommObj.load.loadProfile_year = solarRecomm_result.battLoad_Recom.load_profile_yearly;
-
-	recommObj.battery_recomm.energyCapacity = batt_recom.energyCapacity;
-	recommObj.battery_recomm.sizingDeviation = parseFloat((100 * (batt_recom.energyCapacity - batt_recom.normalizedEnergyDemand) / batt_recom.normalizedEnergyDemand).toFixed(2));
-	recommObj.battery_recomm.noOfParallel = batt_recom.noOfParallel;
-	recommObj.battery_recomm.noOfSeries = batt_recom.noOfSeries;
-	recommObj.battery_recomm.battVoltage = batt_recom.battVoltage;
-	recommObj.battery_recomm.batt_AH = batt_recom.batt_AH;
-	recommObj.battery_recomm.totalCost = batt_recom.totalCost;
-
-	//Battery Energy Test - Beta
-	battEnergy_underTest = batt_recom.energyCapacity;
-	energy_till12 = solarRecomm_result.energyBatt_till_12;
-	battEnergy_instant = battEnergy_underTest - energy_till12;
-	battEnergy_array = Array(24).fill(0);
-	// let solarRecharge_array = [];
-	//While loop Start	- Best Day
-	let areaConst_worstDay = 0;
-	// let areaStepRise = 0.1;
-	let conditionFulfilled_worstDay= false;
-
-	recommObj.solar_recomm = {};
-	recommObj.solar_recomm.solarArrayPower_worstDay = 0;
-	recommObj.solar_recomm.insolationLowlightThreshold = solarRecomm_result.insolationLowlightThreshold;
-	recommObj.solar_recomm.panelPowerOutput_365days = solarRecomm_result.panelPowerOutput_365days;
-	recommObj.solar_recomm.panelPowerOutput_8740hours = solarRecomm_result.panelPowerOutput_8740hours;
-	recommObj.solar_recomm.panelEfficiency_POLY = solarRecomm_result.panelEffi;
-	recommObj.solar_recomm.panelEfficiency_MONO = solarRecomm_result.panelEffi;
-	recommObj.solar_recomm.probabilityOfSuccess = solarRecomm_result.probabilityOfSuccess;
-	recommObj.solar_recomm.splSolarDays = solarRecomm_result.splSolarDays;
-
-	let worstSolarDay_profile = solarRecomm_result.splSolarDays.worst.panelProfile;
-	let testm1111 = 0;
-	while (!conditionFulfilled_worstDay) {
-
-		battEnergy_array = Array(24).fill(0);
-		battEnergy_instant = battEnergy_underTest - energy_till12;
-		//For Best Day in an year
-		
-
-		let battEnergy_state = worstSolarDay_profile.map((panel_PowerData, index) => {
-			if ((recommObj.solar_recomm.solarArrayPower_worstDay < (panel_PowerData * areaConst_worstDay))) {
-				// console.log(panel_PowerData * areaConst_worstDay);
-				recommObj.solar_recomm.solarArrayPower_worstDay = panel_PowerData * areaConst_worstDay;
-				// testm1111 = panel_PowerData * areaConst_worstDay;
-			}
-			battEnergy_array[index] = battEnergy_instant + (panel_PowerData * areaConst_worstDay) - solarRecomm_result.load_profile[index];
-			battEnergy_instant = battEnergy_array[index];
-
-			if (battEnergy_instant <= battEnergy_underTest) {
-				return battEnergy_instant;
-			}
-			else { return battEnergy_underTest; }
-		});
-		// console.log(battEnergy_state);
-		//check feasibility return the best possible measure
-		if (battEnergy_state[23] > battEnergy_state[0]) {
-			recommObj.solar_recomm.areaConstant_worstDay = areaConst_worstDay; //Area constant
-
-			testm1111 = worstSolarDay_profile.reduce((a,b)=>Math.max(a,b));
-
-			recommObj.solar_recomm.costMONO = (47.339 * (recommObj.solar_recomm.solarArrayPower_worstDay)).toFixed(0);
-			recommObj.solar_recomm.costPOLY = (5194.3 * Math.log((recommObj.solar_recomm.solarArrayPower_worstDay)) - 16736).toFixed(0);
-			recommObj.solar_recomm.feasible = "YES"; //Area constant
-			recommObj.solar_recomm.rechargeEnergyArray = battEnergy_state; //Area constant
-			conditionFulfilled_worstDay = true;
-			solarRecharge_array.push(recommObj);
-		}
-		else {
-			recommObj.solar_recomm.areaConstant_worstDay = areaConst_worstDay; //Area constant
-			recommObj.solar_recomm.feasible = "NO"; //Area constant
-			// recommObj.solar_recomm.rechargeEnergyArray = battEnergy_state; //Area constant
-			conditionFulfilled_worstDay = false;
-			// solarRecharge_array.push(0);
-		}
-		areaConst_worstDay += areaStepRise;
-				
-	} //while loop ender for Worst Day
-
-	console.log(testm1111);
-
-	//Average Day for Solar
-	recommObj = {};
-	recommObj.system = {};
-	recommObj.load = {};
-	recommObj.battery_recomm = {};
-	recommObj.solar_recomm = {};
-	recommObj.system.systemVoltage = batt_recom.systemVoltage;
-	recommObj.load.normalizedEnergyDemand = Math.round(batt_recom.normalizedEnergyDemand);
-	recommObj.load.loadProfile_day = solarRecomm_result.load_profile;
-	recommObj.load.loadProfile_year = solarRecomm_result.battLoad_Recom.load_profile_yearly;
-
-	recommObj.battery_recomm.energyCapacity = batt_recom.energyCapacity;
-	recommObj.battery_recomm.sizingDeviation = parseFloat((100 * (batt_recom.energyCapacity - batt_recom.normalizedEnergyDemand) / batt_recom.normalizedEnergyDemand).toFixed(2));
-	recommObj.battery_recomm.noOfParallel = batt_recom.noOfParallel;
-	recommObj.battery_recomm.noOfSeries = batt_recom.noOfSeries;
-	recommObj.battery_recomm.battVoltage = batt_recom.battVoltage;
-	recommObj.battery_recomm.batt_AH = batt_recom.batt_AH;
-	recommObj.battery_recomm.totalCost = batt_recom.totalCost;
 
 
-	//Battery Energy Test - Beta
-	battEnergy_underTest = batt_recom.energyCapacity;
-	energy_till12 = solarRecomm_result.energyBatt_till_12;
-	battEnergy_instant = battEnergy_underTest - energy_till12;
-	battEnergy_array = Array(24).fill(0);
-	// lsolarRecharge_array = [];
-	//While loop Start	- avgDay
-	let areaConst_avgDay = 0;
-	areaStepRise = 0.1;
-	let conditionFulfilled_avgDay = false;
-	while (!conditionFulfilled_avgDay) {
-		recommObj.solar_recomm = {};
-		recommObj.solar_recomm.solarArrayPower_avgDay = 0;
-		recommObj.solar_recomm.insolationLowlightThreshold = solarRecomm_result.insolationLowlightThreshold;
-		recommObj.solar_recomm.panelPowerOutput_365days = solarRecomm_result.panelPowerOutput_365days;
-		recommObj.solar_recomm.panelPowerOutput_8740hours = solarRecomm_result.panelPowerOutput_8740hours;
-		recommObj.solar_recomm.panelEfficiency_POLY = solarRecomm_result.panelEffi;
-		recommObj.solar_recomm.panelEfficiency_MONO = solarRecomm_result.panelEffi;
-		recommObj.solar_recomm.probabilityOfSuccess = solarRecomm_result.probabilityOfSuccess;
-		recommObj.solar_recomm.splSolarDays = solarRecomm_result.splSolarDays;
 
-		battEnergy_array = Array(24).fill(0);
-		battEnergy_instant = battEnergy_underTest - energy_till12;
-		//For Best Day in an year
-		let bestSolarDay_profile = solarRecomm_result.splSolarDays.avg.panelProfile;
-
-		let battEnergy_state = bestSolarDay_profile.map((panel_PowerData, index) => {
-			if ((recommObj.solar_recomm.solarArrayPower_avgDay < (panel_PowerData * areaConst_avgDay))) {
-				recommObj.solar_recomm.solarArrayPower_avgDay = panel_PowerData * areaConst_avgDay;
-			}
-			battEnergy_array[index] = battEnergy_instant + (panel_PowerData * areaConst_avgDay) - solarRecomm_result.load_profile[index];
-			battEnergy_instant = battEnergy_array[index];
-
-			if (battEnergy_instant <= battEnergy_underTest) {
-				return battEnergy_instant;
-			}
-			else { return battEnergy_underTest; }
-		});
-		// console.log(battEnergy_state);
-		//check feasibility return the best possible measure
-		if (battEnergy_state[23] > battEnergy_state[0]) {
-			recommObj.solar_recomm.areaConstant_avgDay = areaConst_avgDay; //Area constant
-			recommObj.solar_recomm.costMONO = (47.339 * (recommObj.solar_recomm.solarArrayPower_avgDay)).toFixed(0);
-			recommObj.solar_recomm.costPOLY = (5194.3 * Math.log((recommObj.solar_recomm.solarArrayPower_avgDay)) - 16736).toFixed(0);
-			recommObj.solar_recomm.feasible = "YES"; //Area constant
-			recommObj.solar_recomm.rechargeEnergyArray = battEnergy_state; //Area constant
-			conditionFulfilled_avgDay = true;
-			solarRecharge_array.push(recommObj);
-		}
-		else {
-			recommObj.solar_recomm.areaConstant_avgDay = areaConst_avgDay; //Area constant
-			recommObj.solar_recomm.feasible = "NO"; //Area constant
-			recommObj.solar_recomm.rechargeEnergyArray = battEnergy_state; //Area constant
-			conditionFulfilled_avgDay = false;
-			// solarRecharge_array.push(0);
-		}
-		areaConst_avgDay += areaStepRise;
-				
-	} //while loop ender for avgDay
 
 	return solarRecharge_array;
 };

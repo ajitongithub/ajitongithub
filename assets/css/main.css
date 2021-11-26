@@ -1780,9 +1780,21 @@ header .user_tag span a {
 }
 
 .load_profile .load_selection #recomm_card_tables table tr:hover {
-  background-color: #272727;
+  background-color: #6e6e6e;
   -webkit-transform: scaleY(1.02);
           transform: scaleY(1.02);
+}
+
+.load_profile .load_selection #recomm_solarBest_result_card {
+  background-color: #007906;
+}
+
+.load_profile .load_selection #recomm_solarWorst_result_card {
+  background-color: #5c0000;
+}
+
+.load_profile .load_selection #recomm_solarAvg_result_card {
+  background-color: #005772;
 }
 
 .load_profile .load_selection #final_load_graph {
