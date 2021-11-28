@@ -1,4 +1,4 @@
-- 👋 Hi, I’m @ajitongithub
+- 👋 Hi, I’m Ajit
 - 👀 I’m interested in ... developing my skills in programming and advanced software and hardware interfacing programs
 - 🌱 I’m currently learning ... working as a Research Associate at Indian Institute of Technology Bombay, India
 - 💞️ I’m looking to collaborate on ... Artificial Intelligence, Automotive Software and Hardware interfacing, Industrial Electronics
