@@ -219,7 +219,7 @@ ipcMain.on('solarRecom', (event, instinct_profile)=>{
 
 //Generate year Profile and Battery Energy Model
 ipcMain.on('load_profile_yearly', (event, instinct_config)=>{
-  // console.log(instinct_config);
+  console.log(instinct_config);
 
   let the_responseObject = [];
 
