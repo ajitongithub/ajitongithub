@@ -1,0 +1,23 @@
+{
+    "config_load_profile": [{
+        "sn": 1,
+        "name": "Air Conditioner",
+        "rated_power": 2000,
+        "manufacturer": "Generic",
+        "type": "Cooling Load",
+        "power_factor": 0.9,
+        "voltage": 230,
+        "recommended_profile": "residential-cooling",
+        "scenario": "RURAL"
+    }],
+    "config_system_voltages": [12, 24, 36, 48, 96, 120, 240],
+    "config_environmental_parameters": [{}],
+    "config_battery_parameters": [
+        {
+            "batt_voltages": [2, 6, 12],
+            "batt_AH_ranges": [50, 500, 10],
+            "batt_series_qty": [1, 120]            
+        }
+
+    ]
+}

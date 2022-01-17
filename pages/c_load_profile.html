@@ -99,7 +99,7 @@
             <div class="card_content_container">
                 <div>
                     <input class="btn_class_type1" type="file" id="load_file" name="load_file" />
-                    <button class="btn_class_type1" id="clickerid" ng-click="load_profile_upload()">Set the
+                    <button class="btn_class_type1" id="clickerid" ng-click="load_profile_file_upload()">Set the
                         File</button>
                 </div>
                 <div>
@@ -107,7 +107,7 @@
                 </div>
             </div>
             <div class="card_btn_container">
-                <button class="btn_class_type1" ng-click="load_profile_sel('uploaded')"> SELECT </button>
+                <button class="btn_class_type1" ng-click="load_profile_file_upload()"> SELECT </button>
             </div>
 
         </div>
@@ -155,7 +155,7 @@
             <div class="card_btn_container">
                 <button class="btn_class_type1" ng-click="reset_load_selection()">RESET</button>
                 <button class="btn_class_type1" id="processLoadProfile" ng-click="recomm_btn()">PROCESS LOAD</button>
-                <button id="btn_load_profile_final" class="btn_class_type1" ng-click="load_profile_upload()"> SET THE
+                <button id="btn_load_profile_final" class="btn_class_type1" ng-click="load_profile_set()"> SET THE
                     LOAD </button>
             </div>
         </div>
@@ -210,7 +210,8 @@
             <div>
                 <table>
                     <th>SN</th>
-                    <th>System</th>
+                    //TODO
+                    <th ng-click="">System</th>
                     <th>Battery</th>
                     <th>Batt AH</th>
                     <th>Energy</th>
@@ -222,7 +223,7 @@
                     <th>Area</th>
                     <th>Mono Solar Cost (Est)</th>
                     <th>Poly Solar Cost (Est)</th> -->
-                    <tr ng-repeat="recomm in recomm_array_bestDay | orderBy:'battery_recomm.totalCost'">
+                    <tr ng-repeat="recomm in recomm_array_bestDay | orderBy:'battery_recomm.systemVoltage'">
                         <td>{{$index+1}}</td>
                         <td>{{recomm.system.systemVoltage}}</td>
                         <td>{{recomm.battery_recomm.battVoltage}}</td>

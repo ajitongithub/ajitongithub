@@ -279,13 +279,39 @@ napp.controller('load_profile_controller', function ($scope, $http, $location) {
 		$scope.preset_loads = response.data.load_profile;
 		// console.log(response.data.load_profile)
 	});
+	//Preset Configuration
+	$http.get('../database/config_data.json').then(function (response) {
+		$scope.software_configurations = response.data;
+		console.log(response.data);
+	});
+	//First Method - Load from Database
+	$scope.load_database = function () {
+		console.log($scope.selectedLoad);
+		btn_load_profile_final.disabled = false;
+		// Other Files
+		var x = document.getElementsByClassName("load_cards_auto_curtain");
+		x[1].style.transform = "translateY(0)";
+		x[2].style.transform = "translateY(0)";
+		x[3].style.transform = "translateY(0)";
+		x[4].style.transform = "translateY(0)";
+		instinct_profile.load_profile = $scope.selectedLoad.load_profile;
+		Plotly.restyle(load_profile_final, 'y', [$scope.selectedLoad.load_profile]);
+	};
 
-
-
-
-	// Load Profile Modelling (User)------------------------------------------
-	var load_profile_array = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-
+	//Third Method - Load from File
+	//load profile File Uploaded
+	$scope.load_profile_file_upload = function () {
+		console.log("Upload THe File");
+		var x = document.getElementsByClassName("load_cards_auto_curtain");
+		x[0].style.transform = "translateY(0)";
+		x[1].style.transform = "translateY(0)";
+		// x[2].style.transform = "translateY(0)";
+		x[3].style.transform = "translateY(0)";
+		x[4].style.transform = "translateY(0)";
+	};
+	//Method Load Profile Modelling (User)------------------------------------------
+	// var load_profile_array = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+	var load_profile_array = Array(24).fill(0);
 	$scope.database_profile = "Profile from Database";
 	$scope.user_model_profile = "Model the Load Profile";
 	$scope.upload_profile = "Upload the Database";
@@ -294,11 +320,12 @@ napp.controller('load_profile_controller', function ($scope, $http, $location) {
 	$scope.max_demand_data = 1500;
 
 	//TODO template loading
+	//Fourth Method - Load from Template Program
 	$scope.load_from_template = () => {
 		$location.path("/auto_load_loader");
 
 	};
-
+	//Second Method - Load from modelling
 	$scope.load_profile_user_modelled = function () {
 		// auto pop up		
 		var load_curtain = document.getElementById("load_profile_curtain");
@@ -310,6 +337,7 @@ napp.controller('load_profile_controller', function ($scope, $http, $location) {
 			// load_profile_array
 			Plotly.restyle(load_profile_final, 'y', [load_profile_array]);
 			instinct_profile.load_profile = load_profile_array;
+			instinct_profile.load_profile_datapoints = load_profile_array.length;
 		}
 		else {
 			load_farm_popup.style.transform = "translateY(0px)";
@@ -321,6 +349,7 @@ napp.controller('load_profile_controller', function ($scope, $http, $location) {
 		x[0].style.transform = "translateY(0)";
 		x[2].style.transform = "translateY(0)";
 		x[3].style.transform = "translateY(0)";
+		x[4].style.transform = "translateY(0)";
 		// var i;
 		// for (i = 0; i < x.length; i++) {
 		// 	x[i].style.transform = "translateY(-100%)";
@@ -560,27 +589,48 @@ napp.controller('load_profile_controller', function ($scope, $http, $location) {
 
 	Plotly.newPlot(load_profile_final, data, layout_load_final, config_load_final);
 
-	$scope.selecter_load = function (input) {
-		console.log(input);
-	};
-	$scope.load_database = function () {
-		console.log($scope.selectedLoad);
-		btn_load_profile_final.disabled = false;
-		// Other Files
-		var x = document.getElementsByClassName("load_cards_auto_curtain");
-		x[1].style.transform = "translateY(0)";
-		x[2].style.transform = "translateY(0)";
-		x[3].style.transform = "translateY(0)";
-		instinct_profile.load_profile = $scope.selectedLoad.load_profile;
-		Plotly.restyle(load_profile_final, 'y', [$scope.selectedLoad.load_profile]);
-	};
-	//load profile 
-	$scope.load_profile_upload = function () {
+	// $scope.selecter_load = function (input) {
+	// 	console.log(input);
+	// };
+
+
+
+	//load profile SET - Final Load Set and Proceed to Components
+	$scope.load_profile_set = function () {
 		console.log("Load Profile Loading");
 		console.log(instinct_profile);
 		// instinct_profile["load_profile"] = load_profile_array;
 		ipcRenderer.send('load_profile_done', instinct_profile);
 		$location.path("/component_selection");
+	};
+
+	let load_profile_info_extraction = (sel_load)=>{
+		var max_demand_load = sel_load.reduce((a, b) => Math.max(a, b));
+		var min_demand_load = sel_load.reduce((a, b) => Math.min(a, b));
+		var energy_demand_load = sel_load.reduce((a, b) => a + b);
+
+		let return_object = {};
+		return_object.max_demand_display = {};
+		return_object.min_demand_display = {};
+		return_object.energy_demand_display = {};
+		return_object.max_demand = max_demand_load;// in Watts
+		return_object.min_demand = min_demand_load;
+		return_object.energy_demand = energy_demand_load; //in Wh
+		return_object.datapoints = sel_load.length;
+
+		if (max_demand_load > 1000) {
+			return_object.max_demand_display = `${Math.round(max_demand_load / 1000)} kW`;
+		}
+		else { return_object.max_demand_display = `${max_demand_load} W`; }
+
+		return_object.energy_demand_display = `${Math.round(energy_demand_load / 1000)} kWh`;
+		// $scope.min_demand_display = "Not Defined Yet";
+		if (min_demand_load > 1000) {
+			return_object.min_demand_display = `${Math.round(min_demand_load / 1000)} kW`;
+		}
+		else { return_object.min_demand_display = `${min_demand_load} W`; }
+
+		return return_object;
 	};
 
 	$scope.load_changer = function () {
@@ -591,21 +641,26 @@ napp.controller('load_profile_controller', function ($scope, $http, $location) {
 		instinct_profile.load_profile = $scope.selectedLoad.load_profile;
 		Plotly.restyle(load_profile_final, 'y', [$scope.selectedLoad.load_profile]);
 		//information display
-		var sel_load = $scope.selectedLoad.load_profile;
-		var max_demand_load = sel_load.reduce((a, b) => Math.max(a, b));
-		var min_demand_load = sel_load.reduce((a, b) => Math.min(a, b));
-		var energy_demand_load = sel_load.reduce((a, b) => a + b);
-		if (max_demand_load > 1000) {
-			$scope.max_demand_display = `${Math.round(max_demand_load / 1000)} kW`;
-		}
-		else { $scope.max_demand_display = `${max_demand_load} W`; }
+		// var sel_load = $scope.selectedLoad.load_profile;
+		var loadProfile_output = load_profile_info_extraction($scope.selectedLoad.load_profile); //Extract Information about the load
+		$scope.max_demand_display = loadProfile_output.max_demand_display;
+		$scope.min_demand_display = loadProfile_output.min_demand_display;
+		$scope.energy_demand_display = loadProfile_output.energy_demand_display;
+		console.log(loadProfile_output);
+		// var max_demand_load = sel_load.reduce((a, b) => Math.max(a, b));
+		// var min_demand_load = sel_load.reduce((a, b) => Math.min(a, b));
+		// var energy_demand_load = sel_load.reduce((a, b) => a + b);
+		// if (max_demand_load > 1000) {
+		// 	$scope.max_demand_display = `${Math.round(max_demand_load / 1000)} kW`;
+		// }
+		// else { $scope.max_demand_display = `${max_demand_load} W`; }
 
-		$scope.energy_demand_display = `${Math.round(energy_demand_load / 1000)} kWh`;
-		// $scope.min_demand_display = "Not Defined Yet";
-		if (min_demand_load > 1000) {
-			$scope.min_demand_display = `${Math.round(min_demand_load / 1000)} kW`;
-		}
-		else { $scope.min_demand_display = `${min_demand_load} W`; }
+		// $scope.energy_demand_display = `${Math.round(energy_demand_load / 1000)} kWh`;
+		// // $scope.min_demand_display = "Not Defined Yet";
+		// if (min_demand_load > 1000) {
+		// 	$scope.min_demand_display = `${Math.round(min_demand_load / 1000)} kW`;
+		// }
+		// else { $scope.min_demand_display = `${min_demand_load} W`; }
 		//Generate the transfer object
 		// generate full year profile
 		let fullYear_loadProfile = document.querySelector("#processLoadProfile");
@@ -620,14 +675,15 @@ napp.controller('load_profile_controller', function ($scope, $http, $location) {
 		instinct_profile.batt_recom_DOD = 0.8;
 		instinct_profile.batt_recom_min_DOA = 1; //Days of autonomy
 		instinct_profile.batt_recom_eff = 0.92; //couloumbic eff.
-		instinct_profile.max_demand = max_demand_load; // compass for inverter
-		instinct_profile.energy_demand = energy_demand_load;
+		instinct_profile.max_demand = loadProfile_output.max_demand_load; // compass for inverter
+		instinct_profile.energy_demand = loadProfile_output.energy_demand_load;
 
 		//Solar Data
 		instinct_profile.panelEffi = 0.18; // Different for poly and mono
 		instinct_profile.insolationLowlightThreshold = 100;
 
-		// console.log(instinct_profile);
+		//TODO Recommender Button
+		console.log(instinct_profile);
 		$scope.recomm_btn = ()=>{
 			let loadBattRecomm_result = ipcRenderer.sendSync("load_profile_yearly", instinct_profile);
 			instinct_profile.battLoad_Recom = loadBattRecomm_result;
