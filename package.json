@@ -4,7 +4,11 @@
   "description": "Microgrid Simulator",
   "main": "main.js",
   "devDependencies": {
+<<<<<<< HEAD
     "electron": "^16.0.6",
+=======
+    "electron": "^16.0.2",
+>>>>>>> c160d079d44cbadd546948d5812800dc02fe666c
     "electron-packager": "^15.4.0"
   },
   "scripts": {
