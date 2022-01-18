@@ -242,6 +242,9 @@ ipcMain.on('load_profile_yearly', (event, instinct_config) => {
   let weekend_detect_array = Array(simulation_hours).fill(0);
   let load_data = instinct_config.load_profile;
   let hours_array = Array.from({ length: simulation_hours }, (x, i) => i);
+
+  console.log("hours_array", hours_array); 
+
   for (count_hours; count_hours < hours_array.length; count_hours++) {
     reset_hours += 1;
     // Weekend Start Detection-----
@@ -263,6 +266,7 @@ ipcMain.on('load_profile_yearly', (event, instinct_config) => {
     count_months = (count_weeks / 4);
   }
 
+  console.log("Weekend Array",weekend_detect_array);
 
 
   for (load_data_inst = 0; load_data_inst < simulation_hours; load_data_inst++) {
