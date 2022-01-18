@@ -244,6 +244,9 @@ napp.controller('load_profile_controller', function ($scope, $http, $location) {
 	$scope.max_demand_display = "Not Defined Yet";
 	$scope.energy_demand_display = "Not Defined Yet";
 	$scope.min_demand_display = "Not Defined Yet";
+
+	//Software Config Array
+	let software_configurations;
 	// Active Button Changer 
 	var side_menu_active_system = document.getElementsByClassName('left_side_menu');
 	for (i = 0; i < side_menu_active_system.length; i++) {
@@ -282,6 +285,7 @@ napp.controller('load_profile_controller', function ($scope, $http, $location) {
 	//Preset Configuration
 	$http.get('../database/config_data.json').then(function (response) {
 		$scope.software_configurations = response.data;
+		software_configurations = response.data;
 		console.log(response.data);
 	});
 	//First Method - Load from Database
@@ -641,62 +645,50 @@ napp.controller('load_profile_controller', function ($scope, $http, $location) {
 		instinct_profile.load_profile = $scope.selectedLoad.load_profile;
 		Plotly.restyle(load_profile_final, 'y', [$scope.selectedLoad.load_profile]);
 		//information display
-		// var sel_load = $scope.selectedLoad.load_profile;
 		var loadProfile_output = load_profile_info_extraction($scope.selectedLoad.load_profile); //Extract Information about the load
 		$scope.max_demand_display = loadProfile_output.max_demand_display;
 		$scope.min_demand_display = loadProfile_output.min_demand_display;
 		$scope.energy_demand_display = loadProfile_output.energy_demand_display;
 		console.log(loadProfile_output);
-		// var max_demand_load = sel_load.reduce((a, b) => Math.max(a, b));
-		// var min_demand_load = sel_load.reduce((a, b) => Math.min(a, b));
-		// var energy_demand_load = sel_load.reduce((a, b) => a + b);
-		// if (max_demand_load > 1000) {
-		// 	$scope.max_demand_display = `${Math.round(max_demand_load / 1000)} kW`;
-		// }
-		// else { $scope.max_demand_display = `${max_demand_load} W`; }
-
-		// $scope.energy_demand_display = `${Math.round(energy_demand_load / 1000)} kWh`;
-		// // $scope.min_demand_display = "Not Defined Yet";
-		// if (min_demand_load > 1000) {
-		// 	$scope.min_demand_display = `${Math.round(min_demand_load / 1000)} kW`;
-		// }
-		// else { $scope.min_demand_display = `${min_demand_load} W`; }
 		//Generate the transfer object
 		// generate full year profile
 		let fullYear_loadProfile = document.querySelector("#processLoadProfile");
 
 		//TODO Battery Configurations 
 		//Recommendation Ranges
-		instinct_profile.system_voltage = [12, 24, 36, 48, 96, 120, 240];
-		instinct_profile.batt_voltages = [2, 6, 12];
-		instinct_profile.batt_AH_ranges = [50, 500, 10]; //start,end,step
-		instinct_profile.batt_series_qty = [1, 120];
-		instinct_profile.batt_parallel_qty = [1, 4];
-		instinct_profile.batt_recom_DOD = 0.8;
-		instinct_profile.batt_recom_min_DOA = 1; //Days of autonomy
-		instinct_profile.batt_recom_eff = 0.92; //couloumbic eff.
-		instinct_profile.max_demand = loadProfile_output.max_demand; // 
-		instinct_profile.min_demand = loadProfile_output.min_demand;
+		instinct_profile.system_voltage = software_configurations.config_system_voltages;//[12, 24, 36, 48, 96, 120, 240];
+		instinct_profile.batt_voltages = software_configurations.config_battery_parameters[0].batt_voltages;//[2, 6, 12];
+		instinct_profile.batt_AH_ranges = software_configurations.config_battery_parameters[0].batt_AH_ranges;// [50, 500, 10]; //start,end,step
+		instinct_profile.batt_series_qty = software_configurations.config_battery_parameters[0].batt_series_qty;//[1, 120];
+		instinct_profile.batt_parallel_qty = software_configurations.config_battery_parameters[0].batt_parallel_qty;//[1, 4];
+		instinct_profile.batt_recom_DOD = software_configurations.config_battery_parameters[0].batt_DOD;
+		instinct_profile.batt_recom_min_DOA = software_configurations.config_battery_parameters[0].batt_autonomy; //Days of autonomy
+		instinct_profile.batt_recom_eff = software_configurations.config_battery_parameters[0].batt_coloumbic_efficiency; //couloumbic eff.
+		
+		instinct_profile.max_demand = loadProfile_output.max_demand;
+		instinct_profile.min_demand = loadProfile_output.min_demand;		
 		instinct_profile.energy_demand = loadProfile_output.energy_demand;
-		instinct_profile.energy_demand = loadProfile_output.energy_demand;
-		instinct_profile.load_datapoints = loadProfile_output.load_datapoints;
+		instinct_profile.load_datapoints = loadProfile_output.datapoints;
 
-		console.log(loadProfile_output.max_demand);
 		//Solar Data
-		instinct_profile.panelEffi = 0.18; // Different for poly and mono
-		instinct_profile.insolationLowlightThreshold = 100;
-
+		instinct_profile.panelEffi = software_configurations.config_panel_parameters[0].solar_efficiency; // Different for poly and mono
+		instinct_profile.insolationLowlightThreshold = software_configurations.config_panel_parameters[0].solar_lowlight_threshold;
+		
 		//TODO Recommender Button
 		console.log(instinct_profile);
+
+
 		$scope.recomm_btn = ()=>{
 			//Generate yearly load profile
 			let loadBattRecomm_result = ipcRenderer.sendSync("load_profile_yearly", instinct_profile);
+
+
 			instinct_profile.battLoad_Recom = loadBattRecomm_result;
+			
 			//Solar Recom Model
 			let solarRecomm_result = ipcRenderer.sendSync('solarRecom', instinct_profile);
 
 			console.log(loadBattRecomm_result);
-			console.log("Test Me");
 
 			// //Solar Recom Model
 			// let solarRecomm_result = ipcRenderer.sendSync('solarRecom', instinct_profile);

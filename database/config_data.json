@@ -1,14 +1,12 @@
 {
     "config_load_profile": [{
-        "sn": 1,
-        "name": "Air Conditioner",
-        "rated_power": 2000,
-        "manufacturer": "Generic",
-        "type": "Cooling Load",
-        "power_factor": 0.9,
-        "voltage": 230,
-        "recommended_profile": "residential-cooling",
-        "scenario": "RURAL"
+        "seed": 1,
+        "simulation_hours": 8760,
+        "datapoints": 24,
+        "interval_in_secs": 3600,
+        "load_variability": 0,
+        "load_variability_tolerance": 3,
+        "weekend_load_rise": 2
     }],
     "config_system_voltages": [12, 24, 36, 48, 96, 120, 240],
     "config_environmental_parameters": [{}],
@@ -16,8 +14,15 @@
         {
             "batt_voltages": [2, 6, 12],
             "batt_AH_ranges": [50, 500, 10],
-            "batt_series_qty": [1, 120]            
+            "batt_series_qty": [1, 120],          
+            "batt_parallel_qty": [1, 4],
+            "batt_DOD": 0.8,
+            "batt_autonomy": 1,
+            "batt_coloumbic_efficiency": 0.92
         }
-
-    ]
+    ],
+    "config_panel_parameters": [{
+        "solar_efficiency": 0.18,
+        "solar_lowlight_threshold": 100
+    }]
 }
