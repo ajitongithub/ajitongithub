@@ -681,16 +681,22 @@ napp.controller('load_profile_controller', function ($scope, $http, $location) {
 		$scope.recomm_btn = ()=>{
 			console.time();
 			//Generate yearly load profile
-			let loadBattRecomm_result = ipcRenderer.sendSync("load_profile_yearly", instinct_profile);
+			let LoadRecomm_result = ipcRenderer.sendSync("load_profile_yearly", instinct_profile);
 
 
-			instinct_profile.battLoad_Recom = loadBattRecomm_result;
+			instinct_profile.loadRecomm = LoadRecomm_result;
 
 			console.timeEnd();
+			console.log("loadRecomm_result", LoadRecomm_result);
+
+			let BattRecomm_result = ipcRenderer.sendSync("battery_recomm_sims", instinct_profile);
+			console.log("BattRecomm_result", BattRecomm_result);
+			instinct_profile.battRecomm = BattRecomm_result;
+			console.log(instinct_profile);
 			//Solar Recom Model
 			let solarRecomm_result = ipcRenderer.sendSync('solarRecom', instinct_profile);
-
-			console.log("loadBattRecomm_result",loadBattRecomm_result);
+			console.log("solarRecomm_result", solarRecomm_result);
+			
 
 			// //Solar Recom Model
 			// let solarRecomm_result = ipcRenderer.sendSync('solarRecom', instinct_profile);

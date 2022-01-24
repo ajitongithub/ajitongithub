@@ -152,67 +152,7 @@ const testms = async () => {
   // },10000);
 };
 
-//Solar Recom Model
-ipcMain.on('solarRecom', (event, instinct_profile) => {
-  instinct_config = fs.readFileSync(resolve(__dirname, 'database/temp_data copy.json'));
-  instinct_config = JSON.parse(instinct_config);
 
-  let tempData = instinct_config.temperature;
-  let simulation_days = 365;
-  let simulation_hours = simulation_days * 24;
-
-  let dailyInsolData = [];
-  let insolAggregator = 0;
-  let insolLimitAggregator = 0;
-  let batt_active_array = Array(simulation_hours).fill(0);
-  let batt_full_SOC_failure = Array(simulation_days).fill(0);
-
-
-
-  // instinct_config.insolation.forEach((currentInsolation, index)=>{    
-  //   //Insolation Aggregator for one day
-  //   if(parseFloat(currentInsolation) > 0){
-  //     insolAggregator += parseFloat(currentInsolation);
-  //     // console.log(currentInsolation,index);
-  //   }
-  //   //Weak Daylight Detection 
-  //   if (parseFloat(currentInsolation) >= instinct_profile.insolationLimit){
-  //     insolLimitAggregator += parseFloat(currentInsolation);
-  //   }    
-  //   //Day complete detection
-  //   if((index + 1)% 24 == 0){
-  //     dailyInsolData.push(insolAggregator);
-  //     insolAggregator =0;
-  //   }
-  // });
-
-  // let tempEfficiency = instinct_profile.panelEffi; 
-  // // console.log(tempEfficiency);
-  // // console.log(instinct_config.insolation.length);
-  // // console.log(dailyInsolData.length);
-
-  // let solarPowerGeneratedPerDay = dailyInsolData.map((data)=>data*tempEfficiency);
-  // let solarPowerGeneratedPerDay_tempCompen = solarPowerGeneratedPerDay.map((data, index)=>data /(((-0.38*(parseInt(tempData[index])-25)/100))+1));
-
-
-  // instinct_profile.solarPowerGeneratedPerDay = solarPowerGeneratedPerDay;
-  // instinct_profile.solarPowerGeneratedPerDay_tempCompen = solarPowerGeneratedPerDay_tempCompen;
-  instinct_profile.dailyInsolData = dailyInsolData;
-  instinct_profile.insolation = instinct_config.insolation;
-  instinct_profile.temperature = tempData;
-
-  let energyBatt_till_12 = instinct_profile.load_profile.reduce((prev_data, current_data, index) => {
-    if (index >= 17) {
-      return prev_data + current_data;
-    } else { return 0; }
-  });
-
-  instinct_profile.energyBatt_till_12 = energyBatt_till_12;
-  event.returnValue = instinct_profile;
-
-  //end of solar recomm program  
-
-});
 
 //Generate year Profile and Battery Energy Model
 ipcMain.on('load_profile_yearly', (event, instinct_config) => {
@@ -224,26 +164,26 @@ ipcMain.on('load_profile_yearly', (event, instinct_config) => {
   console.log(software_config);
   console.log(software_config.config_load_profile);
 
-  var seed = software_config.config_load_profile.seed;
+  var seed = software_config.config_load_profile[0].seed;
   let rand_load = rand_gen.create(seed);
-  let simulation_hours = software_config.config_load_profile.simulation_hours;
-  let load_variability = software_config.config_load_profile.load_variability;
-  let load_variability_tolerance = software_config.config_load_profile.load_variability_tolerance;
-
+  let simulation_hours = software_config.config_load_profile[0].simulation_hours;
+  let load_variability = software_config.config_load_profile[0].load_variability;
+  let load_variability_tolerance = software_config.config_load_profile[0].load_variability_tolerance;
+  let load_inflation_per_year = software_config.config_load_profile[0].load_inflation_per_year;
+  let weekend_load_rise = software_config.config_load_profile[0].weekend_load_rise;
   let hour_id = 0;
   let count_days = 0;
   let count_hours = 0;
   let count_weeks = 0;
   let reset_hours = 0;
   let reset_weekDays = 0;
-
+  let yearly_load_inflation = 0;
+  let years_past = 0;
   let generated_load_profile = Array(simulation_hours).fill(0);
-  let weekend_load_rise = software_config.config_load_profile.weekend_load_rise;
+
   let weekend_detect_array = Array(simulation_hours).fill(0);
   let load_data = instinct_config.load_profile;
   let hours_array = Array.from({ length: simulation_hours }, (x, i) => i);
-
-  console.log("hours_array", hours_array); 
 
   for (count_hours; count_hours < hours_array.length; count_hours++) {
     reset_hours += 1;
@@ -266,9 +206,8 @@ ipcMain.on('load_profile_yearly', (event, instinct_config) => {
     count_months = (count_weeks / 4);
   }
 
-  console.log("Weekend Array",weekend_detect_array);
-
-
+  //TODO Debugiing 1  
+  count_days = 0;
   for (load_data_inst = 0; load_data_inst < simulation_hours; load_data_inst++) {
     //variability randomizer
     load_variability = rand_load.floatBetween((-1 * load_variability_tolerance), load_variability_tolerance) * 0.01;
@@ -280,13 +219,15 @@ ipcMain.on('load_profile_yearly', (event, instinct_config) => {
     //Variability Addition 
     //variability - flag check
     if (true) {
-      generated_load_profile[load_data_inst] += (generated_load_profile[load_data_inst] * load_variability); //adding variability
+      generated_load_profile[load_data_inst] += (generated_load_profile[load_data_inst] * load_variability) + (generated_load_profile[load_data_inst] * yearly_load_inflation); //adding variability
     }
     //load_inflation - flag check ( yearly increment - )
-    if (true && (Math.round(load_data_inst / 8760) > 0)) {
-      //load Inflation addition    
-      generated_load_profile[load_data_inst] += (load_data[hour_id] * Math.round(load_data_inst / 8760)); //adding load inflation
+    if (true && ((load_data_inst % 2500) == 0) && (load_data_inst != 0)) {
+      //load Inflation addition 
+      years_past += 1;
+      yearly_load_inflation = years_past * load_inflation_per_year / 100;
     }
+
     //Weekend Effects - flag
     if (true) {
       if ((weekend_load_rise != 0) && (weekend_detect_array[load_data_inst] == 1)) {
@@ -299,16 +240,67 @@ ipcMain.on('load_profile_yearly', (event, instinct_config) => {
   the_responseObject.max_demand_load_yearly = generated_load_profile.reduce((a, b) => Math.max(a, b));
   the_responseObject.energy_demand_load_yearly = generated_load_profile.reduce((a, b) => a + b);
 
+  // //Normalized energy demand with DOD, DOA, efficiency,
+  // let batt_recom_DOD = instinct_config.batt_recom_DOD;
+  // let batt_recom_min_DOA = instinct_config.batt_recom_min_DOA; //Days of autonomy
+  // let batt_recom_eff = instinct_config.batt_recom_eff; //couloumbic eff.
+
+  // // let normalized_energy_demand_perDay = (the_responseObject.max_demand_load * batt_recom_min_DOA) / (batt_recom_DOD * batt_recom_eff);
+  // let normalized_energy_demand_perDay = (instinct_config.energy_demand * batt_recom_min_DOA) / (batt_recom_DOD * batt_recom_eff);
+
+  // // console.log(`Max Demand${the_responseObject.max_demand}`);
+  // // console.log(`Normalized Demand${normalized_energy_demand_perDay}`);
+
+  // let tempRecom = [];
+  // ///Battery Combinations Possible
+  // instinct_config.system_voltage.forEach((sys_voltage) => {
+  //   // console.log(sys_voltage);    
+  //   //no.of series required    
+  //   instinct_config.batt_voltages.forEach((batt_voltage) => {
+  //     var batt_start_AH = parseInt(instinct_config.batt_AH_ranges[0]);
+  //     var batt_end_AH = parseInt(instinct_config.batt_AH_ranges[1]);
+  //     var batt_step_AH = parseInt(instinct_config.batt_AH_ranges[2]);
+
+  //     var batt_start_parallel = parseInt(instinct_config.batt_parallel_qty[0]);
+  //     var batt_end_parallel = parseInt(instinct_config.batt_parallel_qty[1]);
+
+  //     for (i = batt_start_AH; i <= batt_end_AH; i += batt_step_AH) {
+  //       for (n = batt_start_parallel; n <= batt_end_parallel; n += 1) {
+  //         let objRecom = {};
+  //         // let batt_total_energy = n * (sys_voltage / batt_voltage) * i * sys_voltage;
+  //         let batt_total_energy = n * sys_voltage * i;
+  //         if (batt_total_energy >= normalized_energy_demand_perDay && batt_total_energy < (normalized_energy_demand_perDay * 1.2)) {
+  //           objRecom.systemVoltage = sys_voltage;
+  //           objRecom.battVoltage = batt_voltage;
+  //           objRecom.noOfSeries = sys_voltage / batt_voltage;
+  //           objRecom.batt_AH = i;
+  //           objRecom.noOfParallel = n;
+  //           objRecom.energyCapacity = batt_total_energy;
+  //           objRecom.normalizedEnergyDemand = normalized_energy_demand_perDay;
+  //           objRecom.totalCost = Math.round(104 * i * n * (sys_voltage / batt_voltage)); // unit price 104x => from Prices-appliances.xls
+  //           tempRecom.push(objRecom);
+  //         }
+  //       }
+  //     }
+  //   });
+  // });
+
+  // the_responseObject.battery_recomns = tempRecom;
+  event.returnValue = the_responseObject;
+});
+
+//Battery Model
+ipcMain.on('battery_recomm_sims', (event, instinct_config) => {
+
+  let the_responseObject = [];
+  //TODO Setup a unified database for the parameters
   //Normalized energy demand with DOD, DOA, efficiency,
-  let batt_recom_DOD = instinct_config.batt_recom_DOD;
+  let batt_recom_DOD = instinct_config.batt_recom_DOD;//depth of discharge
   let batt_recom_min_DOA = instinct_config.batt_recom_min_DOA; //Days of autonomy
   let batt_recom_eff = instinct_config.batt_recom_eff; //couloumbic eff.
-
+  //TODO change energydemand to average for 1 year
   // let normalized_energy_demand_perDay = (the_responseObject.max_demand_load * batt_recom_min_DOA) / (batt_recom_DOD * batt_recom_eff);
   let normalized_energy_demand_perDay = (instinct_config.energy_demand * batt_recom_min_DOA) / (batt_recom_DOD * batt_recom_eff);
-
-  // console.log(`Max Demand${the_responseObject.max_demand}`);
-  // console.log(`Normalized Demand${normalized_energy_demand_perDay}`);
 
   let tempRecom = [];
   ///Battery Combinations Possible
@@ -322,13 +314,14 @@ ipcMain.on('load_profile_yearly', (event, instinct_config) => {
 
       var batt_start_parallel = parseInt(instinct_config.batt_parallel_qty[0]);
       var batt_end_parallel = parseInt(instinct_config.batt_parallel_qty[1]);
+      var battery_oversize_factor = parseFloat(instinct_config.battery_oversize_factor);
 
       for (i = batt_start_AH; i <= batt_end_AH; i += batt_step_AH) {
         for (n = batt_start_parallel; n <= batt_end_parallel; n += 1) {
           let objRecom = {};
           // let batt_total_energy = n * (sys_voltage / batt_voltage) * i * sys_voltage;
           let batt_total_energy = n * sys_voltage * i;
-          if (batt_total_energy >= normalized_energy_demand_perDay && batt_total_energy < (normalized_energy_demand_perDay * 1.2)) {
+          if ((batt_total_energy >= normalized_energy_demand_perDay) && batt_total_energy < (normalized_energy_demand_perDay * battery_oversize_factor)) {
             objRecom.systemVoltage = sys_voltage;
             objRecom.battVoltage = batt_voltage;
             objRecom.noOfSeries = sys_voltage / batt_voltage;
@@ -347,6 +340,144 @@ ipcMain.on('load_profile_yearly', (event, instinct_config) => {
   the_responseObject.battery_recomns = tempRecom;
   event.returnValue = the_responseObject;
 });
+
+//Solar Recom Model
+ipcMain.on('solarRecom', (event, instinct_profile) => {
+  let instinct_config = fs.readFileSync(resolve(__dirname, 'database/temp_data copy.json'));
+  let software_config = fs.readFileSync(resolve(__dirname, 'database/config_data.json'));
+  instinct_config = JSON.parse(instinct_config); //Transfer Config
+  software_config = JSON.parse(software_config); //Software Configuration File
+
+  console.log(instinct_config);
+  console.log(software_config);
+  let temperatureData = instinct_config.temperature;
+  let simulation_days = 365; //1 year data
+  let simulation_hours = simulation_days * 24;
+
+  let dailyInsolData = []; // daily energy from the panels
+  let insolAggregator = 0;
+  let solarPowerGeneratedPerDayAggregator = 0; //Solar Power Generated Aggregation
+  let solarPowerGeneratedPerDay_tempCompenAggregator = 0; // Solar Power Derated
+  let insolLimitAggregator = 0;
+  let batt_active_array = Array(simulation_hours).fill(0);
+  let batt_full_SOC_failure = Array(simulation_days).fill(0);
+
+
+  //Map with new equation without the efficiency
+  let solarPowerMax_database = parseInt(instinct_config.components.solar_panel.rating);
+  let solarPowerMax = 250; //Maximum power output from the solar panels
+  let solarTemperatureCoeff = -0.38;
+  let STP_temperature = 25;
+  let solarPowerGenerated = instinct_config.insolation.map((data) => data * (solarPowerMax / 1000));
+  let solarPowerGenerated_tempCompen = solarPowerGenerated.map((data, index) => data / (((solarTemperatureCoeff * (parseInt(temperatureData[index]) - STP_temperature) / 100)) + 1));
+  // let solarPowerGeneratedPerDay = dailyInsolData.map((data) => data * (solarPowerMax / 1000));
+  // let solarPowerGeneratedPerDay_tempCompen = solarPowerGeneratedPerDay.map((data, index) => data / (((solarTemperatureCoeff * (parseInt(temperatureData[index]) - STP_temperature) / 100)) + 1));
+  let solarPowerGeneratedPerDay = [];
+  let solarPowerGeneratedPerDay_tempCompen = [];
+
+
+  instinct_config.insolation.forEach((currentInsolation, index) => {
+    //Insolation Aggregator for one day
+    if (parseFloat(currentInsolation) > 0) {
+      insolAggregator += parseFloat(currentInsolation);
+      solarPowerGeneratedPerDayAggregator += solarPowerGenerated[index];
+      solarPowerGeneratedPerDay_tempCompenAggregator += solarPowerGenerated_tempCompen[index];
+      // console.log(currentInsolation,index);
+    }
+    //Weak Daylight Detection 
+    if (parseFloat(currentInsolation) >= instinct_profile.insolationLimit) {
+      insolLimitAggregator += parseFloat(currentInsolation);
+    }
+    //Day complete detection
+    if ((index + 1) % 24 == 0) {
+      dailyInsolData.push(insolAggregator);
+      solarPowerGeneratedPerDay.push(solarPowerGeneratedPerDayAggregator);
+      solarPowerGeneratedPerDay_tempCompen.push(solarPowerGeneratedPerDay_tempCompenAggregator);
+      insolAggregator = 0;
+      solarPowerGeneratedPerDayAggregator = 0;
+      solarPowerGeneratedPerDay_tempCompenAggregator = 0;
+    }
+  });
+  instinct_profile.dailyInsolData = dailyInsolData; // Daily distribution of the solar insolation
+  instinct_profile.solarPowerGeneratedPerDay = solarPowerGeneratedPerDay; // Daily distribution of the solar insolation
+  instinct_profile.solarPowerGeneratedPerDay_tempCompen = solarPowerGeneratedPerDay_tempCompen; // Daily distribution of the solar insolation
+
+  console.log(solarPowerGeneratedPerDay);
+  console.log(solarPowerGeneratedPerDay_tempCompen);
+
+  let panelPowerOutput_8740hours = solarPowerGenerated_tempCompen;
+  let panelPowerOutput_365days = solarPowerGeneratedPerDay_tempCompen;
+
+  //BEST / AVG / WORST insolation days finding logic
+  //Best Day for Solar and Worst Day for Solar
+  let splSolarDays = {};
+  splSolarDays.best = {};
+  splSolarDays.best.energyOfTheDay = 0;
+  splSolarDays.worst = {};
+  splSolarDays.worst.energyOfTheDay = 10000;
+  splSolarDays.avg = {};
+  splSolarDays.avg.energyOfTheDay = 0;
+  let meanEnergy_year = panelPowerOutput_365days.reduce((a, b) => (a + b));
+  let solarData_length = panelPowerOutput_365days.length;
+  meanEnergy_year = meanEnergy_year / solarData_length; //Mean Energy Generated from Solar Panel
+
+  let min_meanEnergy = Math.abs(meanEnergy_year - panelPowerOutput_365days[0]);
+  panelPowerOutput_365days.forEach((insol_daily, index) => {
+    //Best Day
+    if (splSolarDays.best.energyOfTheDay < insol_daily) {
+      splSolarDays.best.energyOfTheDay = insol_daily;
+      splSolarDays.best.dayOfYear = index;
+    }
+    //worstDay_obj
+    if (splSolarDays.worst.energyOfTheDay > insol_daily) {
+      splSolarDays.worst.energyOfTheDay = insol_daily;
+      splSolarDays.worst.dayOfYear = index;
+    }
+    //Aversge Day Detection
+    if (min_meanEnergy > Math.abs(meanEnergy_year - insol_daily)) {
+      min_meanEnergy = Math.abs(meanEnergy_year - insol_daily);
+      splSolarDays.avg.energyOfTheDay = insol_daily;
+      splSolarDays.avg.dayOfYear = index;
+    }
+  });
+
+
+  
+  //=========================================
+
+  //Find the temperature compensation
+
+
+
+  // let tempEfficiency = instinct_profile.panelEffi; 
+  // // console.log(tempEfficiency);
+  // // console.log(instinct_config.insolation.length);
+  // // console.log(dailyInsolData.length);
+
+  // let solarPowerGeneratedPerDay = dailyInsolData.map((data)=>data*tempEfficiency);
+  // let solarPowerGeneratedPerDay_tempCompen = solarPowerGeneratedPerDay.map((data, index) => data / (((-0.38 * (parseInt(temperatureData[index])-25)/100))+1));
+
+
+  // instinct_profile.solarPowerGeneratedPerDay = solarPowerGeneratedPerDay;
+  // instinct_profile.solarPowerGeneratedPerDay_tempCompen = solarPowerGeneratedPerDay_tempCompen;
+  // 
+  // instinct_profile.insolation = instinct_config.insolation;
+  // instinct_profile.temperature = temperatureData;
+
+  // let energyBatt_till_12 = instinct_profile.load_profile.reduce((prev_data, current_data, index) => {
+  //   if (index >= 17) {
+  //     return prev_data + current_data;
+  //   } else { return 0; }
+  // });
+
+  // instinct_profile.energyBatt_till_12 = energyBatt_till_12;
+  // event.returnValue = instinct_profile;
+  event.returnValue = "TEST";
+
+  //end of solar recomm program  
+
+});
+
 
 //Generate solar panel power
 
