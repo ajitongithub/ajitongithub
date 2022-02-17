@@ -433,7 +433,7 @@ ipcMain.on('solarRecom', (event, instinct_profile) => {
       splSolarDays.worst.energyOfTheDay = insol_daily;
       splSolarDays.worst.dayOfYear = index;
     }
-    //Aversge Day Detection
+    //Average Day Detection
     if (min_meanEnergy > Math.abs(meanEnergy_year - insol_daily)) {
       min_meanEnergy = Math.abs(meanEnergy_year - insol_daily);
       splSolarDays.avg.energyOfTheDay = insol_daily;

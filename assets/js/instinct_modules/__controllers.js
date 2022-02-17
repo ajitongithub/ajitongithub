@@ -740,7 +740,7 @@ napp.controller('load_profile_controller', function ($scope, $http, $location) {
 			// //START OF BEST/WORST/AVG DAYS in YEAR
 			// //Best Day for Solar and Worst Day for Solar
 			// let splSolarDays = {};
-			// splSolarDays.best = {};
+			// splSol  arDays.best = {};
 			// splSolarDays.best.energyOfTheDay = 0;
 			// splSolarDays.worst = {};
 			// splSolarDays.worst.energyOfTheDay = 10000;
