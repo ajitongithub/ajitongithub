@@ -715,43 +715,91 @@ napp.controller('load_profile_controller', function ($scope, $http, $location) {
 				}
 			});
 
-			//Probability of Reliability of the System
-			let design_totalPower_panel = 1500; //in watts - solar - total
-			let reliability_percentage = 0; // How reliabile will be the system for the first year
+			// //Solar Recom Model
+			// let solarRecomm_result = ipcRenderer.sendSync('solarRecom', instinct_profile);
+			// //work the program for recommedation
+			// let tempData = solarRecomm_result.temperature;
+			// let dailyInsolData = [];
+			// let insolAggregator = 0;
+			// solarRecomm_result.insolation.forEach((currentInsolation, index) => {
+			// 	//Insolation Aggregator for one day
+			// 	if (parseFloat(currentInsolation) > 0) {
+			// 		insolAggregator += parseFloat(currentInsolation);
+			// 	}
+			// 	//Day complete detection 
+			// 	if ((index + 1) % 24 == 0) {
+			// 		dailyInsolData.push(insolAggregator);
+			// 		insolAggregator = 0;
+			// 	}
+			// });
 
-			//loading panel power output in one year
-			let panelPowerOutput_year = solarRecomm_result.solarPowerGeneratedPerDay_tempCompen; //Temperature Compensated ( aging Not Included ), power output of the solar panel
+
+
+
+			// //Max Panel Power per area W/m2
+			// //Change the efficiency HERE for MONO and POLY
+			// let panelPowerOutput_8740hours = solarRecomm_result.insolation.map((insol_perHour, index) => {
+			// 	let result = (insol_perHour * solarRecomm_result.panelEffi) / (((-0.38 * (parseInt(tempData[index]) - 25) / 100)) + 1);
+			// 	return result;
+			// });
+			// solarRecomm_result.panelPowerOutput_8740hours = panelPowerOutput_8740hours;
+			// //Max Panel Power per area W/m2...aggregated per day
+			// let panelPowerOutput_365days = [];
+			// let panelPowerAggregator = 0;
+			// panelPowerOutput_8740hours.forEach((currentInsolation, index) => {
+			// 	//Insolation Aggregator for one day
+			// 	if (parseFloat(currentInsolation) > 0) {
+			// 		panelPowerAggregator += parseFloat(currentInsolation);
+			// 	}
+			// 	//Day complete detection 
+			// 	if ((index + 1) % 24 == 0) {
+			// 		panelPowerOutput_365days.push(panelPowerAggregator);
+			// 		panelPowerAggregator = 0;
+			// 	}
+			// });
+			// solarRecomm_result.panelPowerOutput_365days = panelPowerOutput_365days;
+
+
+			// //START OF BEST/WORST/AVG DAYS in YEAR
+			// //Best Day for Solar and Worst Day for Solar
+			// let splSolarDays = {};
+			// splSol  arDays.best = {};
+			// splSolarDays.best.energyOfTheDay = 0;
+			// splSolarDays.worst = {};
+			// splSolarDays.worst.energyOfTheDay = 10000;
+			// splSolarDays.avg = {};
+			// splSolarDays.avg.energyOfTheDay = 0;
+
+			// let meanEnergy_year = panelPowerOutput_365days.reduce((a, b) => (a + b));
+			// let solarData_length = panelPowerOutput_365days.length;
+			// meanEnergy_year = meanEnergy_year / solarData_length;
+			// let min_meanEnergy = Math.abs(meanEnergy_year - panelPowerOutput_365days[0]);
+			// panelPowerOutput_365days.forEach((insol_daily, index) => {
+			// 	//Best Day
+			// 	if (splSolarDays.best.energyOfTheDay < insol_daily) {
+			// 		splSolarDays.best.energyOfTheDay = insol_daily;
+			// 		splSolarDays.best.dayOfYear = index;
+			// 	}
+			// 	//worstDay_obj
+			// 	if (splSolarDays.worst.energyOfTheDay > insol_daily) {
+			// 		splSolarDays.worst.energyOfTheDay = insol_daily;
+			// 		splSolarDays.worst.dayOfYear = index;
+			// 	}
+			// 	//Aversge Day Detection
+			// 	if (min_meanEnergy > Math.abs(meanEnergy_year - insol_daily)) {
+			// 		min_meanEnergy = Math.abs(meanEnergy_year - insol_daily);
+			// 		splSolarDays.avg.energyOfTheDay = insol_daily;
+			// 		splSolarDays.avg.dayOfYear = index;
+			// 	}
+			// });
+
+
+
+
+
+
 			
-			//Setting up panels designed based on Best day Insolation
-			let selected_insolation;
-			let per_panel_power_bestDay = parseInt(panelPowerOutput_year[solarRecomm_result.solarRecomm.splSolarDays.best.dayOfYear]);
-			console.log("This is output in wh/day", per_panel_power_bestDay);
-			//Setting up panels designed based on Average day Insolation
-			let per_panel_power_avgDay = parseInt(panelPowerOutput_year[solarRecomm_result.solarRecomm.splSolarDays.avg.dayOfYear]);
-			console.log("This is output in wh/day", per_panel_power_avgDay);
-			//Setting up panels designed based on Worst day Insolation
-			let per_panel_power_worstDay = parseInt(panelPowerOutput_year[solarRecomm_result.solarRecomm.splSolarDays.worst.dayOfYear]);
-			console.log("This is output in wh/day", per_panel_power_worstDay);
-			//Setting up panels designed based on Designed-select day Insolation
-
-			let required_demand = solarRecomm_result.energy_demand; // Load Demand in Wh
-			// let batteryEnergy_designed_ = 12000; //in Wh
-			let SOH_derate = 0.37; // % of SOH dropped per month. Approx (4.4%/year)
-			let SOC_instant = 1; //SOC
-			let battery_recharge_factor = 1.2; //120% of the required energy by the battery for full charging
-			let battery_DOD = solarRecomm_result.batt_recom_DOD; // Assuming 50% DOD
-			let days_of_autonomy = solarRecomm_result.batt_recom_min_DOA;
-			let battery_instantaneous = (required_demand * days_of_autonomy * SOC_instant * battery_recharge_factor) / battery_DOD;
-			let solar_maxWatt = solarRecomm_result.solarPowerMax;
-			let no_of_panels = [];
-			let no_of_panels__designed = [];
-			panelPowerOutput_year.forEach(solarEnergy => {
-				no_of_panels.push(battery_instantaneous / solarEnergy);
-			});
-			
-			console.log("No of Panels needed everyday", no_of_panels);
-
-
+			// //Probability of Failure Concept
 			// let best_days = 0;
 			// let worst_days = 0;
 			// let average_days = 0; //days counted for all days below the average limit

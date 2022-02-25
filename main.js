@@ -11,7 +11,7 @@ var rand_gen = require('random-seed');
 var nj = require('./assets/js/dependencies/numjs.min.js');
 const console = require('console');
 const { time, Console } = require('console');
-const { resolve } = require('path');
+const { resolve, parse } = require('path');
 const { rejects } = require('assert');
 
 // const { remote } = require('@electron/remote');
@@ -348,8 +348,18 @@ ipcMain.on('solarRecom', (event, instinct_profile) => {
   instinct_config = JSON.parse(instinct_config); //Transfer Config
   software_config = JSON.parse(software_config); //Software Configuration File
 
-  console.log(instinct_config);
-  console.log(software_config);
+
+    let energyBatt_till_12 = instinct_profile.load_profile.reduce((prev_data, current_data, index) => {
+    if (index >= 17) {
+      return prev_data + current_data;
+    } else { return 0; }
+  });
+
+  instinct_profile.energyBatt_till_12 = energyBatt_till_12;
+
+
+  // console.log(instinct_config);
+  // console.log(software_config.config_environmental_parameters[0].standard_temperature);
   let temperatureData = instinct_config.temperature;
   let simulation_days = 365; //1 year data
   let simulation_hours = simulation_days * 24;
@@ -366,10 +376,14 @@ ipcMain.on('solarRecom', (event, instinct_profile) => {
   //Map with new equation without the efficiency
   let solarPowerMax_database = parseInt(instinct_config.components.solar_panel.rating);
   let solarPowerMax = 250; //Maximum power output from the solar panels
+  instinct_profile.solarPowerMax = solarPowerMax;
   let solarTemperatureCoeff = -0.38;
-  let STP_temperature = 25;
-  let solarPowerGenerated = instinct_config.insolation.map((data) => data * (solarPowerMax / 1000));
-  let solarPowerGenerated_tempCompen = solarPowerGenerated.map((data, index) => data / (((solarTemperatureCoeff * (parseInt(temperatureData[index]) - STP_temperature) / 100)) + 1));
+  instinct_profile.solarTemperatureCoeff = solarTemperatureCoeff;
+  //TODO Check the solar insolation data- Some problem confirm the units
+
+  let STP_temperature = parseInt(software_config.config_environmental_parameters[0].standard_temperature);
+  let solarPowerGenerated = instinct_config.insolation.map((insol_data) => insol_data * (solarPowerMax / 1000));
+  let solarPowerGenerated_tempCompen = solarPowerGenerated.map((gen_data, index) => gen_data / (((solarTemperatureCoeff * (parseInt(temperatureData[index]) - STP_temperature) / 100)) + 1));
   // let solarPowerGeneratedPerDay = dailyInsolData.map((data) => data * (solarPowerMax / 1000));
   // let solarPowerGeneratedPerDay_tempCompen = solarPowerGeneratedPerDay.map((data, index) => data / (((solarTemperatureCoeff * (parseInt(temperatureData[index]) - STP_temperature) / 100)) + 1));
   let solarPowerGeneratedPerDay = [];
@@ -398,6 +412,9 @@ ipcMain.on('solarRecom', (event, instinct_profile) => {
       solarPowerGeneratedPerDay_tempCompenAggregator = 0;
     }
   });
+
+
+  //TODO Daily insol data checking
   instinct_profile.dailyInsolData = dailyInsolData; // Daily distribution of the solar insolation
   instinct_profile.solarPowerGeneratedPerDay = solarPowerGeneratedPerDay; // Daily distribution of the solar insolation
   instinct_profile.solarPowerGeneratedPerDay_tempCompen = solarPowerGeneratedPerDay_tempCompen; // Daily distribution of the solar insolation
@@ -420,8 +437,8 @@ ipcMain.on('solarRecom', (event, instinct_profile) => {
   let meanEnergy_year = panelPowerOutput_365days.reduce((a, b) => (a + b));
   let solarData_length = panelPowerOutput_365days.length;
   meanEnergy_year = meanEnergy_year / solarData_length; //Mean Energy Generated from Solar Panel
-
-  let min_meanEnergy = Math.abs(meanEnergy_year - panelPowerOutput_365days[0]);
+  //TODO Mean Energy
+  let closest_meanEnergy = Math.abs(meanEnergy_year - panelPowerOutput_365days[0]);
   panelPowerOutput_365days.forEach((insol_daily, index) => {
     //Best Day
     if (splSolarDays.best.energyOfTheDay < insol_daily) {
@@ -434,13 +451,22 @@ ipcMain.on('solarRecom', (event, instinct_profile) => {
       splSolarDays.worst.dayOfYear = index;
     }
     //Average Day Detection
-    if (min_meanEnergy > Math.abs(meanEnergy_year - insol_daily)) {
-      min_meanEnergy = Math.abs(meanEnergy_year - insol_daily);
+    if (closest_meanEnergy > Math.abs(meanEnergy_year - insol_daily)) {
+      closest_meanEnergy = Math.abs(meanEnergy_year - insol_daily);
       splSolarDays.avg.energyOfTheDay = insol_daily;
       splSolarDays.avg.dayOfYear = index;
     }
   });
 
+instinct_profile.solarPowerGeneratedPerDay = solarPowerGeneratedPerDay;
+instinct_profile.solarPowerGeneratedPerDay_tempCompen = solarPowerGeneratedPerDay_tempCompen;
+instinct_profile.solarRecomm = {};
+instinct_profile.solarRecomm.meanEnergy_year = meanEnergy_year;
+instinct_profile.solarRecomm.splSolarDays = splSolarDays;
+instinct_profile.solar_insolation = instinct_config.insolation;
+  
+  // instinct_profile.insolation = instinct_config.insolation;
+  // instinct_profile.temperature = temperatureData;
 
   
   //=========================================
@@ -471,8 +497,8 @@ ipcMain.on('solarRecom', (event, instinct_profile) => {
   // });
 
   // instinct_profile.energyBatt_till_12 = energyBatt_till_12;
-  // event.returnValue = instinct_profile;
-  event.returnValue = "TEST";
+  event.returnValue = instinct_profile;
+  // event.returnValue = "TEST";
 
   //end of solar recomm program  
 

@@ -211,7 +211,7 @@
             <div>
                 <table>
                     <th>SN</th>
-                    //TODO
+                    <!-- TODO -->
                     <th ng-click="">System</th>
                     <th>Battery</th>
                     <th>Batt AH</th>
@@ -224,7 +224,7 @@
                     <th>Area</th>
                     <th>Mono Solar Cost (Est)</th>
                     <th>Poly Solar Cost (Est)</th> -->
-                    <tr ng-repeat="recomm in recomm_array_bestDay | orderBy:'battery_recomm.systemVoltage'">
+                    <tr ng-repeat="recomm in recomm_array_bestDay | orderBy:'battery_recomm.systemVoltage':reverse_data">
                         <td>{{$index+1}}</td>
                         <td>{{recomm.system.systemVoltage}}</td>
                         <td>{{recomm.battery_recomm.battVoltage}}</td>

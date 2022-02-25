@@ -10,7 +10,10 @@
         "load_inflation_per_year":10
     }],
     "config_system_voltages": [12, 24, 36, 48, 96, 120, 240],
-    "config_environmental_parameters": [{}],
+    "config_environmental_parameters": [{
+        "standard_temperature":25
+
+    }],
     "config_battery_parameters": [
         {
             "batt_voltages": [2, 6, 12],
