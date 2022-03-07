@@ -236,9 +236,60 @@ ipcMain.on('load_profile_yearly', (event, instinct_config) => {
     }
   }
 
+  //Load Demand Daily Aggregate
+  let dailyLoadData = [];
+  let loadAggregator = 0;
+
+  //Grid Dependency System
+  let dailyLoadData_gridSupported = [];
+  let loadAggregator_gridSupported = 0;
+  let totalLoad_gridSupported = [];
+
+  //Grid Dependency processing
+  let grid_dependency = 0.9; // 0- Independed Microgrid, 1- Total Grid Dependent
+
+  generated_load_profile.forEach((currentLoad, index) => {
+    //Load Aggregator for one day
+    if (parseFloat(currentLoad) > 0) {
+      loadAggregator += currentLoad;
+    }
+    //Reliability / Dependency Array
+    dailyLoadData_gridSupported.push(currentLoad); //Reliability Array
+
+    //Day complete detection 
+    if ((index + 1) % 24 == 0) {
+      dailyLoadData.push(loadAggregator);
+      loadAggregator = 0;
+
+      //Reliability Load Duration Curve Conversion
+      dailyLoadData_gridSupported = dailyLoadData_gridSupported.sort(function (a, b) { return (b - a); });
+
+      let no_of_backup_hours = Math.round((1-grid_dependency) * 24);
+
+      for (hr=0; hr<no_of_backup_hours; hr++){
+        loadAggregator_gridSupported += dailyLoadData_gridSupported[hr];
+      }
+
+      totalLoad_gridSupported.push(loadAggregator_gridSupported);
+      loadAggregator_gridSupported = 0;
+    }
+  });
+
+
+
+  //Load Duration Curves Per Day and find the re-processed energy
+
+  
+  the_responseObject.load_energy_daily = dailyLoadData;
   the_responseObject.load_profile_yearly = generated_load_profile;
   the_responseObject.max_demand_load_yearly = generated_load_profile.reduce((a, b) => Math.max(a, b));
   the_responseObject.energy_demand_load_yearly = generated_load_profile.reduce((a, b) => a + b);
+
+  //Grid Depended Series
+  the_responseObject.load_energy_daily_gridDependent = totalLoad_gridSupported;
+  // the_responseObject.load_profile_yearly_gridDependent = generated_load_profile;
+  // the_responseObject.max_demand_load_yearly_gridDependent = generated_load_profile.reduce((a, b) => Math.max(a, b));
+  // the_responseObject.energy_demand_load_yearly_gridDependent = generated_load_profile.reduce((a, b) => a + b);
 
   // //Normalized energy demand with DOD, DOA, efficiency,
   // let batt_recom_DOD = instinct_config.batt_recom_DOD;
@@ -460,6 +511,8 @@ ipcMain.on('solarRecom', (event, instinct_profile) => {
 
 instinct_profile.solarPowerGeneratedPerDay = solarPowerGeneratedPerDay;
 instinct_profile.solarPowerGeneratedPerDay_tempCompen = solarPowerGeneratedPerDay_tempCompen;
+  instinct_profile.solarPowerGeneratedPerHour = solarPowerGenerated;
+instinct_profile.solarPowerGeneratedPerHour_tempCompen = solarPowerGenerated_tempCompen;
 instinct_profile.solarRecomm = {};
 instinct_profile.solarRecomm.meanEnergy_year = meanEnergy_year;
 instinct_profile.solarRecomm.splSolarDays = splSolarDays;
