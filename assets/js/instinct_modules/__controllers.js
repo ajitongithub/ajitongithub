@@ -750,6 +750,8 @@ napp.controller('load_profile_controller', function ($scope, $http, $location) {
 			});
 			
 			console.log("No of Panels needed everyday", no_of_panels);
+			console.log("No of Panels needed everyday");
+
 
 
 			// let best_days = 0;
