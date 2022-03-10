@@ -49,6 +49,24 @@
                 grid-template-columns: 1fr 1fr;
             }
         }
+
+
+        #unshaded_area{
+            background-color: rgba(85, 85, 85, 0.164);
+            border: solid 2px white;
+            border-radius: 10px;
+            padding: 10px;
+            transition: all 150ms ease;
+            &:hover{
+                background-color: rgba(17, 17, 17, 0.164);
+            }
+            form{
+                display: grid;
+                grid-template-columns: 1fr;
+            }
+        }
+
+
         div{
             font-size: 1.5rem;
             // border: solid 1px wheat;

@@ -237,6 +237,8 @@ napp.controller('location_controller', function ($scope, $http, $location, $root
 		$location.path("/load_profile");
 	};
 
+	//Area Input of the User
+	$scope.regex = '\\d+';
 });
 // Load Profile Controller
 napp.controller('load_profile_controller', function ($scope, $http, $location) {
